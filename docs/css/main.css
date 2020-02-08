@@ -1,13 +1,47 @@
 body {
-  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #0d0d0d;
   margin: 15px;
   padding: 15px;
   text-align: center;
 }
 
-h1 {
+header {
+  width: 100rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+header h1 {
   color: #005DFF;
   font-family: "Fredoka One";
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+header h1:hover {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 section ul {
@@ -16,6 +50,8 @@ section ul {
 
 section ul li {
   list-style: none;
+  height: 55rem;
+  width: 55rem;
 }
 
 section ul li #image-wrapper {
@@ -26,13 +62,13 @@ section ul li #image-wrapper {
 section ul li #image-wrapper img {
   height: 48rem;
   width: 48rem;
+  border-radius: 20px;
 }
 
 section ul li .caption {
   color: #005DFF;
-  height: 100%;
   overflow-wrap: break-word;
-  width: 72%;
+  width: 52%;
   padding: 15px;
   border: 15px;
   margin: 0 auto;
@@ -44,5 +80,59 @@ p {
 
 footer {
   color: chartreuse;
+}
+
+.menu-button {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  border: 3px solid #fff;
+}
+
+.menu-button__burger {
+  width: 50px;
+  height: 6px;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+          box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-button__burger::before,
+.menu-button__burger::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 6px;
+  background: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+          box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-button__burger::before {
+  -webkit-transform: translateX(-25px) translateY(-16px);
+          transform: translateX(-25px) translateY(-16px);
+}
+
+.menu-button__burger::after {
+  -webkit-transform: translateX(-25px) translateY(16px);
+          transform: translateX(-25px) translateY(16px);
 }
 /*# sourceMappingURL=main.css.map */
