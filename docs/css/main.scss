@@ -14,8 +14,9 @@ $fonts: (
     // font-family: 'Fredoka One', cursive;
 );
 
-$padding: 15px;
-$borders: 15px;
+$padding-distance: 15px;
+$border-distance: 15px;
+$margin-distance: 15px;
 
 @function color($color-name){
     @return map-get($colors, $color-name);
@@ -23,6 +24,13 @@ $borders: 15px;
 
 @function font($font-name){
     @return map-get($fonts, $font-name);
+}
+
+body {
+    background-color: black;
+    margin: $margin-distance;
+    padding: $padding-distance;
+    text-align: center;
 }
 
 h1 {
@@ -33,20 +41,35 @@ h1 {
 section {
 
     ul {
-
+        padding: 0 0 0 0;
         li {
             list-style: none;
 
-            img {
+            #image-wrapper {
+                height: 50rem;
+                width: 50rem;
+
+                img {
+                    height: 48rem;
+                    width: 48rem;
+                }
 
             }
-
             .caption {
                 color: color(primary);
+
+                height: 100%;
+                overflow-wrap: break-word;
+                width: 72%;
+                
+                padding: $padding-distance;
+                border: $border-distance;
+                margin: 0 auto;
             }
         }
     }
 }
+
 p {
     font-family: font(caption);
 }

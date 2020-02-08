@@ -1,14 +1,41 @@
+body {
+  background-color: black;
+  margin: 15px;
+  padding: 15px;
+  text-align: center;
+}
+
 h1 {
   color: #005DFF;
   font-family: "Fredoka One";
+}
+
+section ul {
+  padding: 0 0 0 0;
 }
 
 section ul li {
   list-style: none;
 }
 
+section ul li #image-wrapper {
+  height: 50rem;
+  width: 50rem;
+}
+
+section ul li #image-wrapper img {
+  height: 48rem;
+  width: 48rem;
+}
+
 section ul li .caption {
   color: #005DFF;
+  height: 100%;
+  overflow-wrap: break-word;
+  width: 72%;
+  padding: 15px;
+  border: 15px;
+  margin: 0 auto;
 }
 
 p {
