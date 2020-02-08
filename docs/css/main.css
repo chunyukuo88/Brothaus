@@ -98,7 +98,7 @@ footer {
   cursor: pointer;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
-  border: 3px solid #fff;
+  border-radius: 5px;
 }
 
 .menu-button__burger {
@@ -134,5 +134,23 @@ footer {
 .menu-button__burger::after {
   -webkit-transform: translateX(-25px) translateY(16px);
           transform: translateX(-25px) translateY(16px);
+}
+
+.menu-button.open .menu-button__burger {
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+}
+
+.menu-button.open .menu-button__burger::before {
+  -webkit-transform: rotate(45deg) translate(35px, -35px);
+          transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-button.open .menu-button__burger::after {
+  -webkit-transform: rotate(-45deg) translate(35px, 35px);
+          transform: rotate(-45deg) translate(35px, 35px);
 }
 /*# sourceMappingURL=main.css.map */

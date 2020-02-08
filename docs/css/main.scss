@@ -108,7 +108,8 @@ footer {
     height: 80px;
     cursor: pointer;
     transition: all .5s ease-in-out;
-    border: 3px solid #fff;
+    // border: 3px solid #fff;
+    border-radius: 5px;
 }
 
 .menu-button__burger {
@@ -137,4 +138,18 @@ footer {
 
 .menu-button__burger::after {
     transform: translateX(-25px) translateY(16px);
+}
+
+.menu-button.open .menu-button__burger {
+    background: transparent;
+    box-shadow: none;
+    transform: translateX(-50px);
+}
+
+.menu-button.open .menu-button__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-button.open .menu-button__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
 }
