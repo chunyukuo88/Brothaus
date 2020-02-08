@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/chunyukuo88/Brothaus#readme",
   "devDependencies": {
+    "sass": "^1.25.0",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.3"
