@@ -13,7 +13,7 @@
 </head>
 <body>
     <header class="header">
-        <h1>Woobler's House</h1>
+        <h1>Woobler's H<span id="red-o">o</span>use</h1>
         <nav class="dropdown">
             <button onclick="showOrHideMenu()" class="drop-button">🍞</button>
             <div id="myDropdown" class="dropdown-content">
@@ -24,6 +24,11 @@
             </div>
         </nav>
     </header>
+
+    <section class="joke-panel">
+        <button id="joke-button" onclick="renderJoke()">JOKE</button>
+        <p id="joke-content">Joke</p>
+    </section>
 
     <section class="six-fot">
         <ul>
@@ -67,6 +72,7 @@
     </section>
 
     <script src="./burger.js"></script>
+    <!-- <script src="../src/index.js"></script> -->
 </body>
 <footer>
     <p id="made-with-crumbs">Made with crumbs in Cbus</p>

@@ -48,13 +48,9 @@ a {
     color: color(primary);
 }
 
-#repo {
-    color: green;
-}
-
-#中文{
-    color: red;
-}
+footer {
+    color: color(footer);
+ }
 
 header {
     width: 100rem;
@@ -137,10 +133,22 @@ section {
     }
 }
 
+#joke{
+    color: white;
+}
+
 p {
     font-family: font(caption);
 }
 
-footer {
-   color: color(footer);
+#repo {
+    color: green;
+}
+
+#red-o {
+    color: green;
+}
+
+#中文{
+    color: red;
 }

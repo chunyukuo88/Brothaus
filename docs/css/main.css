@@ -31,12 +31,8 @@ a {
   color: #005DFF;
 }
 
-#repo {
-  color: green;
-}
-
-#中文 {
-  color: red;
+footer {
+  color: chartreuse;
 }
 
 header {
@@ -134,11 +130,23 @@ section ul li #image-wrapper figure:hover figcaption {
   opacity: 0.93;
 }
 
+#joke {
+  color: white;
+}
+
 p {
   font-family: "Fredoka One";
 }
 
-footer {
-  color: chartreuse;
+#repo {
+  color: green;
+}
+
+#red-o {
+  color: green;
+}
+
+#中文 {
+  color: red;
 }
 /*# sourceMappingURL=main.css.map */
