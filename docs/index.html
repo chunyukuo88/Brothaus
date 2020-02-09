@@ -8,55 +8,60 @@
     <title>We Like Bread</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/burger.css">
-    <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Indie+Flower|Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Indie+Flower|Luckiest+Guy|Noto+Sans+TC&display=swap" rel="stylesheet">
 
 </head>
 <body>
     <header class="header">
         <h1>Woobler's House</h1>
-        <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">🍞</button>
+        <nav class="dropdown">
+            <button onclick="showOrHideMenu()" class="drop-button">🍞</button>
             <div id="myDropdown" class="dropdown-content">
-              <a href="#About">About</a>
-              <a href="#Code">Code</a>
-              <a href="#Chinese">中文</a>
+              <a></a>
+              <a id="repo" href="https://github.com/chunyukuo88/Brothaus" target="_blank">Code</a>
+              <a id="about" href="#About">About</a>
+              <a id="中文" href="#中文">話語版本</a>
             </div>
-          </div>
-
-
+        </nav>
     </header>
 
     <section class="six-fot">
         <ul>
             <li>
                 <wrapper id="image-wrapper">
-                    <img class="foto" src="images/a.png" alt="Photo #1" />
-                    <p class="caption">Humid, and temperatures have been hovering around freezing, and that results in beautiful crystalline trees!</p>
+                    <figure>
+                        <img class="foto" src="images/a.png" alt="Photo #1" />
+                        <figcaption class="caption">Humid, and temperatures have been hovering around freezing, and that results in beautiful crystalline trees!</figcaption>
+                    </figure>
                 </wrapper>
             </li>
             <li>
                 <wrapper id="image-wrapper">
-                    <img class="foto" src="images/b.png" alt="Photo #2" />
-                    <p class="caption">Glacier Ridge Park was reclaimed from farmland. Now it's  trees and beautiful marshland!</p>
+                    <figure>
+                        <img class="foto" src="images/b.png" alt="Photo #2" />
+                        <figcaption class="caption">Glacier Ridge Park was reclaimed from farmland. Now it's  trees and beautiful marshland!</figcaption>
+                    </figure>
                 </wrapper>
             </li>
             <li>
                 <wrapper id="image-wrapper">
-                    <img class="foto" src="images/c.png" alt="Photo #3" />
-                    <p class="caption">Take your eyes off the Woobler for just a second and...</p>
+                    <figure>
+                        <img class="foto" src="images/c.png" alt="Photo #3" />
+                        <figcaption class="caption">Take your eyes off the Woobler for just a second and...</figcaption>
+                    </figure>
                 </wrapper>
             </li>
             <!-- <li>
                 <img src="">
-                <p class="caption"></p>
+                <figcaption class="caption"></figcaption>
             </li>
             <li>
                 <img src="">
-                <p class="caption"></p>
+                <figcaption class="caption"></figcaption>
             </li>
             <li>
                 <img src="">
-                <p class="caption"></p>
+                <figcaption class="caption"></figcaption>
             </li> -->
         </ul>
     </section>

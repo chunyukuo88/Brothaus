@@ -7,11 +7,10 @@ $colors: (
 );
 
 $fonts: (
-    heading: 'Fredoka One',
-    caption: 'Indie Flower'
-    // font-family: 'Indie Flower', cursive;
-    // font-family: 'Luckiest Guy', cursive;
-    // font-family: 'Fredoka One', cursive;
+    heading: 'Luckiest Guy',
+    caption: 'Fredoka One',
+    chinese: 'Noto Sans TC',
+    dropdown: 'Indie Flower'
 );
 
 $padding-distance: 15px;
@@ -37,24 +36,44 @@ body {
     text-align: center;
 }
 
+#中文 {
+    font-family: font(chinese);
+}
+
+a {
+    font-family: font(dropdown);
+}
+
+#about{
+    color: color(primary);
+}
+
+#repo {
+    color: green;
+}
+
+#中文{
+    color: red;
+}
+
 header {
     width: 100rem;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-
+        
         h1 {
             color: color(primary);
             font-family: font(heading);
             transition: 0.5s ease-in-out;
             
-            &:hover {
-                transform: rotate(180deg);
-            }
+            &:hover { transform: rotate(180deg); }
         }
 
-
-
+        #myDropdown {
+            background-color: yellow;
+            clip-path: polygon(34% 0, 34% 12%, 47% 12%, 47% 0, 63% 0, 63% 11%, 100% 11%, 100% 100%, 18% 100%, 17% 0);
+        }
 }
 
 section {
@@ -70,21 +89,49 @@ section {
                 height: 50rem;
                 width: 50rem;
 
-                img {
-                    height: 48rem;
-                    width: 48rem;
-                    border-radius: 20px;
-                }
+                figure {
+                    position: relative;
+                    display: block;
+                    margin: 5px 0 10px 0;
+                    width:350px;
 
-            }
-            .caption {
-                color: color(primary);
-                overflow-wrap: break-word;
-                width: 52%;
-                
-                padding: $padding-distance;
-                border: $border-distance;
-                margin: 0 auto; //筆記：margin: 0 auto” is shorthand for setting the top and bottom margins to zero, and the left and right margins to auto.
+                    img {
+                        height: 48rem;
+                        width: 48rem;
+                        clip-path: polygon(0 10%, 10% 10%, 10% 0, 90% 0, 90% 10%, 100% 10%, 100% 90%, 90% 90%, 90% 100%, 10% 100%, 10% 90%, 0 90%);
+                    }
+                    figcaption {
+                        clip-path: polygon(0 0, 9% 13%, 15% 0%, 84% 0, 100% 8%, 100% 89%, 94% 100%, 100% 95%, 0 85%, 19% 95%, 0 100%);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        overflow-wrap: anywhere;
+                        height: 50%;
+                        width: 100%;
+                        left: 70%;
+                        position: absolute;
+                        top: 20%;
+                        
+                        background-color: black;
+                        color: color(primary);
+                        font-family: font(caption);
+                        font-size: 1.2rem;
+                        opacity: 0;
+                        
+                        -webkit-transition: opacity .5s ease-in-out;
+                        -moz-transition: opacity .5s ease-in-out;
+                        -o-transition: opacity .5s ease-in-out;
+                        transition: opacity .5s ease-in-out;
+                        
+                        padding: $padding-distance;
+                        border: $border-distance;
+                        margin: 0 auto; //筆記：margin: 0 auto” is shorthand for setting the top and bottom margins to zero, and the left and right margins to auto.
+                    }
+                }
+                figure:hover figcaption {
+                    opacity: 0.93;
+                }
             }
         }
     }
@@ -95,6 +142,5 @@ p {
 }
 
 footer {
-    color: color(footer);
+   color: color(footer);
 }
-
