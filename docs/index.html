@@ -7,15 +7,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>We Like Bread</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/burger.css">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Indie+Flower|Luckiest+Guy&display=swap" rel="stylesheet">
 
 </head>
 <body>
     <header class="header">
         <h1>Woobler's House</h1>
-        <div class="menu-button">
-            <div class="menu-button__burger"></div>
-        </div>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">🍞</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#About">About</a>
+              <a href="#Code">Code</a>
+              <a href="#Chinese">中文</a>
+            </div>
+          </div>
+
+
     </header>
 
     <section class="six-fot">
@@ -29,7 +37,7 @@
             <li>
                 <wrapper id="image-wrapper">
                     <img class="foto" src="images/b.png" alt="Photo #2" />
-                    <p class="caption">I love Glacier Ridge Park because it has been reclaimed from farmland. Now abounds with trees and beautiful marshland. Not pristine but in some ways better--recovering!</p>
+                    <p class="caption">Glacier Ridge Park was reclaimed from farmland. Now it's  trees and beautiful marshland!</p>
                 </wrapper>
             </li>
             <li>
