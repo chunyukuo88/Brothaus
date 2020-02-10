@@ -14,32 +14,21 @@ window.onclick = function(event) {
   }
 }
 
+let jokeData;
 
-
-
-
-let button = document.getElementById('joke-button');
-
-
-async function fetchJoke(){
+function fetchJoke(){
     const url = "https://api.chucknorris.io/jokes/random";
-    // const options = { method: "GET", headers: { "Content-type": "application/JSON" }};
-    await fetch(url) //, options
-        .then(response => {
-          return response.json();
-        })
-        .then((responseData) =>{
-          return responseData;
-        })
-        .catch("Fetch failed");
+    const options = { method: "GET", headers: { "Content-type": "application/JSON" }};
+    fetch(url, options)
+        .then(res => res.json())
+        .then(data => console.log(data.value))
+        .catch(()=>{'Fetch failed'});
 }
 
-// let jokeString = document.getElementById('joke-content');
 function renderJoke(){
-  let result = fetchJoke();
-  console.log(result);
-    // .then(data => {
-    //   console.log(data.value);
-    //   // jokeString.innerText = data;
-    //   })
+  fetchJoke()
+    .then(result => {
+      jokeData = result;
+      console.log(result);
+  });
 }
