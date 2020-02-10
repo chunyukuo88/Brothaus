@@ -140,18 +140,23 @@ section {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
+    border-radius: 15px;
         .joke-left {
             background-color: color(primary);
+            border-radius: inherit;
+            margin: 10px;
             position: relative;
             width: 50%;
-            margin: 10px;
 
-            li {
+            .joke-instructions {
+                color: white;
+                border-radius: inherit;
                 text-align: center;
             }
             
         }
         .joke-right{
+            border-radius: inherit;
             margin: 10px;
             background-color: color(primary);
             display: flex;
@@ -194,6 +199,7 @@ p {
 #chinese    { color: red; }
 #with-crumbs{ color: color(primary); transform: rotate(3deg); }
 #red-o      { color: green; }
+#red-o:hover{ color: red; }
 #repo       { color: green; }
 #weird-o    { color: darken(orange, 10%); }
 

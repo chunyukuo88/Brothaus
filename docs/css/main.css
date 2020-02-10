@@ -143,20 +143,25 @@ section ul li #image-wrapper figure:hover figcaption {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  border-radius: 15px;
 }
 
 .joke-panel .joke-left {
   background-color: #005DFF;
+  border-radius: inherit;
+  margin: 10px;
   position: relative;
   width: 50%;
-  margin: 10px;
 }
 
-.joke-panel .joke-left li {
+.joke-panel .joke-left .joke-instructions {
+  color: white;
+  border-radius: inherit;
   text-align: center;
 }
 
 .joke-panel .joke-right {
+  border-radius: inherit;
   margin: 10px;
   background-color: #005DFF;
   display: -webkit-box;
@@ -218,6 +223,10 @@ p {
 
 #red-o {
   color: green;
+}
+
+#red-o:hover {
+  color: red;
 }
 
 #repo {
