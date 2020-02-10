@@ -68,24 +68,19 @@
     </section>
 
     <wrapper class="joke-panel">
-        <section class="joke-left">
-            <p class="joke-instructions">Click the button for a lousy joke!</p>
-
-
-
-
-            <!-- button -->
-            <div class="joke-button red" onclick="renderJoke()">
-                <p>Lousy joke</p>
-            </div>
-            <!-- button -->
-
-
-
-        </section>
+        <ul class="joke-left">
+            <li><p class="joke-instructions">Click the button for a lousy joke!</p></li>
+            <li>
+                <div class="joke-button red" onclick="renderJoke()">
+                    <p>Lousy joke</p>
+                </div>
+            </li>
+        </ul>
+        
+        <section class="joke-right">
             <p class="joke-label">The lousy joke shows up here!</p>
             <p id="joke-content"></p>
-
+        </section>
     </wrapper>
 
     <script src="./burger.js"></script>

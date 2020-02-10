@@ -134,23 +134,31 @@ section {
 }
 
 .joke-panel {
+    color: yellow;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     width: 100%;
         .joke-left {
+            position: relative;
+            width: 50%;
 
-            .joke-instructions {
-
+            li {
+                text-align: center;
             }
             
         }
         .joke-right{
-            
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            width: 50%;
+
             .joke-label {
-
+                color: inherit;
             }
-            .joke-content {
-
+            #joke-content {
+                color: red;
             }
         }
 }
@@ -168,7 +176,9 @@ section {
     }
 }
 
-
+li {
+    list-style: none;
+}
 
 p {
     font-family: font(caption);
@@ -180,5 +190,5 @@ p {
 #with-crumbs{ color: color(primary); transform: rotate(3deg); }
 #red-o      { color: green; }
 #repo       { color: green; }
-#weird-o    { color: orange; }
+#weird-o    { color: darken(orange, 10%); }
 

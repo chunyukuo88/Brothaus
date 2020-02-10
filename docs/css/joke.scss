@@ -1,9 +1,3 @@
-// <div id="joke-button" onclick="renderJoke()">
-//      <p >Lousy jok<span id="stupid-e">e</span></p>
-// </div>
-
-// <a class="push_button red" href="#">Take The Red Pill</a>
-
 .joke-button {
 	position: relative;
 	width:220px;
@@ -13,7 +7,7 @@
 	text-decoration:none;
 	line-height:12px;
 	display: block;
-	margin: 30px;
+	margin: auto;
 }
 .joke-button:before {
 	background:#f0f0f0;
