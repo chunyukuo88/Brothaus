@@ -97,7 +97,7 @@ section {
                         clip-path: polygon(0 10%, 10% 10%, 10% 0, 90% 0, 90% 10%, 100% 10%, 100% 90%, 90% 90%, 90% 100%, 10% 100%, 10% 90%, 0 90%);
                     }
                     figcaption {
-                        clip-path: polygon(0 0, 9% 13%, 15% 0%, 84% 0, 100% 8%, 100% 89%, 94% 100%, 100% 95%, 0 85%, 19% 95%, 0 100%);
+                        clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -109,8 +109,8 @@ section {
                         position: absolute;
                         top: 20%;
                         
-                        background-color: black;
-                        color: color(primary);
+                        background-color: orange;
+                        color: color(accent);
                         font-family: font(caption);
                         font-size: 1.2rem;
                         opacity: 0;
@@ -134,14 +134,17 @@ section {
 }
 
 .joke-panel {
-    color: yellow;
+    background: yellow;
+    color: blue;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
         .joke-left {
+            background-color: color(primary);
             position: relative;
             width: 50%;
+            margin: 10px;
 
             li {
                 text-align: center;
@@ -149,6 +152,8 @@ section {
             
         }
         .joke-right{
+            margin: 10px;
+            background-color: color(primary);
             display: flex;
             flex-direction: column;
             position: relative;
@@ -158,7 +163,7 @@ section {
                 color: inherit;
             }
             #joke-content {
-                color: red;
+                color: white;
             }
         }
 }
