@@ -8,6 +8,7 @@
     <title>We Like Bread</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/burger.css">
+    <link rel="stylesheet" href="./css/joke.css">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Indie+Flower|Luckiest+Guy|Noto+Sans+TC&display=swap" rel="stylesheet">
 
 </head>
@@ -20,15 +21,10 @@
               <a></a>
               <a id="repo" href="https://github.com/chunyukuo88/Brothaus" target="_blank">Code</a>
               <a id="about" href="#About">About</a>
-              <a id="中文" href="#中文">話語版本</a>
+              <a id="chinese" href="#中文">話語版本</a>
             </div>
         </nav>
     </header>
-
-    <section class="joke-panel">
-        <button id="joke-button" onclick="renderJoke()">JOKE</button>
-        <p id="joke-content">Joke</p>
-    </section>
 
     <section class="six-fot">
         <ul>
@@ -71,10 +67,33 @@
         </ul>
     </section>
 
+    <wrapper class="joke-panel">
+        <section class="joke-left">
+            <p class="joke-instructions">Click the button for a lousy joke!</p>
+
+
+
+
+            <!-- button -->
+            <div class="joke-button red" onclick="renderJoke()">
+                <p>Lousy joke</p>
+            </div>
+            <!-- button -->
+
+
+
+        </section>
+            <p class="joke-label">The lousy joke shows up here!</p>
+            <p id="joke-content"></p>
+
+    </wrapper>
+
     <script src="./burger.js"></script>
 </body>
 <footer>
-    <p id="made-with-crumbs">Made with crumbs in Cbus</p>
-    <p id="copyright">&copy; Alex Gochenour 2020</p>
+    <ul class="footer-container">
+        <li class="footer-content" id="with-crumbs"><p>Made with love in Crumbus</p></li>
+        <li class="footer-content" id="copyright"><p>&copy; Alex Gochen<span id="weird-o">o</span>ur 2020</p></li>
+    </ul>
 </footer>
 </html>

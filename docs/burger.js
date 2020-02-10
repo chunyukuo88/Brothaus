@@ -17,12 +17,13 @@ window.onclick = function(event) {
 let jokeData;
 
 async function fetchJoke(){
-    const url = "https://api.chucknorris.io/jokes/random";
-    const options = { method: "GET", headers: { "Content-type": "application/JSON" }};
+    const url = "https://icanhazdadjoke.com/";
+    const options = { method: "GET", 
+                      headers: { "Accept": "application/JSON" }};
     await fetch(url, options)
         .then(res => res.json())
         .then(data => {
-          jokeData = data.value;
+          jokeData = data.joke;
         })
         .catch(()=>{'Fetch failed'});
 }

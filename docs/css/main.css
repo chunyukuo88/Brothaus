@@ -130,23 +130,59 @@ section ul li #image-wrapper figure:hover figcaption {
   opacity: 0.93;
 }
 
-#joke {
-  color: white;
+.joke-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+}
+
+.footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+}
+
+.footer-container .footer-content {
+  list-style: none;
 }
 
 p {
   font-family: "Fredoka One";
 }
 
-#repo {
-  color: green;
+#copyright {
+  color: chartreuse;
+  -webkit-transform: rotate(356deg);
+          transform: rotate(356deg);
+}
+
+#chinese {
+  color: red;
+}
+
+#with-crumbs {
+  color: #005DFF;
+  -webkit-transform: rotate(3deg);
+          transform: rotate(3deg);
 }
 
 #red-o {
   color: green;
 }
 
-#中文 {
-  color: red;
+#repo {
+  color: green;
+}
+
+#weird-o {
+  color: orange;
 }
 /*# sourceMappingURL=main.css.map */
