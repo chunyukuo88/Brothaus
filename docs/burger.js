@@ -16,19 +16,21 @@ window.onclick = function(event) {
 
 let jokeData;
 
-function fetchJoke(){
+async function fetchJoke(){
     const url = "https://api.chucknorris.io/jokes/random";
     const options = { method: "GET", headers: { "Content-type": "application/JSON" }};
-    fetch(url, options)
+    await fetch(url, options)
         .then(res => res.json())
-        .then(data => console.log(data.value))
+        .then(data => {
+          jokeData = data.value;
+        })
         .catch(()=>{'Fetch failed'});
 }
 
 function renderJoke(){
+  let jokeString = document.getElementById('joke-content');
   fetchJoke()
-    .then(result => {
-      jokeData = result;
-      console.log(result);
-  });
+    .then(
+      jokeString.innerText = jokeData
+  );
 }
