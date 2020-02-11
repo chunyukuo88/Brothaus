@@ -9,22 +9,22 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/burger.css">
     <link rel="stylesheet" href="./css/joke.css">
+    <link rel="stylesheet" href="./css/snackbar.css">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Indie+Flower|Luckiest+Guy|Noto+Sans+TC&display=swap" rel="stylesheet">
-
-
-
-    
 
 </head>
 <body>
+    <div id="snackbar">This site was made with vanilla JavaScript, Sass, and Web Components.</div>
+
+    
     <header class="header">
         <h1>Woobler's H<span id="red-o">o</span>use</h1>
         <nav class="dropdown">
             <button onclick="showOrHideMenu()" class="drop-button">🍞</button>
             <div id="myDropdown" class="dropdown-content">
-              <a></a>
-              <a id="repo" href="https://github.com/chunyukuo88/Brothaus" target="_blank">Code</a>
-              <a id="about" href="#About">About</a>
+                <a></a>
+                <a id="repo" href="https://github.com/chunyukuo88/Brothaus" target="_blank">Code</a>
+                <a onclick="snackbar()" id="about">About</a>
               <a id="chinese" href="#中文">華語版本</a>
             </div>
         </nav>
