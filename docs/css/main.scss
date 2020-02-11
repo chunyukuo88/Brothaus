@@ -77,7 +77,10 @@ header {
             font-family: font(heading);
             transition: 0.5s ease-in-out;
             
-            &:hover { transform: rotate(180deg); }
+            &:hover { 
+                transform: rotate(180deg); 
+                color: orange;
+            }
         }
 
         .drop-button:hover {
@@ -220,11 +223,12 @@ p {
 }
 
 //Superficial styling:
+#coming-soon{ color: orange; transform: rotate(4deg)}
 #copyright  { color: color(footer); transform: rotate(356deg); }
 #chinese    { color: red; }
-#with-crumbs{ color: color(primary); transform: rotate(3deg); }
-#red-o      { color: green; }
+#with-crumbs{ color: color(primary); transform: rotate(350deg); }
+.red-o      { color: green; }
 #red-o:hover{ color: red; }
 #repo       { color: green; }
-#weird-o    { color: darken(orange, 10%); }
+.weird-o    { color: color(primary); }
 

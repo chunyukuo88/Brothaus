@@ -14,17 +14,18 @@
 
 </head>
 <body>
-    <div id="snackbar">This site was made with vanilla JavaScript, Sass, and Web Components.</div>
+    <div id="snackbar">Made with vanilla JavaScript, Sass, and Web Components.</div>
 
     
     <header class="header">
-        <h1>Woobler's H<span id="red-o">o</span>use</h1>
+        <h1>Woobler's H<span class="red-o">o</span>use</h1>
         <nav class="dropdown">
             <button onclick="showOrHideMenu()" class="drop-button">🍞</button>
             <div id="myDropdown" class="dropdown-content">
-                <a></a>
-                <a id="repo" href="https://github.com/chunyukuo88/Brothaus" target="_blank">Code</a>
+                <a></a> <!-- These empty tags create an appropriate bit of space above the first dropdown option. -->
                 <a onclick="snackbar()" id="about">About</a>
+                <a id="repo" href="https://github.com/chunyukuo88/" target="_blank">Code</a>
+                <!-- <a href="" class="columbus-weather">It's <span class="cbus-temp"></span>° here.</a> -->
               <a id="chinese" href="#中文">華語版本</a>
             </div>
         </nav>
@@ -36,7 +37,7 @@
                 <wrapper id="image-wrapper">
                     <figure>
                         <img class="foto" src="images/a.jpg" alt="Photo #1" />
-                        <figcaption class="caption">Woobler woke up from a nap</figcaption>
+                        <figcaption class="caption">Celebrate the first week of Woobler's House with a picture of Mugi!</figcaption>
                     </figure>
                 </wrapper>
             </li>
@@ -99,8 +100,9 @@
 </body>
 <footer>
     <ul class="footer-container">
-        <li class="footer-content" id="with-crumbs"><p>Made with love in Crumbus</p></li>
-        <li class="footer-content" id="copyright"><p>&copy; Alex Gochen<span id="weird-o">o</span>ur 2020</p></li>
+        <li class="footer-content" id="with-crumbs"><p>Made with l<span class="red-o">o</span>ve in Crumbus</p></li>
+        <li class="footer-content" id="coming-soon"><p>Coming soon: L<span class="weird-o">o</span>cal weather report & Chinese localization!</p></li>
+        <li class="footer-content" id="copyright"><p>&copy; Alex Gochen<span class="weird-o">o</span>ur 2020</p></li>
     </ul>
 </footer>
 </html>

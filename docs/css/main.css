@@ -152,6 +152,7 @@ header h1 {
 header h1:hover {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+  color: orange;
 }
 
 header .drop-button:hover {
@@ -319,6 +320,12 @@ p {
   font-family: "Fredoka One";
 }
 
+#coming-soon {
+  color: orange;
+  -webkit-transform: rotate(4deg);
+          transform: rotate(4deg);
+}
+
 #copyright {
   color: chartreuse;
   -webkit-transform: rotate(356deg);
@@ -331,11 +338,11 @@ p {
 
 #with-crumbs {
   color: #005DFF;
-  -webkit-transform: rotate(3deg);
-          transform: rotate(3deg);
+  -webkit-transform: rotate(350deg);
+          transform: rotate(350deg);
 }
 
-#red-o {
+.red-o {
   color: green;
 }
 
@@ -347,7 +354,7 @@ p {
   color: green;
 }
 
-#weird-o {
-  color: #cc8400;
+.weird-o {
+  color: #005DFF;
 }
 /*# sourceMappingURL=main.css.map */
