@@ -320,6 +320,11 @@ p {
   font-family: "Fredoka One";
 }
 
+#columbus-weather {
+  color: #005DFF;
+  font-weight: bold;
+}
+
 #coming-soon {
   color: orange;
   -webkit-transform: rotate(4deg);
