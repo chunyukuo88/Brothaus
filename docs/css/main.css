@@ -165,8 +165,13 @@ header .drop-button:hover {
 }
 
 header .dropdown-content {
+  -webkit-animation: shake 35s;
+          animation: shake 35s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
   background-color: yellow;
   border: 1px solid;
+  font-weight: bold;
   padding: 10px;
   -webkit-clip-path: polygon(34% 0, 34% 12%, 47% 12%, 47% 0, 63% 0, 63% 11%, 100% 11%, 100% 100%, 18% 100%, 17% 0);
           clip-path: polygon(34% 0, 34% 12%, 47% 12%, 47% 0, 63% 0, 63% 11%, 100% 11%, 100% 100%, 18% 100%, 17% 0);
@@ -197,8 +202,8 @@ section ul li #image-wrapper figure {
 section ul li #image-wrapper figure img {
   height: 48rem;
   width: 48rem;
-  -webkit-clip-path: polygon(0 10%, 10% 10%, 10% 0, 90% 0, 90% 10%, 100% 10%, 100% 90%, 90% 90%, 90% 100%, 10% 100%, 10% 90%, 0 90%);
-          clip-path: polygon(0 10%, 10% 10%, 10% 0, 90% 0, 90% 10%, 100% 10%, 100% 90%, 90% 90%, 90% 100%, 10% 100%, 10% 90%, 0 90%);
+  -webkit-clip-path: polygon(0 9%, 6% 4%, 0 0, 100% 0, 92% 5%, 100% 7%, 100% 100%, 94% 91%, 91% 100%, 8% 100%, 4% 93%, 0 100%);
+          clip-path: polygon(0 9%, 6% 4%, 0 0, 100% 0, 92% 5%, 100% 7%, 100% 100%, 94% 91%, 91% 100%, 8% 100%, 4% 93%, 0 100%);
 }
 
 section ul li #image-wrapper figure figcaption {
@@ -322,7 +327,6 @@ p {
 
 #columbus-weather {
   color: #005DFF;
-  font-weight: bold;
 }
 
 #coming-soon {
