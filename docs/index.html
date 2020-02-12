@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="./css/burger.css">
     <link rel="stylesheet" href="./css/joke.css">
     <link rel="stylesheet" href="./css/snackbar.css">
-    <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Indie+Flower|Luckiest+Guy|Ma+Shan+Zheng|ZCOOL+KuaiLe+TC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Indie+Flower|Luckiest+Guy|Ma+Shan+Zheng|ZCOOL+KuaiLe&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body onload="getTemp()">
     <div id="snackbar">Made with vanilla JavaScript, Sass, and Web Components.</div>
     <div id="language-switch" class="English"></div>
     
@@ -25,7 +25,9 @@
                 <a></a> <!-- These empty tags create an appropriate bit of space above the first dropdown option. -->
                 <a onclick="snackbar()" id="about">About</a>
                 <a id="repo" href="https://github.com/chunyukuo88/Brothaus" target="_blank">Code</a>
-                <!-- <a href="" class="columbus-weather">It's <span class="cbus-temp"></span>° here.</a> -->
+                <a id="columbus-weather">It's 
+                    <span id="cbus-temp"></span>°F here.
+                </a>
                 <a onclick="changeLanguage()" id="chinese" href="#中文">華語版本</a>
             </div>
         </nav>
@@ -97,6 +99,11 @@
     </wrapper>
 
     <script src="./burger.js"></script>
+    <script src="./joke.js"></script>
+    <script src="./localize.js"></script>
+    <script src="./snackbar.js"></script>
+    <script src="./weather.js"></script>
+
 </body>
 <footer>
     <ul class="footer-container">
