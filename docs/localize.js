@@ -16,12 +16,10 @@ function changeLanguage(){
     const about = document.getElementById('about');
       about.innerText = '關於';
     const repo = document.getElementById('repo');
-      repo.innerText = '本站之原碼';    
-//[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+      repo.innerText = '本站之原碼';
     const localWeather = document.getElementById('columbus-weather');
       const currentTemp = document.getElementById('cbus-temp');
       localWeather.innerText = '這裡有' + fahrenheitToCelsius(currentTemp.innerText) + '°';
-//[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
       const language = document.getElementById('chinese');
       language.innerText = 'English';  
     const snackbar = document.getElementById('snackbar');
@@ -44,7 +42,7 @@ function changeLanguage(){
       const currentTemp = document.getElementById('cbus-temp');
       localWeather.innerText = 'It\'s ' + celsiusToFahrenheit(currentTemp) + '° here';    
     const language = document.getElementById('chinese');
-      language.innerText = '話語版本';    
+      language.innerText = '華語版本';    
     const snackbar = document.getElementById('snackbar');
       snackbar.innerText = 'Made with vanilla JavaScript, Sass, and Web Components.';  
     const jokeInstructions = document.getElementsByClassName('joke-instructions');
