@@ -3,6 +3,7 @@ function showOrHideMenu() {
 }
 
 window.onclick = function(event) {
+  
   if (!event.target.matches('.drop-button')) {
     const dropdowns = document.getElementsByClassName("dropdown-content");
     for (let i = 0; i < dropdowns.length; i++) {

@@ -187,26 +187,26 @@ section ul li {
   width: 55rem;
 }
 
-section ul li #image-wrapper {
+section ul li .image-wrapper {
   height: 50rem;
   width: 50rem;
 }
 
-section ul li #image-wrapper figure {
+section ul li .image-wrapper figure {
   position: relative;
   display: block;
   margin: 5px 0 10px 0;
   width: 350px;
 }
 
-section ul li #image-wrapper figure img {
+section ul li .image-wrapper figure img {
   height: 48rem;
   width: 48rem;
   -webkit-clip-path: polygon(0 9%, 6% 4%, 0 0, 100% 0, 92% 5%, 100% 7%, 100% 100%, 94% 91%, 91% 100%, 8% 100%, 4% 93%, 0 100%);
           clip-path: polygon(0 9%, 6% 4%, 0 0, 100% 0, 92% 5%, 100% 7%, 100% 100%, 94% 91%, 91% 100%, 8% 100%, 4% 93%, 0 100%);
 }
 
-section ul li #image-wrapper figure figcaption {
+section ul li .image-wrapper figure figcaption {
   -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
           clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
   display: -webkit-box;
@@ -236,7 +236,7 @@ section ul li #image-wrapper figure figcaption {
   margin: 0 auto;
 }
 
-section ul li #image-wrapper figure:hover figcaption {
+section ul li .image-wrapper figure:hover figcaption {
   -webkit-animation: shake 15s;
           animation: shake 15s;
   -webkit-animation-iteration-count: infinite;
