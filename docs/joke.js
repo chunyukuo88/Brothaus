@@ -12,9 +12,9 @@ async function fetchJoke(){
         .catch(()=>{'Fetch failed'});
 }
 
-function renderJoke(){
+async function renderJoke(){
   let jokeString = document.getElementById('joke-content');
-  fetchJoke()
+  await fetchJoke()
     .then(
       jokeString.innerText = jokeData
   );
