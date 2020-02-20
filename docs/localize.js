@@ -46,9 +46,9 @@ function changeLanguage(){
     const snackbar = document.getElementById('snackbar');
       snackbar.innerText = 'Made with vanilla JavaScript, Sass, and Web Components.';  
     const jokeInstructions = document.getElementsByClassName('joke-instructions');
-      jokeInstructions.innerText = 'Click the button for a lousy joke!';
+      jokeInstructions[0].innerText = 'Click the button for a lousy joke!';
     const jokeLabel = document.getElementsByClassName('joke-label');
-      jokeLabel.innerText = 'The lousy joke shows up here!';
+      jokeLabel[0].innerText = 'The lousy joke shows up here!';
       applyEnglishFonts();
   }
   
