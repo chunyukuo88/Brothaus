@@ -145,13 +145,15 @@ header {
 header h1 {
   color: #005DFF;
   font-family: "Luckiest Guy";
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 
 header h1:hover {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+  -webkit-transition-timing-function: cubic-bezier(0, -0.43, 1, -0.04);
+          transition-timing-function: cubic-bezier(0, -0.43, 1, -0.04);
   color: orange;
 }
 
@@ -178,6 +180,8 @@ header .dropdown-content {
 }
 
 section ul {
+  -webkit-filter: drop-shadow(0 0 10px gray);
+          filter: drop-shadow(0 0 10px gray);
   padding: 0 0 0 0;
 }
 

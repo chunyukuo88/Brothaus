@@ -45,6 +45,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     background-color: lighten(black, 5%);
     margin: $margin-distance;
     padding: $padding-distance;
@@ -76,10 +77,11 @@ header {
         h1 {
             color: color(primary);
             font-family: font(heading);
-            transition: 0.5s ease-in-out;
+            transition: 2s;
             
             &:hover { 
                 transform: rotate(180deg); 
+                transition-timing-function: cubic-bezier(0,-0.43,1,-0.04);
                 color: orange;
             }
         }
@@ -104,6 +106,7 @@ header {
 section {
 
     ul {
+        filter: drop-shadow(0 0 10px gray);
         padding: 0 0 0 0;
         li {
             list-style: none;
@@ -236,4 +239,3 @@ p {
 #red-o:hover{ color: red; }
 #repo       { color: green; }
 .weird-o    { color: color(primary); }
-
