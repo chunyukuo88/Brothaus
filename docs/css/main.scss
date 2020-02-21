@@ -81,7 +81,7 @@ header {
             
             &:hover { 
                 transform: rotate(180deg); 
-                transition-timing-function: cubic-bezier(0,-0.43,1,-0.04);
+                transition-timing-function: cubic-bezier(0,1.11,1,-0.04);
                 color: orange;
             }
         }
