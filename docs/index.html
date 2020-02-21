@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Indie+Flower|Luckiest+Guy|Ma+Shan+Zheng|ZCOOL+KuaiLe&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
 </head>
-<body onload="getTemp(), fetchJoke()">
+<body onload="renderTemp(), fetchJoke(), renderConditions()">
     <div id="snackbar">Made with vanilla JavaScript, Sass, and Web Components.</div>
     <div id="language-switch" class="English"></div>
     <header class="header">
@@ -26,7 +26,7 @@
                 <a onclick="snackbar()" id="about">About</a>
                 <a id="repo" href="https://github.com/chunyukuo88/Brothaus" target="_blank">Code</a>
                 <a id="columbus-weather">It's 
-                    <span id="cbus-temp"></span>° here
+                    <span id="cbus-temp"></span>° here & <span id="cbus-conditions">lovely</span>
                 </a>
                 <a onclick="changeLanguage()" id="chinese">華語版本</a>
             </div>

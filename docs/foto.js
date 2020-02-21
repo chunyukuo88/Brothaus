@@ -190,7 +190,6 @@ class myFoto extends HTMLElement {
       `;
         shadow.appendChild(linkElem);
         shadow.appendChild(style);
-        console.log(style.isConnected);
   
       // Attach the other created elements to the shadow dom
 
