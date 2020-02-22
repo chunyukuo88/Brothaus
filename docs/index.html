@@ -26,13 +26,29 @@
         z-index: 99;
 
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-
     }
 
     .loading-gif {
         outline: none;
+    }
+
+    .loader > img {
+        width: 50%;
+    }
+
+    .loader.hidden {
+        animation: fadeOut 1s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeOut {
+        100% {
+            opacity: 0;
+            visibility: hidden;
+        }
     }
 
     .loading-caption {
@@ -43,10 +59,17 @@
 <body onload="renderTemp(), 
               renderConditions(), 
               fetchJoke()">
+        <!-- ------------------------------------------------------ -->
     <div class="loader">
         <img class="loading-gif" src="./images/loading.gif" alt="Loading...">
-        <p class="loading-caption">Knocking over dad's books...</p>
+        <p class="loading-caption">The photos on this site are big, so let's watch Woobler knock over my books while we wait.</p>
     </div>
+        <!-- ------------------------------------------------------ -->
+
+
+
+
+
     <div id="snackbar">Made with vanilla JavaScript, Sass, and Web Components.</div>
     <div id="language-switch" class="English"></div>
     <header class="header">
@@ -57,7 +80,7 @@
                 <a></a>
                 <a onclick="snackbar()" id="about">About</a>
                 <a id="repo" href="https://github.com/chunyukuo88/Brothaus" target="_blank">Code</a>
-                <a id="columbus-weather">It's 
+                <a id="columbus-weather"> 
                     <span id="cbus-temp"></span>°F and <span id="cbus-conditions">lovely</span>
                 </a>
                 <a onclick="changeLanguage()" id="chinese">華語版本</a>
@@ -97,6 +120,13 @@
         </section>
     </wrapper>
 
+
+    <script type="text/JavaScript">
+        window.addEventListener("load", ()=>{
+            const loader = document.querySelector(".loader");
+            loader.className += " hidden";
+        })
+    </script>
     <script src="./burger.js"></script>
     <script src="./foto.js"></script>
     <script src="./joke.js"></script>

@@ -46,7 +46,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    background-color: lighten(#686868, 5%);
+    background-color: lighten(black, 5%);
     margin: $margin-distance;
     padding: $padding-distance;
     text-align: center;
@@ -86,6 +86,9 @@ header {
             }
         }
 
+        .drop-button {
+            outline: none;
+        }
         .drop-button:hover {
             animation: shake 0.75s;
             animation-iteration-count: 1;
