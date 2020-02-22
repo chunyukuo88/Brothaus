@@ -14,9 +14,39 @@
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Indie+Flower|Luckiest+Guy|Ma+Shan+Zheng|ZCOOL+KuaiLe&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
 </head>
+
+<style media="screen">
+    .loader{
+        background: #1f6dc7;
+        height: 100%;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 99;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .loading-gif {
+        outline: none;
+    }
+
+    .loading-caption {
+        color: #ffff00;
+    }
+</style>
+
 <body onload="renderTemp(), 
               renderConditions(), 
               fetchJoke()">
+    <div class="loader">
+        <img class="loading-gif" src="./images/loading.gif" alt="Loading...">
+        <p class="loading-caption">Knocking over dad's books...</p>
+    </div>
     <div id="snackbar">Made with vanilla JavaScript, Sass, and Web Components.</div>
     <div id="language-switch" class="English"></div>
     <header class="header">
@@ -40,14 +70,14 @@
         <ul>
             <fot-foto text="The lads visited Momiland and jumped around for four hours." 
             img="images/a.png"></fot-foto>
-            <fot-foto text="Most of my reading time has been devoted to all things JavaScript, but I do feel liberated to dive back into my old sci-fi favorites like 三體." 
+            <!-- <fot-foto text="Most of my reading time has been devoted to all things JavaScript, but I do feel liberated to dive back into my old sci-fi favorites like 三體." 
                       img="images/b.png"></fot-foto>
             <fot-foto text="The Woobler displays a profound curiosity of containers these days. At home he's fond of tossing things in the trash can." 
                       img="images/c.png"></fot-foto>
             <fot-foto text="The ball pit at Momiland." 
                       img="images/d.png"></fot-foto>
             <fot-foto text="Celebratory feast with Jalil at Wolf's Ridge. This was the restaurant's cheeky take on fish & chips." 
-                      img="images/e.png"></fot-foto>
+                      img="images/e.png"></fot-foto> -->
         </ul>
     </section>
 
