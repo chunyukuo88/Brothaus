@@ -8,68 +8,20 @@
     <title>We Like Bread</title>
     <link rel="stylesheet" href="./css/burger.css">
     <link rel="stylesheet" href="./css/joke.css">
+    <link rel="stylesheet" href="./css/loader.css" media="screen">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/snackbar.css">
     <link rel="stylesheet" href="./css/scrollbar.css">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Indie+Flower|Luckiest+Guy|Ma+Shan+Zheng|ZCOOL+KuaiLe&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
 </head>
-
-<style media="screen">
-    .loader{
-        background: #1f6dc7;
-        height: 100%;
-        left: 0;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 99;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .loading-gif {
-        outline: none;
-    }
-
-    .loader > img {
-        width: 50%;
-    }
-
-    .loader.hidden {
-        animation: fadeOut 1s;
-        animation-fill-mode: forwards;
-    }
-
-    @keyframes fadeOut {
-        100% {
-            opacity: 0;
-            visibility: hidden;
-        }
-    }
-
-    .loading-caption {
-        color: #ffff00;
-    }
-</style>
-
 <body onload="renderTemp(), 
               renderConditions(), 
               fetchJoke()">
-        <!-- ------------------------------------------------------ -->
     <div class="loader">
         <img class="loading-gif" src="./images/loading.gif" alt="Loading...">
-        <p class="loading-caption">The photos on this site are big, so let's watch Woobler knock over my books while we wait.</p>
+        <p class="loading-caption">Neutron stars spin up to 500 times per second and are some of the fastest-spinning objects known to astronomers. Source: Florida Institute of Technology.</p>
     </div>
-        <!-- ------------------------------------------------------ -->
-
-
-
-
-
     <div id="snackbar">Made with vanilla JavaScript, Sass, and Web Components.</div>
     <div id="language-switch" class="English"></div>
     <header class="header">
@@ -91,15 +43,15 @@
 
     <section class="six-fot">
         <ul>
-            <fot-foto text="We celebrated the new jerb by visiting North Market, the most exciting place in Columbus to grab a quick meal." 
+            <fot-foto text="This is why I haven't purchased cookies in a long, long time." 
                       img="images/a.png"></fot-foto>
-            <fot-foto text="Woobler naturally proceeded to devour gobs of scrumptious injera, although it was ultimately not to his taste." 
+            <fot-foto text="We celebrated the new jerb by visiting North Market, the most exciting place in Columbus to grab a quick meal." 
                       img="images/b.png"></fot-foto>
-            <fot-foto text="'Leave the gun, take the cannolli.' These are my favorite dessert." 
+            <fot-foto text="Woobler naturally proceeded to devour gobs of scrumptious injera, although it was ultimately not to his taste." 
                       img="images/c.png"></fot-foto>
-            <fot-foto text="Hi dad whatcha dooooooooooin'?" 
+            <fot-foto text="'Leave the gun, take the cannolli.' If an establishment sells proper connolli, I purchase nothing else." 
                       img="images/d.png"></fot-foto>
-            <fot-foto text="One of his favorite haunts." 
+            <fot-foto text="All this origami-making has inspired Mugi to follow suit." 
                       img="images/e.png"></fot-foto>
         </ul>
     </section>
@@ -120,20 +72,13 @@
         </section>
     </wrapper>
 
-
-    <script type="text/JavaScript">
-        window.addEventListener("load", ()=>{
-            const loader = document.querySelector(".loader");
-            loader.className += " hidden";
-        })
-    </script>
     <script src="./burger.js"></script>
     <script src="./foto.js"></script>
     <script src="./joke.js"></script>
     <script src="./localize.js"></script>
+    <script src="./loader.js" type="text/JavaScript"></script>
     <script src="./snackbar.js"></script>
     <script src="./weather.js"></script>
-
 </body>
 <footer>
     <ul class="footer-container">
