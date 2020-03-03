@@ -17,10 +17,12 @@
 </head>
 <body onload="renderTemp(), 
               renderConditions(), 
-              fetchJoke()">
+              fetchJoke(),
+              addRandomFact()
+              ">
     <div class="loader">
         <img class="loading-gif" src="./images/loading.gif" alt="Loading...">
-        <p class="loading-caption">Neutron stars spin up to 500 times per second and are some of the fastest-spinning objects known to astronomers. Source: Florida Institute of Technology.</p>
+        <p class="loading-caption"></p>
     </div>
     <div id="snackbar">Made with vanilla JavaScript, Sass, and Web Components.</div>
     <div id="language-switch" class="English"></div>
@@ -77,6 +79,7 @@
     <script src="./joke.js"></script>
     <script src="./localize.js"></script>
     <script src="./loader.js" type="text/JavaScript"></script>
+    <script src="./randomFact.js"></script>
     <script src="./snackbar.js"></script>
     <script src="./weather.js"></script>
 </body>

@@ -20,10 +20,11 @@ class myFoto extends HTMLElement {
       if (this.hasAttribute('img')) {
         imgUrl = this.getAttribute('img');
       } else {
-        imgUrl = 'images/z_default.png';
+        imgUrl = 'images/default.png';
       }
       image.src = imgUrl;
   
+        // Apply external styles to the shadow dom 
       const linkElem = document.createElement('link');
 
       let style = document.createElement('style');
@@ -142,8 +143,8 @@ class myFoto extends HTMLElement {
       li .image-wrapper figure img {
         height: 48rem;
         width: 48rem;
-        -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
-        clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+        -webkit-clip-path: polygon(0 0, 9% 7%, 15% 0%, 22% 8%, 32% 0, 100% 0, 100% 100%, 92% 93%, 88% 100%, 79% 93%, 72% 100%, 0 100%);
+        clip-path: polygon(0 0, 9% 7%, 15% 0%, 22% 8%, 32% 0, 100% 0, 100% 100%, 92% 93%, 88% 100%, 79% 93%, 72% 100%, 0 100%);
       }
       
       li .image-wrapper figure figcaption {
