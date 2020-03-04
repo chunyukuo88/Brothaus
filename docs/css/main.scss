@@ -100,9 +100,9 @@ header {
             animation-iteration-count: infinite;
             background-color: yellow;
             border: 1px solid;
+            clip-path: polygon(0 0, 100% 0, 100% 13%, 91% 13%, 91% 24%, 100% 24%, 100% 100%, 28% 100%, 28% 95%, 18% 95%, 18% 100%, 0 100%);
             font-weight: bold;
             padding: 10px;
-            clip-path: polygon(34% 0, 34% 12%, 47% 12%, 47% 0, 63% 0, 63% 11%, 100% 11%, 100% 100%, 18% 100%, 17% 0);
         }
 }
 
