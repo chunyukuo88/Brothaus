@@ -1,8 +1,3 @@
-function addRandomFact(){
-    const loader = document.querySelector(".loader");
-    loader.innerText = produceRandomFact();
-}
-
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.ceil(max));
 }
@@ -24,3 +19,8 @@ factMap.set(7, " A car ride to the nearest star at 70 miles per hour would last 
 factMap.set(8, " Ninety-five percent of the matter in the universe is either dark matter or dark energy that can’t be detected.");
 factMap.set(9, " Neutron stars, which are leftover from the deaths of massive stars in supernova explosions, are so dense that just a bowlful of neutron star material has more mass than the Moon.");
 factMap.set(10, " The other galaxies in the universe are moving away from us, and some are millions of light-years away.");
+
+!function() {
+    const loader = document.querySelector(".loader");
+    loader.innerText = produceRandomFact();
+}();

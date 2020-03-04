@@ -17,13 +17,10 @@
 </head>
 <body onload="renderTemp(), 
               renderConditions(), 
-              fetchJoke(),
-              addRandomFact()
+              fetchJoke()
               ">
-    <div class="loader">
-        <img class="loading-gif" src="./images/loading.gif" alt="Loading...">
-        <p class="loading-caption"></p>
-    </div>
+    <div class="loader" onload="produceRandomFact()"></div>
+    
     <div id="snackbar">Made with vanilla JavaScript, Sass, and Web Components.</div>
     <div id="language-switch" class="English"></div>
     <header class="header">

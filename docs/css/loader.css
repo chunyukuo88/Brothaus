@@ -1,5 +1,8 @@
 .loader{
     background: #1f6dc7;
+    color: yellow;
+    font-family: 'Fredoka One';
+    font-size: 5em;
     height: 100%;
     left: 0;
     position: fixed;
