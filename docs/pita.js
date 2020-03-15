@@ -1,35 +1,96 @@
-dragElement(document.getElementById("pita"));
-
-function dragMouseDown(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // get the mouse cursor position at startup:
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-}
-
-function closeDragElement() {// stop moving when mouse button is released:
-    document.onmouseup = null;
-    document.onmousemove = null;
-}
-
-function dragElement(theBreadBalloon) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    theBreadBalloon.onmousedown = dragMouseDown;
-    // set the element's new position:
-    theBreadBalloon.style.top = (theBreadBalloon.offsetTop - pos2) + "px";
-    theBreadBalloon.style.left = (theBreadBalloon.offsetLeft - pos1) + "px";
-}
-
-function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // calculate the new cursor position:
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-}
+const setTranslate = (x, y, element) => {
+    element.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+  };
+  
+  /**
+   * Simple Draggable Utility
+   * @param {String}   selector    CSS Selector of the container element
+   * @param {String}   dragElement CSS Selector of the drag handler element (optional)
+   * @param {Function} onDrag      Callback handler to fire while dragging
+   * @param {Function} onDragEnd   Callback handler to fire on drag end
+   * @param {Function} onDragStart Callback handler to fire on drag start
+   */
+  const draggable = ({ selector, dragElement, onDrag, onDragEnd, onDragStart }) => {
+    let dragging;
+    let currentX, currentY, initialX, initialY;
+    let xOffset = 0;
+    let yOffset = 0;
+    
+    const container = document.querySelector(selector);
+    
+    container.addEventListener('mousedown', function(e) {
+      e.preventDefault();
+  
+      if (!dragElement || dragElement && e.target.closest(dragElement) !== null) {
+        initialX = e.clientX - xOffset;
+        initialY = e.clientY - yOffset;
+  
+        dragging = container;
+  
+        dragging.classList.add('ui-dragging');
+        
+        if (typeof(onDragStart) === 'function') {
+          onDragStart(e, dragging, initialX, initialY);
+        }
+      }
+    });
+  
+    document.addEventListener('mouseup', function(e) {
+      if (dragging) {
+        initialX = currentX;
+        initialY = currentY;
+  
+        dragging.classList.remove('ui-dragging');
+  
+        if (typeof(onDragEnd) === 'function') {
+          onDragEnd(e, dragging, initialX, initialY);
+        }
+      }
+  
+      dragging = null;
+    });
+  
+    document.addEventListener('mousemove', function(e) {
+      if (dragging) {
+        e.preventDefault();
+  
+        currentX = e.clientX - initialX;
+        currentY = e.clientY - initialY;
+  
+        xOffset = currentX;
+        yOffset = currentY;
+  
+        setTranslate(currentX, currentY, dragging);
+  
+        if (typeof(onDrag) === 'function') {
+          onDrag(e, dragging, currentX, currentY);
+        }
+      }
+    });
+  }
+  
+  
+  /*************
+   * DEMO CODE *
+   *************/
+  
+  let zIndex = 100;
+  
+  document.querySelectorAll('[draggable]').forEach((element) => {
+    const data = element.dataset;
+    
+    draggable({
+      selector: data.container,
+      dragElement: data.dragElement,
+      onDragStart(e, element, x, y) {
+        element.style.zIndex = zIndex++;
+        console.log('DRAG START',e, element, x, y);
+      },
+      onDrag(e, element, x, y) {
+        console.log('DRAGGING', e, element, x, y);
+      },
+      onDragEnd(e, element, x, y) {
+        console.log('DRAG END',e, element, x, y);
+      }
+    });
+  });
