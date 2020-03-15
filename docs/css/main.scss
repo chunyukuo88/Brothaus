@@ -243,3 +243,15 @@ p {
 #red-o:hover{ color: red; }
 #repo       { color: green; }
 .weird-o    { color: color(primary); }
+
+
+//For the pita:
+[draggable] {
+    position: absolute;
+}
+  
+.ui-dragging {
+    will-change: transform;
+    -webkit-touch-callout: none;
+    z-index: 1;
+}
