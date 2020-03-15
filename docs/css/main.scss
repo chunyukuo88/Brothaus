@@ -232,6 +232,12 @@ p {
     font-family: font(caption);
 }
 
+#pita {
+    background: alpha($color: #000000);
+    position: absolute;
+    z-index: 9;
+}
+
 //Superficial styling:
 #columbus-weather{ color: color(primary);}
 #coming-soon{ color: orange; transform: rotate(4deg)}
