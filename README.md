@@ -7,3 +7,6 @@ https://www.remove.bg/
 
 Also, save yourself the agony of searching for a decent .png -> .svg converter and just use this:
 https://online-converting.com/image/convert-to-svg/
+
+I used this to produce .webp files:
+https://image.online-convert.com/convert-to-webp
