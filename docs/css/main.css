@@ -177,10 +177,10 @@ header .dropdown-content {
           animation-iteration-count: infinite;
   background-color: yellow;
   border: 1px solid;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 13%, 91% 13%, 91% 24%, 100% 24%, 100% 100%, 28% 100%, 28% 95%, 18% 95%, 18% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 13%, 91% 13%, 91% 24%, 100% 24%, 100% 100%, 28% 100%, 28% 95%, 18% 95%, 18% 100%, 0 100%);
   font-weight: bold;
   padding: 10px;
-  -webkit-clip-path: polygon(34% 0, 34% 12%, 47% 12%, 47% 0, 63% 0, 63% 11%, 100% 11%, 100% 100%, 18% 100%, 17% 0);
-          clip-path: polygon(34% 0, 34% 12%, 47% 12%, 47% 0, 63% 0, 63% 11%, 100% 11%, 100% 100%, 18% 100%, 17% 0);
 }
 
 section ul {
@@ -303,10 +303,6 @@ section ul li .image-wrapper figure:hover figcaption {
           box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #FFF;
 }
 
-.joke-panel .joke-right .joke-label {
-  color: inherit;
-}
-
 .joke-panel .joke-right #joke-content {
   color: white;
 }
@@ -373,5 +369,15 @@ p {
 
 .weird-o {
   color: #005DFF;
+}
+
+[draggable] {
+  position: absolute;
+}
+
+.ui-dragging {
+  will-change: transform;
+  -webkit-touch-callout: none;
+  z-index: 1;
 }
 /*# sourceMappingURL=main.css.map */
