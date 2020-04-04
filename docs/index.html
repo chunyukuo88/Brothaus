@@ -68,14 +68,17 @@
         
         <section class="joke-right">
             <p class="joke-label">The lousy joke shows up here!</p>
-            <p id="joke-content"></p>
+            <p id="joke-content">Insert lousy joke here</p>
+            <p onclick="copyToClipboard()" class="copy-button">Copy joke</p>
         </section>
     </wrapper>
 
-    <div draggable class="box-one ui-drag" data-container=".box-one">
-        <img draggable="true" class="ui-drag" src="images/pita.png">
-    </div>
+    <!-- <div draggable class="box-one ui-drag" data-container=".box-one">
+        <img draggable="true" class="ui-drag" src="images/coronaBrot.png">
+    </div> -->
+
     <script src="./burger.js"></script>
+    <script src="./copyJoke.js"></script>
     <script src="./foto.js"></script>
     <script src="./joke.js"></script>
     <script src="./localize.js"></script>
@@ -87,9 +90,15 @@
 </body>
 <footer>
     <ul class="footer-container">
-        <li class="footer-content" id="with-crumbs"><p>Have a l<span class="red-o">o</span>vely pita.</p></li>
-        <li class="footer-content" id="coming-soon"><p>Click and drag it a<span class="weird-o">r</span>ound!</p></li>
-        <li class="footer-content" id="copyright"><p>&copy; Alex Gochen<span class="weird-o">o</span>ur 2020</p></li>
+        <li class="footer-content" id="with-crumbs">
+            <p>H<span class="red-o">a</span>ve some Corona bread.</p>
+        </li>
+        <li class="footer-content" id="coming-soon">
+            <p>Click and drag it a<span class="weird-o">r</span>ound!</p>
+        </li>
+        <li class="footer-content" id="copyright">
+            <p>&copy; Alex Gochen<span class="weird-o">o</span>ur 2020</p>
+        </li>
     </ul>
 </footer>
 </html>
