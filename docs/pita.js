@@ -68,12 +68,6 @@ const setTranslate = (x, y, element) => {
       }
     });
   }
-  
-  
-  /*************
-   * DEMO CODE *
-   *************/
-  
   let zIndex = 100;
   
   document.querySelectorAll('[draggable]').forEach((element) => {
@@ -84,13 +78,6 @@ const setTranslate = (x, y, element) => {
       dragElement: data.dragElement,
       onDragStart(e, element, x, y) {
         element.style.zIndex = zIndex++;
-        // console.log('DRAG START',e, element, x, y);
-      },
-      // onDrag(e, element, x, y) {
-      //   console.log('DRAGGING', e, element, x, y);
-      // },
-      // onDragEnd(e, element, x, y) {
-        // console.log('DRAG END',e, element, x, y);
-      // }
+      }
     });
   });
