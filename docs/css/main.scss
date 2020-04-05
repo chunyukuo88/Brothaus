@@ -46,7 +46,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    background-color: linear-gradient(black, gray);
+    background: radial-gradient(circle, rgba(206,232,151,1) 0%, rgba(148,187,233,1) 100%);
     margin: $margin-distance;
     padding: $padding-distance;
     text-align: center;
