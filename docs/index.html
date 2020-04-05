@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="./css/joke.css">
     <link rel="stylesheet" href="./css/loader.css" media="screen">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/pita.css">
     <link rel="stylesheet" href="./css/snackbar.css">
     <link rel="stylesheet" href="./css/scrollbar.css">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Indie+Flower|Luckiest+Guy|Ma+Shan+Zheng|ZCOOL+KuaiLe&display=swap" rel="stylesheet">
@@ -69,7 +68,9 @@
         <section class="joke-right">
             <p class="joke-label">The lousy joke shows up here!</p>
             <p id="joke-content"></p>
-            <p onclick="copyToClipboard()" class="copy-button">Copy joke to clipboard</p>
+            <div class="joke-button red" onclick="copyToClipboard()">
+                <p>Copy joke to clipboard</p>
+            </div>
         </section>
     </wrapper>
 

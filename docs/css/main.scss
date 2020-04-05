@@ -215,9 +215,6 @@ section {
     width: 100%;
     .footer-content {
         list-style: none;
-        &:hover{
-            
-        }
     }
 }
 
@@ -247,7 +244,7 @@ p {
     position: absolute;
 }
   
-.ui-dragging {
+.ui-drag {
     will-change: transform;
     -webkit-touch-callout: none;
     z-index: 1;

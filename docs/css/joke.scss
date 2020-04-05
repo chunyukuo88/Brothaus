@@ -68,6 +68,14 @@
 	background-image:linear-gradient(top, #D25068, #F66C7B);
 }
 
-.copy-button, .joke-label {
-	color: yellow;
+.joke-label,
+.copy-button {
+	color: purple;
 }
+
+// .copy-button {
+// 	color: green;
+// 	&:hover{
+// 		color: purple;
+// 	}
+// }
