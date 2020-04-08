@@ -10,3 +10,6 @@ https://online-converting.com/image/convert-to-svg/
 
 I used this to produce .webp files:
 https://image.online-convert.com/convert-to-webp
+
+I used this to compress .webp files:
+https://www.ps2pdf.com/compress-webp
