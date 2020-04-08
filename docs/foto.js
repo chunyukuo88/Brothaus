@@ -10,6 +10,7 @@ class myFoto extends HTMLElement {
     const figure = document.createElement('figure');
     const image = document.createElement('img');
       image.setAttribute('class', 'foto');
+      image.setAttribute('loading', 'lazy');
     const caption = document.createElement('figcaption');
       caption.setAttribute('class', 'caption');
     let text = this.getAttribute('text');
