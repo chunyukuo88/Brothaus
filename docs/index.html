@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/snackbar.css">
     <link rel="stylesheet" href="./css/scrollbar.css">
+    <link rel="stylesheet" href="./css/snackbarForClipboard.css">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Indie+Flower|Luckiest+Guy|Ma+Shan+Zheng|ZCOOL+KuaiLe&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
 </head>
@@ -81,8 +82,12 @@
         <section class="joke-right">
             <p class="joke-label">The lousy joke shows up here!</p>
             <p id="joke-content"></p>
-            <div class="joke-button red" onclick="copyToClipboard()">
+            <div class="joke-button red" 
+                 id="toast-trigger" 
+                 onclick="copyToClipboard()"
+            >
                 <p>Copy joke to clipboard</p>
+                <p id="joke-snackbar">Joke has been copied!</p>
             </div>
         </section>
     </wrapper>
