@@ -1,7 +1,10 @@
 function copyToClipboard() {
-  createTextElement();
-  displayJokeSnackbar();
-  removeTextElement();
+  let jokeContent = document.getElementById('joke-content').innerHTML;
+  if (jokeContent.length > 0){
+    createTextElement();
+    displayJokeSnackbar();
+    removeTextElement();
+  }
 };
 
 function createTextElement(){
