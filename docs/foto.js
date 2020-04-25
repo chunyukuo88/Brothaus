@@ -144,8 +144,8 @@ class myFoto extends HTMLElement {
     li .image-wrapper figure img {
       height: 48rem;
       width: 48rem;
-      -webkit-clip-path: polygon(0 0, 9% 7%, 15% 0%, 22% 8%, 32% 0, 100% 0, 100% 100%, 92% 93%, 88% 100%, 79% 93%, 72% 100%, 0 100%);
-      clip-path: polygon(0 0, 9% 7%, 15% 0%, 22% 8%, 32% 0, 100% 0, 100% 100%, 92% 93%, 88% 100%, 79% 93%, 72% 100%, 0 100%);
+      -webkit-clip-path: polygon(0 0, 11% 0, 11% 7%, 19% 7%, 19% 0, 100% 0, 100% 100%, 39% 100%, 39% 94%, 30% 94%, 30% 100%, 0 100%);
+      clip-path: polygon(0 0, 11% 0, 11% 7%, 19% 7%, 19% 0, 100% 0, 100% 100%, 39% 100%, 39% 94%, 30% 94%, 30% 100%, 0 100%);
     }
     
     li .image-wrapper figure figcaption {
