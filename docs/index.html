@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./css/scrollbar.css">
     <link rel="stylesheet" href="./css/snackbarForClipboard.css">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Indie+Flower|Luckiest+Guy|Ma+Shan+Zheng|ZCOOL+KuaiLe&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png" href="./images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="./images/z_favicon.png">
 </head>
 <body onload="renderTemp(), 
               renderConditions(), 
@@ -40,7 +40,7 @@
         </nav>
     </header>
 
-    <section class="six-fot">
+    <!-- <section class="six-fot">
         <ul>
             <li>
                 <fot-foto text="Woobler often climbs into his train, whether or not The Fourth is around to transport him to distant lands." 
@@ -75,10 +75,10 @@
                           img="./images/h.png"></fot-foto>
             </li>
         </ul>
-    </section>
-  <div draggable class="box-one ui-drag" data-container=".box-one">
-    <img draggable="true" class="ui-drag" src="./images/koronaBrot.png">
-</div>
+    </section> -->
+  <!-- <div draggable class="box-one ui-drag" data-container=".box-one">
+    <img draggable="true" class="ui-drag" src="./images/z_koronaBrot.png">
+</div> -->
 
     <wrapper class="joke-panel">
         <ul class="joke-left">
@@ -121,6 +121,7 @@
     <script src="./randomFact.js"></script>
     <script src="./registration.js"></script>
     <script src="./snackbar.js"></script>
+    <script src="./selectableFact.js"></script>
     <script src="./weather.js"></script>
 </body>
 <footer>
@@ -135,5 +136,6 @@
             <p>&copy; Alex Gochen<span class="weird-o">o</span>ur 2020</p>
         </li>
     </ul>
+    <button onclick="selectableFact(2)">Fact</button>
 </footer>
 </html>
