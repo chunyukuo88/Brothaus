@@ -15,24 +15,34 @@
     <link rel="stylesheet" href="./docs/css/snackbarForClipboard.css">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Indie+Flower|Luckiest+Guy|Ma+Shan+Zheng|ZCOOL+KuaiLe&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="./docs/images/z_favicon.png">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168681251-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-168681251-1');
+    </script>
+
 </head>
-<body onload="renderTemp(), 
-              renderConditions(), 
+<body onload="renderTemp(),
+              renderConditions(),
               fetchJoke()
               ">
     <div class="loader" onload="produceRandomFact()"></div>
-    
+
     <div id="snackbar">Made with vanilla JavaScript, Sass, and Web Components.</div>
     <div id="language-switch" class="English"></div>
     <header class="header">
-        <h1 id="wooblers-house">Woobler's H<span class="red-o">o</span>use</h1>        
+        <h1 id="wooblers-house">Woobler's H<span class="red-o">o</span>use</h1>
         <nav class="dropdown">
             <button onclick="showOrHideMenu()" id="bread-button" class="drop-button">🍞</button>
             <div id="myDropdown" class="dropdown-content">
                 <a></a>
                 <a onclick="snackbar()" id="about">About</a>
                 <a id="repo" href="https://github.com/chunyukuo88/Brothaus" target="_blank">Code</a>
-                <a id="columbus-weather"> 
+                <a id="columbus-weather">
                     <span id="cbus-temp"></span>°F and <span id="cbus-conditions">lovely</span>
                 </a>
                 <a onclick="changeLanguage()" id="chinese">華語版本</a>
@@ -43,7 +53,7 @@
     <section class="six-fot">
         <ul>
             <li>
-                <fot-foto text="Friday night is game night. The Fourth has been interested in creepy sidescrollers by the Danish studio called Playdead Games." 
+                <fot-foto text="Friday night is game night. The Fourth has been interested in creepy sidescrollers by the Danish studio called Playdead Games."
                           img="./docs/images/a.png"></fot-foto>
             </li>
             <li>
@@ -55,15 +65,15 @@
                           img="./docs/images/c.png"></fot-foto>
             </li>
             <li>
-                <fot-foto text="Rabbit Park." 
+                <fot-foto text="Rabbit Park."
                           img="./docs/images/d.png"></fot-foto>
             </li>
             <li>
-                <fot-foto text="Coconut flour might as well be called coconut cement mix. It is extremely absorbant and is also quite horrible. Here is my sad attempt at a Dutch baby using this vilest of ingredients. It tasted as bad as it looked and practically begged to leap into the trash can." 
+                <fot-foto text="Coconut flour might as well be called coconut cement mix. It is extremely absorbant and is also quite horrible. Here is my sad attempt at a Dutch baby using this vilest of ingredients. It tasted as bad as it looked and practically begged to leap into the trash can."
                           img="./docs/images/e.png"></fot-foto>
             </li>
             <li>
-                <fot-foto text="Scootering about in the shade in the enclosed storage area next to Burlington." 
+                <fot-foto text="Scootering about in the shade in the enclosed storage area next to Burlington."
                           img="./docs/images/f.png"></fot-foto>
             </li>
         </ul>
@@ -81,12 +91,12 @@
                 </div>
             </li>
         </ul>
-        
+
         <section class="joke-right">
             <p class="joke-label">The lousy joke shows up here!</p>
             <p id="joke-content"></p>
-            <div class="joke-button red" 
-                 id="toast-trigger" 
+            <div class="joke-button red"
+                 id="toast-trigger"
                  onclick="copyToClipboard()"
             >
                 <p>Copy joke to clipboard</p>
@@ -94,15 +104,15 @@
         </section>
     </wrapper>
     <p id="joke-snackbar">Joke has been copied!</p>
-    
+
     <!-- <section class="registration-container">
         <button class="registration-button"
                 onclick="registration()"
         >Register!</button>
         <p id="registration-confirmation"></p>
     </section> -->
-    
-    
+
+
     <script src="./docs/burger.js"></script>
     <script src="./docs/copyJoke.js"></script>
     <script src="./docs/foto.js"></script>
