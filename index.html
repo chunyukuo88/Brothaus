@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Howzit howzit</title>
+    <script>
+        dataLayer = [];
+    </script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -24,14 +27,14 @@
     <link rel="shortcut icon" type="image/png" href="./docs/images/z_favicon.png">
 
 </head>
-<body onload="renderTemp(),
-              renderConditions(),
-              fetchJoke()
-              ">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVNPQSJ"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+<body onload="renderTemp(),
+              renderConditions(),
+              fetchJoke()
+              ">
 
 <div class="loader" onload="produceRandomFact()"></div>
 
@@ -43,12 +46,22 @@
         <button onclick="showOrHideMenu()" id="bread-button" class="drop-button">🍞</button>
         <div id="myDropdown" class="dropdown-content">
             <a></a>
-            <a onclick="snackbar()" id="about">About</a>
-            <a id="repo" href="https://github.com/chunyukuo88/Brothaus" target="_blank">Code</a>
+            <a onclick="snackbar()"
+               id="about"
+               onclick="dataLayer.push({'event': 'about-click'});"
+            >About</a>
+            <a id="repo"
+               href="https://github.com/chunyukuo88/Brothaus"
+               target="_blank"
+               onclick="dataLayer.push({'event': 'github-click'});"
+            >Code</a>
             <a id="columbus-weather">
                 <span id="cbus-temp"></span>°F and <span id="cbus-conditions">lovely</span>
             </a>
-            <a onclick="changeLanguage()" id="chinese">華語版本</a>
+            <a onclick="changeLanguage()"
+               id="chinese"
+               onclick="dataLayer.push({'event': 'localization-click'});"
+            >華語版本</a>
         </div>
     </nav>
 </header>
