@@ -4,17 +4,29 @@ class myFoto extends HTMLElement {
     const shadow = this.attachShadow({mode: 'open'});
 
     //create elements within the custom element:
-    const listItem = document.createElement('li');
-    const wrapper = document.createElement('wrapper');
-      wrapper.setAttribute('class', 'image-wrapper');
-    const figure = document.createElement('figure');
-    const image = document.createElement('img');
-      image.setAttribute('class', 'foto');
-      image.setAttribute('loading', 'lazy');
-    const caption = document.createElement('figcaption');
-      caption.setAttribute('class', 'caption');
+    
+    // const listItem = document.createElement('li');
+    // const wrapper = document.createElement('wrapper');
+      // wrapper.setAttribute('class', 'image-wrapper');
+    // const figure = document.createElement('figure');
+    // const image = document.createElement('img');
+    //   image.setAttribute('class', 'foto');
+    //   image.setAttribute('loading', 'lazy');
+    // const caption = document.createElement('figcaption');
+    //   caption.setAttribute('class', 'caption');
     let text = this.getAttribute('text');
       caption.textContent = text;
+
+    const listItem = `
+      <li>
+        <wrapper class="image-wrapper">
+          <figure>
+            <img class="foto" loading="lazy"/>
+            <caption class="caption"></caption>
+          </figure>
+        </wrapper>
+      </li>
+    `
 
     // Insert icon
     let imgUrl;
