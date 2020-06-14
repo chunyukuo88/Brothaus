@@ -1,3 +1,13 @@
+@media screen and (max-width: 663px) {
+    .caption {
+        background-color: blue;
+    }
+
+    #dragable-bread {
+        visibility: hidden;
+    }
+}
+
 $colors: (
     primary: rgb(255, 145, 72),
     primary-light: lighten(rgb(255, 220, 106), 50%),

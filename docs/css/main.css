@@ -1,4 +1,13 @@
 @charset "UTF-8";
+@media screen and (max-width: 663px) {
+  .caption {
+    background-color: blue;
+  }
+  #dragable-bread {
+    visibility: hidden;
+  }
+}
+
 @-webkit-keyframes shake {
   0% {
     -webkit-transform: rotate(0deg);
@@ -45,6 +54,7 @@
             transform: rotate(-3deg);
   }
 }
+
 @keyframes shake {
   0% {
     -webkit-transform: rotate(0deg);
