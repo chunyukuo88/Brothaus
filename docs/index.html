@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Howzit howzit</title>
+<<<<<<< HEAD:docs/index.html
     <link rel="stylesheet" href="./css/burger.css">
     <link rel="stylesheet" href="./css/joke.css">
     <link rel="stylesheet" href="./css/loader.css" media="screen">
@@ -15,11 +16,38 @@
     <link rel="stylesheet" href="./css/snackbarForClipboard.css">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Indie+Flower|Luckiest+Guy|Ma+Shan+Zheng|ZCOOL+KuaiLe&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="./images/z_favicon.png">
+=======
+    <script>
+        dataLayer = [];
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KVNPQSJ');</script>
+    <!-- End Google Tag Manager -->
+    <link rel="stylesheet" href="./docs/css/burger.css">
+    <link rel="stylesheet" href="./docs/css/joke.css">
+    <link rel="stylesheet" href="./docs/css/loader.css" media="screen">
+    <link rel="stylesheet" href="./docs/css/main.css">
+    <link rel="stylesheet" href="./docs/css/snackbar.css">
+    <link rel="stylesheet" href="./docs/css/scrollbar.css">
+    <link rel="stylesheet" href="./docs/css/snackbarForClipboard.css">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Indie+Flower|Luckiest+Guy|Ma+Shan+Zheng|ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="./docs/images/z_favicon.png">
+
+>>>>>>> 516bd748e6a46ba9d19053ac5836465483fc196d:index.html
 </head>
-<body onload="renderTemp(), 
-              renderConditions(), 
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVNPQSJ"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<body onload="renderTemp(),
+              renderConditions(),
               fetchJoke()
               ">
+<<<<<<< HEAD:docs/index.html
     <div class="loader" onload="produceRandomFact()"></div>
     
     <div id="snackbar">Made with vanilla JavaScript, Sass, and Web Components.</div>
@@ -68,26 +96,79 @@
   <div  draggable class="box-one ui-drag" data-container=".box-one">
     <img id="dragable-bread" draggable="true" class="ui-drag" src="./images/z_koronaBrot.png">
   </div>
+=======
 
-    <wrapper class="joke-panel">
-        <ul class="joke-left">
-            <li><p class="joke-instructions">Click the button for a lousy joke!</p></li>
-            <li>
-                <div class="joke-button red" onclick="renderJoke()">
-                    <p>Lousy joke</p>
-                </div>
-            </li>
-        </ul>
-        
-        <section class="joke-right">
-            <p class="joke-label">The lousy joke shows up here!</p>
-            <p id="joke-content"></p>
-            <div class="joke-button red" 
-                 id="toast-trigger" 
-                 onclick="copyToClipboard()"
-            >
-                <p>Copy joke to clipboard</p>
+<div class="loader" onload="produceRandomFact()"></div>
+
+<div id="snackbar">Made with vanilla JavaScript, Sass, and Web Components.</div>
+<div id="language-switch" class="English"></div>
+<header class="header">
+    <h1 id="wooblers-house">Woobler's H<span class="red-o">o</span>use</h1>
+    <nav class="dropdown">
+        <button onclick="showOrHideMenu()" id="bread-button" class="drop-button">🍞</button>
+        <div id="myDropdown" class="dropdown-content">
+            <a></a>
+            <a onclick="snackbar()"
+               id="about"
+               onclick="dataLayer.push({'event': 'about-click'});"
+            >About</a>
+            <a id="repo"
+               href="https://github.com/chunyukuo88/Brothaus"
+               target="_blank"
+               onclick="dataLayer.push({'event': 'github-click'});"
+            >Code</a>
+            <a id="columbus-weather">
+                <span id="cbus-temp"></span>°F and <span id="cbus-conditions">lovely</span>
+            </a>
+            <a onclick="changeLanguage()"
+               id="chinese"
+               onclick="dataLayer.push({'event': 'localization-click'});"
+            >華語版本</a>
+        </div>
+    </nav>
+</header>
+
+<section class="six-fot">
+    <ul>
+        <li>
+            <fot-foto text="Friday night is game night. The Fourth has been interested in creepy sidescrollers by the Danish studio called Playdead Games."
+                      img="./docs/images/a.png"></fot-foto>
+        </li>
+        <li>
+            <fot-foto text="Homemade ciabatta is all the better when deployed with a squisloissel of honey mustard and ajvar, the wonder drug from the Caucasus. Ajvar is a love letter to the nightshade family; it is made with tomato, red bell pepper, and eggplant."
+                      img="./docs/images/b.png"></fot-foto>
+        </li>
+        <li>
+            <fot-foto text="Mugi bought some glasses for us to wear while reading Roald Dahl's 'The BFG'."
+                      img="./docs/images/c.png"></fot-foto>
+        </li>
+        <li>
+            <fot-foto text="Rabbit Park."
+                      img="./docs/images/d.png"></fot-foto>
+        </li>
+        <li>
+            <fot-foto text="Coconut flour might as well be called coconut cement mix. It is extremely absorbant and is also quite horrible. Here is my sad attempt at a Dutch baby using this vilest of ingredients. It tasted as bad as it looked and practically begged to leap into the trash can."
+                      img="./docs/images/e.png"></fot-foto>
+        </li>
+        <li>
+            <fot-foto text="Scootering about in the shade in the enclosed storage area next to Burlington."
+                      img="./docs/images/f.png"></fot-foto>
+        </li>
+    </ul>
+</section>
+<div draggable class="box-one ui-drag" data-container=".box-one">
+    <img draggable="true" class="ui-drag" src="./docs/images/z_koronaBrot.png">
+</div>
+>>>>>>> 516bd748e6a46ba9d19053ac5836465483fc196d:index.html
+
+<wrapper class="joke-panel">
+    <ul class="joke-left">
+        <li><p class="joke-instructions">Click the button for a lousy joke!</p></li>
+        <li>
+            <div class="joke-button red" onclick="renderJoke()">
+                <p>Lousy joke</p>
             </div>
+<<<<<<< HEAD:docs/index.html
         </section>
     </wrapper>
     <p id="joke-snackbar">Joke has been copied!</p>
@@ -112,6 +193,44 @@
     <script src="./snackbar.js"></script>
     <script src="./selectableFact.js"></script>
     <script src="./weather.js"></script>
+=======
+        </li>
+    </ul>
+
+    <section class="joke-right">
+        <p class="joke-label">The lousy joke shows up here!</p>
+        <p id="joke-content"></p>
+        <div class="joke-button red"
+             id="toast-trigger"
+             onclick="copyToClipboard()"
+        >
+            <p>Copy joke to clipboard</p>
+        </div>
+    </section>
+</wrapper>
+<p id="joke-snackbar">Joke has been copied!</p>
+
+<!-- <section class="registration-container">
+    <button class="registration-button"
+            onclick="registration()"
+    >Register!</button>
+    <p id="registration-confirmation"></p>
+</section> -->
+
+
+<script src="./docs/burger.js"></script>
+<script src="./docs/copyJoke.js"></script>
+<script src="./docs/foto.js"></script>
+<script src="./docs/joke.js"></script>
+<script src="./docs/localize.js"></script>
+<script src="./docs/loader.js"></script>
+<script src="./docs/pita.js"></script>
+<script src="./docs/randomFact.js"></script>
+<script src="./docs/registration.js"></script>
+<script src="./docs/snackbar.js"></script>
+<script src="./docs/selectableFact.js"></script>
+<script src="./docs/weather.js"></script>
+>>>>>>> 516bd748e6a46ba9d19053ac5836465483fc196d:index.html
 </body>
 <footer>
     <ul class="footer-container">
