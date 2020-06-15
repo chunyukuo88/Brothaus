@@ -23,7 +23,6 @@ class myFoto extends HTMLElement {
     image.src = imgUrl;
 
     //Style
-    const linkElem = document.createElement('link');
     const style = document.createElement('style');
     style.textContent = `
     li {
@@ -32,50 +31,48 @@ class myFoto extends HTMLElement {
       width: 55rem;
     }
     
-    li .image-wrapper {
+    .image-wrapper {
       height: 50rem;
       width: 50rem;
     }
     
-    li .image-wrapper figure {
+    .image-wrapper figure {
       position: relative;
       display: block;
       margin: 5px 0 10px 0;
       width: 350px;
     }
     
-    li .image-wrapper figure img {
+    .image-wrapper figure img {
       height: 48rem;
       width: 48rem;
       -webkit-clip-path: polygon(0 0, 11% 0, 11% 7%, 19% 7%, 19% 0, 100% 0, 100% 100%, 39% 100%, 39% 94%, 30% 94%, 30% 100%, 0 100%);
       clip-path: polygon(0 0, 11% 0, 11% 7%, 19% 7%, 19% 0, 100% 0, 100% 100%, 39% 100%, 39% 94%, 30% 94%, 30% 100%, 0 100%);
     }
     
-    li .image-wrapper figure figcaption {
+    .image-wrapper figure figcaption {
       -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
               clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      height: 50%;
-      left: 70%;
-      overflow-wrap: anywhere;
-      position: absolute;
-      top: 20%;
-      width: 100%;
+      justify-content: center;
+      align-items: center;
+      
       background-color: orange;
       color: #FFF6BB;
       font-family: "Fredoka One";
       font-size: 1.2rem;
       opacity: 0;
-      -webkit-transition: opacity .5s ease-in-out;
+      
+      height: 50%;
+      width: 100%;
+      left: 70%;
+      top: 20%;
+      overflow-wrap: anywhere;
+      position: absolute;
       transition: opacity .5s ease-in-out;
+      
       padding: 15px;
       border: 15px;
       margin: 0 auto;
@@ -85,11 +82,9 @@ class myFoto extends HTMLElement {
       opacity: 0.93;
       -webkit-transition: ease-in-out;
       transition: ease-in-out;
-    }
-    `;
+    }`;
 
     //Assembly
-    shadow.appendChild(linkElem);
     shadow.appendChild(style);
     shadow.appendChild(listItem);
     listItem.appendChild(wrapper);
