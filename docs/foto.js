@@ -2,10 +2,10 @@ class myFoto extends HTMLElement {
   constructor() {
     super();
   }
-  connectedCallback(){
-    const shadow = this.attachShadow({mode: 'open'});
 
-    //create elements within the custom element:
+  connectedCallback(){
+    //Pieces
+    const shadow = this.attachShadow({mode: 'open'});
     const listItem = document.createElement('li');
     const wrapper = document.createElement('wrapper');
     wrapper.setAttribute('class', 'image-wrapper');
@@ -16,114 +16,16 @@ class myFoto extends HTMLElement {
     const caption = document.createElement('figcaption');
     caption.setAttribute('class', 'caption');
 
-    let text = this.getAttribute('text');
+    //Attributes
+    const text = this.getAttribute('text');
     caption.textContent = text;
-
-    // Insert icon
-    let imgUrl;
-    if (this.hasAttribute('img')) {
-      imgUrl = this.getAttribute('img');
-    } else {
-      imgUrl = 'images/default.png';
-    }
+    const imgUrl = (this.hasAttribute('img')) ? this.getAttribute('img'): 'images/default.png';
     image.src = imgUrl;
-    // Apply external styles to the shadow dom
+
+    //Style
     const linkElem = document.createElement('link');
-    let style = document.createElement('style');
-    style.textContent =
-        `
-    @-webkit-keyframes shake {
-      0% {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-      }
-      10% {
-        -webkit-transform: rotate(-3deg);
-                transform: rotate(-3deg);
-      }
-      20% {
-        -webkit-transform: rotate(3deg);
-                transform: rotate(3deg);
-      }
-      30% {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-      }
-      40% {
-        -webkit-transform: rotate(3deg);
-                transform: rotate(3deg);
-      }
-      50% {
-        -webkit-transform: rotate(-3deg);
-                transform: rotate(-3deg);
-      }
-      60% {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-      }
-      70% {
-        -webkit-transform: rotate(-3deg);
-                transform: rotate(-3deg);
-      }
-      80% {
-        -webkit-transform: rotate(3deg);
-                transform: rotate(3deg);
-      }
-      90% {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-      }
-      100% {
-        -webkit-transform: rotate(-3deg);
-                transform: rotate(-3deg);
-      }
-    }
-    @keyframes shake {
-      0% {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-      }
-      10% {
-        -webkit-transform: rotate(-3deg);
-                transform: rotate(-3deg);
-      }
-      20% {
-        -webkit-transform: rotate(3deg);
-                transform: rotate(3deg);
-      }
-      30% {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-      }
-      40% {
-        -webkit-transform: rotate(3deg);
-                transform: rotate(3deg);
-      }
-      50% {
-        -webkit-transform: rotate(-3deg);
-                transform: rotate(-3deg);
-      }
-      60% {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-      }
-      70% {
-        -webkit-transform: rotate(-3deg);
-                transform: rotate(-3deg);
-      }
-      80% {
-        -webkit-transform: rotate(3deg);
-                transform: rotate(3deg);
-      }
-      90% {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-      }
-      100% {
-        -webkit-transform: rotate(-3deg);
-                transform: rotate(-3deg);
-      }
-    }
+    const style = document.createElement('style');
+    style.textContent = `
     li {
       list-style: none;
       height: 55rem;
@@ -180,18 +82,15 @@ class myFoto extends HTMLElement {
     }
     
     li .image-wrapper figure:hover figcaption {
-      -webkit-animation: shake 15s;
-              animation: shake 15s;
-      -webkit-animation-iteration-count: infinite;
-              animation-iteration-count: infinite;
       opacity: 0.93;
       -webkit-transition: ease-in-out;
       transition: ease-in-out;
     }
     `;
+
+    //Assembly
     shadow.appendChild(linkElem);
     shadow.appendChild(style);
-    // Attach the other created elements to the shadow dom
     shadow.appendChild(listItem);
     listItem.appendChild(wrapper);
     wrapper.appendChild(figure);
@@ -199,5 +98,5 @@ class myFoto extends HTMLElement {
     figure.appendChild(caption);
   }
 }
-// Define the new element
+
 customElements.define('fot-foto', myFoto);
