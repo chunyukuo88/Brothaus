@@ -1,23 +1,33 @@
 class myFoto extends HTMLElement {
   constructor() {
     super();
-    this._caption;
-    this._figure;
   }
   connectedCallback(){
     const shadow = this.attachShadow({mode: 'open'});
-    //-------------Creating the core HTML:-------------
+
+    //create elements within the custom element:
     const listItem = document.createElement('li');
     const wrapper = document.createElement('wrapper');
     wrapper.setAttribute('class', 'image-wrapper');
-    this._figure = document.createElement('figure');
+    const figure = document.createElement('figure');
     const image = document.createElement('img');
     image.setAttribute('class', 'foto');
     image.setAttribute('loading', 'lazy');
-    image.addEventListener('mouseenter', this._showCaption.bind(this));
-    image.addEventListener('mouseleave', this._hideCaption.bind(this))
+    const caption = document.createElement('figcaption');
+    caption.setAttribute('class', 'caption');
 
-    //-------------Creating the style:-------------
+    let text = this.getAttribute('text');
+    caption.textContent = text;
+
+    // Insert icon
+    let imgUrl;
+    if (this.hasAttribute('img')) {
+      imgUrl = this.getAttribute('img');
+    } else {
+      imgUrl = 'images/default.png';
+    }
+    image.src = imgUrl;
+    // Apply external styles to the shadow dom
     const linkElem = document.createElement('link');
     let style = document.createElement('style');
     style.textContent =
@@ -181,28 +191,13 @@ class myFoto extends HTMLElement {
     `;
     shadow.appendChild(linkElem);
     shadow.appendChild(style);
-
-    ////-------------Assembling the core HTML:-------------
+    // Attach the other created elements to the shadow dom
     shadow.appendChild(listItem);
     listItem.appendChild(wrapper);
-    wrapper.appendChild(this._figure);
-    this._figure.appendChild(image);
-
-
-    ////-------------Using the "props":-------------
-    const imgUrl = this.hasAttribute('img') ? this.getAttribute('img') : 'images/default.png';
-    image.src = imgUrl;
+    wrapper.appendChild(figure);
+    figure.appendChild(image);
+    figure.appendChild(caption);
   }
-
-  _showCaption(){
-    this._caption = document.createElement('figcaption');
-    this._caption.setAttribute('class', 'caption');
-    let text = this.getAttribute('text');
-    this._caption.textContent = text;
-    this._figure.appendChild(this._caption);
-  }
-
 }
-
-//-------------Define the new element:-------------
+// Define the new element
 customElements.define('fot-foto', myFoto);
