@@ -1,48 +1,27 @@
 class myFoto extends HTMLElement {
   constructor() {
     super();
+    this._caption;
+    this._figure;
+  }
+  connectedCallback(){
     const shadow = this.attachShadow({mode: 'open'});
+    //-------------Creating the core HTML:-------------
+    const listItem = document.createElement('li');
+    const wrapper = document.createElement('wrapper');
+    wrapper.setAttribute('class', 'image-wrapper');
+    this._figure = document.createElement('figure');
+    const image = document.createElement('img');
+    image.setAttribute('class', 'foto');
+    image.setAttribute('loading', 'lazy');
+    image.addEventListener('mouseenter', this._showCaption.bind(this));
+    image.addEventListener('mouseleave', this._hideCaption.bind(this))
 
-    //create elements within the custom element:
-    
-    // const listItem = document.createElement('li');
-    // const wrapper = document.createElement('wrapper');
-      // wrapper.setAttribute('class', 'image-wrapper');
-    // const figure = document.createElement('figure');
-    // const image = document.createElement('img');
-    //   image.setAttribute('class', 'foto');
-    //   image.setAttribute('loading', 'lazy');
-    // const caption = document.createElement('figcaption');
-    //   caption.setAttribute('class', 'caption');
-    let text = this.getAttribute('text');
-      caption.textContent = text;
-
-    const listItem = `
-      <li>
-        <wrapper class="image-wrapper">
-          <figure>
-            <img class="foto" loading="lazy"/>
-            <caption class="caption"></caption>
-          </figure>
-        </wrapper>
-      </li>
-    `
-
-    // Insert icon
-    let imgUrl;
-    if (this.hasAttribute('img')) {
-      imgUrl = this.getAttribute('img');
-    } else {
-      imgUrl = 'images/default.png';
-    }
-    image.src = imgUrl;
-
-      // Apply external styles to the shadow dom 
+    //-------------Creating the style:-------------
     const linkElem = document.createElement('link');
-
     let style = document.createElement('style');
-    style.textContent = 
-    `
+    style.textContent =
+        `
     @-webkit-keyframes shake {
       0% {
         -webkit-transform: rotate(0deg);
@@ -200,18 +179,30 @@ class myFoto extends HTMLElement {
       transition: ease-in-out;
     }
     `;
-      shadow.appendChild(linkElem);
-      shadow.appendChild(style);
+    shadow.appendChild(linkElem);
+    shadow.appendChild(style);
 
-    // Attach the other created elements to the shadow dom
-
+    ////-------------Assembling the core HTML:-------------
     shadow.appendChild(listItem);
     listItem.appendChild(wrapper);
-    wrapper.appendChild(figure);
-    figure.appendChild(image);
-    figure.appendChild(caption);
+    wrapper.appendChild(this._figure);
+    this._figure.appendChild(image);
+
+
+    ////-------------Using the "props":-------------
+    const imgUrl = this.hasAttribute('img') ? this.getAttribute('img') : 'images/default.png';
+    image.src = imgUrl;
   }
+
+  _showCaption(){
+    this._caption = document.createElement('figcaption');
+    this._caption.setAttribute('class', 'caption');
+    let text = this.getAttribute('text');
+    this._caption.textContent = text;
+    this._figure.appendChild(this._caption);
+  }
+
 }
 
-// Define the new element
+//-------------Define the new element:-------------
 customElements.define('fot-foto', myFoto);
