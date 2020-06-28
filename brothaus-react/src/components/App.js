@@ -11,9 +11,6 @@ export default () => {
         <>
             <AccountContextWrapper>
                 <Heading />
-                <Status />
-
-                <Settings />
                 <Foto />
             </AccountContextWrapper>
         </>

@@ -17,7 +17,7 @@ export default () => {
         <div>
             {loggedIn && (
                 <>
-                    <h1>Settings</h1>
+                    <div id='settings-title'>Settings</div>
                     <ChangePassword />
                 </>
             )}
