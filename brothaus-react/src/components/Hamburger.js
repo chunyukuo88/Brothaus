@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import Settings from "./loginStatus/Settings";
-import {AccountContextWrapper} from "../contexts/account-context";
 import DropdownMenuItems from "./DropdownMenuItems";
 
-const Hamburger = () => {
+export default () => {
     const [state, setState] = useState({menuIsActive : false});
 
     const toggleMenuState = () => {
@@ -18,10 +16,12 @@ const Hamburger = () => {
 
     return (
             <div>
-                <div data-test='hamburger' onClick={toggleMenuState}>🍔</div>
+                <h1 data-test='hamburger' onClick={toggleMenuState}>
+                    <span role='image' aria-label="burger menu">
+                        🍔
+                    </span>
+                </h1>
                 <div>{menuItems}</div>
             </div>
     );
 };
-
-export default Hamburger;

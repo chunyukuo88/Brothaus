@@ -42,32 +42,28 @@ const AccountContextWrapper = props => {
             }
         });
 
-    const authenticate = async (Username, Password) =>
-        await new Promise((resolve, reject) => {
-            const user = new CognitoUser({ Username, Pool });
-            const authDetails = new AuthenticationDetails({ Username, Password });
-
-            user.authenticateUser(authDetails, {
-                onSuccess: data => {resolve(data);},
-                onFailure: err => {reject(err);},
-                newPasswordRequired: data => {resolve(data);}
-            });
-        });
-
-    const logout = () => {
-        const user = Pool.getCurrentUser();
-        if (user) user.signOut();
-    }
-
     return (
-        <AccountContext.Provider value={{
-            authenticate,
-            getSession,
-            logout
-        }}>
+        <AccountContext.Provider value={{ authenticate, getSession, logout}}>
             {props.children}
         </AccountContext.Provider>
     );
 };
+
+const logout = () => {
+    const user = Pool.getCurrentUser();
+    if (user) user.signOut();
+};
+
+const authenticate = async (Username, Password) =>
+    await new Promise((resolve, reject) => {
+        const user = new CognitoUser({ Username, Pool });
+        const authDetails = new AuthenticationDetails({ Username, Password });
+
+        user.authenticateUser(authDetails, {
+            onSuccess: data => {resolve(data);},
+            onFailure: err => {reject(err);},
+            newPasswordRequired: data => {resolve(data);}
+        });
+    });
 
 export { AccountContextWrapper, AccountContext };

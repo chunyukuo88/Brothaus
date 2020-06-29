@@ -1,10 +1,9 @@
 import React, {useContext, useEffect, useState} from "react";
 import { AccountContext } from '../contexts/account-context';
 
-
 export default () => {
     const [status, setStatus] = useState(false);
-    const { getSession, logout } = useContext(AccountContext);
+    const { getSession } = useContext(AccountContext);
 
     useEffect(() => {
         getSession()
@@ -12,19 +11,20 @@ export default () => {
                 console.log('Session:', session);
                 setStatus(true);
             })
-    }, []);
+    }, [status]);
 
     return (
         <div>
-            {status ? (
-                <div>
-                    [Public-facing fot fotos go here]
-                </div>
-                ): (
-                <div>
-                    [Members-only fot fotos go here]
-                </div>
-            )}
+            { status && displayPrivateFotFoto() }
+            { !status && displayPublicFotFoto() }
         </div>
     );
 };
+
+const displayPublicFotFoto = () => (
+    <div>[Public-facing fot fotos go here]</div>
+);
+
+const displayPrivateFotFoto = () => (
+    <div>[Members-only fot fotos go here]</div>
+);

@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
-import {AccountContext, AccountContextWrapper} from '../../contexts/account-context';
+import { AccountContext } from '../../contexts/account-context';
 import Login from "./Login";
+import Signup from "./Signup";
 
 export default () => {
     const [status, setStatus] = useState(false);
@@ -12,20 +13,28 @@ export default () => {
                 console.log('Session:', session);
                 setStatus(true);
             })
-    }, []);
+    }, [status]);
 
     return (
         <div>
-            {status ? (
-                <div>
-                    You are logged in.
-                    <button onClick={logout}>Logout</button>
-                </div>
-            ) : (
-                <div>
-                    Please login below.
-                    <Login />
-                </div>)}
+            { status && displayLogOutButton(logout)}
+            { !status && displayLoginAndSignup()}
         </div>
+
     );
 };
+
+const displayLogOutButton = (logout) => (
+    <div>
+        You are logged in.
+        <button onClick={ logout }>Logout</button>
+    </div>
+);
+
+const displayLoginAndSignup = () => (
+        <div>
+            <div>Please login below.</div>
+            <Login />
+            <Signup />
+        </div>
+);

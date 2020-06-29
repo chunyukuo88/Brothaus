@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './style/index.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
+import {AccountContextWrapper} from "./contexts/account-context";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <AccountContextWrapper>
+        <App/>
+      </AccountContextWrapper>
   </React.StrictMode>,
   document.getElementById('root')
 );
