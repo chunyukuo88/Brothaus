@@ -1,10 +1,13 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { AccountContext } from '../../contexts/account-context';
+import { AuthContext }    from '../../contexts/authentication-context';
 import Login from "./Login";
 import Signup from "./Signup";
 
 export default () => {
     const [status, setStatus] = useState(false);
+    const [ authStatus ] = useContext(AuthContext);
+
     const { getSession, logout } = useContext(AccountContext);
 
     useEffect(() => {
@@ -13,12 +16,12 @@ export default () => {
                 console.log('Session:', session);
                 setStatus(true);
             })
-    }, [status, getSession]);
+    }, [authStatus, getSession]);
 
     return (
         <div>
-            { status && displayLogOutButton(logout)}
-            { !status && displayLoginAndSignup()}
+            { status === false && displayLoginAndSignup()}
+            { status === true && displayLogOutButton(logout)}
         </div>
     );
 };
