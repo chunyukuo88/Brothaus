@@ -13,14 +13,13 @@ export default () => {
                 console.log('Session:', session);
                 setStatus(true);
             })
-    }, [status]);
+    }, [status, getSession]);
 
     return (
         <div>
             { status && displayLogOutButton(logout)}
             { !status && displayLoginAndSignup()}
         </div>
-
     );
 };
 

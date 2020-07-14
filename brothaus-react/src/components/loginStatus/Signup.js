@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import UserPool from './UserPool';
+import toggleVisibility from '../../utils/togglePasswordVisibility';
 
 export default () => {
     const [email, setEmail] = useState('');
@@ -14,9 +15,24 @@ export default () => {
 
     return (<div>
                 <form onSubmit={onSubmit}>
-                    <input value={email} onChange={event => setEmail(event.target.value)}/>
-                    <input value={password} onChange={event => setPassword(event.target.value)}/>
-                    <button type='submit'>Signup</button>
+                    <div className="input-container">
+                        <input value={email}
+                               placeholder="Username goes here"
+                               onChange={event => setEmail(event.target.value)}
+                               required/>
+                        <input value={password}
+                               id="signup-password"
+                               placeholder="Password goes here"
+                               type="password"
+                               onChange={event => setPassword(event.target.value)}
+                               required/>
+                        <span><i className="fa fa-eye"
+                                 id="togglePassword"
+                                 aria-hidden="true"
+                                 onClick={()=> toggleVisibility('signup-password')}
+                        ></i></span>
+                        <button type='submit'>Signup</button>
+                    </div>
                 </form>
             </div>);
 };

@@ -5,9 +5,11 @@ export default () => {
     const [state, setState] = useState({menuIsActive : false});
 
     const toggleMenuState = () => {
-        setState({menuIsActive : !state.menuIsActive});
+        setState({ menuIsActive : !state.menuIsActive });
     };
+
     let menuItems = null;
+
     if (state.menuIsActive) {
         menuItems = (
             <DropdownMenuItems />
@@ -16,12 +18,8 @@ export default () => {
 
     return (
             <div>
-                <h1 data-test='hamburger' onClick={toggleMenuState}>
-                    <span role='image' aria-label="burger menu">
-                        🍔
-                    </span>
-                </h1>
-                <div>{menuItems}</div>
+                <h1 data-test='hamburger' onClick={toggleMenuState}>MENU</h1>
+                {menuItems}
             </div>
     );
 };
