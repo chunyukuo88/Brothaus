@@ -1,8 +1,14 @@
 import React, {useContext, useEffect, useState} from "react";
+import { AuthContext }    from '../contexts/authentication-context';
 import { AccountContext } from '../contexts/account-context';
+import FotoPublic from "./FotoPublic";
+import FotoPrivate from "./FotoPrivate";
+
 
 export default () => {
-    const [status, setStatus] = useState(false);
+    const [ status, setStatus ] = useState(false);
+    const [ authStatus ] = useContext(AuthContext);
+
     const { getSession } = useContext(AccountContext);
 
     useEffect(() => {
@@ -10,21 +16,11 @@ export default () => {
             .then(session => {
                 console.log('Session:', session);
                 setStatus(true);
-            })
-    }, [status]);
+        }, [authStatus, getSession]);
+    });
 
-    return (
-        <div>
-            { status && displayPrivateFotFoto() }
-            { !status && displayPublicFotFoto() }
-        </div>
-    );
+    return <>
+            {status === false && <FotoPublic /> }
+            {status === true && <FotoPrivate /> }
+        </>;
 };
-
-const displayPublicFotFoto = () => (
-    <div>[Public-facing fot fotos go here]</div>
-);
-
-const displayPrivateFotFoto = () => (
-    <div>[Members-only fot fotos go here]</div>
-);
