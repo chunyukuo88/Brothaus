@@ -14,13 +14,12 @@ export default () => {
     useEffect(() => {
         getSession()
             .then(session => {
-                console.log('Session:', session);
                 setStatus(true);
         }, [authStatus, getSession]);
     });
 
     return <>
-            {status === false && <FotoPublic /> }
-            {status === true && <FotoPrivate /> }
+            {!status && <FotoPublic /> }
+            { status && <FotoPrivate /> }
         </>;
 };

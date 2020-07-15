@@ -6,17 +6,14 @@ import Signup from "./Signup";
 
 export default () => {
     const [status, setStatus] = useState(false);
-    const [ authStatus ] = useContext(AuthContext);
-
     const { getSession, logout } = useContext(AccountContext);
 
     useEffect(() => {
         getSession()
-            .then(session => {
-                console.log('Session:', session);
+            .then(() => {
                 setStatus(true);
-            })
-    }, [authStatus, getSession]);
+            });
+    }, [status, getSession]);
 
     return (
         <div>
