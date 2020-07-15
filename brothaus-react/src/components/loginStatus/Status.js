@@ -4,8 +4,9 @@ import { AuthContext }    from '../../contexts/authentication-context';
 import Login from "./Login";
 import Signup from "./Signup";
 
-export default () => {
+const Status = () => {
     const [status, setStatus] = useState(false);
+    const [ authStatus ] = useContext(AuthContext);
     const { getSession, logout } = useContext(AccountContext);
 
     useEffect(() => {
@@ -13,7 +14,7 @@ export default () => {
             .then(() => {
                 setStatus(true);
             });
-    }, [status, getSession]);
+    }, [authStatus, getSession]);
 
     return (
         <div>
@@ -23,12 +24,15 @@ export default () => {
     );
 };
 
-const displayLogOutButton = (logout) => (
-    <div>
-        You are logged in.
-        <button onClick={ logout }>Logout</button>
-    </div>
-);
+const displayLogOutButton = (logout) => {
+    return (
+        <div>
+            You are logged in.
+            //TODO: Figure out how to make this re-render the page.
+            <button onClick={ logout }>Logout</button>
+        </div>
+    );
+}
 
 const displayLoginAndSignup = () => (
         <div>
@@ -37,3 +41,5 @@ const displayLoginAndSignup = () => (
             <Signup />
         </div>
 );
+
+export default Status;

@@ -5,6 +5,7 @@ import Pool from '../components/loginStatus/UserPool';
 const AccountContext = createContext();
 
 const AccountContextWrapper = props => {
+
     const getSession = async () =>
         await new Promise((resolve, reject) => {
             const user = Pool.getCurrentUser();
@@ -51,7 +52,10 @@ const AccountContextWrapper = props => {
 
 const logout = () => {
     const user = Pool.getCurrentUser();
-    if (user) user.signOut();
+    if (user) {
+        user.signOut();
+        alert('Refresh the page to register the logout.');
+    }
 };
 
 const authenticate = async (Username, Password) =>
@@ -63,7 +67,7 @@ const authenticate = async (Username, Password) =>
             onSuccess: data => {resolve(data);},
             onFailure: err => {reject(err);},
             newPasswordRequired: data => {resolve(data);}
-        });
     });
+});
 
 export { AccountContextWrapper, AccountContext };

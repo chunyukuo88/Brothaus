@@ -8,7 +8,6 @@ import FotoPrivate from "./FotoPrivate";
 export default () => {
     const [ status, setStatus ] = useState(false);
     const [ authStatus ] = useContext(AuthContext);
-
     const { getSession } = useContext(AccountContext);
 
     useEffect(() => {
