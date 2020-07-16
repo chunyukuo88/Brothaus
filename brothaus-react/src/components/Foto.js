@@ -20,5 +20,5 @@ export default () => {
     return <>
             {!status && <FotoPublic /> }
             { status && <FotoPrivate /> }
-        </>;
+           </>;
 };

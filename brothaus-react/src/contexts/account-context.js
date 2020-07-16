@@ -25,12 +25,10 @@ const AccountContextWrapper = props => {
                                         const { Name, Value } = attribute;
                                         results[Name] = Value;
                                     }
-
                                     resolve(results);
                                 }
                             });
                         });
-
                         resolve({
                             user,
                             ...session,
@@ -54,7 +52,7 @@ const logout = () => {
     const user = Pool.getCurrentUser();
     if (user) {
         user.signOut();
-        alert('Refresh the page to register the logout.');
+        alert('Refresh the page to complete logging out.');
     }
 };
 
