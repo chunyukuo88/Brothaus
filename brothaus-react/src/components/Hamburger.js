@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import DropdownMenuItems from "./DropdownMenuItems";
 
-export default () => {
+const Hamburger = () => {
     const [state, setState] = useState({menuIsActive : false});
 
-    const toggleMenuState = () => {
+    const _toggleMenuState = () => {
         setState({ menuIsActive : !state.menuIsActive });
     };
 
@@ -17,9 +17,11 @@ export default () => {
     };
 
     return (
-            <div>
-                <h1 data-test='hamburger' onClick={toggleMenuState}>MENU</h1>
+            <>
+                <h1 data-test='hamburger' onClick={_toggleMenuState}>MENU</h1>
                 {menuItems}
-            </div>
+            </>
     );
 };
+
+export default Hamburger;

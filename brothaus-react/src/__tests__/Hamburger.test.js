@@ -15,19 +15,21 @@ const findByTestAttr = (wrapper, value) => {
     return wrapper.find(`[data-test="${value}"]`);
 };
 
-it('renders without error.', ()=>{
-   const wrapper = setup();
-   const hamburger = findByTestAttr(wrapper, 'hamburger');
-   expect(hamburger.length).toBe(1);
-});
-
+describe('On load,', ()=>{
+    it('renders without error.', ()=>{
+    const wrapper = setup();
+    const hamburger = findByTestAttr(wrapper, 'hamburger');
+    expect(hamburger.length).toBe(1);
+    });
+})
 describe('When clicked on ', ()=>{
     describe('for the first time, ', ()=>{
-        it('it toggles the navigation state.', ()=>{
+        it('the internal toggle function is invoked.', ()=>{
             const wrapper = setup();
             const hamburger = findByTestAttr(wrapper, 'hamburger');
+            const spy = jest.spyOn(Hamburger, '_toggleMenuState');
             hamburger.simulate('click');
-            expect(hamburger.state).toBe({menuIsActive : true});
+            expect(spy).toHaveBeenCalled();
         });
         it('It also displays the menu items when open.', ()=>{
             const wrapper = setup();
