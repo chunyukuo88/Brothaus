@@ -18,19 +18,22 @@ const findByTestAttr = (wrapper, value) => {
 describe('DropdownMenuItems.js', ()=>{
     const wrapper = setup();
     describe('On load,', ()=>{
-        it('renders without error.', ()=>{
+        it('renders without error, ', ()=>{
             const component = findByTestAttr(wrapper, 'menu-items');
             expect(component.length).toBe(1);
         });
     });
     describe('When the language string is clicked, ', ()=>{
-        it('the the internal toggler function is invoked.', ()=>{
-            const toggler = jest.fn();
+        it('the the internal toggler function is invoked, ', ()=>{
+            const mockToggler = jest.fn();
             const wrapper = shallow(<p id="chinese-or-english"
                                        data-test='language-display'
-                                       onClick={toggler}></p>);
-            wrapper.simulate("click");
-            expect(toggler).toBeCalled();
+                                       onClick={mockToggler}></p>);
+            wrapper.simulate('click');
+            expect(mockToggler).toBeCalled();
+        });
+        it('and the language changes.', ()=>{
+
         });
     });
 });
