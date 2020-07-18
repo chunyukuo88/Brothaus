@@ -21,7 +21,7 @@ describe('On load,', ()=>{
     const hamburger = findByTestAttr(wrapper, 'hamburger');
     expect(hamburger.length).toBe(1);
     });
-})
+});
 describe('When clicked on ', ()=>{
     describe('for the first time, ', ()=>{
         it('the internal toggle function is invoked.', ()=>{
