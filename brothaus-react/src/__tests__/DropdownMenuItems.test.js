@@ -32,9 +32,9 @@ describe('DropdownMenuItems.js', ()=>{
         test('The displayed language string changes to 華語版本.', ()=>{
             const wrapper = shallow(<DropdownMenuItems />);
             const languageDisplay = wrapper.find('#chinese-or-english');
-                                                        console.log('Before click: ', languageDisplay.text());
+            console.log('Before click: ', languageDisplay.text());
             languageDisplay.simulate('click');
-                                                        console.log('After click: ', languageDisplay.text());
+            console.log('After click: ', languageDisplay.text());
             expect(languageDisplay.text()).toEqual('華語版本');
         });
     });
