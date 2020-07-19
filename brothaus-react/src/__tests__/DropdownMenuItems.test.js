@@ -18,22 +18,22 @@ const findByTestAttr = (wrapper, value) => {
 describe('DropdownMenuItems.js', ()=>{
     const wrapper = setup();
     describe('On load,', ()=>{
-        it('renders without error, ', ()=>{
+        test('renders without error, ', ()=>{
             const component = findByTestAttr(wrapper, 'menu-items');
             expect(component.length).toBe(1);
         });
+        test('and the initial language is English.', ()=>{
+            const wrapper = shallow(<DropdownMenuItems/>);
+            const languageDisplay = findByTestAttr(wrapper,'language-display');
+            expect(languageDisplay.text()).toBe('English');
+        });
     });
     describe('When the language string is clicked, ', ()=>{
-        it('the the internal toggler function is invoked, ', ()=>{
-            const mockToggler = jest.fn();
-            const wrapper = shallow(<p id="chinese-or-english"
-                                       data-test='language-display'
-                                       onClick={mockToggler}></p>);
-            wrapper.simulate('click');
-            expect(mockToggler).toBeCalled();
-        });
-        it('and the language changes.', ()=>{
-
-        });
+        test('The displayed language string changes to 華語版本.', ()=>{
+            const wrapper = shallow(<DropdownMenuItems/>);
+            const languageDisplay = findByTestAttr(wrapper,'language-display');
+            languageDisplay.simulate('click');
+            expect(languageDisplay.text()).toEqual('華語版本');
+        })
     });
 });

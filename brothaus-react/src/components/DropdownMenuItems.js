@@ -4,22 +4,24 @@ import React, { useState } from "react";
 export default () => {
         const [language, setLanguage] = useState('English');
 
-        function _toggleLanguage (){
+        const _toggleLanguage = () => {
                 if (language === '華語版本') setLanguage('English');
                 else setLanguage('華語版本');
         };
 
         return (
-            <section id='menu-items' data-test='menu-items'>
+            <section id='menu-items'
+                     data-test='menu-items'
+                     data-testid='menu-items'>
                 <Settings />
                 <p>About</p>
                 <a id="repo" href="https://github.com/chunyukuo88/Brothaus" target="_blank" rel="noopener noreferrer">Code</a>
                 <p id="columbus-weather"></p>
-                <p id="chinese-or-english"
+                <div id="chinese-or-english"
                    data-test='language-display'
                    onClick={_toggleLanguage}>
                         {language}
-                </p>
+                </div>
             </section>
         );
 };
