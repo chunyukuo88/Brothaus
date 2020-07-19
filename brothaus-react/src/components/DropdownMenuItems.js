@@ -5,6 +5,7 @@ export default () => {
         const [language, setLanguage] = useState('English');
 
         const _toggleLanguage = () => {
+                console.log('clicked!');
                 if (language === '華語版本') setLanguage('English');
                 else setLanguage('華語版本');
         };
@@ -17,11 +18,11 @@ export default () => {
                 <p>About</p>
                 <a id="repo" href="https://github.com/chunyukuo88/Brothaus" target="_blank" rel="noopener noreferrer">Code</a>
                 <p id="columbus-weather"></p>
-                <div id="chinese-or-english"
+                <p id="chinese-or-english"
                    data-test='language-display'
                    onClick={_toggleLanguage}>
                         {language}
-                </div>
+                </p>
             </section>
         );
 };

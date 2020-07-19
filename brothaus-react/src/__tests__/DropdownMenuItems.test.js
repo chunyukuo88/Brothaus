@@ -30,10 +30,12 @@ describe('DropdownMenuItems.js', ()=>{
     });
     describe('When the language string is clicked, ', ()=>{
         test('The displayed language string changes to 華語版本.', ()=>{
-            const wrapper = shallow(<DropdownMenuItems/>);
-            const languageDisplay = findByTestAttr(wrapper,'language-display');
+            const wrapper = shallow(<DropdownMenuItems />);
+            const languageDisplay = wrapper.find('#chinese-or-english');
+                                                        console.log('Before click: ', languageDisplay.text());
             languageDisplay.simulate('click');
+                                                        console.log('After click: ', languageDisplay.text());
             expect(languageDisplay.text()).toEqual('華語版本');
-        })
+        });
     });
 });
