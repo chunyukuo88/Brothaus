@@ -4,7 +4,6 @@ import { AccountContext } from '../contexts/account-context';
 import FotoPublic from "./FotoPublic";
 import FotoPrivate from "./FotoPrivate";
 
-
 export default () => {
     const [ status, setStatus ] = useState(false);
     const [ authStatus ] = useContext(AuthContext);
@@ -17,8 +16,5 @@ export default () => {
         }, [authStatus, getSession]);
     });
 
-    return <>
-            {!status && <FotoPublic /> }
-            { status && <FotoPrivate /> }
-           </>;
+    return <>{ status ? <FotoPrivate/> : <FotoPublic /> }</>;
 };

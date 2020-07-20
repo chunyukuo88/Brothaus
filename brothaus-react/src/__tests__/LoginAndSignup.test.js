@@ -9,7 +9,6 @@ const findByAttr = (wrapper, value) => {
     return wrapper.find(`[data-test="${value}"]`);
 };
 
-
 describe('On load,', ()=>{
    it('The component renders without error', ()=>{
     const wrapper = shallow(<LoginAndSignup/>);

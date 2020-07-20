@@ -1,27 +1,22 @@
 import React, { useState } from "react";
 import DropdownMenuItems from "./DropdownMenuItems";
 
-const Hamburger = () => {
-    const [state, setState] = useState({menuIsActive : false});
+export default () => {
+    const [menuIsActive, setMenuIsActive] = useState(false);
 
     const _toggleMenuState = () => {
-        setState({ menuIsActive : !state.menuIsActive });
+        setMenuIsActive(!menuIsActive);
     };
 
     let menuItems = null;
+    if (menuIsActive) menuItems = <DropdownMenuItems />;
 
-    if (state.menuIsActive) {
-        menuItems = (
-            <DropdownMenuItems />
-        );
-    };
-
-    return (
-            <>
-                <h1 data-test='hamburger' onClick={_toggleMenuState}>MENU</h1>
-                {menuItems}
-            </>
-    );
+    return <>
+             <h1 id='hamburger'
+                 data-test='hamburger'
+                 onClick={_toggleMenuState}>
+                 MENU
+             </h1>
+             {menuItems}
+           </>;
 };
-
-export default Hamburger;

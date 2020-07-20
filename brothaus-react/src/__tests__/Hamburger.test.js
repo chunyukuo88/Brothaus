@@ -5,36 +5,34 @@ import Hamburger from "../components/Hamburger";
 
 Enzyme.configure({ adapter: new EnzymeAdapter()});
 
-const setup = (props = {}, state = null) => {
-  const wrapper = shallow(<Hamburger {...props}/>);
-  if (state) wrapper.setState(state);
+const setup = () => {
+  const wrapper = shallow(<Hamburger/>);
   return wrapper;
 };
-
 const findByTestAttr = (wrapper, value) => {
     return wrapper.find(`[data-test="${value}"]`);
 };
 
-describe('On load,', ()=>{
-    it('renders without error.', ()=>{
+describe('Hamburger.js,', ()=>{
     const wrapper = setup();
-    const hamburger = findByTestAttr(wrapper, 'hamburger');
-    expect(hamburger.length).toBe(1);
-    });
-});
-xdescribe('When clicked on ', ()=>{
-    describe('for the first time, ', ()=>{
-        it('the internal toggle function is invoked.', ()=>{
-            const wrapper = setup();
-            const hamburger = findByTestAttr(wrapper, 'hamburger');
-            const spy = jest.spyOn(Hamburger, '_toggleMenuState');
-            hamburger.simulate('click');
-            expect(spy).toHaveBeenCalled();
-        });
-        xit('It also displays the menu items when open.', ()=>{
-            const wrapper = setup();
-            const hamburger = findByTestAttr(wrapper, 'hamburger');
-            hamburger.simulate('click');
+
+    describe('On load, ', ()=>{
+        const hamburger = findByTestAttr(wrapper, 'hamburger');
+        it('renders without error.', ()=>{
+        expect(hamburger.length).toBe(1);
         });
     });
+    describe('When clicked on ', ()=>{
+        describe('for the first time, ', ()=>{
+            it('the internal toggle function is invoked.', ()=>{
+                const setMenuIsActive = jest.fn();
+                const hamburger = wrapper.find('h1');
+                const handleClick = jest.spyOn(React, "useState");
+                handleClick.mockImplementation(menuIsActive => [menuIsActive, setMenuIsActive]);
+                hamburger.simulate("click");
+                expect(setMenuIsActive).toBeTruthy();
+            });
+        });
+    });
 });
+

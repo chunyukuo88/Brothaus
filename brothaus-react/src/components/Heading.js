@@ -6,7 +6,7 @@ export default () => {
 
     return (
         <div data-test="heading">
-            <div className='page-title'>Welcome to my photo album</div>
+            <div className='page-title'>Woobler's House</div>
             <Status />
             <Hamburger />
         </div>

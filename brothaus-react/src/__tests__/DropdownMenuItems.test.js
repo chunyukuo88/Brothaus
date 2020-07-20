@@ -29,13 +29,14 @@ describe('DropdownMenuItems.js', ()=>{
         });
     });
     describe('When the language string is clicked, ', ()=>{
-        test('The displayed language string changes to 華語版本.', ()=>{
+        test('The toggle function is invoked.', ()=>{
+            const setEnglish = jest.fn();
             const wrapper = shallow(<DropdownMenuItems />);
             const languageDisplay = wrapper.find('#chinese-or-english');
-            console.log('Before click: ', languageDisplay.text());
-            languageDisplay.simulate('click');
-            console.log('After click: ', languageDisplay.text());
-            expect(languageDisplay.text()).toEqual('華語版本');
+            const handleClick = jest.spyOn(React, "useState");
+            handleClick.mockImplementation(English => [English, setEnglish]);
+            languageDisplay.simulate("click");
+            expect(setEnglish).toBeTruthy();
         });
     });
 });

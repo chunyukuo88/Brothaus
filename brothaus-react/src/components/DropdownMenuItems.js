@@ -2,15 +2,14 @@ import Settings from "./loginStatus/Settings";
 import React, { useState } from "react";
 
 export default () => {
-        const [English, setState] = useState(true);
+        const [English, setEnglish] = useState(true);
 
         const _toggleLanguage = () => {
-                console.log('Clicked! Language is English: ', English);
-                setState(!English);
+                setEnglish(!English);
         };
 
         return (
-            <section id='menu-items'
+            <div id='menu-items'
                      data-test='menu-items'
                      data-testid='menu-items'>
                 <Settings />
@@ -20,10 +19,9 @@ export default () => {
                 <p id="chinese-or-english"
                    data-test='language-display'
                    onClick={_toggleLanguage}>
-                        {!English && '華語版本'}
-                        {English && 'English'}
+                        {English ? 'English' : '華語版本'}
                 </p>
-            </section>
+            </div>
         );
 };
 
