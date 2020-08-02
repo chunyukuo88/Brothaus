@@ -1,6 +1,7 @@
 .heading-component {
-    border: 3px solid black;
+    margin: auto;
     filter: drop-shadow(15px 6px 15px #4444dd);
+    width: 80%;
 }
 
 .navigation {
@@ -11,5 +12,4 @@
 
 .nav-item {
     padding: 15px;
-
 }

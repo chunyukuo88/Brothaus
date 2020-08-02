@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
+import '../../style/Status.css';
 import { AccountContext } from '../../contexts/account-context';
 import { AuthContext }    from '../../contexts/authentication-context';
 import LoginAndSignup from "../LoginAndSignup";
@@ -16,19 +17,18 @@ const Status = () => {
     }, [authStatus, getSession]);
 
     return (
-        <div>
-            { status === false && <LoginAndSignup/>}
-            { status === true && displayLogOutButton(logout)}
-        </div>
+        <>
+            {status === true ? displayLogOutButton(logout): <LoginAndSignup/>}
+        </>
     );
 };
 
 const displayLogOutButton = (logout) => {
     return (
-        <div>
+        <>
             You are logged in.
             <button onClick={ logout }>Logout</button>
-        </div>
+        </>
     );
 }
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../../style/Signup.css';
 import UserPool from './UserPool';
 import toggleVisibility from '../../utils/togglePasswordVisibility';
 
@@ -31,7 +32,7 @@ export default () => {
                                  aria-hidden="true"
                                  onClick={()=> toggleVisibility('signup-password')}
                         ></i></span>
-                        <button type='submit'>Signup</button>
+                        <button id="button-for-signup" type='submit'>Signup</button>
                     </div>
                 </form>
             </div>);

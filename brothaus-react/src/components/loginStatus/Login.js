@@ -1,4 +1,5 @@
 import React, { useState, useContext } from "react";
+import '../../style/Login.css';
 import { AccountContext } from  '../../contexts/account-context';
 import { AuthContext }    from  '../../contexts/authentication-context';
 import toggleVisibility   from  '../../utils/togglePasswordVisibility';
@@ -19,7 +20,7 @@ export default () => {
             .catch(err => {console.error('Failed to log in', err);});
     };
 
-    return (<div>
+    return (<>
                 <form onSubmit={onSubmit}>
                     <div className="input-container">
                         <input value={email}
@@ -37,9 +38,9 @@ export default () => {
                                  aria-hidden="true"
                                  onClick={()=> toggleVisibility('login-password')}
                         ></i></span>
-                        <button type="submit">Login</button>
+                        <button id="button-for-login" type="submit">Login</button>
                     </div>
                 </form>
-            </div>);
+            </>);
 };
 
