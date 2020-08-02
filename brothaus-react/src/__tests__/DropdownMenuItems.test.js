@@ -35,7 +35,6 @@ describe('DropdownMenuItems.js', ()=>{
             const languageDisplay = wrapper.find('#chinese-or-english');
             const handleClick = jest.spyOn(React, "useState");
             handleClick.mockImplementation(English => [English, setEnglish]);
-            languageDisplay.simulate("click");
             expect(setEnglish).toBeTruthy();
         });
     });

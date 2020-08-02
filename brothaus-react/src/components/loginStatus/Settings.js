@@ -12,11 +12,7 @@ export default () => {
         });
     }, [loggedIn, getSession]);
 
-    return (
-        <div>
-            {loggedIn && displaySettings()}
-        </div>
-    );
+    return <>{loggedIn && displaySettings()}</>;
 };
 
 const displaySettings = () => (

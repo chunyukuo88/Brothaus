@@ -1,0 +1,15 @@
+.heading-component {
+    border: 3px solid black;
+    filter: drop-shadow(15px 6px 15px #4444dd);
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-item {
+    padding: 15px;
+
+}
