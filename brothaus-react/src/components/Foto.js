@@ -1,8 +1,9 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from 'react';
 import { AuthContext }    from '../contexts/authentication-context';
 import { AccountContext } from '../contexts/account-context';
-import FotoPublic from "./FotoPublic";
-import FotoPrivate from "./FotoPrivate";
+import '../style/Foto.css';
+import FotoPublic from './FotoPublic';
+import FotoPrivate from './FotoPrivate';
 
 export default () => {
     const [ status, setStatus ] = useState(false);
