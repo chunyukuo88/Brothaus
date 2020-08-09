@@ -5,11 +5,11 @@ import React from "react";
 
 export default () => (
     <div data-test="login-and-signup">
-        <div class="input-section">
-            <span class="input-item">
+        <div className="input-section">
+            <span className="input-item">
                 <Login />
             </span>
-            <span class="input-item">
+            <span className="input-item">
                 <Signup />
             </span>
         </div>

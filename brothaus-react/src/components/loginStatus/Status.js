@@ -6,7 +6,7 @@ import LoginAndSignup from "../LoginAndSignup";
 
 const Status = () => {
     const [status, setStatus] = useState(false);
-    const [ authStatus ] = useContext(AuthContext);
+    const [ authStatus, setAuthStatus ] = useContext(AuthContext);
     const { getSession, logout } = useContext(AccountContext);
 
     useEffect(() => {
@@ -16,20 +16,25 @@ const Status = () => {
             });
     }, [authStatus, getSession]);
 
-    return (
-        <>
-            {status === true ? displayLogOutButton(logout): <LoginAndSignup/>}
-        </>
-    );
+    return <>{showLoginLogoutFields(status, logout)}</>;
 };
 
-const displayLogOutButton = (logout) => {
-    return (
+const showLoginLogoutFields = (status, logout) => {
+    return status === true
+        ? displayLogOutButton(logout)
+        : <LoginAndSignup/>;
+}
+
+const displayLogOutButton = logout => (
         <>
             You are logged in.
-            <button onClick={ logout }>Logout</button>
+            <button onClick={ logoutAndUpdateAuthStatus }>Logout</button>
         </>
-    );
+);
+
+const logoutAndUpdateAuthStatus = (logout, setAuthStatus) => {
+    logout();
+    setAuthStatus(false);
 }
 
 export default Status;

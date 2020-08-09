@@ -6,11 +6,11 @@ import Status from "./loginStatus/Status";
 export default () => {
 
     return (
-        <div class="heading-component" data-test="heading">
+        <div className="heading-component" data-test="heading">
             <h1 className='page-title'>Woobler's House</h1>
-            <nav class="navigation">
-                <span class="nav-item"><Hamburger /></span>
-                <span class="nav-item"><Status /></span>
+            <nav className="navigation">
+                <span className="nav-item"><Hamburger /></span>
+                <span className="nav-item"><Status /></span>
             </nav>
         </div>
     );

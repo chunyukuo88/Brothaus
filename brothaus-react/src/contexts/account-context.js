@@ -52,7 +52,7 @@ const logout = () => {
     const user = Pool.getCurrentUser();
     if (user) {
         user.signOut();
-        alert('Refresh the page to complete logging out.');
+        // alert('Refresh the page to complete logging out.');
     }
 };
 
