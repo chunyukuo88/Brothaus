@@ -1,0 +1,9 @@
+@use '@material/drawer';
+@use '@material/list';
+@use '../common.css';
+@include drawer.core-styles;
+@include list.core-styles;
+
+.mdc-list-item {
+    height: 30px;
+}

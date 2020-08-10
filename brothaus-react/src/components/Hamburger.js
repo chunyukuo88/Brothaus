@@ -14,7 +14,7 @@ export default () => {
 
     return <>
              <h1 id='hamburger'
-                 class='mdc-top-app-bar__navigation-icon mdc-icon-button material-icons mdc-ripple-upgraded--unbounded mdc-ripple-upgraded'
+                 className='mdc-top-app-bar__navigation-icon mdc-icon-button material-icons mdc-ripple-upgraded--unbounded mdc-ripple-upgraded'
                  data-test='hamburger'
                  onClick={_toggleMenuState}
              >
