@@ -10,8 +10,9 @@ export default () => {
 
         return (
             <div id='menu-items'
-                     data-test='menu-items'
-                     data-testid='menu-items'>
+                 class='mdc-drawer mdc-drawer--dismissible demo-drawer mdc-drawer--modal mdc-drawer--open'
+                 data-test='menu-items'
+                 data-testid='menu-items'>
                 <Settings />
                 <p>About</p>
                 <a id="repo" href="https://github.com/chunyukuo88/Brothaus" target="_blank" rel="noopener noreferrer">Code</a>

@@ -10,7 +10,7 @@ export default () => {
     };
 
     let menuItems = null;
-    if (menuIsActive) menuItems = <DropdownMenuItems />;
+    menuItems = menuIsActive ? <DropdownMenuItems /> : '';
 
     return <>
              <h1 id='hamburger'
