@@ -19,23 +19,23 @@ console.log(repo);
                 <Settings />
                 <p className='mdc-list-item mdc-list-item--selected demo-drawer-list-item'>
                         <i className="material-icons mdc-list-item__graphic" aria-hidden="true">help</i>
-                        About
+                        <span class="mdc-list-item__text">About</span>
                 </p>
                 <a className='mdc-list-item mdc-list-item--selected demo-drawer-list-item'
                    id="repo" href={{repo}} target="_blank" rel="noopener noreferrer">
                         <i className="material-icons mdc-list-item__graphic" aria-hidden="true">code</i>
-                        Code
+                        <span className="mdc-list-item__text">Code</span>
                 </a>
                 <p className='mdc-list-item mdc-list-item--selected demo-drawer-list-item' id="columbus-weather">
                         <i className="material-icons mdc-list-item__graphic" aria-hidden="true">cloud</i>
-                        Weather
+                        <span className="mdc-list-item__text">Weather</span>
                 </p>
                 <p className='mdc-list-item mdc-list-item--selected demo-drawer-list-item'
                    id="chinese-or-english"
                    data-test='language-display'
                    onClick={_toggleLanguage}>
                         <i className="material-icons mdc-list-item__graphic" aria-hidden="true">language</i>
-                        {English ? 'English' : '華語版本'}
+                        <span className="mdc-list-item__text">{English ? 'English' : '華語版本'}</span>
                 </p>
             </div>
         );

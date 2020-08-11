@@ -3,9 +3,13 @@ import Heading from './Heading';
 import Foto from './Foto';
 import '../style/App.css';
 
-export default () =>
-    <div id="app"
-         data-test="component-app">
-        <Heading/>
-        <Foto/>
-    </div>;
+function App() {
+
+        return  <div id="app"
+                     data-test="component-app">
+                <Heading/>
+                <Foto/>
+                </div>;
+}
+
+export default App;
