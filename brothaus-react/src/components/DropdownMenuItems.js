@@ -1,31 +1,11 @@
 import Settings from "./loginStatus/Settings";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import '../style/DropdownMenuItems.css';
+import WeatherDisplay from "./WeatherDisplay";
 import urls from '../urls';
-import axios from 'axios';
 
 export default () => {
         const [ English, setEnglish ] = useState(true);
-        const [ temperature, setTemperature ] = useState('Weather');
-
-        const getWeatherFromApi = async () => {
-          const apiKey = 'eb366c82727f387afc53658766e245e8';
-          const url = 'https://api.openweathermap.org/data/2.5/weather?q=Columbus,Ohio&appid=' + apiKey;
-          const result = await fetch(url).then(res => res.json());
-          setTemperature(result.main.temp);
-        }
-
-        useEffect(() => {
-            getWeatherFromApi();
-        },[]);
-
-        const _toggleWeatherDisplay = async () => {
-          if (temperature === 'Weather'){
-            getWeatherFromApi();
-          }
-          else
-            setTemperature('Weather');
-        }
 
         // const _toggleLanguage = () => {
         //   setEnglish(!English);
@@ -50,11 +30,11 @@ export default () => {
                 {/*</a>*/}
                 <div className='mdc-list-item mdc-list-item--selected demo-drawer-list-item'
                    id="columbus-weather"
-                   onClick={_toggleWeatherDisplay}
+                   // onClick={_toggleWeatherDisplay}
                   >
                         <i className="material-icons mdc-list-item__graphic" aria-hidden="true">cloud</i>
                         <span className="mdc-list-item__text">
-                                {temperature}
+                                <WeatherDisplay/>
                         </span>
                 </div>
                 {/*<div className='mdc-list-item mdc-list-item--selected demo-drawer-list-item'*/}
