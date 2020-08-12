@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import DropdownMenuItems from "./DropdownMenuItems";
-import '../style/Hamburger.css';
 
 export default () => {
     const [menuIsActive, setMenuIsActive] = useState(false);

@@ -1,22 +1,3 @@
-/*.heading-component {*/
-/*    margin: auto;*/
-/*    filter: drop-shadow(15px 6px 15px #4444dd);*/
-/*    width: 80%;*/
-
-/*}*/
-
-/*.navigation {*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    justify-content: space-between;*/
-/*}*/
-
-/*.nav-item {*/
-/*    padding: 15px;*/
-/*}*/
-
-/*.page-title {*/
-/*    margin: 4px 15px 15px 15px;*/
-/*    border: 4px 15px 15px 15px;*/
-/*    padding: 4px 15px 15px 15px;*/
-/*}*/
+.page-title {
+    margin: auto;
+}
