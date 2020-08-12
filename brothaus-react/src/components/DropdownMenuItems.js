@@ -6,23 +6,25 @@ import axios from 'axios';
 
 export default () => {
         const [ English, setEnglish ] = useState(true);
-        const [ weather, setWeather ] = useState('Weather');
+        const [ temperature, setTemperature ] = useState('Weather');
 
         const getWeatherFromApi = async () => {
           const apiKey = 'eb366c82727f387afc53658766e245e8';
           const url = 'https://api.openweathermap.org/data/2.5/weather?q=Columbus,Ohio&appid=' + apiKey;
-          return await axios.get(url);
+          const result = await fetch(url).then(res => res.json());
+          setTemperature(result.main.temp);
         }
 
         useEffect(() => {
             getWeatherFromApi();
         },[]);
 
-        const _toggleWeatherDisplay = () => {
-          if (weather === 'Weather')
-            setWeather('meow');
+        const _toggleWeatherDisplay = async () => {
+          if (temperature === 'Weather'){
+            getWeatherFromApi();
+          }
           else
-            setWeather('Weather');
+            setTemperature('Weather');
         }
 
         // const _toggleLanguage = () => {
@@ -52,7 +54,7 @@ export default () => {
                   >
                         <i className="material-icons mdc-list-item__graphic" aria-hidden="true">cloud</i>
                         <span className="mdc-list-item__text">
-                                {weather}
+                                {temperature}
                         </span>
                 </div>
                 {/*<div className='mdc-list-item mdc-list-item--selected demo-drawer-list-item'*/}
