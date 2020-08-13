@@ -1,6 +1,5 @@
 import React, {useContext  } from 'react';
 import { AuthContext }    from '../contexts/authentication-context';
-import '../style/Foto.css';
 import FotoPublic from './FotoPublic';
 import FotoPrivate from './FotoPrivate';
 

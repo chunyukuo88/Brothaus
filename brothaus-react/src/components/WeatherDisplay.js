@@ -5,7 +5,7 @@ export default function WeatherDisplay () {
   const [ weatherConditions, setWeatherConditions ] = useState('cloudy');
 
   let temperatureInFahrenheit = (9/5) * (temperature - 273) + 32;
-  let displayFahrenheit = `${Math.round(temperatureInFahrenheit)}° and ${weatherConditions} here.`
+  let displayFahrenheit = `${Math.round(temperatureInFahrenheit)}° and ${weatherConditions} here.`;
 
   const getWeatherFromApi = async () => {
     const myOpenWeatherApiKey = 'eb366c82727f387afc53658766e245e8';

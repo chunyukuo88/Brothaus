@@ -7,7 +7,7 @@ function App() {
 
         return  <div id="app"
                      data-test="component-app">
-                <Heading/>
+                <Heading className="mdc-top-app-bar"/>
                 <Foto/>
                 </div>;
 }
