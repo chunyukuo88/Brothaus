@@ -4,7 +4,7 @@ import '../style/DropdownMenuItems.css';
 import WeatherDisplay from "./WeatherDisplay";
 import urls from '../urls';
 
-export default () => {
+export default function DropDownMenuItems () {
         const [ English, setEnglish ] = useState(true);
 
         const _toggleLanguage = () => {
