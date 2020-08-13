@@ -4,6 +4,9 @@
 @include drawer.core-styles;
 @include list.core-styles;
 
+#menu-items {
+    width: auto;
+}
 .mdc-list-item {
     height: 30px;
 }

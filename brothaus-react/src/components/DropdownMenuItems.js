@@ -11,8 +11,6 @@ export default function DropDownMenuItems () {
           setEnglish(!English);
         };
 
-        const repo = urls.repo;
-
         return (
             <div id='menu-items'
                  className='mdc-drawer mdc-drawer--dismissible demo-drawer mdc-drawer--modal mdc-drawer--open'
@@ -24,7 +22,9 @@ export default function DropDownMenuItems () {
                         <span className="mdc-list-item__text">About</span>
                 </div>
                 <a className='mdc-list-item mdc-list-item--selected demo-drawer-list-item'
-                   id="repo" href={{repo}} target="_blank" rel="noopener noreferrer">
+                   id="repo"
+                   href="https://github.com/chunyukuo88/Brothaus"
+                   target="_blank">
                         <i className="material-icons mdc-list-item__graphic" aria-hidden="true">code</i>
                         <span className="mdc-list-item__text">Code</span>
                 </a>
