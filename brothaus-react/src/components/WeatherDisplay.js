@@ -1,11 +1,11 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 
 export default function WeatherDisplay () {
-  const [ temperature, setTemperature ] = useState(73);
+  const [ temperature, setTemperature ] = useState(200);
   const [ weatherConditions, setWeatherConditions ] = useState('cloudy');
 
-  let temperatureInFahrenheit = (9/5) * (temperature - 273) + 32;
-  let displayFahrenheit = `${Math.round(temperatureInFahrenheit)}° and ${weatherConditions} here.`;
+  const temperatureInFahrenheit = (9/5) * (temperature - 273) + 32;
+  const displayFahrenheit = `${Math.round(temperatureInFahrenheit)}° and ${weatherConditions}.`;
 
   const getWeatherFromApi = async () => {
     const myOpenWeatherApiKey = 'eb366c82727f387afc53658766e245e8';

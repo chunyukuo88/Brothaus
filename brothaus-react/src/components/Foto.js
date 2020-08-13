@@ -4,6 +4,6 @@ import FotoPublic from './FotoPublic';
 import FotoPrivate from './FotoPrivate';
 
 export default () => {
-    const [ status, setStatus ] = useContext(AuthContext);
+    const [ status ] = useContext(AuthContext);
     return <>{ status === true ? <FotoPrivate/> : <FotoPublic /> }</>;
 };
