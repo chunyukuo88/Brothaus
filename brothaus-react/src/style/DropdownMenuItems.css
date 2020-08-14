@@ -11,6 +11,10 @@
     height: 30px;
 }
 
+.mdc-list-item:hover {
+    background-color: beige;
+}
+
 #menu-items {
     height: auto;
     border-radius: 0 10px 10px 0;
