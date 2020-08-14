@@ -5,8 +5,8 @@ export default function WeatherDisplay () {
   const [ degreesKelvin, setDegreesKelvin] = useState(200);
   const [ weatherConditions, setWeatherConditions ] = useState('cloudy');
 
-  const degreesFahrenheit = (9/5) * (degreesKelvin - 273) + 32;
-  const displayFahrenheit = getDisplayFahrenheit(degreesFahrenheit, weatherConditions);
+  const degreesFahrenheit = getDegreesFahrenheit(degreesKelvin);
+  const temperatureAndConditions = getDisplayFahrenheit(degreesFahrenheit, weatherConditions);
 
   const getWeatherFromApi = async () => {
     const result = await fetch(urls.openWeatherUrl).then(res => res.json());
@@ -18,9 +18,9 @@ export default function WeatherDisplay () {
     getWeatherFromApi();
   },[]);
 
-  return <div>{displayFahrenheit}</div>;
+  return <div>{temperatureAndConditions}</div>;
 }
 
-const getDisplayFahrenheit = (temp, conditions) => {
-  return `${Math.round(temp)}° and ${conditions}.`
-}
+const getDisplayFahrenheit = (temp, conditions) => `${Math.round(temp)}° and ${conditions}.`;
+
+const getDegreesFahrenheit = degreesKelvin => (9/5) * (degreesKelvin - 273) + 32;
