@@ -23,7 +23,7 @@ export default function DropDownMenuItems () {
                 </div>
                 <a className='mdc-list-item mdc-list-item--selected demo-drawer-list-item'
                    id="repo"
-                   href="https://github.com/chunyukuo88/Brothaus"
+                   href={urls.githubRepo}
                    target="_blank">
                         <i className="material-icons mdc-list-item__graphic" aria-hidden="true">code</i>
                         <span className="mdc-list-item__text">Code</span>

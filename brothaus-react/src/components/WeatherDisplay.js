@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react";
+import urls from "../urls";
 
 export default function WeatherDisplay () {
-  const [ temperature, setTemperature ] = useState(200);
+  const [ degreesKelvin, setDegreesKelvin] = useState(200);
   const [ weatherConditions, setWeatherConditions ] = useState('cloudy');
 
-  const temperatureInFahrenheit = (9/5) * (temperature - 273) + 32;
-  const displayFahrenheit = `${Math.round(temperatureInFahrenheit)}° and ${weatherConditions}.`;
+  const degreesFahrenheit = (9/5) * (degreesKelvin - 273) + 32;
+  const displayFahrenheit = getDisplayFahrenheit(degreesFahrenheit, weatherConditions);
 
   const getWeatherFromApi = async () => {
-    const myOpenWeatherApiKey = 'eb366c82727f387afc53658766e245e8';
-    const openWeatherUrl = 'https://api.openweathermap.org/data/2.5/weather?q=Columbus,Ohio&appid=' + myOpenWeatherApiKey;
-    const result = await fetch(openWeatherUrl).then(res => res.json());
-    setTemperature(result.main.temp);
+    const result = await fetch(urls.openWeatherUrl).then(res => res.json());
+    setDegreesKelvin(result.main.temp);
     setWeatherConditions(result.weather[0].description);
   }
 
@@ -20,4 +19,8 @@ export default function WeatherDisplay () {
   },[]);
 
   return <div>{displayFahrenheit}</div>;
+}
+
+const getDisplayFahrenheit = (temp, conditions) => {
+  return `${Math.round(temp)}° and ${conditions}.`
 }
