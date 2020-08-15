@@ -1,21 +1,13 @@
 import React, { useEffect, useState } from "react";
 import urls from "../urls";
 
-export default function WeatherDisplay () {
+export default function WeatherDisplay (props) {
   const [ degreesKelvin, setDegreesKelvin] = useState(200);
   const [ weatherConditions, setWeatherConditions ] = useState('cloudy');
 
-  const degreesFahrenheit = getDegreesFahrenheit(degreesKelvin);
-  const degreesCelsius = getDegreesCelsius(degreesKelvin);
-
-  let temperatureAndConditions = getDisplayFahrenheit(degreesFahrenheit, weatherConditions);
-  // TODO: Fix the toggle function.
-  // function toggleCelsiusFahrenheit(){
-  //   console.log('clicked the toggle')
-  //   temperatureAndConditions = (temperatureAndConditions.includes('°F'))
-  //     ? getDisplayCelsius(degreesCelsius, weatherConditions)
-  //     : getDisplayFahrenheit(degreesFahrenheit, weatherConditions);
-  // }
+  const display = (props.isFahrenheit === true)
+    ? getDisplayFahrenheit(getDegreesFahrenheit(degreesKelvin), setWeatherConditions)
+    : getDisplayCelsius(getDegreesCelsius(degreesKelvin), setWeatherConditions);
 
   const getWeatherFromApi = async () => {
     const result = await fetch(urls.openWeatherUrl).then(res => res.json());
@@ -28,7 +20,7 @@ export default function WeatherDisplay () {
   },[]);
 
   return  <div>
-            {temperatureAndConditions}
+            {display}
           </div>;
 }
 
