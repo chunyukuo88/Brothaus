@@ -1,6 +1,7 @@
 import React from "react";
 import '../style/Heading.css';
 import Hamburger from "./Hamburger";
+import Fries from "./Fries";
 import Title from "./Title";
 export default () => {
 
@@ -10,15 +11,18 @@ export default () => {
                 <div className="title-container">
                     <Title/>
                 </div>
+
                 <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-                <div className="nav-item">
-                    <Hamburger />
-                </div>
+                    <div className="nav-item">
+                        <Hamburger />
+                    </div>
                 </section>
+
+
                 <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-                    <button className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
-                            aria-label="Options">more_vert
-                    </button>
+                    <div className="nav-item">
+                        <Fries />
+                    </div>
                 </section>
             </div>
         </header>
