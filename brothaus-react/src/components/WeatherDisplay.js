@@ -6,8 +6,8 @@ export default function WeatherDisplay (props) {
   const [ weatherConditions, setWeatherConditions ] = useState('cloudy');
 
   const display = (props.isFahrenheit === true)
-    ? getDisplayFahrenheit(getDegreesFahrenheit(degreesKelvin), setWeatherConditions)
-    : getDisplayCelsius(getDegreesCelsius(degreesKelvin), setWeatherConditions);
+    ? getDisplayFahrenheit(getDegreesFahrenheit(degreesKelvin), weatherConditions)
+    : getDisplayCelsius(getDegreesCelsius(degreesKelvin), weatherConditions);
 
   const getWeatherFromApi = async () => {
     const result = await fetch(urls.openWeatherUrl).then(res => res.json());
