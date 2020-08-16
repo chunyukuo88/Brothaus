@@ -16,7 +16,7 @@ export default function DropDownMenuItems () {
         };
 
         return (
-            <div id='menu-items' className='mdc-drawer mdc-drawer--modal mdc-drawer--open' data-test='menu-items'>
+            <aside id='menu-items' className='mdc-drawer mdc-drawer--modal mdc-drawer--open' data-test='menu-items'>
               <div className='mdc-list-item mdc-list-item--selected demo-drawer-list-item'>
                 <i className="material-icons mdc-list-item__graphic" aria-hidden="true">help</i>
                 <span className="mdc-list-item__text" role="menuitem">About</span>
@@ -42,7 +42,7 @@ export default function DropDownMenuItems () {
                 <i className="material-icons mdc-list-item__graphic" aria-hidden="true">translate</i>
                 <span className="mdc-list-item__text">{English ? 'English' : '華語版本'}</span>
               </div>
-            </div>
+            </aside>
         );
 };
 

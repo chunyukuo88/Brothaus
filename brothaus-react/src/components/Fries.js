@@ -13,7 +13,7 @@ export default () => {
 
   return (
         <>
-          <div className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+          <div className="mdc-top-app-bar__navigation-icon mdc-icon-button material-icons mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
                aria-label="Options"
                data-test='fries'
                onClick={_toggleMenuState}
