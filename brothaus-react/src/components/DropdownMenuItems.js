@@ -4,7 +4,7 @@ import WeatherDisplay from "./WeatherDisplay";
 import '../style/DropdownMenuItems.css';
 import ReactDOM from "react-dom";
 import Popup from "reactjs-popup";
-import Content from "./content";
+import AboutModal from "./AboutModal";
 
 export default function DropDownMenuItems () {
         const [ English, setEnglish ] = useState(true);
@@ -20,26 +20,22 @@ export default function DropDownMenuItems () {
 
         return (
             <aside id='menu-items' className='mdc-drawer mdc-drawer--modal mdc-drawer--open' data-test='menu-items'>
-              <div className='mdc-list-item mdc-list-item--selected demo-drawer-list-item'>
+
+              <div className='mdc-list-item'>
                 <i className="material-icons mdc-list-item__graphic" aria-hidden="true">help</i>
-                <span className="mdc-list-item__text" role="menuitem">About</span>
+                <Popup modal trigger={<span>About this site</span>}>
+                  {close => <AboutModal close={close} />}
+                </Popup>
               </div>
 
-              {/*<div className='mdc-list-item mdc-list-item--selected demo-drawer-list-item'>*/}
-              {/*  <i className="material-icons mdc-list-item__graphic" aria-hidden="true">help</i>*/}
-                <Popup modal trigger={<button>Click Me</button>}>
-                  {close => <Content close={close} />}
-                </Popup>
-              {/*</div>*/}
 
-
-              <a   className='mdc-list-item mdc-list-item--selected demo-drawer-list-item' target="_blank" href={urls.githubRepo} rel="noopener noreferrer" id="repo" >
+              <a className='mdc-list-item' target="_blank" href={urls.githubRepo} rel="noopener noreferrer" id="repo" >
                 <i className="material-icons mdc-list-item__graphic" aria-hidden="true">code</i>
                 <span className="mdc-list-item__text">Code</span>
               </a>
 
 
-              <div onClick={_toggleDegrees} className='mdc-list-item mdc-list-item--selected demo-drawer-list-item' id="columbus-weather">
+              <div onClick={_toggleDegrees} className='mdc-list-item' id="columbus-weather">
                 <i className="material-icons mdc-list-item__graphic" aria-hidden="true">cloud</i>
                 <span className="mdc-list-item__text">
                   <WeatherDisplay {...degrees}/>
@@ -48,7 +44,7 @@ export default function DropDownMenuItems () {
               </div>
 
 
-              <div onClick={_toggleLanguage} id="chinese-or-english" className='mdc-list-item mdc-list-item--selected demo-drawer-list-item' data-test='language-display'>
+              <div onClick={_toggleLanguage} id="chinese-or-english" className='mdc-list-item' data-test='language-display'>
                 <i className="material-icons mdc-list-item__graphic" aria-hidden="true">translate</i>
                 <span className="mdc-list-item__text">{English ? 'English' : '華語版本'}</span>
               </div>
