@@ -14,6 +14,8 @@ export default function DropDownMenuItems () {
           setEnglish(!English);
         };
 
+
+
         const _toggleDegrees = () => {
           toggleDegreeType({isFahrenheit: !degrees.isFahrenheit});
         };
@@ -44,9 +46,9 @@ export default function DropDownMenuItems () {
               </div>
 
 
-              <div onClick={_toggleLanguage} id="chinese-or-english" className='mdc-list-item' data-test='language-display'>
+              <div onClick={_toggleLanguage} id="chinese-or-english" className='mdc-list-item'>
                 <i className="material-icons mdc-list-item__graphic" aria-hidden="true">translate</i>
-                <span className="mdc-list-item__text">{English ? 'English' : '華語版本'}</span>
+                <span data-test='language-display' className="mdc-list-item__text">{English ? 'English' : '華語版本'}</span>
               </div>
             </aside>
         );

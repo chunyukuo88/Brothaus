@@ -1,24 +1,28 @@
 import React, { useState } from "react";
 import LoginAndSignup from "./LoginAndSignup";
 
-export default () => {
+const Fries = () => {
   const [menuIsActive, setMenuIsActive] = useState(false);
 
   const _toggleMenuState = () => {
     setMenuIsActive(!menuIsActive);
   };
 
-  let menuItems = null;
-  menuItems = menuIsActive ? <LoginAndSignup /> : '';
+  let menuItems = menuIsActive ? <LoginAndSignup /> : null;
 
   return (
-        <>
+        <div data-test='fries'>
           <div className="mdc-top-app-bar__navigation-icon mdc-icon-button material-icons mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
                aria-label="Options"
-               data-test='fries'
                onClick={_toggleMenuState}
-          >more_vert</div>
+          >
+            more_vert
+          </div>
+          <div data-test='fries-menu-items'>
             {menuItems}
-        </>
+          </div>
+        </div>
       );
 }
+
+export default Fries;

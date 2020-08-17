@@ -6,7 +6,7 @@ import Title from "./Title";
 export default () => {
 
     return (
-        <header >
+        <header data-test='heading'>
             <div className="mdc-top-app-bar__row">
                 <div className="title-container">
                     <Title/>

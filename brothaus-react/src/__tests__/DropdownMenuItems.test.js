@@ -28,7 +28,7 @@ describe('DropdownMenuItems.js', ()=>{
             expect(languageDisplay.text()).toBe('English');
         });
     });
-    describe('When the language string is clicked, ', ()=>{
+    describe('When the language string is clicked once, ', ()=>{
         test('The toggle function is invoked.', ()=>{
             const setEnglish = jest.fn();
             const wrapper = shallow(<DropdownMenuItems />);
