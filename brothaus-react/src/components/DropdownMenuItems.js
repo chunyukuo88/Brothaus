@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import urls from '../urls';
 import WeatherDisplay from "./WeatherDisplay";
 import '../style/DropdownMenuItems.css';
+import ReactDOM from "react-dom";
+import Popup from "reactjs-popup";
+import Content from "./content";
 
 export default function DropDownMenuItems () {
         const [ English, setEnglish ] = useState(true);
@@ -21,6 +24,13 @@ export default function DropDownMenuItems () {
                 <i className="material-icons mdc-list-item__graphic" aria-hidden="true">help</i>
                 <span className="mdc-list-item__text" role="menuitem">About</span>
               </div>
+
+              {/*<div className='mdc-list-item mdc-list-item--selected demo-drawer-list-item'>*/}
+              {/*  <i className="material-icons mdc-list-item__graphic" aria-hidden="true">help</i>*/}
+                <Popup modal trigger={<button>Click Me</button>}>
+                  {close => <Content close={close} />}
+                </Popup>
+              {/*</div>*/}
 
 
               <a   className='mdc-list-item mdc-list-item--selected demo-drawer-list-item' target="_blank" href={urls.githubRepo} rel="noopener noreferrer" id="repo" >
