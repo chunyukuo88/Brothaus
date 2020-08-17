@@ -14,6 +14,7 @@ const Fries = () => {
         <div data-test='fries'>
           <div className="mdc-top-app-bar__navigation-icon mdc-icon-button material-icons mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
                aria-label="Options"
+               data-test='fries-button'
                onClick={_toggleMenuState}
           >
             more_vert

@@ -23,10 +23,14 @@ describe('Fries.js, ', ()=>{
     });
   });
   describe('When the fries are clicked, ', ()=>{
-    const setMenuIsActive = jest.fn();
-    const handleClick = jest.spyOn(React, 'useState');
-    handleClick.mockImplementation(menuIsActive => [menuIsActive, setMenuIsActive]);
-    fries.simulate('click');
-    expect(setMenuIsActive).toBeCalled();
+    test('the toggle is invoked.', ()=>{
+      const setMenuIsActive = jest.fn();
+      const friesButton = findByTestAttr(wrapper, 'fries-button');
+      const handleClick = jest.spyOn(React, 'useState');
+      handleClick.mockImplementation(setMenuIsActive => [menuIsActive, setMenuIsActive]);
+      expect(setMenuIsActive).toBeTruthy();
+      friesButton.simulate('click');
+      expect(setMenuIsActive).toBeCalled();
+    })
   });
 });
