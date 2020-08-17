@@ -9,12 +9,10 @@ export default () => (
          dir="rtl"
          data-test='menu-items'>
     <div className='mdc-list-item'>
-      <i className="material-icons mdc-list-item__graphic" aria-hidden="true">help</i>
       <span className="woob-input-item" role="menuitem" dir="ltr"><Login /></span>
     </div>
 
     <div className='mdc-list-item'>
-      <i className="material-icons mdc-list-item__graphic" aria-hidden="true">help</i>
       <span className="woob-input-item" role="menuitem" dir="ltr"><Signup /></span>
     </div>
 
