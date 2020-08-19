@@ -4,27 +4,21 @@ import LoginAndSignup from "./LoginAndSignup";
 const Fries = () => {
   const [menuIsActive, setMenuIsActive] = useState(false);
 
-  const _toggleMenuState = () => {
-    setMenuIsActive(!menuIsActive);
-  };
+  const _toggleMenuState = () => setMenuIsActive(!menuIsActive);
 
-  let menuDrawer = menuIsActive ? <LoginAndSignup /> : null;
-
-  return (
-        <div data-test='fries'>
-          <div className="mdc-top-app-bar__navigation-icon mdc-icon-button material-icons mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
-               aria-label="Options"
-               id='fries-button'
-               data-test='fries-button'
-               onClick={_toggleMenuState}
-          >
-            more_vert
-          </div>
-          <div data-test='fries-drawer'>
-            ====test!==== {menuDrawer}
-          </div>
-        </div>
-      );
+  return  <div data-test='fries'>
+              <button  className="mdc-icon-button material-icons"
+                       aria-label="Options"
+                       id='fries-button'
+                       data-test='fries-button'
+                       onClick={_toggleMenuState}
+              >
+                more_vert
+              </button>
+              <aside id="fries-drawer" data-test='fries-drawer'>
+                {menuIsActive ? <LoginAndSignup /> : null}
+              </aside>
+          </div>;
 }
 
 export default Fries;

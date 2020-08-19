@@ -30,12 +30,13 @@ describe('Fries.js, ', ()=>{
     test('the menu toggle is invoked.', ()=>{
       const { container } = render(<Fries/>);
       const button = container.firstChild;
-      const drawer = container.firstChild.firstChild.nextSibling;
+      const drawer = document.getElementById('fries-drawer');
 
-            console.log('drawer.innerHTML: ', drawer.innerHTML);
+            console.log('drawer.innerHTML: ', drawer.childElementCount);
+      expect(drawer.innerHTML).toBe('');
       fireEvent.click(button);
-            console.log('drawer.innerHTML: ', drawer.innerHTML);
-      expect(drawer.innerHTML).toBeUndefined();
+            console.log('drawer.innerHTML: ', drawer.childElementCount);
+      expect(drawer.innerHTML).not.toBe('');
     });
   });
 });
