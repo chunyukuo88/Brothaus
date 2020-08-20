@@ -1,67 +1,31 @@
 import React from "react";
-import { render, fireEvent } from '@testing-library/react';
-import Enzyme, { shallow } from 'enzyme';
-import EnzymeAdapter from 'enzyme-adapter-react-16';
+import { render, fireEvent, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import userEvent from '@testing-library/user-event';
+
 import Fries from '../components/Fries';
 
-Enzyme.configure({ adapter: new EnzymeAdapter()});
-
-const setup = () => shallow(<Fries/>);
-const findByTestAttr = (wrapper, value) => wrapper.find(`[data-test="${value}"]`);
-
 describe('Fries.js, ', ()=>{
-  const wrapper = setup();
-  const fries = findByTestAttr(wrapper, 'fries');
-
-  afterEach(() => {
-    jest.clearAllMocks();
-  });
-
   describe('On load, ', ()=>{
     test('the Fries component renders without crashing, ', ()=>{
-      expect(fries.length).toBe(1);
+      render(<Fries/>);
+      expect(screen.getByTestId('fries')).toBeInTheDocument();
     });
-    test('and the default menu state is closed.', ()=>{
-      const friesMenuItems = findByTestAttr(wrapper, 'fries-drawer')
-      expect(friesMenuItems.innerText).toBeUndefined();
+    test('and the drawer is closed.', ()=>{
+      render(<Fries/>);
+      const drawer = screen.getByTestId('fries-drawer');
+      expect(drawer.innerHTML).toBe('');
     });
   });
   describe('When I click the fries icon, ', ()=>{
     test('the menu toggle is invoked.', ()=>{
-      const { container } = render(<Fries/>);
-      const button = container.firstChild;
-      const drawer = document.getElementById('fries-drawer');
+      render(<Fries/>);
+      const drawer = screen.getByTestId('fries-drawer');
+      expect(drawer.innerHTML.length).toBe(0);
 
-            console.log('drawer.innerHTML: ', drawer.childElementCount);
-      expect(drawer.innerHTML).toBe('');
-      fireEvent.click(button);
-            console.log('drawer.innerHTML: ', drawer.childElementCount);
-      expect(drawer.innerHTML).not.toBe('');
+      screen.debug(screen.getByText(/more_vert/));
+      userEvent.click(screen.getByText(/more_vert/));
+      // expect(...).to(...);
     });
   });
 });
-
-  // const mockSetMenuIsActive = jest.fn();
-  // React.useState = jest.fn(() => [false, mockSetMenuIsActive]);
-  //
-  // const wrapper = setup();
-  // const fries = findByTestAttr(wrapper, 'fries');
-  //
-  // fries.simulate('click', { preventDefault() {} });
-  // // fries.simulate('click');
-  // expect(mockSetMenuIsActive).toHaveBeenCalledWith(false);
-
-
-// const setMenuIsActive = jest.fn();
-// const handleClick = jest.spyOn(React, 'useState');
-// handleClick.mockImplementation(menuIsActive => [menuIsActive, setMenuIsActive]);
-// expect(setMenuIsActive).toBeTruthy();
-// expect(setMenuIsActive).toHaveBeenCalled();
-// fries.simulate('click');
-
-// const wrapper = setup();
-// const fries = findByTestAttr(wrapper, 'fries');
-// const setMenuIsActive = jest.fn();
-// React.useState = jest.fn(() => [false, setMenuIsActive]);
-// fries.simulate('click', { preventDefault() {} });
-// expect(setMenuIsActive).toHaveBeenCalledTimes(1);
