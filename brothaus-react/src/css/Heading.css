@@ -3,6 +3,10 @@
   font-size: 0.5rem;
 }
 
+#nav-items {
+  display: flex;
+}
+
 #heading {
   margin: 15px;
 }

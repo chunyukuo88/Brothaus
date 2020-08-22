@@ -18,7 +18,7 @@ export default function Hamburger(){
 
   return (
     <div>
-      <h1 data-test='hamburger' onClick={toggleMenuState}>MENU</h1>
+      <h1 data-test='hamburger' onClick={toggleMenuState}>More</h1>
       {menuItems}
     </div>
   );

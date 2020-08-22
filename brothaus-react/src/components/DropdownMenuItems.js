@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import urls from '../urls';
-import WeatherDisplay from './WeatherDisplay';
 import Popup from 'reactjs-popup';
+import WeatherDisplay from './WeatherDisplay';
 import AboutModal from './AboutModal';
 
 export default function DropDownMenuItems () {
@@ -29,7 +29,7 @@ export default function DropDownMenuItems () {
 
               <a className='mdc-list-item' target='_blank' href={urls.githubRepo} rel='noopener noreferrer' id='repo' >
                 <i className='material-icons mdc-list-item__graphic' aria-hidden='true'>code</i>
-                <span className='mdc-list-item__text'>Code</span>
+
               </a>
 
 
@@ -44,7 +44,7 @@ export default function DropDownMenuItems () {
 
               <div onClick={_toggleLanguage} id='chinese-or-english' className='mdc-list-item'>
                 <i className='material-icons mdc-list-item__graphic' aria-hidden='true'>translate</i>
-                <span data-test='language-display' className='mdc-list-item__text'>{English ? 'English' : '華語版本'}</span>
+                <div data-test='language-display' className='mdc-list-item__text'>{English ? 'English' : '華語版本'}</div>
               </div>
             </aside>
         );
