@@ -1,4 +1,3 @@
-import '../style/DropdownMenuItems.css';
 import React, { useState } from 'react';
 import urls from '../urls';
 import WeatherDisplay from './WeatherDisplay';

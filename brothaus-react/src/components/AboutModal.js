@@ -1,5 +1,5 @@
 import React from "react";
-import '../style/AboutModal.css';
+import '../css/AboutModal.css';
 
 const AboutModal = ({ close }) => (
   <div className="modal">

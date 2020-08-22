@@ -1,18 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './style/index.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
-import {AccountContextWrapper} from './contexts/account-context';
-import {AuthContextWrapper} from './contexts/authentication-context';
 
 ReactDOM.render(
   <React.StrictMode>
-      <AccountContextWrapper>
-          <AuthContextWrapper>
             <App/>
-          </AuthContextWrapper>
-      </AccountContextWrapper>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,7 +1,8 @@
 import React from "react";
-import '../style/Title.css';
+import '../css/Title.css';
 
-const Title = () =>  (
+export default function Title () {
+  return (
       <div className='title-container'>
             <section className='title-array'>
                 <div className='page-title'>W</div>
@@ -13,8 +14,7 @@ const Title = () =>  (
                 <div className='page-title'>r</div>
                 <div className='page-title'>'</div>
                 <div className='page-title'>s</div>
-            </section>
-            <section className='title-array'>
+                <div className='page-title'>&nbsp;&nbsp;</div>
                 <div className='page-title'>h</div>
                 <div className='page-title'>o</div>
                 <div className='page-title'>u</div>
@@ -23,5 +23,4 @@ const Title = () =>  (
             </section>
       </div>
     );
-
-export default Title;
+}

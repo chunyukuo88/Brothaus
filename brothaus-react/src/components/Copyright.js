@@ -1,2 +1,5 @@
 import React from "react";
-export default ()=><>Copyright Alex Gochenour 2020</>;
+
+export default function Copyright(){
+  return <>Copyright Alex Gochenour 2020</>;
+}

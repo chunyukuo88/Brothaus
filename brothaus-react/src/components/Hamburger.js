@@ -1,27 +1,25 @@
 import React, { useState } from "react";
 import DropdownMenuItems from "./DropdownMenuItems";
-import '../style/Hamburger.css'
 
 export default function Hamburger(){
-    const [menuIsActive, setMenuIsActive] = useState(false);
+  const [state, setState] = useState({menuIsActive : false});
 
-    function _toggleMenuState(){
-        setMenuIsActive(!menuIsActive);
-    };
+  const toggleMenuState = () => {
+    setState({ menuIsActive : !state.menuIsActive });
+  };
 
-    let menuItems = null;
-    menuItems = menuIsActive ? <DropdownMenuItems /> : '';
+  let menuItems = null;
 
-    return (
-      <>
-         <h3 data-testid='hamburger'
-             onClick={_toggleMenuState}
-         >
-           🍔
-         </h3>
-        <div data-testid='drawer'>
-          {menuItems}
-        </div>
-     </>
+  if (state.menuIsActive) {
+    menuItems = (
+      <DropdownMenuItems />
     );
+  };
+
+  return (
+    <div>
+      <h1 data-test='hamburger' onClick={toggleMenuState}>MENU</h1>
+      {menuItems}
+    </div>
+  );
 };
