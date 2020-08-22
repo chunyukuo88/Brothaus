@@ -4,7 +4,7 @@ import DropdownMenuItems from "./DropdownMenuItems";
 export default () => {
     const [menuIsActive, setMenuIsActive] = useState(false);
 
-    const _toggleMenuState = () => {
+    function _toggleMenuState(){
         setMenuIsActive(!menuIsActive);
     };
 
@@ -14,11 +14,11 @@ export default () => {
     return <>
              <h1 id='hamburger'
                  className='mdc-top-app-bar__navigation-icon mdc-icon-button material-icons mdc-ripple-upgraded--unbounded mdc-ripple-upgraded'
-                 data-test='hamburger'
+                 data-testid='hamburger'
                  onClick={_toggleMenuState}
              >
                  menu
              </h1>
-             {menuItems}
+            <div data-testid='drawer'>{menuItems}</div>
            </>;
 };

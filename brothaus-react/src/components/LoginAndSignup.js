@@ -3,7 +3,7 @@ import '../style/LoginAndSignup.css';
 import Signup from "./loginStatus/Signup";
 import React from "react";
 
-export default () => (
+const LoginAndSignup = () => (
 
   <aside id='menu-items'
          className='mdc-drawer mdc-drawer--modal mdc-drawer--open app-layout__drawer--align-end'
@@ -21,3 +21,4 @@ export default () => (
   </aside>
 );
 
+export default LoginAndSignup;

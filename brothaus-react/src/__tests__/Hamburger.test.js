@@ -1,37 +1,34 @@
 import React from "react";
-import Enzyme, { shallow } from 'enzyme';
-import EnzymeAdapter from 'enzyme-adapter-react-16';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import userEvent from '@testing-library/user-event';
+
 import Hamburger from "../components/Hamburger";
 
-Enzyme.configure({ adapter: new EnzymeAdapter()});
-
-const setup = () => {
-  const wrapper = shallow(<Hamburger/>);
-  return wrapper;
-};
-const findByTestAttr = (wrapper, value) => {
-    return wrapper.find(`[data-test="${value}"]`);
-};
-
 describe('Hamburger.js,', ()=>{
-    const wrapper = setup();
-
-    describe('On load, ', ()=>{
-        const hamburger = findByTestAttr(wrapper, 'hamburger');
-        it('renders without error.', ()=>{
-        expect(hamburger.length).toBe(1);
-        });
+    describe('On load,', ()=>{
+       test('the Hamburger component renders without crashing,', ()=>{
+           render(<Hamburger/>);
+           const hamburger = screen.getByTestId('hamburger');
+           expect(hamburger).toBeInTheDocument();
+       });
+       test('and the drawer is closed.', ()=>{
+           render(<Hamburger/>);
+           const drawer = screen.getByTestId('drawer');
+           expect(drawer.innerHTML).toBe('');
+       });
     });
-    describe('When clicked on ', ()=>{
-        describe('for the first time, ', ()=>{
-            it('the internal toggle function is invoked.', ()=>{
-                const setMenuIsActive = jest.fn();
-                const hamburger = wrapper.find('h1');
-                const handleClick = jest.spyOn(React, "useState");
-                handleClick.mockImplementation(menuIsActive => [menuIsActive, setMenuIsActive]);
-                hamburger.simulate("click");
-                expect(setMenuIsActive).toBeTruthy();
-            });
+    describe('When I click the hamburger icon,', ()=>{
+        test('the menu toggle is invoked.', ()=>{
+            render(<Hamburger/>);
+            const hamburger = screen.getByTestId('hamburger');
+            const drawer = screen.getByTestId('drawer');
+
+            console.log('Before click', drawer.innerHTML);
+            expect(drawer.innerHTML).toBe('');
+            userEvent.click(hamburger);
+            console.log('After click', drawer.innerHTML);
+            expect(drawer.innerHTML).not.toBe('');
         });
     });
 });

@@ -6,6 +6,9 @@ const Fries = () => {
 
   const _toggleMenuState = () => setMenuIsActive(!menuIsActive);
 
+  const login = <LoginAndSignup/> || '';
+  let displayResult = (menuIsActive === true) ? login : null;
+
   return  <div data-testid='fries'>
               <button  className="mdc-icon-button material-icons"
                        aria-label="Options"
@@ -14,9 +17,9 @@ const Fries = () => {
               >
                 more_vert
               </button>
-              <aside data-testid='fries-drawer'>
-                {menuIsActive ? <LoginAndSignup /> : null}
-              </aside>
+              <div data-testid='fries-drawer'>
+                {displayResult}
+              </div>
           </div>;
 }
 
