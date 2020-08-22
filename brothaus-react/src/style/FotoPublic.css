@@ -21,7 +21,7 @@ img:hover{
 }
 
 div:hover img[title]:not(:hover){
-    opacity: .5;
+    opacity: .7;
 }
 
 @media(max-width: 800px){
