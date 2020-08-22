@@ -2,8 +2,15 @@
     margin: auto;
 }
 
+#hamburger,
+#login,
+#title{
+    margin: 15px;
+}
+
 #heading{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
+

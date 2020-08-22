@@ -1,9 +1,24 @@
-import React, {useContext  } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext }    from '../contexts/authentication-context';
+import { AccountContext } from '../contexts/account-context';
 import FotoPublic from './FotoPublic';
 import FotoPrivate from './FotoPrivate';
 
 export default function Foto(){
-    const [ status ] = useContext(AuthContext);
-    return <>{ status === true ? <FotoPrivate/> : <FotoPublic /> }</>;
+    const [ status, setStatus ] = useState(false);
+    const [ authStatus ] = useContext(AuthContext);
+    const { getSession } = useContext(AccountContext);
+
+    useEffect(() => {
+        getSession()
+          .then(session => {
+              console.log('Session:', session);
+              setStatus(true);
+          }, [authStatus, getSession]);
+    });
+
+    return <>
+        {status === false && <FotoPublic /> }
+        {status === true && <FotoPrivate /> }
+    </>;
 };

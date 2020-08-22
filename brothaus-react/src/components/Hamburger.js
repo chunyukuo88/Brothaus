@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import DropdownMenuItems from "./DropdownMenuItems";
+import '../style/Hamburger.css'
 
-const Hamburger = () => {
+export default function Hamburger(){
     const [menuIsActive, setMenuIsActive] = useState(false);
 
     function _toggleMenuState(){
@@ -11,18 +12,16 @@ const Hamburger = () => {
     let menuItems = null;
     menuItems = menuIsActive ? <DropdownMenuItems /> : '';
 
-    return <>
-             <h1 id='hamburger'
-                 className='mdc-top-app-bar__navigation-icon mdc-icon-button material-icons mdc-ripple-upgraded--unbounded mdc-ripple-upgraded'
-                 data-testid='hamburger'
-                 onClick={_toggleMenuState}
-             >
-                 menu
-             </h1>
-            <div data-testid='drawer'>
-              {menuItems}
-            </div>
-           </>;
+    return (
+      <>
+         <h3 data-testid='hamburger'
+             onClick={_toggleMenuState}
+         >
+           🍔
+         </h3>
+        <div data-testid='drawer'>
+          {menuItems}
+        </div>
+     </>
+    );
 };
-
-export default Hamburger;

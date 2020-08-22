@@ -3,7 +3,7 @@ import { AccountContext } from '../../contexts/account-context';
 import { AuthContext }    from '../../contexts/authentication-context';
 import LoginAndSignup from "../LoginAndSignup";
 
-function Status () {
+function Logout () {
     const [ status, setStatus ] = useContext(AuthContext);
     const { getSession, logout } = useContext(AccountContext);
 
@@ -36,4 +36,4 @@ function Status () {
 };
 
 
-export default Status;
+export default Logout;
