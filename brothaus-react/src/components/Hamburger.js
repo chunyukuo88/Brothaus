@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import DropdownMenuItems from "./DropdownMenuItems";
 
-export default () => {
+const Hamburger = () => {
     const [menuIsActive, setMenuIsActive] = useState(false);
 
     function _toggleMenuState(){
@@ -19,6 +19,10 @@ export default () => {
              >
                  menu
              </h1>
-            <div data-testid='drawer'>{menuItems}</div>
+            <div data-testid='drawer'>
+              {menuItems}
+            </div>
            </>;
 };
+
+export default Hamburger;

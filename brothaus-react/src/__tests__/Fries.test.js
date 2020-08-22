@@ -4,7 +4,6 @@ import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
 
 import Fries from '../components/Fries';
-import LoginAndSignup from '../components/LoginAndSignup';
 
 beforeEach(()=>{
   render(<Fries/>);
@@ -25,21 +24,9 @@ describe('Fries.js, ', ()=>{
       const drawer = screen.getByTestId('fries-drawer');
       const button = screen.getByTestId('fries-button');
 
-      expect(drawer.innerHTML.length).toBe(0);
+      expect(drawer.innerHTML).toBe('');
       userEvent.click(button);
-      expect(drawer.innerHTML.length).not.toBe(0);
+      expect(drawer.innerHTML).not.toBe('');
     });
   });
 });
-
-
-// render(<Fries/>);
-// jest.mock('../components/LoginAndSignup', ()=>{
-//   return <div data-testid='fries-drawer'>test</div>;
-// });
-// const drawer = screen.getByTestId('fries-drawer');
-// expect(drawer.innerHTML.length).toBe(0);
-//
-// screen.debug(screen.getByTestId('fries-drawer'));
-// userEvent.click(screen.getByText(/more_vert/));
-// expect(...).to(...);

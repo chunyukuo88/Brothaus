@@ -4,7 +4,7 @@ import { AccountContext } from  '../../contexts/account-context';
 import { AuthContext }    from  '../../contexts/authentication-context';
 import toggleVisibility   from  '../../utils/togglePasswordVisibility';
 
-export default () => {
+export default function Login(){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const { authenticate } = useContext(AccountContext);

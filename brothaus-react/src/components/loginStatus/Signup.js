@@ -3,7 +3,7 @@ import '../../style/Signup.css';
 import UserPool from './UserPool';
 import toggleVisibility from '../../utils/togglePasswordVisibility';
 
-export default () => {
+export default function Signup(){
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 

@@ -4,10 +4,12 @@ import LoginAndSignup from "./LoginAndSignup";
 const Fries = () => {
   const [menuIsActive, setMenuIsActive] = useState(false);
 
-  const _toggleMenuState = () => setMenuIsActive(!menuIsActive);
+  function _toggleMenuState(){
+    setMenuIsActive(!menuIsActive);
+  }
 
-  const login = <LoginAndSignup/> || '';
-  let displayResult = (menuIsActive === true) ? login : null;
+  let menuItems = null;
+  menuItems = menuIsActive ? <LoginAndSignup/> : '';
 
   return  <div data-testid='fries'>
               <button  className="mdc-icon-button material-icons"
@@ -18,7 +20,7 @@ const Fries = () => {
                 more_vert
               </button>
               <div data-testid='fries-drawer'>
-                {displayResult}
+                {menuItems}
               </div>
           </div>;
 }
