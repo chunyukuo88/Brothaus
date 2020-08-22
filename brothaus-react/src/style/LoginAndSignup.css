@@ -2,10 +2,6 @@
     border-radius: 5px 0 0 5px;
 }
 
-.woob-input-item{
-    padding: 5px;
-}
-
 .woob-input-section{
     display: flex;
     flex-direction: column;
