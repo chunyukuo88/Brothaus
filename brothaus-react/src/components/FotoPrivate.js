@@ -1,6 +1,7 @@
 import React from "react";
 
-export default () => (
+export default function FotoPrivate(){
+  return (
         <div>
             <div>Members-only</div>
             <div className="foto-wrapper">
@@ -10,3 +11,4 @@ export default () => (
             </div>
         </div>
     );
+}

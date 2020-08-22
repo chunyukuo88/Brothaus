@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import LoginAndSignup from "./LoginAndSignup";
 
 const Fries = () => {
+  //TODO: This will have to use global state because the submit button within Login should close this menu.
   const [menuIsActive, setMenuIsActive] = useState(false);
 
   function _toggleMenuState(){

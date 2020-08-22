@@ -1,8 +1,9 @@
 import React, { useState, useContext } from "react";
+import toggleVisibility   from  '../../utils/togglePasswordVisibility';
 import '../../style/Login.css';
+
 import { AccountContext } from  '../../contexts/account-context';
 import { AuthContext }    from  '../../contexts/authentication-context';
-import toggleVisibility   from  '../../utils/togglePasswordVisibility';
 
 export default function Login(){
     const [email, setEmail] = useState("");
@@ -20,7 +21,7 @@ export default function Login(){
             .catch(err => {console.error('Failed to log in', err);});
     };
 
-    return (<>
+    return (<div>
                 <form onSubmit={onSubmit}>
                     <div className="input-container">
                         <input value={email}
@@ -41,6 +42,6 @@ export default function Login(){
                         <button id="button-for-login" type="submit">Login</button>
                     </div>
                 </form>
-            </>);
+            </div>);
 };
 

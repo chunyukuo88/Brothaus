@@ -3,7 +3,8 @@ import '../style/Heading.css';
 import Hamburger from "./Hamburger";
 import Fries from "./Fries";
 import Title from "./Title";
-export default () => {
+
+export default function Heading(){
 
     return (
         <header data-test='heading'>

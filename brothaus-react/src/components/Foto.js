@@ -3,7 +3,7 @@ import { AuthContext }    from '../contexts/authentication-context';
 import FotoPublic from './FotoPublic';
 import FotoPrivate from './FotoPrivate';
 
-export default () => {
+export default function Foto(){
     const [ status ] = useContext(AuthContext);
     return <>{ status === true ? <FotoPrivate/> : <FotoPublic /> }</>;
 };

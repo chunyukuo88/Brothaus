@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import '../../style/Signup.css';
-import UserPool from './UserPool';
 import toggleVisibility from '../../utils/togglePasswordVisibility';
+import '../../style/Signup.css';
+
+import UserPool from './UserPool';
 
 export default function Signup(){
     const [email, setEmail] = useState('');
