@@ -6,8 +6,8 @@ import Title from './Title';
 export default function Heading(){
   return (
     <div id='heading'>
-      <Title/><p id='haha'>haha</p>
-      <Hamburger />
+      <Title/>
+      <div id='hamburger'><Hamburger /></div>
     </div>
   );
 };
