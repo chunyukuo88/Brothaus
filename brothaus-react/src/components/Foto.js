@@ -4,7 +4,7 @@ import '../css/FotoPublic.css';
 export default function Foto(){
       return (
         <div className="container">
-            <img title="Pic 0"  src="https://placekeanu.com/500/300/y" alt=""/>
+            <img title="Pic 0"  src="https://woobler-photos.s3.amazonaws.com/tiger.png" alt=""/>
             <img title="Pic 1"  src="https://placekeanu.com/500/320/y" alt=""/>
             <img title="Pic 2"  src="https://placekeanu.com/500/500/y" alt=""/>
             <img title="Pic 3"  src="https://placekeanu.com/500/500/y" alt=""/>
