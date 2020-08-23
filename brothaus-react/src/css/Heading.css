@@ -1,18 +1,11 @@
-#hamburger {
-  font-family: "Fredoka One";
-  font-size: 0.5rem;
-}
-
 #nav-items {
   display: flex;
 }
 
 #heading {
+  font-family: "Fredoka One";
+  font-size: 0.88rem;
   margin: 15px;
-}
-
-#haha {
-  background-color: white;
 }
 
 /*# sourceMappingURL=Heading.css.map */

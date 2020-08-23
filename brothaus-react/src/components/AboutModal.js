@@ -1,21 +1,20 @@
 import React from "react";
 import '../css/AboutModal.css';
 
-const AboutModal = ({ close }) => (
-  <div className="modal">
-    <a className="close" onClick={close}>
-      👌
-    </a>
-    <div className="header"> My Bilingual Photo Album </div>
-    <div className="content">
-      {" "}
-      This hobby project was made with the React Context API, Amazon Cognito, Istanbul, and a gingerly amount of Material Design.
-      <br />
-      Modals are provided by the handy reactjs-popup library.
-      <br />
-      Testing with Enzyme.
+export default function AboutModal ({ close }){
+  return (
+    <div className="modal">
+      <a className="close" onClick={close}>
+        👌
+      </a>
+      <div className="header">...to my bilingual photo album.</div>
+      <div className="content">
+        This site was made with the React Context API, Istanbul, and Sass.
+        <br />
+        Modals are provided by the handy reactjs-popup library.
+        <br />
+        Testing with Enzyme and React Testing Library.
+      </div>
     </div>
-  </div>
-);
-
-export default AboutModal;
+  );
+};

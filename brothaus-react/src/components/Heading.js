@@ -25,7 +25,7 @@ export default function Heading(){
     <div id='heading'>
       <Title/>
       <nav id='nav-items'>
-        <Popup modal trigger={<span>Welcome!</span>}>
+        <Popup modal trigger={<span>Welcome</span>}>
           {close => <AboutModal close={close} />}
         </Popup>
         <a className='mdc-list-item' target='_blank' href={urls.githubRepo} rel='noopener noreferrer' id='repo' >

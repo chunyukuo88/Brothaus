@@ -1,14 +1,26 @@
-.page-title {
+.title-letter,
+.title-letter-up {
   font-family: "Luckiest Guy", cursive;
   font-size: 2em;
   padding: 0;
   border: 0;
   margin: 0;
+  transition: 1s;
 }
 
-.page-title:hover {
-  transform: translate(0, 5px);
-  color: chartreuse;
+.title-letter:hover,
+.title-letter-up:hover {
+  color: #4c9900;
+  transition: 1s;
+}
+
+.title-letter:hover {
+  transform: translate(0, 10px);
+}
+
+.title-letter-up:hover {
+  transform: translate(0px, -10px);
+  transition: 1s;
 }
 
 .title-container {
@@ -16,13 +28,12 @@
   flex-direction: row;
   justify-content: center;
   margin-top: 15px;
+  font-size: 1rem;
 }
 
 .title-array {
   display: flex;
   flex-direction: row;
 }
-
-/*# sourceMappingURL=Title.css.map */
 
 /*# sourceMappingURL=Title.css.map */
