@@ -1,11 +1,17 @@
-#nav-items {
-  display: flex;
-}
-
 #heading {
   font-family: "Fredoka One";
   font-size: 0.88rem;
-  margin: 15px;
+}
+
+#nav-items {
+  display: flex;
+  justify-content: space-around;
+}
+
+.title-array {
+  margin: 8px;
+  padding: 8px;
+  border: 8px;
 }
 
 /*# sourceMappingURL=Heading.css.map */

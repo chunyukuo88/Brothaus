@@ -1,3 +1,5 @@
+$title-transition: 1s
+
 .title-letter,
 .title-letter-up
   font-family: 'Luckiest Guy', cursive
@@ -5,19 +7,19 @@
   padding: 0
   border: 0
   margin: 0
-  transition: 1s
+  transition: $title-transition
 
 .title-letter:hover,
 .title-letter-up:hover
   color: darken(chartreuse, 20%)
-  transition: 1s
+  transition: $title-transition
 
 .title-letter:hover
   transform: translate(0, 10px)
 
 .title-letter-up:hover
   transform: translate(0px, -10px)
-  transition: 1s
+  transition: $title-transition
 
 .title-container
   display: flex

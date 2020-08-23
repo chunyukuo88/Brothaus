@@ -7,7 +7,7 @@ export default function AboutModal ({ close }){
       <a className="close" onClick={close}>
         👌
       </a>
-      <div className="header">...to my bilingual photo album.</div>
+      <div className="header">...to my trilingual photo album.</div>
       <div className="content">
         This site was made with the React Context API, Istanbul, and Sass.
         <br />

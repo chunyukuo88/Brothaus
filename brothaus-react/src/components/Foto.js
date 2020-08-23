@@ -1,7 +1,7 @@
 import React from "react";
 import '../css/FotoPublic.css';
 
-export default function FotoPublic(){
+export default function Foto(){
       return (
         <div className="container">
             <img title="Pic 0"  src="https://placekeanu.com/500/300/y" alt=""/>

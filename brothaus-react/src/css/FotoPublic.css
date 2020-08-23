@@ -4,7 +4,7 @@ body {
 
 .container {
   padding: 1em;
-  column-count: 4;
+  column-count: 3;
 }
 
 img {
@@ -26,11 +26,6 @@ div:hover img[title]:not(:hover) {
 
 @media (max-width: 800px) {
   .container {
-    column-count: 3;
-  }
-}
-@media (max-width: 600px) {
-  .container {
     column-count: 2;
   }
 }
@@ -39,6 +34,5 @@ div:hover img[title]:not(:hover) {
     column-count: 1;
   }
 }
-/*# sourceMappingURL=FotoPublic.css.map */
 
 /*# sourceMappingURL=FotoPublic.css.map */
