@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../sass/Heading.sass","../sass/common.sass"],"names":[],"mappings":"AAEA;EACE;EACA;;;AAEF;EACE;EACA;;;AAEF;EACE,QCTc;EDUd,SCZe;EDaf,QCZc","file":"Heading.css"}
+{"version":3,"sourceRoot":"","sources":["../sass/Heading.sass","../sass/common.sass"],"names":[],"mappings":"AAEA;EACE;;;AACF;EACE;EACA;;;AAEF;EACE;EACA;;;AAEF;EACE,QCXc;EDYd,SCde;EDef,QCdc","file":"Heading.css"}

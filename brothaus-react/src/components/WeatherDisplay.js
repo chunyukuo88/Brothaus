@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-import urls from "../urls";
+import React, { useEffect, useState } from 'react';
+import urls from '../urls';
 
 export default function WeatherDisplay (props) {
-  const [ degreesKelvin, setDegreesKelvin] = useState(200);
+  const [ degreesKelvin, setDegreesKelvin] = useState(270);
   const [ humidity, setHumidity ] = useState(50);
 
-  const display = (props.isFahrenheit === true)
+  const display = (props.isFahrenheit)
     ? getDisplayFahrenheit(getDegreesFahrenheit(degreesKelvin), humidity)
     : getDisplayCelsius(getDegreesCelsius(degreesKelvin), humidity);
 
@@ -19,14 +19,22 @@ export default function WeatherDisplay (props) {
     getWeatherFromApi();
   },[]);
 
-  return  <div>
+  return  <>
             {display}
-          </div>;
+          </>;
 }
 
 const getDegreesFahrenheit = degreesKelvin => (9/5) * (degreesKelvin - 273) + 32;
 const getDegreesCelsius    = degreesKelvin => (degreesKelvin - 273.15);
 
-const getDisplayFahrenheit = (temp, humidity) => `${Math.round(temp)}°F & ${humidity}% humidity.`;
-const getDisplayCelsius    = (temp, humidity) => `${Math.round(temp)}°C & ${humidity}% humidity.`;
+const getDisplayFahrenheit = (temp, humidity) => {
+  const tempColor = temp > 35 ? 'green' : 'blue';
+  return <div><span style={{color: `${tempColor}`}}>{Math.round(temp)}°F</span> and {humidity}% humidity here</div>
+}
+
+const getDisplayCelsius = (temp, humidity) => {
+  const tempColor = temp > 2 ? 'green' : 'blue';
+  return <div><span style={{color: `${tempColor}`}}>{Math.round(temp)}°C</span> and {humidity}% humidity here</div>
+}
+
 
