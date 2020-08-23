@@ -28,6 +28,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "react-scripts build && aws s3 rm s3://wooblers-house.xyz/ --recursive && aws s3 cp ./build s3://wooblers-house.xyz/ --recursive --acl public-read",
     "test": "react-scripts test",
     "test:coverage": "set CI=true && react-scripts test --coverage",
     "eject": "react-scripts eject"
