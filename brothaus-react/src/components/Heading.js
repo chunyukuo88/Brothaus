@@ -4,7 +4,6 @@ import '../css/Heading.css';
 import Title from './Title';
 import WeatherDisplay from './WeatherDisplay';
 import Welcome from "./Welcome";
-import urls from "../urls";
 import Code from "./Code";
 
 export default function Heading(){

@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../sass/FotoPublic.sass"],"names":[],"mappings":"AAAA;EACE;;;AAEF;EACE;EACA;;;AAEF;EACE;EACA;EACA;EACA;EACA;;;AAEF;EACE;EACA;EACA;EACA;;;AAEF;EACE;;;AAGF;EACE;IACE;;;AAEJ;EACE;IACE","file":"FotoPublic.css"}
+{"version":3,"sourceRoot":"","sources":["../sass/FotoPublic.sass"],"names":[],"mappings":"AAAA;EACE;EACA;EAEA;EACA;;;AAEF;EACE;EACA;EACA;EACA;;;AAEF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;;AAeF;EACE;;;AAEF;EACE;EACA;;;AAEF;EACE;;;AAEF;EACE;IACE","file":"FotoPublic.css"}
