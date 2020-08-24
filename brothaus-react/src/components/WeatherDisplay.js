@@ -19,19 +19,16 @@ export default function WeatherDisplay (props) {
     getWeatherFromApi();
   },[]);
 
-  return  <>
-            {display}
-          </>;
+  return <>{display}</>;
 }
 
 const getDegreesFahrenheit = degreesKelvin => (9/5) * (degreesKelvin - 273) + 32;
-const getDegreesCelsius    = degreesKelvin => (degreesKelvin - 273.15);
-
 const getDisplayFahrenheit = (temp, humidity) => {
   const tempColor = temp > 35 ? '#4c9900' : 'blue';
   return <div><span style={{color: `${tempColor}`}}>{Math.round(temp)}°F</span> and {humidity}% humidity here</div>
 }
 
+const getDegreesCelsius = degreesKelvin => (degreesKelvin - 273.15);
 const getDisplayCelsius = (temp, humidity) => {
   const tempColor = temp > 2 ? '#4c9900' : 'blue';
   return <div><span style={{color: `${tempColor}`}}>{Math.round(temp)}°C</span> and {humidity}% humidity here</div>

@@ -5,6 +5,7 @@ import Title from './Title';
 import WeatherDisplay from './WeatherDisplay';
 import Welcome from "./Welcome";
 import urls from "../urls";
+import Code from "./Code";
 
 export default function Heading(){
   const [ English, setEnglish ] = useState(true);
@@ -22,10 +23,18 @@ export default function Heading(){
     <div id='heading'>
       <Title/>
       <nav id='nav-items'>
-        <Welcome/>
-        <a href={urls.githubRepo} target='_blank' rel='noopener noreferrer' id='repo' >Code</a>
-        <div onClick={_toggleDegrees}><WeatherDisplay {...degrees}/></div>
-        <div onClick={_toggleLanguage} data-test='language-display' className='mdc-list-item__text'>{English ? 'English' : '華語版本'}</div>
+        <div className='nav-item'>
+              <Welcome/>
+        </div>
+        <div className='nav-item'>
+              <Code/>
+        </div>
+        <div className='nav-item' onClick={_toggleDegrees}>
+              <WeatherDisplay {...degrees}/>
+        </div>
+        <div onClick={_toggleLanguage} data-test='language-display'>
+              <span className='nav-item' >{English ? 'English' : '華語版本'}</span>
+        </div>
       </nav>
     </div>
   );
