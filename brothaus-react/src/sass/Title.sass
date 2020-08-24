@@ -1,3 +1,5 @@
+@use './common'
+
 $title-transition: 1s
 
 .title-letter,
@@ -11,7 +13,7 @@ $title-transition: 1s
 
 .title-letter:hover,
 .title-letter-up:hover
-  color: darken(chartreuse, 20%)
+  color: common.$primary-font-color
   transition: $title-transition
 
 .title-letter:hover

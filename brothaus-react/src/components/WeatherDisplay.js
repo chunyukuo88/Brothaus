@@ -28,12 +28,12 @@ const getDegreesFahrenheit = degreesKelvin => (9/5) * (degreesKelvin - 273) + 32
 const getDegreesCelsius    = degreesKelvin => (degreesKelvin - 273.15);
 
 const getDisplayFahrenheit = (temp, humidity) => {
-  const tempColor = temp > 35 ? 'green' : 'blue';
+  const tempColor = temp > 35 ? '#4c9900' : 'blue';
   return <div><span style={{color: `${tempColor}`}}>{Math.round(temp)}°F</span> and {humidity}% humidity here</div>
 }
 
 const getDisplayCelsius = (temp, humidity) => {
-  const tempColor = temp > 2 ? 'green' : 'blue';
+  const tempColor = temp > 2 ? '#4c9900' : 'blue';
   return <div><span style={{color: `${tempColor}`}}>{Math.round(temp)}°C</span> and {humidity}% humidity here</div>
 }
 
