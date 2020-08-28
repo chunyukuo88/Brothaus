@@ -1,9 +1,6 @@
 import React from "react";
 import '../css/FotoPublic.css';
 
-// Start here: https://css-tricks.com/css-only-carousel/
-//Ref: https://codepen.io/desandro/pen/vOeGzL
-//Ref: https://flickity.metafizzy.co/
 export default function Foto(){
   return(
     <div className="carousel"
@@ -27,6 +24,26 @@ export default function Foto(){
       <div className="carousel__cell">
         <img className="carousel__cell__image"
              data-flickity-lazyload="https://woobler-photos.s3.amazonaws.com/5-min.jpg.jpg" alt=""/>
+      </div>
+      <div className="carousel__cell">
+        <img className="carousel__cell__image"
+             data-flickity-lazyload="https://woobler-photos.s3.amazonaws.com/6-min.jpg" alt=""/>
+      </div>
+      <div className="carousel__cell">
+        <img className="carousel__cell__image"
+             data-flickity-lazyload="https://woobler-photos.s3.amazonaws.com/7-min.jpg" alt=""/>
+      </div>
+      <div className="carousel__cell">
+        <img className="carousel__cell__image"
+             data-flickity-lazyload="https://woobler-photos.s3.amazonaws.com/8-min.jpg" alt=""/>
+      </div>
+      <div className="carousel__cell">
+        <img className="carousel__cell__image"
+             data-flickity-lazyload="https://woobler-photos.s3.amazonaws.com/9-min.jpg" alt=""/>
+      </div>
+      <div className="carousel__cell">
+        <img className="carousel__cell__image"
+             data-flickity-lazyload="https://woobler-photos.s3.amazonaws.com/10-min.jpg.jpg" alt=""/>
       </div>
     </div>
   );
