@@ -19,7 +19,7 @@ export default function Heading(){
   };
 
   return (
-    <div data-testid='heading'>
+    <div data-testid='heading' id='heading'>
       <Title/>
       <nav id='nav-items'>
         <div className='nav-item'>

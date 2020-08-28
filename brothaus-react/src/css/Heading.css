@@ -1,3 +1,10 @@
+body {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 #copyright {
   color: fuchsia;
   font-family: "Luckiest Guy", cursive;
@@ -9,15 +16,15 @@ a {
 }
 
 #heading {
-  font-family: "Fredoka One";
-  font-size: 2rem;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 3vw;
 }
 
 .nav-item {
   cursor: pointer;
 }
 .nav-item :hover {
-  color: fuchsia;
+  text-shadow: 2px 2px yellow;
 }
 
 #nav-items {

@@ -1,3 +1,10 @@
+body {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 #copyright {
   color: fuchsia;
   font-family: "Luckiest Guy", cursive;
@@ -12,6 +19,9 @@
 
 .modal {
   font-size: 2rem;
+  padding: 4px;
+  border: 4px;
+  margin: 4px;
 }
 .modal .actions {
   margin: auto;
@@ -37,6 +47,9 @@
 .modal .content {
   width: 100%;
   padding: 10px 5px;
+}
+.modal .content .technology-link {
+  color: fuchsia;
 }
 .modal .header {
   width: 100%;
