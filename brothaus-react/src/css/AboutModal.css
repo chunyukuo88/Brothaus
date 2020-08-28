@@ -45,6 +45,11 @@ body {
   border-radius: 18px;
   border: 1px solid #cfcece;
 }
+.modal .modal-header {
+  padding: 8px;
+  border: 8px;
+  margin: 8px;
+}
 .modal .content {
   width: 100%;
   padding: 10px 5px;
