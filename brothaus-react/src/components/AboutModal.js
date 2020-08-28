@@ -4,8 +4,8 @@ import '../css/AboutModal.css';
 export default function AboutModal ({ close }){
   return (
     <div className="modal">
-      <a className="close" onClick={close}>
-        👌
+      <a className="close" onClick={close} href="#">
+        ×
       </a>
       <div className="modal-header">...to my trilingual photo album.</div>
       <div className="content">

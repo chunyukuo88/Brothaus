@@ -19,7 +19,7 @@ export default function Heading(){
   };
 
   return (
-    <div id='heading'>
+    <div data-testid='heading'>
       <Title/>
       <nav id='nav-items'>
         <div className='nav-item'>
@@ -31,8 +31,10 @@ export default function Heading(){
         <div className='nav-item' onClick={_toggleDegrees}>
               <WeatherDisplay {...degrees}/>
         </div>
-        <div onClick={_toggleLanguage} data-test='language-display'>
-              <span className='nav-item' >{English ? 'English' : '華語版本'}</span>
+        <div onClick={_toggleLanguage} >
+              <span data-test='language-display'
+                    className='nav-item' >{English ? 'English' : '華語版本'}
+              </span>
         </div>
       </nav>
     </div>

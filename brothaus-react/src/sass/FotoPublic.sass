@@ -1,75 +1,26 @@
-$background-color: #cfca9d
+@use './common'
+
+$background-color: #54502d
 
 *
   -webkit-box-sizing: border-box
   box-sizing: border-box
 
 body
-  background: $background-color
+  //background: $background-color
 
-.gallery
-  background: darken($background-color, 20%)
+.carousel
+  width: 80vw
+  height: auto
+  border: common.$common-border
+  margin: 0 auto
+  padding: common.$common-padding
+  border-radius: 25px
+  &__cell
+    &__image
+      width: 100vw
+      height: auto
 
-.gallery-cell
-  width: 66%
-  height: 1000px
-  margin-right: 2px
-  background: darken($background-color, 40%)
-  counter-increment: gallery-cell
-
-  img
-    width: auto
-    height: 60vh
-    margin-top: auto
-
-
-/* cell number */
-.gallery-cell:before
-  display: block
-  text-align: center
-  content: counter(gallery-cell)
-  line-height: 200px
-  font-size: 80px
-  color: white
-
-
-
-
-//img
-//  border-radius: 5px
-//  box-shadow: 0 1px 3px rgba(0,0,0, .12), 0 1px 2px rgba(0,0,0, .24)
-//  //margin-bottom: 1em
-//  width: 100%
-//  transition: 0.7s
-//
-//img:hover
-//  box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .20)
-//  transform: scale(1.05)
-//  z-index: 9000
-//  transition: 0.3s
-//
-//.figcaption
-//  background: rgba(0,0,0,0.5)
-//  color: green
-//  font-size: 2rem
-//  position: relative
-//  text-align: center
-//  top: -40px
-//  z-index: 9000
-
-
-
-
-
-
-
-//.container
-//  padding: 1em
-//  column-count: 3
-//
-//div:hover img[title]:not(:hover)
-//  opacity: .85
-//
-//@media(max-width: 800px)
-//  .container
-//    column-count: 1
+//This class is part of flickity; it does not appear in Foto.js.
+.flickity-viewport
+  border-radius: 15px

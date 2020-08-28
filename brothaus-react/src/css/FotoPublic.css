@@ -1,37 +1,29 @@
+#copyright {
+  color: fuchsia;
+  font-family: "Luckiest Guy", cursive;
+  text-align: center;
+}
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-body {
-  background: #cfca9d;
+.carousel {
+  width: 80vw;
+  height: auto;
+  border: 8px;
+  margin: 0 auto;
+  padding: 8px;
+  border-radius: 25px;
+}
+.carousel__cell__image {
+  width: 100vw;
+  height: auto;
 }
 
-.gallery {
-  background: #ada559;
-}
-
-.gallery-cell {
-  width: 66%;
-  height: 1000px;
-  margin-right: 2px;
-  background: #6b6635;
-  counter-increment: gallery-cell;
-}
-.gallery-cell img {
-  width: auto;
-  height: 60vh;
-  margin-top: auto;
-}
-
-/* cell number */
-.gallery-cell:before {
-  display: block;
-  text-align: center;
-  content: counter(gallery-cell);
-  line-height: 200px;
-  font-size: 80px;
-  color: white;
+.flickity-viewport {
+  border-radius: 15px;
 }
 
 /*# sourceMappingURL=FotoPublic.css.map */
