@@ -14,15 +14,16 @@ body {
 
 .modal-header {
   color: #4c9900;
-  font-size: 2rem;
+  font-size: 1rem;
   text-align: center;
 }
 
 .modal {
-  font-size: 2rem;
+  font-size: 1rem;
   padding: 4px;
   border: 4px;
   margin: 4px;
+  text-align: center;
 }
 .modal .actions {
   margin: auto;
