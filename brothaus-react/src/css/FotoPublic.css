@@ -23,7 +23,7 @@ body {
   border: 8px;
   margin: 0 auto;
   padding: 8px;
-  border-radius: 25px;
+  border-radius: 25px 25px 25px 25px;
 }
 .carousel__cell__image {
   width: 100vw;

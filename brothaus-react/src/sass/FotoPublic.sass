@@ -6,22 +6,22 @@ $background-color: #54502d
   -webkit-box-sizing: border-box
   box-sizing: border-box
 
-body
-  //background: $background-color
-
 .carousel
   width: 80vw
   height: auto
   border: common.$common-border
   margin: 0 auto
   padding: common.$common-padding
-  border-radius: 25px
+  border-radius: 25px 25px 25px 25px
   &__cell
     &__image
       width: 100vw
       height: auto
+    //&__caption
 
-//This class is part of flickity; it does not appear in Foto.js.
-.flickity-viewport
+.flickity-viewport //This class is part of flickity; it does not appear in Foto.js.
   border-radius: 15px
   height: 100%
+
+.flickity-button
+  //TODO: Buttons move based on image size.
