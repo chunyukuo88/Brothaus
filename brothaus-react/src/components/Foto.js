@@ -12,9 +12,6 @@ export default function Foto(){
       <div className="carousel__cell">
           <img className="carousel__cell__image"
                data-flickity-lazyload="https://woobler-photos.s3.amazonaws.com/1-min.jpg" alt=""/>
-          <div className='carousel__cell__caption'>
-             {/*<h1>The lads</h1>*/}
-          </div>
       </div>
       <div className="carousel__cell">
         <img className="carousel__cell__image"
@@ -32,18 +29,18 @@ export default function Foto(){
         <img className="carousel__cell__image"
              data-flickity-lazyload="https://woobler-photos.s3.amazonaws.com/5-min.jpg" alt=""/>
       </div>
-      {/*<div className="carousel__cell">*/}
-      {/*  <img className="carousel__cell__image"*/}
-      {/*       data-flickity-lazyload="https://woobler-photos.s3.amazonaws.com/6-min.jpg" alt=""/>*/}
-      {/*</div>*/}
+      <div className="carousel__cell">
+        <img className="carousel__cell__image"
+             data-flickity-lazyload="https://woobler-photos.s3.amazonaws.com/6-min.jpg" alt=""/>
+      </div>
       <div className="carousel__cell">
         <img className="carousel__cell__image"
              data-flickity-lazyload="https://woobler-photos.s3.amazonaws.com/7-min.jpg" alt=""/>
       </div>
-      {/*<div className="carousel__cell">*/}
-      {/*  <img className="carousel__cell__image"*/}
-      {/*       data-flickity-lazyload="https://woobler-photos.s3.amazonaws.com/8-min.jpg" alt=""/>*/}
-      {/*</div>*/}
+      <div className="carousel__cell">
+        <img className="carousel__cell__image"
+             data-flickity-lazyload="https://woobler-photos.s3.amazonaws.com/8-min.jpg" alt=""/>
+      </div>
       <div className="carousel__cell">
         <img className="carousel__cell__image"
              data-flickity-lazyload="https://woobler-photos.s3.amazonaws.com/9-min.jpg" alt=""/>
