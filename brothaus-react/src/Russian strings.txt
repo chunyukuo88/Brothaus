@@ -1,0 +1,9 @@
+Welcome ...to my trilingual photo album. This is a test-driven React project. Modals are provided by the Reactjs-Popup library. 100% test coverage with Enzyme & React Testing Library.
+Добро пожаловать ... в мой трехъязычный фотоальбом. Это проект проект. Модальные блоки предоставлены библиотекой Reactjs-Popup. 100% тестового покрытия с библиотекой Enzyme и React Testing Library.
+
+Code
+Код
+
+70°F and 40% humidity here
+Здесь 70°F и влажность 40%
+
