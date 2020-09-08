@@ -28,8 +28,8 @@ describe('Code.js', ()=>{
     });
     test('and it renders the initial language.', ()=>{
       const component = wrapper.find("[data-test='code']");
-      console.log(component);
-      expect(component.innerText).toBe('Код');
+      expect(component.text()).toBe('Код'); //Enzyme docs don't say WHY this 'should be looked at with skepticism.'
+      expect(component.render().text()).toBe('Код');
     });
   });
 });
