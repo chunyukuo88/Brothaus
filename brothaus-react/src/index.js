@@ -4,11 +4,11 @@ import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import reducers from './reducers'; //The reducers here is whatever is exported from index.js of the reducers directory.
+import reducer from './reducers'; //The reducers here is whatever is exported from index.js of the reducers directory.
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={createStore(reducers, {})}>
+    <Provider store={createStore(reducer, {})}>
       <App/>
     </Provider>
   </React.StrictMode>,

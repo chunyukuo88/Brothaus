@@ -3,13 +3,23 @@ import urls from "../urls";
 import { connect } from 'react-redux';
 
 class Code extends Component {
+
   render(){
     return <a href={urls.githubRepo}
               target='_blank'
               data-test='code'
               rel='noopener noreferrer'
-              id='repo'>{this.props.language}</a>;
+              id='repo'>{this._getCodeDisplay(this.props)}</a>;
   };
+  _getCodeDisplay = ({language}) => {
+    switch (language){
+      case 'chinese': return '代碼';
+      case 'english': return 'Code';
+      case 'russian': return 'Код';
+      default: return 'Source Code';
+    }
+  }
+
 }
 
 function mapStateToProps(state){

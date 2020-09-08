@@ -8,7 +8,7 @@ import Root from '../Root.js';
 let wrapper;
 beforeEach(()=>{
   const initialState = {
-    language: 'english',
+    language: 'russian',
   };
   wrapper = mount(
     <Root initialState={initialState}>
@@ -26,9 +26,10 @@ describe('Code.js', ()=>{
       const component = wrapper.find("[data-test='code']");
       expect(component.length).toBe(1);
     });
-    test('and it renders the intial language.', ()=>{
-      console.log(wrapper.find('a').length);
-      console.log(wrapper.find('a').innerHTML);
+    test('and it renders the initial language.', ()=>{
+      const component = wrapper.find("[data-test='code']");
+      console.log(component);
+      expect(component.innerText).toBe('Код');
     });
   });
 });
