@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
 import '../css/Heading.css';
+import { switchToRussian} from '../actions';
 
 import Title from './Title';
 import WeatherDisplay from './WeatherDisplay';
-import Welcome from "./Welcome";
-import Code from "./Code";
+import Welcome from './Welcome';
+import Code from './Code';
+
 
 export default function Heading(){
   const [ degrees, toggleDegreeType ] = useState({isFahrenheit: true});
@@ -12,6 +14,8 @@ export default function Heading(){
   const _toggleDegrees = () => {
     toggleDegreeType({isFahrenheit: !degrees.isFahrenheit});
   };
+
+
 
   return (
     <div data-testid='heading' id='heading'>
@@ -30,7 +34,7 @@ export default function Heading(){
               <WeatherDisplay {...degrees}/>
         </div>
         <div id='nav-items__language' className='nav-item'>
-              <span className='nav-item' >EN</span>
+              <span className='nav-item' onClick={switchToRussian}>EN</span>
         </div>
       </nav>
     </div>
