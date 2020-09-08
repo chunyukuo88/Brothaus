@@ -1,10 +1,20 @@
-import React from "react";
+import React, { Component } from "react";
 import urls from "../urls";
+import { connect } from 'react-redux';
+import mapDispatchToProps from "react-redux/lib/connect/mapDispatchToProps";
 
-const Code = () => <a href={urls.githubRepo}
-                      target='_blank'
-                      data-test='code'
-                      rel='noopener noreferrer'
-                      id='repo'>Code</a>;
+class Code extends Component {
+  render(){
+    return <a href={urls.githubRepo}
+              target='_blank'
+              data-test='code'
+              rel='noopener noreferrer'
+              id='repo'>Code</a>;
+  };
+}
 
-export default Code;
+function mapStateToProps(state){
+  return { language: state.language };
+}
+
+export default connect(mapStateToProps)(Code);
