@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import '../css/Heading.css';
-import { switchToRussian} from '../actions';
+import { switchToRussian } from '../actions';
+import { useDispatch } from 'react-redux';
 
 import Title from './Title';
 import WeatherDisplay from './WeatherDisplay';
@@ -9,6 +10,7 @@ import Code from './Code';
 
 
 export default function Heading(){
+  const dispatch = useDispatch();
   const [ degrees, toggleDegreeType ] = useState({isFahrenheit: true});
 
   const _toggleDegrees = () => {
@@ -34,7 +36,7 @@ export default function Heading(){
               <WeatherDisplay {...degrees}/>
         </div>
         <div id='nav-items__language' className='nav-item'>
-              <span className='nav-item' onClick={switchToRussian}>EN</span>
+              <span className='nav-item' onClick={()=>dispatch(switchToRussian())}>EN</span>
         </div>
       </nav>
     </div>
