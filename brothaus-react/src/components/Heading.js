@@ -22,18 +22,18 @@ export default function Heading(){
     <div data-testid='heading' id='heading'>
       <Title/>
       <nav id='nav-items'>
-        <div className='nav-item'>
+        <div id='nav-items__welcome' className='nav-item'>
               <Welcome/>
         </div>
-        <div className='nav-item'>
+        <div id='nav-items__code' className='nav-item'>
               <Code/>
         </div>
-        <div className='nav-item' onClick={_toggleDegrees}>
+        <div id='nav-items__weather' className='nav-item' onClick={_toggleDegrees}>
               <WeatherDisplay {...degrees}/>
         </div>
-        <div onClick={_toggleLanguage} >
+        <div id='nav-items__language' onClick={_toggleLanguage} className='nav-item'>
               <span data-test='language-display'
-                    className='nav-item' >{English ? 'English' : '華語版本'}
+                    className='nav-item' >{English ? 'EN' : '華語'}
               </span>
         </div>
       </nav>

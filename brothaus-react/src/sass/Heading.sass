@@ -18,9 +18,28 @@ a
 
 @media(max-width: 800px)
   #nav-items
-    display: flex
-    flex-direction: column
-    align-items: center
+    display: grid
+    grid-template-columns: auto auto 130px 100px
+    grid-template-rows: repeat(2, 40px)
+    .nav-item
+      align-self: center
+      text-align: center
+    #nav-items__weather
+        color: red
+        grid-column-start: 1
+        grid-column-end: span 2
+        grid-row-start: 1
+        grid-row-end: span 2
+    #nav-items__welcome
+        grid-column-start: 3
+        grid-row-start: 1
+    #nav-items__code
+        grid-column-start: 3
+        grid-row-start: 2
+    #nav-items__language
+        grid-column-start: 4
+        grid-row-start: 1
+        grid-row-end: span 2
 
 .title-array
   font-size: 2rem

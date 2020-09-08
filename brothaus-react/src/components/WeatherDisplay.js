@@ -25,13 +25,13 @@ export default function WeatherDisplay (props) {
 const getDegreesFahrenheit = degreesKelvin => (9/5) * (degreesKelvin - 273) + 32;
 const getDisplayFahrenheit = (temp, humidity) => {
   const tempColor = temp > 35 ? '#4c9900' : 'blue';
-  return <div><span style={{color: `${tempColor}`}}>{Math.round(temp)}°F</span> and {humidity}% humidity here</div>
+  return <div><span style={{color: `${tempColor}`}}>{Math.round(temp)}°F</span> and {humidity}% humidity here in Westerville</div>
 }
 
 const getDegreesCelsius = degreesKelvin => (degreesKelvin - 273.15);
 const getDisplayCelsius = (temp, humidity) => {
   const tempColor = temp > 2 ? '#4c9900' : 'blue';
-  return <div><span style={{color: `${tempColor}`}}>{Math.round(temp)}°C</span> and {humidity}% humidity here</div>
+  return <div><span style={{color: `${tempColor}`}}>{Math.round(temp)}°C</span> and {humidity}% humidity here in Westerville</div>
 }
 
 
