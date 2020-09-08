@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import urls from "../urls";
 import { connect } from 'react-redux';
-import mapDispatchToProps from "react-redux/lib/connect/mapDispatchToProps";
 
 class Code extends Component {
   render(){
@@ -9,7 +8,7 @@ class Code extends Component {
               target='_blank'
               data-test='code'
               rel='noopener noreferrer'
-              id='repo'>Code</a>;
+              id='repo'>{this.props.language}</a>;
   };
 }
 

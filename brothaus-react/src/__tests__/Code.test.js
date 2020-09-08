@@ -22,9 +22,13 @@ afterEach(()=>{
 
 describe('Code.js', ()=>{
   describe('On load,', ()=>{
-    test('It loads without crashing', ()=>{
+    test('It loads without crashing, ', ()=>{
       const component = wrapper.find("[data-test='code']");
       expect(component.length).toBe(1);
+    });
+    test('and it renders the intial language.', ()=>{
+      console.log(wrapper.find('a').length);
+      console.log(wrapper.find('a').innerHTML);
     });
   });
 });
