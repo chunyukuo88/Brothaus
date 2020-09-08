@@ -19,13 +19,12 @@ describe('Heading.js', ()=>{
            expect(heading.length).toBe(1);
        });
    });
-   describe('When the language display string is clicked,', ()=>{
-       it('the language toggler is invoked.', ()=>{
+   xdescribe('When the weather display string is clicked,', ()=>{
+       it('the degree toggler is invoked.', ()=>{
            wrapper = mount(<Heading/>);
-           const languageDisplay = wrapper.find("[data-test='language-display']");
+           const languageDisplay = wrapper.find("[data-test='weather-display']");
            console.log(languageDisplay);
            expect(languageDisplay.innerText).toBeDefined();
-           // languageDisplay.simulate('click')
        });
     });
 });

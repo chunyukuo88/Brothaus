@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import '../css/Heading.css';
 
 import Title from './Title';
@@ -7,12 +7,7 @@ import Welcome from "./Welcome";
 import Code from "./Code";
 
 export default function Heading(){
-  const [ English, setEnglish ] = useState(true);
   const [ degrees, toggleDegreeType ] = useState({isFahrenheit: true});
-
-  const _toggleLanguage = () => {
-    setEnglish(!English);
-  };
 
   const _toggleDegrees = () => {
     toggleDegreeType({isFahrenheit: !degrees.isFahrenheit});
@@ -28,13 +23,14 @@ export default function Heading(){
         <div id='nav-items__code' className='nav-item'>
               <Code/>
         </div>
-        <div id='nav-items__weather' className='nav-item' onClick={_toggleDegrees}>
+        <div id='nav-items__weather'
+             className='nav-item'
+             onClick={_toggleDegrees}
+             data-test='weather-display'>
               <WeatherDisplay {...degrees}/>
         </div>
-        <div id='nav-items__language' onClick={_toggleLanguage} className='nav-item'>
-              <span data-test='language-display'
-                    className='nav-item' >{English ? 'EN' : '華語'}
-              </span>
+        <div id='nav-items__language' className='nav-item'>
+              <span className='nav-item' >EN</span>
         </div>
       </nav>
     </div>
