@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import '../../css/Title.css';
 import { connect } from 'react-redux';
 import { EnglishTitle } from './English';
+import { RussianTitle } from "./русский";
 
 class Title extends Component {
   render() {
@@ -12,8 +13,8 @@ class Title extends Component {
   _getTitleBasedOnLanguage = ({language}) => {
     switch (language){
       case 'chinese': return '代碼';
-      case 'russian': return 'Код';
-      default: return <EnglishTitle/>;
+      case 'russian': return <RussianTitle/>;
+      default:        return <EnglishTitle/>;
     }
   }
 }
