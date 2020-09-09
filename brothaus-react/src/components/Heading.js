@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import '../css/Heading.css';
-import {switchToRussian, switchToEnglish, switchToChinese} from '../actions';
+import { switchToRussian, switchToEnglish, switchToChinese } from '../actions';
 import { useDispatch } from 'react-redux';
 
 import Title from './Title/Title';
@@ -16,8 +16,6 @@ export default function Heading(){
   const _toggleDegrees = () => {
     toggleDegreeType({isFahrenheit: !degrees.isFahrenheit});
   };
-
-
 
   return (
     <div data-testid='heading' id='heading'>
@@ -36,9 +34,9 @@ export default function Heading(){
               <WeatherDisplay {...degrees}/>
         </div>
         <div id='nav-items__language' className='nav-item'>
-              <span className='nav-item russian' onClick={()=>dispatch(switchToRussian())}>русский</span>
-              <span className='nav-item english' onClick={()=>dispatch(switchToEnglish())}>English</span>
-              <span className='nav-item chinese' onClick={()=>dispatch(switchToChinese())}>華語</span>
+              <span id='rus' className='nav-item russian' onClick={()=>dispatch(switchToRussian())}>🇷🇺</span>
+              <span id='en' className='nav-item english' onClick={()=>dispatch(switchToEnglish())}>🇺🇸</span>
+              <span id='ch' className='nav-item chinese' onClick={()=>dispatch(switchToChinese())}>🇹🇼</span>
         </div>
       </nav>
     </div>

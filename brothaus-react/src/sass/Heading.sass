@@ -41,6 +41,18 @@ a
         grid-column-start: 4
         grid-row-start: 1
         grid-row-end: span 2
+        display: grid
+        grid-template-rows: repeat(3, 1fr)
+        grid-template-columns: repeat(3, 1fr)
+        #rus
+          grid-row-start: 1
+          grid-column-start: 1
+        #en
+          grid-row-start: 2
+          grid-column-start: 2
+        #ch
+          grid-row-start: 3
+          grid-column-start: 3
 .title-array
   font-size: 2rem
   margin:  common.$common-margin
