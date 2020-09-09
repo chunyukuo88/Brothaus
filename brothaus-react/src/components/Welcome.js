@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Popup from 'reactjs-popup';
-import AboutModal from "./AboutModal";
+import AboutModal from "./AboutModal/AboutModal";
 import { connect } from 'react-redux';
 
 class Welcome extends Component {
