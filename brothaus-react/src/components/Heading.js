@@ -36,9 +36,9 @@ export default function Heading(){
               <WeatherDisplay {...degrees}/>
         </div>
         <div id='nav-items__language' className='nav-item'>
-              <span className='nav-item' onClick={()=>dispatch(switchToRussian())}>русский</span>
-              <span className='nav-item' onClick={()=>dispatch(switchToEnglish())}>English</span>
-              <span className='nav-item' onClick={()=>dispatch(switchToChinese())}>華語</span>
+              <span className='nav-item russian' onClick={()=>dispatch(switchToRussian())}>русский</span>
+              <span className='nav-item english' onClick={()=>dispatch(switchToEnglish())}>English</span>
+              <span className='nav-item chinese' onClick={()=>dispatch(switchToChinese())}>華語</span>
         </div>
       </nav>
     </div>
