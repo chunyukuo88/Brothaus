@@ -8,7 +8,6 @@ import WeatherDisplay from './WeatherDisplay';
 import Welcome from './Welcome';
 import Code from './Code';
 
-
 export default function Heading(){
   const dispatch = useDispatch();
   const [ degrees, toggleDegreeType ] = useState({isFahrenheit: true});

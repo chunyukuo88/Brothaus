@@ -48,8 +48,7 @@ a {
 @media (max-width: 800px) {
   #nav-items {
     display: grid;
-    grid-template-columns: auto auto 130px 100px;
-    grid-template-rows: repeat(2, 40px);
+    place-items: center;
   }
   #nav-items .nav-item {
     align-self: center;
@@ -57,39 +56,39 @@ a {
   }
   #nav-items #nav-items__weather {
     color: red;
-    grid-column-start: 1;
-    grid-column-end: span 2;
-    grid-row-start: 1;
-    grid-row-end: span 2;
+    grid-column: 1;
+    grid-row: 1/span 2;
     transform: rotate(-5deg);
   }
   #nav-items #nav-items__welcome {
-    grid-column-start: 3;
-    grid-row-start: 1;
+    grid-column: 2;
+    grid-row: 1;
   }
   #nav-items #nav-items__code {
-    grid-column-start: 3;
-    grid-row-start: 2;
+    grid-column: 2;
+    grid-row: 2;
   }
   #nav-items #nav-items__language {
-    grid-column-start: 4;
-    grid-row-start: 1;
-    grid-row-end: span 2;
+    grid-column: 3;
+    grid-row: 1/span 2;
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(3, auto);
   }
   #nav-items #nav-items__language #rus {
-    grid-row-start: 1;
-    grid-column-start: 1;
+    grid-row: 1;
+    grid-column: 1;
+    padding: 0 5px 0 5px;
   }
   #nav-items #nav-items__language #en {
-    grid-row-start: 2;
-    grid-column-start: 2;
+    grid-row: 2;
+    grid-column: 2;
+    padding: 0 5px 0 5px;
   }
   #nav-items #nav-items__language #ch {
-    grid-row-start: 3;
-    grid-column-start: 3;
+    grid-row: 3;
+    grid-column: 3;
+    padding: 0 5px 0 5px;
   }
 }
 .title-array {
