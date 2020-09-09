@@ -3,7 +3,7 @@ import '../css/Heading.css';
 import {switchToRussian, switchToEnglish, switchToChinese} from '../actions';
 import { useDispatch } from 'react-redux';
 
-import Title from './Title';
+import Title from './Title/Title';
 import WeatherDisplay from './WeatherDisplay';
 import Welcome from './Welcome';
 import Code from './Code';

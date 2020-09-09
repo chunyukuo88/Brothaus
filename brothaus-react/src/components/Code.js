@@ -13,9 +13,8 @@ class Code extends Component {
   _getCodeDisplay = ({language}) => {
     switch (language){
       case 'chinese': return '代碼';
-      case 'english': return 'Code';
       case 'russian': return 'Код';
-      default: return 'Source Code';
+      default: return 'Code';
     }
   }
 
