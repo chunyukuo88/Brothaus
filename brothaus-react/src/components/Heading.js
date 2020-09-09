@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import '../css/Heading.css';
-import { switchToRussian } from '../actions';
+import {switchToRussian, switchToEnglish, switchToChinese} from '../actions';
 import { useDispatch } from 'react-redux';
 
 import Title from './Title';
@@ -36,7 +36,9 @@ export default function Heading(){
               <WeatherDisplay {...degrees}/>
         </div>
         <div id='nav-items__language' className='nav-item'>
-              <span className='nav-item' onClick={()=>dispatch(switchToRussian())}>EN</span>
+              <span className='nav-item' onClick={()=>dispatch(switchToRussian())}>русский</span>
+              <span className='nav-item' onClick={()=>dispatch(switchToEnglish())}>English</span>
+              <span className='nav-item' onClick={()=>dispatch(switchToChinese())}>華語</span>
         </div>
       </nav>
     </div>

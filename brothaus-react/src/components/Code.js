@@ -3,7 +3,6 @@ import urls from "../urls";
 import { connect } from 'react-redux';
 
 class Code extends Component {
-
   render(){
     return <a href={urls.githubRepo}
               target='_blank'
