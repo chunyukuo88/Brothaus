@@ -12,9 +12,16 @@ body {
   text-align: center;
 }
 
+.english {
+  font-family: "Luckiest Guy", cursive;
+}
+
+.russian {
+  font-family: "Balsamiq Sans", cursive;
+}
+
 .title-letter,
 .title-letter-up {
-  font-family: "Luckiest Guy", cursive;
   font-size: 10vw;
   padding: 0;
   border: 0;
