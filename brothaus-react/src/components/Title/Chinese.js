@@ -5,7 +5,7 @@ export class ChineseTitle extends Component {
     return (
       <div className='title-container'>
         <section className='title-array'>
-          <h1 className='title chinese'>小巫之屋</h1>
+          <p className='title chinese'>小巫之屋</p>
         </section>
       </div>
     )
