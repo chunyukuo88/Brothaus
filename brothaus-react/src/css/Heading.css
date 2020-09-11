@@ -24,12 +24,9 @@ body {
   font-family: "Neucha";
 }
 
-a {
-  text-decoration: none;
-}
-
-.code, .welcome, .weather {
+.code, .welcome, .weather, .localization {
   color: white;
+  padding: 4px;
 }
 
 #heading {
@@ -58,7 +55,6 @@ a {
   #nav-items #nav-items__weather {
     grid-column: 1;
     grid-row: 1/span 2;
-    transform: rotate(-5deg);
   }
   #nav-items #nav-items__welcome {
     grid-column: 2;
@@ -71,24 +67,13 @@ a {
   #nav-items #nav-items__language {
     grid-column: 3;
     grid-row: 1/span 2;
-    display: grid;
-    grid-template-rows: repeat(3, auto);
-    grid-template-columns: repeat(3, auto);
   }
-  #nav-items #nav-items__language #rus {
-    grid-row: 1;
-    grid-column: 1;
-    padding: 0 5px 0 5px;
-  }
-  #nav-items #nav-items__language #en {
-    grid-row: 2;
-    grid-column: 2;
-    padding: 0 5px 0 5px;
-  }
-  #nav-items #nav-items__language #ch {
-    grid-row: 3;
-    grid-column: 3;
-    padding: 0 5px 0 5px;
+  #nav-items #nav-items__language .localization {
+    background: #796b6b;
+    border: 2px;
+    border-radius: 100%;
+    margin: 2px;
+    padding: 2px;
   }
 }
 .title-array {
