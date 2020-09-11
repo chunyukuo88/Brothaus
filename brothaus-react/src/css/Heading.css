@@ -28,6 +28,10 @@ a {
   text-decoration: none;
 }
 
+.code, .welcome, .weather {
+  color: white;
+}
+
 #heading {
   font-family: "Luckiest Guy", cursive;
   font-size: 3vw;
@@ -35,9 +39,6 @@ a {
 
 .nav-item {
   cursor: pointer;
-}
-.nav-item :hover {
-  text-shadow: 2px 2px yellow;
 }
 
 #nav-items {
@@ -55,7 +56,6 @@ a {
     text-align: center;
   }
   #nav-items #nav-items__weather {
-    color: red;
     grid-column: 1;
     grid-row: 1/span 2;
     transform: rotate(-5deg);

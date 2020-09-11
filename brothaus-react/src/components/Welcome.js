@@ -14,9 +14,9 @@ class Welcome extends Component {
 
   _getWelcomeString = ({language}) => {
     switch (language){
-      case 'chinese': return <div className='chinese'>簡介</div>;
-      case 'russian': return <div className='russian'>пожаловать</div>;
-      default:        return <div className='english'>Welcome</div>;
+      case 'chinese': return <div className='welcome chinese'>簡介</div>;
+      case 'russian': return <div className='welcome russian'>пожаловать</div>;
+      default:        return <div className='welcome english'>Welcome!</div>;
     }
   }
 }

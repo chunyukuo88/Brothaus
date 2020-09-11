@@ -26,7 +26,7 @@ export default function WeatherDisplay (props) {
     getWeatherFromApi();
   },[]);
 
-  return <>{displayLanguage(selectedLanguage)}</>;
+  return <div className='weather'>{displayLanguage(selectedLanguage)}</div>;
 }
 
 const getDegreesFahrenheit = degreesKelvin => (9/5) * (degreesKelvin - 273) + 32;
