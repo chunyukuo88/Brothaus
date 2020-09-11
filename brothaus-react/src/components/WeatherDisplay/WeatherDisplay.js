@@ -10,9 +10,9 @@ export default function WeatherDisplay (props) {
 
   const displayLanguage = (language) => {
     switch(language){
-      case 'russian': return getRussianDisplay(getDegreesFahrenheit(degreesKelvin), humidity);
+      case 'russian': return getRussianDisplay(getDegreesCelsius(degreesKelvin), humidity);
       case 'chinese': return getChineseDisplay(getDegreesCelsius(degreesKelvin), humidity);
-      default:        return getEnglishDisplay(getDegreesCelsius(degreesKelvin), humidity);
+      default:        return getEnglishDisplay(getDegreesFahrenheit(degreesKelvin), humidity);
     }
   }
 
