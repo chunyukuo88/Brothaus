@@ -4,9 +4,7 @@ export class ChineseTitle extends Component {
   render() {
     return (
       <div className='title-container'>
-        <section className='title-array'>
-          <p className='title chinese'>小巫之屋</p>
-        </section>
+        <div className='title chinese'>小巫之屋</div>
       </div>
     )
   }
