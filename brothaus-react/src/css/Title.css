@@ -21,14 +21,13 @@ body {
 }
 
 .russian {
-  font-family: "Balsamiq Sans", cursive;
+  font-family: "Neucha";
 }
 
 .title-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  font-size: 3em;
   margin-top: 15px;
   -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
   -moz-animation: neon1 1.5s ease-in-out infinite alternate;
@@ -37,14 +36,26 @@ body {
 
 .title {
   color: #fff;
+  font-size: 3em;
   text-decoration: none;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+.title:hover {
+  color: black;
 }
 
 .english-title {
   font-family: "Monoton", cursive;
+}
+
+.russian-title {
+  font-family: "Rubik Mono One", sans-serif;
 }
 
 /*glow for webkit*/
