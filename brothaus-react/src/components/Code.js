@@ -4,20 +4,22 @@ import { connect } from 'react-redux';
 
 class Code extends Component {
   render(){
-    return <a href={urls.githubRepo}
-              target='_blank'
-              data-test='code'
-              rel='noopener noreferrer'
-              id='repo'>{this._getCodeDisplay(this.props)}</a>;
+    return codeString(this.props);
   };
-  _getCodeDisplay = ({language}) => {
-    switch (language){
-      case 'chinese': return <div className='code chinese'>代碼</div>;
-      case 'russian': return <div className='code russian'>Код</div>;
-      default:        return <div className='code english'>Github</div>;
-    }
-  }
+}
 
+const codeString = props => <a href={urls.githubRepo}
+                                 target='_blank'
+                                 data-test='code'
+                                 rel='noopener noreferrer'
+                                 id='repo'>{getCodeDisplay(props)}</a>;
+
+const getCodeDisplay = props => {
+  switch (props.language){
+    case 'chinese': return <div className='code chinese'>代碼</div>;
+    case 'russian': return <div className='code russian'>Код</div>;
+    default:        return <div className='code english'>Github</div>;
+  }
 }
 
 function mapStateToProps(state){
