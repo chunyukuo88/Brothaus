@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import '../../css/AboutModal.css';
 import { connect } from 'react-redux';
 import { EnzymeLink, ReactPopup, ReactTesting } from './ClickableTechnologyLinks';
+import staticStrings from '../../StaticStrings.js';
 
 class AboutModal extends Component {
   render(){
@@ -20,16 +21,16 @@ class AboutModal extends Component {
   };
   _getModalHeader = ({language}) => {
     switch (language){
-      case 'chinese': return <div className='chinese'>歡迎訪問小巫之屋～</div>;
-      case 'russian': return <div className='russian'>... в мой трехъязычный фотоальбом.</div>;
-      default:        return <div className='english'>...to my trilingual photo album.</div>;
+      case 'chinese': return <div className='chinese'>{staticStrings.modalHeading.ZH}</div>;
+      case 'russian': return <div className='russian'>{staticStrings.modalHeading.RU}</div>;
+      default:        return <div className='english'>{staticStrings.modalHeading.EN}</div>;
     }
   };
   _getSummaryText = ({language}) => {
     switch (language){
-      case 'chinese': return <div className='chinese'>製作本站，我用了REACT與REDUX</div>;
-      case 'russian': return <div className='russian'>Это проект React.</div>;
-      default:        return <div className='english'>This is a test-driven React project.</div>;
+      case 'chinese': return <div className='chinese'>{staticStrings.modalSummary.ZH}</div>;
+      case 'russian': return <div className='russian'>{staticStrings.modalSummary.RU}</div>;
+      default:        return <div className='english'>{staticStrings.modalSummary.EN}</div>;
     }
   }
   _getModalDescription = ({language}) => {

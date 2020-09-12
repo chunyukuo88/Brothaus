@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Popup from 'reactjs-popup';
 import AboutModal from './AboutModal/AboutModal';
 import { connect } from 'react-redux';
+import staticStrings from '../StaticStrings';
 
 class Welcome extends Component {
   render(){
@@ -17,9 +18,9 @@ const welcomeString = (props) => <span>{getWelcomeString(props)}</span>;
 
 const getWelcomeString = (props) => {
   switch (props.language){
-    case 'chinese': return <div className='welcome chinese'>簡介</div>;
-    case 'russian': return <div className='welcome russian'>пожаловать</div>;
-    default:        return <div className='welcome english'>Welcome!</div>;
+    case 'chinese': return <div className='welcome chinese'>{staticStrings.welcome.ZH}</div>;
+    case 'russian': return <div className='welcome russian'>{staticStrings.welcome.RU}</div>;
+    default:        return <div className='welcome english'>{staticStrings.welcome.EN}</div>;
   }
 }
 
