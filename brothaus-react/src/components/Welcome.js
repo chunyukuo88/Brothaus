@@ -6,18 +6,20 @@ import { connect } from 'react-redux';
 class Welcome extends Component {
   render(){
     return (
-      <Popup modal trigger={<span>{this._getWelcomeString(this.props)}</span>}>
+      <Popup modal trigger={welcomeString(this.props)}>
         {close => <AboutModal close={close} />}
       </Popup>
     );
   };
+}
 
-  _getWelcomeString = ({language}) => {
-    switch (language){
-      case 'chinese': return <div className='welcome chinese'>簡介</div>;
-      case 'russian': return <div className='welcome russian'>пожаловать</div>;
-      default:        return <div className='welcome english'>Welcome!</div>;
-    }
+const welcomeString = (props) => <span>{getWelcomeString(props)}</span>;
+
+const getWelcomeString = (props) => {
+  switch (props.language){
+    case 'chinese': return <div className='welcome chinese'>簡介</div>;
+    case 'russian': return <div className='welcome russian'>пожаловать</div>;
+    default:        return <div className='welcome english'>Welcome!</div>;
   }
 }
 
