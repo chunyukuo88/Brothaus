@@ -32,9 +32,9 @@ body {
 
 .modal {
   font-size: 1rem;
-  padding: 4px;
-  border: 4px;
-  margin: 4px;
+  padding: 5px;
+  border: 5px;
+  margin: 5px;
   text-align: center;
 }
 .modal .actions {
@@ -42,7 +42,7 @@ body {
 }
 .modal .actions {
   width: 100%;
-  padding: 10px 5px;
+  padding: calc(2 * 5px) 5px;
   text-align: center;
 }
 .modal .modal-header {
@@ -56,6 +56,7 @@ body {
 }
 .modal .content .technology-link {
   color: fuchsia;
+  text-decoration: none;
 }
 .modal .header {
   width: 100%;

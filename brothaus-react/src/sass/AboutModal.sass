@@ -1,5 +1,6 @@
 @use './common'
 $modal-fonts: 1rem
+$standard-paboma: 5px //paboma = 'padding, border, margin.' It's also the order of innermost to outermost spacing classifications.
 
 .modal-header
   color: common.$primary-font-color
@@ -8,15 +9,15 @@ $modal-fonts: 1rem
 
 .modal
   font-size: $modal-fonts
-  padding: 4px
-  border: 4px
-  margin: 4px
+  padding: $standard-paboma
+  border: $standard-paboma
+  margin: $standard-paboma
   text-align: center
   .actions
     margin: auto
   .actions
     width: 100%
-    padding: 10px 5px
+    padding: calc(2 * #{$standard-paboma}) $standard-paboma
     text-align: center
   .modal-header
     padding: common.$common-padding
@@ -24,16 +25,16 @@ $modal-fonts: 1rem
     margin: common.$common-margin
   .content
     width: 100%
-    padding: 10px 5px
+    padding: 10px $standard-paboma
     .technology-link
       color: fuchsia
-
+      text-decoration: none
   .header
     width: 100%
     border-bottom: 1px solid gray
     font-size: 18px
     text-align: center
-    padding: 5px
+    padding: $standard-paboma
 
 .popup-content
   border-radius: 8px

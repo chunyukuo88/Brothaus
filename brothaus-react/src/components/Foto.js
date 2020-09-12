@@ -2,7 +2,6 @@ import React from "react";
 import '../css/FotoPublic.css';
 
 export default function Foto(){
-
   return(
     <div className="carousel"
          data-flickity='{ "lazyLoad": true,
