@@ -40,14 +40,6 @@ export default function Foto(){
         <img className="carousel__cell__image"
              data-flickity-lazyload="https://woobler-photos.s3.amazonaws.com/8-min.jpg" alt=""/>
       </div>
-      <div className="carousel__cell">
-        <img className="carousel__cell__image"
-             data-flickity-lazyload="https://woobler-photos.s3.amazonaws.com/9-min.jpg" alt=""/>
-      </div>
-      <div className="carousel__cell">
-        <img className="carousel__cell__image"
-             data-flickity-lazyload="https://woobler-photos.s3.amazonaws.com/10-min.jpg" alt=""/>
-      </div>
     </div>
   );
 }
