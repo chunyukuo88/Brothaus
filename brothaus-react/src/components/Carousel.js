@@ -1,9 +1,15 @@
 import React from "react";
 import '../css/FotoPublic.css';
 import Foto from './Foto';
+import AWS from 'aws-sdk';
 
 export default function Carousel(){
-  console.log('# of fot: ', 'https://woobler-photos.s3.amazonaws.com/woobler-photos'.length);
+  const fotoAlbum = 'woobler-photos';
+  const s3 = new AWS.S3({
+    apiVersion: '2006-03-01',
+    params: { Bucket: fotoAlbum}
+  })
+  console.log(s3.listObjects());
   const foto1 = {fotoNumber: 1};
   const foto2 = {fotoNumber: 2};
   const foto3 = {fotoNumber: 3};
