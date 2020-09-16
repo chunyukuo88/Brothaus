@@ -3,6 +3,7 @@ import '../css/FotoPublic.css';
 import Foto from './Foto';
 
 export default function Carousel(){
+  console.log('# of fot: ', 'https://woobler-photos.s3.amazonaws.com/woobler-photos'.length);
   const foto1 = {fotoNumber: 1};
   const foto2 = {fotoNumber: 2};
   const foto3 = {fotoNumber: 3};

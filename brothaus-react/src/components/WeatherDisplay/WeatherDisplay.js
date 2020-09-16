@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import urls from '../../urls';
 import { useSelector } from 'react-redux';
-import {ChineseWeatherDisplay, EnglishWeatherDisplay, RussianWeatherDisplay} from './WeatherDisplayLocalizations';
+import { ChineseWeatherDisplay, EnglishWeatherDisplay, RussianWeatherDisplay } from './WeatherDisplayLocalizations';
 
-export default function WeatherDisplay (props) {
-  const [ degreesKelvin, setDegreesKelvin] = useState(270);
+export default function WeatherDisplay () {
+  const [ degreesKelvin, setDegreesKelvin] = useState(285);
   const [ humidity, setHumidity ] = useState(50);
   const selectedLanguage = useSelector((state) => state.language);
 
