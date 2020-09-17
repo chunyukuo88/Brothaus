@@ -22,7 +22,7 @@ export default function Carousel(){
     if (err) {
       console.log("Error", err);
     } else {
-      console.log("Success", data.Contents);
+      console.log("Number of photos in the bucket: ", data.Contents.length);
     }
   });
 
