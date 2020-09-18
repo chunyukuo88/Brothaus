@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import '../css/FotoPublic.css';
 import Foto from './Foto';
 import AWS from 'aws-sdk';
@@ -15,16 +15,20 @@ const s3 = new AWS.S3({apiVersion: '2006-03-01'});
 const albumBucketName = 'woobler-photos';
 const bucketParams = {Bucket: albumBucketName};
 
-
+/**
+* data.Contents.length
+* */
 
 export default function Carousel(){
-  s3.listObjects(bucketParams, function(err, data) {
+  const result = () => s3.listObjects(bucketParams, function(err, data) {
     if (err) {
-      console.log("Error", err);
+      console.log("Unable to get photo count: ", err);
     } else {
       console.log("Number of photos in the bucket: ", data.Contents.length);
+      return data;
     }
   });
+  console.log('Pulled out the variable: ', result());
 
   const foto1 = {fotoNumber: 1};
   const foto2 = {fotoNumber: 2};

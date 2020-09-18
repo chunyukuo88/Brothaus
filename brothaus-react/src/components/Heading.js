@@ -21,7 +21,6 @@ export default function Heading(){
       <Title/>
       <nav id='nav-items'>
         {getWelcomeString()}
-        {getCodeString()}
         {getLocalizationStrings(dispatch)}
         <div id='nav-items__weather'
              className='nav-item'
@@ -36,7 +35,7 @@ export default function Heading(){
 
 const getWelcomeString = () => <div id='nav-items__welcome' className='nav-item'><Welcome/></div>;
 
-const getCodeString = () => <div id='nav-items__code' className='nav-item'><Code/></div>;
+
 
 const getLocalizationStrings = (dispatch) => {
   return (

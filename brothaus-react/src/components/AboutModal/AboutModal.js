@@ -1,8 +1,9 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import '../../css/AboutModal.css';
 import { connect } from 'react-redux';
 import { EnzymeLink, ReactPopup, ReactTesting } from './ClickableTechnologyLinks';
 import staticStrings from '../../StaticStrings.js';
+import Code from '../Code';
 
 class AboutModal extends Component {
   render(){
@@ -15,10 +16,15 @@ class AboutModal extends Component {
           <p className='modal-text'>{this._getModalDescription(this.props)}</p>
           <hr/>
           <p className='statement'>{this._getCoverageStatement(this.props)}</p>
+          <hr/>
+          <p >{this._getCodeString()}</p>
         </div>
       </div>
     );
   };
+
+  _getCodeString = () => <div id='nav-items__code' className='nav-item'><Code/></div>;
+
   _getModalHeader = ({language}) => {
     switch (language){
       case 'chinese': return <div className='chinese'>{staticStrings.modalHeading.ZH}</div>;
