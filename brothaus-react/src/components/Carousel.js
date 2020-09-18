@@ -24,11 +24,12 @@ const bucketParams = {
 export default function Carousel(){
   async function getCount () {
     const result = await s3.listObjectsV2(bucketParams).promise();
+    console.log('getCount()', result.Contents.length);
     return result;
   }
 
   const result = getCount().then(data => data.Contents.length);
-  console.log(result);
+  console.log('After the .then() block: ', result);
 
   // async function getCount () {
   //   s3.listObjectsV2(bucketParams, function(err, data) {
