@@ -13,7 +13,9 @@ AWS.config.credentials = new AWS.CognitoIdentityCredentials({
 
 const s3 = new AWS.S3({apiVersion: '2006-03-01'});
 const albumBucketName = 'woobler-photos';
-const bucketParams = {Bucket: albumBucketName};
+const bucketParams = {
+  Bucket: albumBucketName,
+};
 
 /**
 * data.Contents.length
@@ -25,7 +27,8 @@ export default function Carousel(){
     return result;
   }
 
-  console.log('Count: ', getCount());
+  const result = getCount().then(data => data.Contents.length);
+  console.log(result);
 
   // async function getCount () {
   //   s3.listObjectsV2(bucketParams, function(err, data) {
