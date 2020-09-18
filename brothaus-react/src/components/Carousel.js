@@ -20,15 +20,26 @@ const bucketParams = {Bucket: albumBucketName};
 * */
 
 export default function Carousel(){
-  const result = () => s3.listObjects(bucketParams, function(err, data) {
-    if (err) {
-      console.log("Unable to get photo count: ", err);
-    } else {
-      console.log("Number of photos in the bucket: ", data.Contents.length);
-      return data;
-    }
-  });
-  console.log('Pulled out the variable: ', result());
+  async function getCount () {
+    const result = await s3.listObjectsV2(bucketParams).promise();
+    return result;
+  }
+
+  console.log('Count: ', getCount());
+
+  // async function getCount () {
+  //   s3.listObjectsV2(bucketParams, function(err, data) {
+  //     let result;
+  //     if (err) {
+  //       console.error("Error: ", err);
+  //     } else {
+  //       return data.Contents.length;
+  //     }
+  //   });
+  // }
+
+  // let count = 0;
+  // console.log('Count', getCount().then(data => count = data));
 
   const foto1 = {fotoNumber: 1};
   const foto2 = {fotoNumber: 2};
