@@ -7,11 +7,11 @@ export default function Carousel(){
 
   let photoCount;
   getPhotoCount()
-    .then(doSomething)
+    .then(populateCarousel);
 
-  function doSomething(data) {
+  function populateCarousel(data) {
     photoCount = data;
-    console.log('Count: ', photoCount);
+    console.log('photoCount: ', photoCount);
   }
 
 
