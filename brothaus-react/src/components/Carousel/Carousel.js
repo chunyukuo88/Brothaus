@@ -5,28 +5,32 @@ import getFotoCount from './photoCount';
 
 export default function Carousel(){
 
-  // return <div>
-  //   {
-  //     [1,2,3].map ( (n) => {
-  //       return this.renderSquare(n)
-  //     })
-  //   }
-  // </div>;
-
+  let fotoCount;
   getFotoCount()
     .then(populateCarousel);
 
-  function populateCarousel() {
-      return [1,2,3,4,5,6,7,8].map(number => <Foto key={number} {...{fotoNumber: number}}/>);
+  function populateCarousel(data) {
+      fotoCount = data;
+      const fotoCountAsArray = arrayFromFotoCount(fotoCount);
+      return fotoCountAsArray.map(fotoNumber => <Foto key={fotoNumber} {...{fotoNumber: fotoNumber}}/>);
   }
 
   return(
       <div className="carousel"
-          data-flickity='{ "lazyLoad": true,
-                           "freeScroll": true,
-                           "dragThreshold": 6,
-                           "wrapAround": true }'>
+          data-flickity='{"lazyLoad": true,
+                          "freeScroll": true,
+                          "dragThreshold": 6,
+                          "wrapAround": true}'>
         {populateCarousel()}
      </div>
   );
+}
+
+function arrayFromFotoCount (fotoCount) {
+  let result = [];
+  let i = fotoCount
+  while(i > 0){
+    result.push(i);
+  }
+  return result;
 }
