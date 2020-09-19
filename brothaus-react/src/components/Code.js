@@ -10,10 +10,10 @@ class Code extends Component {
 }
 
 const codeString = props => <a href={urls.githubRepo}
-                                 target='_blank'
-                                 data-test='code'
-                                 rel='noopener noreferrer'
-                                 id='repo'>{getCodeDisplay(props)}</a>;
+                               target='_blank'
+                               data-test='code'
+                               rel='noopener noreferrer'
+                               id='repo'>{getCodeDisplay(props)}</a>;
 
 const getCodeDisplay = props => {
   switch (props.language){

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { EnzymeLink, ReactPopup, ReactTesting } from './ClickableTechnologyLinks';
 import staticStrings from '../../StaticStrings.js';
 import Code from '../Code';
+import urls from "../../urls";
 
 class AboutModal extends Component {
   render(){
@@ -11,19 +12,31 @@ class AboutModal extends Component {
       <div className='modal'>
         <div className='modal-header'>{this._getModalHeader(this.props)}</div>
         <div className='content'>
-          <p className='summary-text'>{this._getSummaryText(this.props)}</p>
+          <div className='summary-text'>{this._getSummaryText(this.props)}</div>
           <hr/>
-          <p className='modal-text'>{this._getModalDescription(this.props)}</p>
+          <div className='modal-text'>{this._getModalDescription(this.props)}</div>
           <hr/>
-          <p className='statement'>{this._getCoverageStatement(this.props)}</p>
+          <div className='statement'>{this._getCoverageStatement(this.props)}</div>
           <hr/>
-          <p >{this._getCodeString()}</p>
+          <div className='code'>{this._getCodeString(this.props)}</div>
         </div>
       </div>
     );
   };
 
-  _getCodeString = () => <div id='nav-items__code' className='nav-item'><Code/></div>;
+  _getCodeDisplay = ({language}) => {
+    switch (language){
+      case 'chinese': return <div className='code chinese'>{staticStrings.code.ZH}</div>;
+      case 'russian': return <div className='code russian'>{staticStrings.code.RU}</div>;
+      default:        return <div className='code english'>{staticStrings.code.EN}</div>;
+    }
+  }
+
+  _getCodeString = props => <a href={urls.githubRepo}
+                           target='_blank'
+                           data-test='code'
+                           rel='noopener noreferrer'
+                           id='repo'>{this._getCodeDisplay(props)}</a>;
 
   _getModalHeader = ({language}) => {
     switch (language){

@@ -3,15 +3,17 @@ import '../css/FotoPublic.css';
 import Foto from './Foto';
 import AWS from 'aws-sdk';
 
-//TODO: Finish the tutorial:
 //https://medium.com/javascript-in-plain-english/using-node-js-to-display-images-in-a-private-aws-s3-bucket-4c043ed5c5d0
 
+//TODO: Move these:
 AWS.config.region = 'us-east-1'; // Region
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
   IdentityPoolId: 'us-east-1:1f7f72b9-a2e9-4c6e-a304-08eae3599fb5',
 });
+AWS.config.setPromisesDependency();
 
 const s3 = new AWS.S3({apiVersion: '2006-03-01'});
+//TODO: Move this:
 const albumBucketName = 'woobler-photos';
 const bucketParams = {
   Bucket: albumBucketName,
@@ -22,13 +24,18 @@ const bucketParams = {
 * */
 
 export default function Carousel(){
+
   async function getCount () {
-    const result = await s3.listObjectsV2(bucketParams).promise();
-    console.log('getCount()', result.Contents.length);
+    const result = await s3.listObjectsV2(bucketParams, function(err, data){
+      if (err) console.log(err, err.stack);
+      else     return data;
+    }).promise()
+      // .then(data => data.Contents.length);
+    // console.log('getCount(): ', result);
     return result;
   }
 
-  const result = getCount().then(data => data.Contents.length);
+  const result = getCount();
   console.log('After the .then() block: ', result);
 
   // async function getCount () {
