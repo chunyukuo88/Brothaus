@@ -13,11 +13,10 @@ class AboutModal extends Component {
         <div className='modal-header'>{this._getModalHeader(this.props)}</div>
         <div className='content'>
           <div className='summary-text'>{this._getSummaryText(this.props)}</div>
-          <hr/>
+          <br/>
           <div className='modal-text'>{this._getModalDescription(this.props)}</div>
-          <hr/>
           <div className='statement'>{this._getCoverageStatement(this.props)}</div>
-          <hr/>
+          <br/>
           <div className='code'>{this._getCodeString(this.props)}</div>
         </div>
       </div>

@@ -7,10 +7,12 @@ export default function Carousel(){
 
   let fotoCount;
   getFotoCount()
-    .then(populateCarousel);
+    .then(result => populateCarousel(result));
+  //TODO: Fix the memory leak from the promise
 
   function populateCarousel(data) {
       fotoCount = data;
+      console.log('fotoCount: ', fotoCount);
       const fotoCountAsArray = arrayFromFotoCount(fotoCount);
       return fotoCountAsArray.map(fotoNumber => <Foto key={fotoNumber} {...{fotoNumber: fotoNumber}}/>);
   }
@@ -26,11 +28,16 @@ export default function Carousel(){
   );
 }
 
-function arrayFromFotoCount (fotoCount) {
-  let result = [];
-  let i = fotoCount
-  while(i > 0){
-    result.push(i);
+function arrayFromFotoCount (int) {
+  const arr = [];
+  for (let i = 1; i < (int+1); i++){
+    arr.push(i);
   }
-  return result;
+  return arr;
+  // let result = [];
+  // let i = 1
+  // while(i < int+1){
+  //   result.push(i);
+  // }
+  // return result;
 }
