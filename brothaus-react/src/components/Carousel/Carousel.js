@@ -1,29 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
 import '../../css/FotoPublic.css';
 import Foto from '../Foto';
-import getFotoCount from './photoCount';
+import { connect } from 'react-redux';
 
-export default function Carousel(){
+class Carousel extends Component{
 
-  let fotoCount;
-
-  // getFotoCount()
-  //   .then(result => populateCarousel(result));
-
-  function populateCarousel(data) {
-      // fotoCount = data;
-      // console.log('fotoCount: ', fotoCount);
-      // const fotoCountAsArray = arrayFromFotoCount(fotoCount);
+  populateCarousel(props) {
       const fotoCountAsArray = arrayFromFotoCount(8); //TODO: Have this use getFotoCount() or Redux.
       return fotoCountAsArray.map(fotoNumber => <Foto key={fotoNumber} {...{fotoNumber: fotoNumber}}/>);
+      console.log('REDUX:', props.fotoCount);
   }
 
-  return(
-      <div className="carousel"
-           data-flickity='{"lazyLoad": true, "freeScroll": true, "dragThreshold": 6, "wrapAround": true}'>
-        {populateCarousel()}
-     </div>
-  );
+  render(){
+    return(
+        <div className="carousel" data-flickity='{"lazyLoad": true, "freeScroll": true, "dragThreshold": 6, "wrapAround": true}'>
+          {this.populateCarousel()}
+       </div>
+    );
+  }
 }
 
 function arrayFromFotoCount (int) {
@@ -33,10 +27,10 @@ function arrayFromFotoCount (int) {
   }
   console.log('array: ', arr);
   return arr;
-  // let result = [];
-  // let i = 1
-  // while(i < int+1){
-  //   result.push(i);
-  // }
-  // return result;
 }
+
+function mapStateToProps(state){
+  return { fotoCount: state.fotoCount }
+}
+
+export default connect(mapStateToProps)(Carousel);

@@ -6,7 +6,6 @@ import { useDispatch } from 'react-redux';
 import Title from './Title/Title';
 import WeatherDisplay from './WeatherDisplay/WeatherDisplay';
 import Welcome from './Welcome';
-import Code from './Code';
 
 export default function Heading(){
   const dispatch = useDispatch();

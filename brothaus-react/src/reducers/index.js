@@ -1,9 +1,8 @@
 import { combineReducers } from 'redux';
 import languageReducer from './switchLanguage';
+import fotoCountReducer from './fotoCount';
 
-/*
-* This combines multiple reducers into a single object.
-* */
 export default combineReducers({
-  language: languageReducer
+  language: languageReducer,
+  fotoCount: fotoCountReducer
 });
