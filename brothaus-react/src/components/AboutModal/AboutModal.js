@@ -3,7 +3,6 @@ import '../../css/AboutModal.css';
 import { connect } from 'react-redux';
 import { EnzymeLink, ReactPopup, ReactTesting } from './ClickableTechnologyLinks';
 import staticStrings from '../../StaticStrings.js';
-import Code from '../Code';
 import urls from "../../urls";
 
 class AboutModal extends Component {
@@ -23,6 +22,7 @@ class AboutModal extends Component {
     );
   };
 
+  //TODO: Figure out why this is a horizontal line.
   _getCodeDisplay = ({language}) => {
     switch (language){
       case 'chinese': return <div className='code chinese'>{staticStrings.code.ZH}</div>;
