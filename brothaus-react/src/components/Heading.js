@@ -16,7 +16,7 @@ export default function Heading(){
   };
 
   return (
-    <div data-testid='heading' id='heading'>
+    <section data-testid='heading' id='heading'>
       <Title/>
       <nav id='nav-items'>
         {getWelcomeString()}
@@ -28,7 +28,7 @@ export default function Heading(){
               <WeatherDisplay {...degrees}/>
         </div>
       </nav>
-    </div>
+    </section>
   );
 };
 

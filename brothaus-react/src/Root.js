@@ -9,7 +9,7 @@ import reducer from './reducers/index.js';
  * middleware or do anything else that changes the Provider.
  * */
 
-export default ({ children, initialState = {language: 'english'} }) => {
+export default function Root ({ children, initialState = {language: 'english'} }) {
   return (
     <Provider store={createStore(reducer, initialState)}>
       {children}
