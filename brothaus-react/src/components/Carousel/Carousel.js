@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 class Carousel extends Component{
 
   populateCarousel(props) {
-      const fotoCountAsArray = arrayFromFotoCount(8); //TODO: Have this use getFotoCount() or Redux.
+      const fotoCountAsArray = createFotoCountArray(8); //TODO: Have this use getFotoCount() or Redux.
       return fotoCountAsArray.map(fotoNumber => <Foto key={fotoNumber} {...{fotoNumber: fotoNumber}}/>);
       console.log('REDUX:', props.fotoCount);
   }
@@ -20,7 +20,7 @@ class Carousel extends Component{
   }
 }
 
-function arrayFromFotoCount (int) {
+function createFotoCountArray (int) {
   const arr = [];
   for (let i = 1; i < (int+1); i++){
     arr.push(i);
