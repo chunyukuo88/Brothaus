@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducer from './reducers/index.js';
 
-export default ({ children, initialState = {language: 'english', fotoCount: 0} }) => {
+export default ({ children, initialState = {language: 'english', fotoCount: 1} }) => {
   return (
     <Provider store={createStore(reducer, initialState)}>
       {children}

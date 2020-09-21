@@ -18,6 +18,9 @@ export function switchToEnglish(){
 export function switchToChinese(){
   return { type: CHINESE }
 }
-export function updateFotoCount(){
-  return { type: UPDATE_FROM_S3 }
+export function updateFotoCount(count){
+  return {
+          type: UPDATE_FROM_S3,
+          payload: count
+  }
 }
