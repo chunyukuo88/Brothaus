@@ -3,10 +3,17 @@
 $glow-color: #45ff11
 $text-glow-base: #fff
 
+#display-container
+  height: 150px
+  display: flex
+  align-items: center
+  justify-content: center
+
 .title-container
   display: flex
   flex-direction: row
   justify-content: center
+  align-items: center
   margin-top: 15px
   -webkit-animation: neon1 1.5s ease-in-out infinite alternate
   -moz-animation: neon1 1.5s ease-in-out infinite alternate
@@ -25,6 +32,9 @@ $text-glow-base: #fff
 
 .title:hover
   color: black
+
+.chinese-title
+  font-size: 5rem
 
 .english-title
   font-family: 'Monoton', cursive
