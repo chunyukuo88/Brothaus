@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import '../css/Heading.css';
-import { switchToRussian, switchToEnglish, switchToChinese } from '../actions';
+import { switchToRussian, switchToEnglish, switchToChinese } from '../actions/actions';
 import { useDispatch } from 'react-redux';
 
 import Title from './Title/Title';

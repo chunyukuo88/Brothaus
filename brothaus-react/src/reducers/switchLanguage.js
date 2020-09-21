@@ -1,8 +1,8 @@
 export default function languageReducer (state = 'english', action){
  switch (action.type){
-   case 'RUSSIAN': return 'russian';
-   case 'CHINESE': return 'chinese';
-   case 'ENGLISH': return 'english';
+   case 'RUSSIAN': return action.payload;
+   case 'CHINESE': return action.payload;
+   case 'ENGLISH': return action.payload;
    default: return state;
  }
 }
