@@ -1,6 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
+import reduxPromise from 'redux-promise';
 import reducer from './reducers/index.js';
 
 /**
@@ -10,8 +11,13 @@ import reducer from './reducers/index.js';
  * */
 
 export default function Root ({ children, initialState = {language: 'english'} }) {
+  const store = createStore(
+    reducer,
+    initialState,
+    applyMiddleware(reduxPromise)
+  );
   return (
-    <Provider store={createStore(reducer, initialState)}>
+    <Provider store={store}>
       {children}
     </Provider>
   )

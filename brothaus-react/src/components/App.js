@@ -1,5 +1,5 @@
 import React from 'react';
-import Heading from './Heading';
+import Heading from './Heading/Heading';
 import Carousel from './Carousel/Carousel';
 import '../css/common.css';
 import Copyright from './Copyright';

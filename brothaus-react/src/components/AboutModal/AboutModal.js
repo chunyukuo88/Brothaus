@@ -3,6 +3,7 @@ import '../../css/AboutModal.css';
 import { connect } from 'react-redux';
 import { EnzymeLink, ReactPopup, ReactTesting } from './ClickableTechnologyLinks';
 import staticStrings from '../../StaticStrings.js';
+import Code from '../Code';
 import urls from "../../urls";
 
 class AboutModal extends Component {
@@ -16,7 +17,8 @@ class AboutModal extends Component {
           <div className='modal-text'>{this._getModalDescription(this.props)}</div>
           <div className='statement'>{this._getCoverageStatement(this.props)}</div>
           <br/>
-          <div className='code'>{this._getCodeString(this.props)}</div>
+          {/*<div className='code'>{this._getCodeString(this.props)}</div>*/}
+          <div className='code'>{this._getCodeDisplay(this.props)}</div>
         </div>
       </div>
     );
@@ -25,17 +27,11 @@ class AboutModal extends Component {
   //TODO: Figure out why this is a horizontal line.
   _getCodeDisplay = ({language}) => {
     switch (language){
-      case 'chinese': return <div className='code chinese'>{staticStrings.code.ZH}</div>;
-      case 'russian': return <div className='code russian'>{staticStrings.code.RU}</div>;
-      default:        return <div className='code english'>{staticStrings.code.EN}</div>;
+      case 'chinese': return <div className='code chinese'><Code {...language}/></div>;
+      case 'russian': return <div className='code russian'><Code {...language}/></div>;
+      default:        return <div className='code english'><Code {...language}/></div>;
     }
   }
-
-  _getCodeString = props => <a href={urls.githubRepo}
-                           target='_blank'
-                           data-test='code'
-                           rel='noopener noreferrer'
-                           id='repo'>{this._getCodeDisplay(props)}</a>;
 
   _getModalHeader = ({language}) => {
     switch (language){

@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import '../css/Heading.css';
-import { switchToRussian, switchToEnglish, switchToChinese } from '../actions/actions';
+import '../../css/Heading.css';
+import { switchToRussian, switchToEnglish, switchToChinese } from '../../actions/actions';
 import { useDispatch } from 'react-redux';
 
-import Title from './Title/Title';
-import WeatherDisplay from './WeatherDisplay/WeatherDisplay';
-import Welcome from './Welcome';
+import Title from '../Title/Title';
+import WeatherDisplay from '../WeatherDisplay/WeatherDisplay';
+import Welcome from '../Welcome';
 
 export default function Heading(){
   const dispatch = useDispatch();
@@ -16,7 +16,7 @@ export default function Heading(){
   };
 
   return (
-    <section data-testid='heading' id='heading'>
+    <section data-test='heading' id='heading'>
       <Title/>
       <nav id='nav-items'>
         {getWelcomeString()}
