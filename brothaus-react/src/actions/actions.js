@@ -1,4 +1,3 @@
-import axios from 'axios';
 import urls from '../urls';
 import * as types from './types';
 
@@ -21,10 +20,11 @@ export function switchToChinese(){
   };
 }
 export async function getGlobalTemp(){
-  const response = await fetch(urls.openWeatherUrl).then(res => res.json());
-  console.log('getGlobalTemp(): ', response.main.temp);
+  const fetchedWeatherObject = await fetch(urls.openWeatherUrl).then(res => res.json());
+  const temp = fetchedWeatherObject.main.temp;
+  console.log('getGlobalTemp(): ', temp);
   return {
     type: types.FETCH_TEMP,
-    payload: response.main.temp,
+    payload: temp,
   };
 }
