@@ -1,4 +1,5 @@
 import * as actions from '../actions';
+import urls from "../../urls";
 
 describe('actions.js: ', ()=>{
   describe('The switchToRussian action creator', ()=>{
@@ -29,13 +30,20 @@ describe('actions.js: ', ()=>{
     });
   });
   describe('The getGlobalTemp action creator', ()=>{
+    const mockSuccessResponse = { temp: 50 };
+    const mockJsonPromise = Promise.resolve(mockSuccessResponse);
+    const mockFetchPromise = Promise.resolve({
+      json: () => mockJsonPromise,
+    });
+    jest.spyOn(global, 'fetch').mockImplementation(() => mockFetchPromise);
+
     const action = actions.getGlobalTemp();
     test('has the correct type', ()=>{
       expect(action.type).toEqual('FETCH_TEMP');
     });
     test('and has the correct payload.', ()=>{
-    //TODO: Mock out the fetch request
-      expect(action.payload).toEqual(50);
+      expect(global.fetch).toHaveBeenCalledTimes(1);
+      expect(global.fetch).toHaveBeenCalledWith(urls.openWeatherUrl);
     });
   });
 });
