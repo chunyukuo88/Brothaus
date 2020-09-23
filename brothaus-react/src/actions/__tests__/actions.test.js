@@ -1,12 +1,11 @@
 import * as actions from '../actions';
 import urls from '../../urls';
 
-const mockSuccessResponse = { temp: 50 };
-const mockJsonPromise = Promise.resolve(mockSuccessResponse);
-const mockFetchPromise = Promise.resolve({
-  json: () => mockJsonPromise,
+global.fetch = jest.fn(() =>{
+  Promise.resolve({
+    json: ()=> Promise.resolve({ data: {main: { temp: 50}}})
+  });
 });
-jest.spyOn(global, 'fetch').mockImplementation(() => mockFetchPromise);
 
 const action = actions.getGlobalTemp();
 
