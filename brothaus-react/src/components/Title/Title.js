@@ -9,7 +9,7 @@ import { ChineseTitle } from './Chinese';
 class Title extends Component {
   render() {
     return (
-      <div id='display-container'>
+      <div data-test='title-container' id='display-container'>
         {getTitleBasedOnLanguage(this.props)}
       </div>
     );

@@ -38,7 +38,7 @@
     "deploy": "react-scripts build && aws s3 rm s3://wooblers-house.xyz/ --recursive && aws s3 cp ./build s3://wooblers-house.xyz/ --recursive --acl public-read",
     "test": "react-scripts test",
     "test:coverage": "set CI=true && react-scripts test --coverage",
-    "coverage": "jest --coverage --colors --silent --verbose",
+    "coverage":      "jest --coverage --colors --silent --verbose",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
