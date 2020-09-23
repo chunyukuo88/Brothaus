@@ -1,5 +1,19 @@
 import * as actions from '../actions';
-import urls from "../../urls";
+import urls from '../../urls';
+import 'fetch';
+
+const action = actions.getGlobalTemp();
+jest.mock('fetch', () => ({
+  __esModule: true,
+  default: () => {
+    return mockSuccessResponse
+  }
+}));
+let mockSuccessResponse = {
+  main:  {
+    temp: 50
+  }
+};
 
 describe('actions.js: ', ()=>{
   describe('The switchToRussian action creator', ()=>{
@@ -30,20 +44,23 @@ describe('actions.js: ', ()=>{
     });
   });
   describe('The getGlobalTemp action creator', ()=>{
-    const mockSuccessResponse = { temp: 50 };
-    const mockJsonPromise = Promise.resolve(mockSuccessResponse);
-    const mockFetchPromise = Promise.resolve({
-      json: () => mockJsonPromise,
-    });
-    jest.spyOn(global, 'fetch').mockImplementation(() => mockFetchPromise);
+    // const mockSuccessResponse = { temp: 50 };
+    // const mockJsonPromise = Promise.resolve(mockSuccessResponse);
+    // const mockFetchPromise = Promise.resolve({
+    //   json: () => mockJsonPromise,
+    // });
+    // jest.spyOn(global, 'fetch').mockImplementation(() => mockFetchPromise);
 
-    const action = actions.getGlobalTemp();
     test('has the correct type', ()=>{
       expect(action.type).toEqual('FETCH_TEMP');
     });
-    test('and has the correct payload.', ()=>{
-      expect(global.fetch).toHaveBeenCalledTimes(1);
+    test('and calls the correct URL.', ()=>{
       expect(global.fetch).toHaveBeenCalledWith(urls.openWeatherUrl);
+    });
+    test('and has the correct payload.', ()=>{
+      console.log('\n=== action.payload ===\n', action);
+      // expect(action.payload.temp).toBe(50);
+      expect(action).toBe(50);
     });
   });
 });
