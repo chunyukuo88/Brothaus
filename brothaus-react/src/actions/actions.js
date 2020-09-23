@@ -19,12 +19,16 @@ export function switchToChinese(){
     payload: 'chinese'
   };
 }
-export async function getGlobalTemp(){
-  const fetchedWeatherObject = await fetch(urls.openWeatherUrl).then(res => res.json());
-  const temp = fetchedWeatherObject.main.temp;
-  console.log('getGlobalTemp(): ', temp);
+export function getGlobalTemp(){
   return {
     type: types.FETCH_TEMP,
-    payload: temp,
+    payload: _fetchTemp(),
   };
+}
+
+async function _fetchTemp(){
+  const fetchedWeatherObject = await fetch(urls.openWeatherUrl).then(res => res.json());
+  const temp = fetchedWeatherObject.main.temp;
+  console.log('_fetchTemp()', temp);
+  return temp;
 }
