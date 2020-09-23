@@ -1,6 +1,10 @@
 import '../actions';
 import '../types';
-import { switchToRussian, switchToChinese, switchToEnglish } from '../actions';
+import {
+  switchToRussian,
+  switchToChinese,
+  switchToEnglish,
+  getGlobalTemp } from '../actions';
 
 describe('actions.js: ', ()=>{
   describe('The switchToRussian action creator', ()=>{
@@ -30,4 +34,15 @@ describe('actions.js: ', ()=>{
       expect(action.payload).toEqual('english');
     });
   });
+  describe('The getGlobalTemp action creator', ()=>{
+    const fetchedTemp = 50;
+    const action = getGlobalTemp(fetchedTemp);
+    test('has the correct type', ()=>{
+      expect(action.type).toEqual('GLOBAL_TEMP');
+    });
+    test('and has the correct payload.', ()=>{
+      expect(action.payload).toEqual(50);
+    });
+  });
 });
+

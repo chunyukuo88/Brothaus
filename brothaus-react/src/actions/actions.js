@@ -1,11 +1,15 @@
-import { RUSSIAN, ENGLISH, CHINESE } from './types';
+import * as types from './types';
 
 export function switchToRussian(){
-  return { type: RUSSIAN, payload: 'russian' }
+  return { type: types.RUSSIAN, payload: 'russian' }
 }
 export function switchToEnglish(){
-  return { type: ENGLISH, payload: 'english'  }
+  return { type: types.ENGLISH, payload: 'english'  }
 }
 export function switchToChinese(){
-  return { type: CHINESE, payload: 'chinese' }
+  return { type: types.CHINESE, payload: 'chinese' }
+}
+
+export function getGlobalTemp(fetchedTemp){
+  return { type: types.GLOBAL_TEMP, payload: fetchedTemp }
 }
