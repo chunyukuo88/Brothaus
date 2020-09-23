@@ -10,7 +10,12 @@ import reducer from './reducers/index.js';
  * middleware or do anything else that changes the Provider.
  * */
 
-export default function Root ({ children, initialState = {language: 'english'} }) {
+const theInitialState = {
+  language: 'english',
+  globalTemp: 40
+};
+
+export default function Root ({ children, initialState = theInitialState }) {
   const store = createStore(
     reducer,
     initialState,

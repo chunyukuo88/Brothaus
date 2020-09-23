@@ -35,8 +35,7 @@ describe('actions.js: ', ()=>{
     });
   });
   describe('The getGlobalTemp action creator', ()=>{
-    const fetchedTemp = 50;
-    const action = getGlobalTemp(fetchedTemp);
+    const action = getGlobalTemp();
     test('has the correct type', ()=>{
       expect(action.type).toEqual('GLOBAL_TEMP');
     });

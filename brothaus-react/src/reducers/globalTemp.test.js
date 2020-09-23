@@ -1,12 +1,12 @@
 import globalTempReducer from './globalTempReducer';
-import { GLOBAL_TEMP} from '../actions/types';
+import { FETCH_TEMP} from '../actions/types';
 
 describe('globalTemp.js reducer:', ()=>{
   describe('When invoked with the valid action type GLOBAL_TEMP', ()=>{
     test('It sets the global temperature state.', ()=>{
       const dispatchedTemp = 40;
       const action = {
-        type: GLOBAL_TEMP,
+        type: FETCH_TEMP,
         payload: dispatchedTemp
       };
       const newState = globalTempReducer(undefined, action);

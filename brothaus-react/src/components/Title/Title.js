@@ -4,12 +4,12 @@ import '../../css/Title.css';
 import { EnglishTitle } from './English';
 import { RussianTitle } from './русский';
 import { ChineseTitle } from './Chinese';
-
+import * as actions from '../../actions/actions';
 
 class Title extends Component {
   render() {
     return (
-      <div data-test='title-container' id='display-container'>
+      <div onClick={this.props.getGlobalTemp} data-test='title-container' id='display-container' >
         {getTitleBasedOnLanguage(this.props)}
       </div>
     );
@@ -25,7 +25,10 @@ const getTitleBasedOnLanguage = ({language}) => {
 };
 
 function mapStateToProps(state){
-  return { language: state.language };
+  return {
+    language: state.language,
+    temp: state.temp
+  };
 }
 
-export default connect(mapStateToProps)(Title);
+export default connect(mapStateToProps, actions)(Title);
