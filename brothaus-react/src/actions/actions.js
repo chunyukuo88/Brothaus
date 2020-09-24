@@ -26,13 +26,15 @@ export function getGlobalTemp(){
   };
 }
 
+//exported for testing purposes
 export async function _fetchTemp(){
   try {
     const result = await fetch(urls.openWeatherUrl);
     const data = await result.json();
-    console.log('_fetchTemp()', data.main.temp);
+    console.log('_fetchTemp() successful', data.main.temp);
     return data.main.temp;
   } catch (e) {
+    console.log('_fetchTemp() failed', e);
     console.log(e);
     console.log(e.message);
   }

@@ -3,7 +3,7 @@ import urls from '../../urls';
 
 global.fetch = jest.fn(() =>
   Promise.resolve({
-    json: ()=> Promise.resolve({ data: {main: { temp: 50}}}),
+    json: ()=> Promise.resolve({ data: { main: { temp: 50 }}}),
   })
 );
 
@@ -43,9 +43,9 @@ describe('actions.js: ', ()=>{
     test('and calls the correct URL.', ()=>{
       expect(global.fetch).toHaveBeenCalledWith(urls.openWeatherUrl);
     });
-    test('and has the correct payload.', ()=>{
-      console.log('\n=== action.payload ===\n', action);
-      expect(action.payload).toBe({temp: 50});
+    test('and has the correct payload.', async ()=>{
+      console.log('\n=== action ===\n', action);
+      expect(await action.payload).toBe({temp: 50});
     });
   });
   describe('The _fetchTemp helper function', ()=>{
