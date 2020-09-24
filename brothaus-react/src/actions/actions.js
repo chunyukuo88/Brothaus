@@ -26,11 +26,14 @@ export function getGlobalTemp(){
   };
 }
 
-async function _fetchTemp(){
-  const fetchedWeatherObject = await fetch(urls.openWeatherUrl)
-    .then(res => res.json())
-    .catch(e => console.error(e.message));
-  const temp = fetchedWeatherObject.main.temp;
-  console.log('_fetchTemp()', temp);
-  return temp;
+export async function _fetchTemp(){
+  try {
+    const result = await fetch(urls.openWeatherUrl);
+    const data = await result.json();
+    console.log('_fetchTemp()', data.main.temp);
+    return data.main.temp;
+  } catch (e) {
+    console.log(e);
+    console.log(e.message);
+  }
 }
