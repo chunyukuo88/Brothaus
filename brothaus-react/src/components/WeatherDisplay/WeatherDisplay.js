@@ -24,7 +24,7 @@ export default function WeatherDisplay () {
 
   useEffect(() => {
     getWeatherFromApi();
-  },[]);
+  },[degreesKelvin]);
 
   return <div className='weather'>{displayLanguage(selectedLanguage)}</div>;
 }
