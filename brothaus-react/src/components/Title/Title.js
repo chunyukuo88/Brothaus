@@ -9,7 +9,7 @@ import * as actions from '../../actions/actions';
 class Title extends Component {
   render() {
     return (
-      <div onClick={this.props.getGlobalTemp} data-test='title-container' id='display-container' >
+      <div data-test='title-container' id='display-container' >
         {getTitleBasedOnLanguage(this.props)}
       </div>
     );

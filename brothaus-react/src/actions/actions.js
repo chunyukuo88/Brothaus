@@ -1,6 +1,5 @@
 import urls from '../urls';
 import * as types from './types';
-import axios from 'axios';
 
 export function switchToRussian(){
   return {
@@ -36,6 +35,6 @@ async function fetchTemp(){
     console.log('_fetchTemp() successful', result);
     return result;
   } catch (e) {
-    console.log('_fetchTemp() failed', e.message);
+    console.error('_fetchTemp() failed', e.message);
   }
 }
