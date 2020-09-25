@@ -19,22 +19,39 @@ export function switchToChinese(){
     payload: 'chinese'
   };
 }
+
 export async function getGlobalTemp(){
   return {
     type: types.FETCH_TEMP,
-    payload: await fetchTemp(),
+    payload: {
+      temp: await fetchWeather('temp'),
+    }
   };
 }
 
-async function fetchTemp(){
+export async function getGlobalHumidity(){
+  return {
+    type: types.FETCH_HUMIDITY,
+    payload: {
+      humidity: await fetchWeather('humidity'),
+    }
+  };
+}
+
+async function fetchWeather(weatherAttribute){
   try {
     const data = await fetch(urls.openWeatherUrl)
       .then(res => res.json())
       .catch(e => console.error(e.message));
-    const result = data.main.temp;
-    console.log('_fetchTemp() successful', result);
+    const result = (weatherAttribute === 'temp')
+      ? data.main.temp
+      : data.main.humidity;
+    console.log('fetchWeather() successful', result);
     return result;
   } catch (e) {
-    console.error('_fetchTemp() failed', e.message);
+    console.error('fetchWeather() failed', e.message);
   }
 }
+
+
+

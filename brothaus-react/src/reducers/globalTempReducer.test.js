@@ -1,5 +1,5 @@
 import globalTempReducer from './globalTempReducer';
-import { FETCH_TEMP} from '../actions/types';
+import { FETCH_TEMP } from '../actions/types';
 
 describe('globalTempReducer.js:', ()=>{
   describe('When invoked with the valid action type GLOBAL_TEMP', ()=>{
@@ -7,20 +7,24 @@ describe('globalTempReducer.js:', ()=>{
       const dispatchedTemp = 40;
       const action = {
         type: FETCH_TEMP,
-        payload: dispatchedTemp
+        payload: {
+          temp: dispatchedTemp
+        }
       };
+      const expectedPayload = {temp: dispatchedTemp}
       const newState = globalTempReducer(undefined, action);
-      expect(newState).toEqual(dispatchedTemp);
+      expect(newState).toEqual(expectedPayload);
     });
   });
-  describe('When invoked with an invalid action type GLOBAL_TEMP', ()=>{
+  describe('When invoked with an invalid action type', ()=>{
     test('It handles the action and returns the default state', ()=>{
       const action = {
         type: 'CRAP',
         payload: 'crap'
       };
       const newState = globalTempReducer(undefined, action);
-      expect(newState).toEqual(40);
+      const expectedPayload = {"temp": 45};
+      expect(newState).toEqual(expectedPayload);
     });
   });
 });

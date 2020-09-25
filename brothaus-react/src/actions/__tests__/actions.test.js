@@ -38,6 +38,9 @@ describe('actions.js: ', ()=>{
       expect(action.payload).toEqual('english');
     });
   });
+
+
+
   describe('The getGlobalTemp action creator', ()=>{
     const action = actions.getGlobalTemp();
     test('has the correct type', ()=>{
@@ -50,14 +53,27 @@ describe('actions.js: ', ()=>{
         expect(global.fetch).toHaveBeenCalledWith(urls.openWeatherUrl);
     });
     test('and has the correct payload.', ()=>{
-        const result = action.payload;
-        expect(result).toBe({ temp: 20 });
+      expect(action.payload).toBe({ temp: 20 });
     });
   });
-  describe('The _fetchTemp helper function', ()=>{
+
+  describe('The getGlobalHumidity action creator', ()=>{
+    const action = actions.getGlobalHumidity();
+    test('has the correct type', ()=>{
+      setTimeout(()=>{
+        console.log(action.type);
+        expect(action.type).toEqual('FETCH_HUMIDITY');
+      }, 100);
+    });
+    test('and has the correct payload', async ()=>{
+      const result = await action.payload;
+      expect(result).toBe({humidity: 40});
+    });
+  });
+  describe('The fetchWeather helper function', ()=>{
     test('handles exception with null', async () => {
       fetch.mockImplementationOnce(() => Promise.reject('Api failure'));
-      const result = await actions._fetchTemp();
+      const result = await actions.fetchWeather('temp');
       expect(result).not.toBeDefined();
     });
   });
