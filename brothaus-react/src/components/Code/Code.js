@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import urls from '../urls';
+import urls from '../../urls';
 import { connect } from 'react-redux';
-import staticStrings from '../StaticStrings';
+import staticStrings from '../../StaticStrings';
 
 class Code extends Component {
   render(){

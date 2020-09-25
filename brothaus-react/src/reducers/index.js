@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import languageReducer from './switchLanguage';
+import languageReducer from './languageReducer';
 import globalTempReducer from './globalTempReducer';
 
 /*

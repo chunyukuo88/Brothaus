@@ -3,7 +3,7 @@ import '../../css/AboutModal.css';
 import { connect } from 'react-redux';
 import { EnzymeLink, ReactPopup, ReactTesting } from './ClickableTechnologyLinks';
 import staticStrings from '../../StaticStrings.js';
-import Code from '../Code';
+import Code from '../Code/Code';
 import urls from "../../urls";
 
 class AboutModal extends Component {

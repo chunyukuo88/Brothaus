@@ -1,7 +1,7 @@
-import languageReducer from '../reducers/switchLanguage';
+import languageReducer from './languageReducer';
 import { CHINESE } from '../actions/types';
 
-describe('switchLanguage.js reducer:', ()=>{
+describe('languageReducer.js reducer:', ()=>{
   describe('When invoked with a valid action type such as CHINESE, ', ()=>{
     test('it handles the action and returns "chinese".', ()=>{
       const action = {

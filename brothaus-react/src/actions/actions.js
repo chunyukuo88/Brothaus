@@ -23,17 +23,18 @@ export function switchToChinese(){
 export async function getGlobalTemp(){
   return {
     type: types.FETCH_TEMP,
-    payload: await _fetchTemp(),
+    payload: await fetchTemp(),
   };
 }
 
-//exported for testing purposes
-export async function _fetchTemp(){
+async function fetchTemp(){
   try {
-    const result = await fetch(urls.openWeatherUrl)
-      .then(res => res.json());
-    console.log('_fetchTemp() successful', result.main.temp);
-    return result.main.temp;
+    const data = await fetch(urls.openWeatherUrl)
+      .then(res => res.json())
+      .catch(e => console.error(e.message));
+    const result = data.main.temp;
+    console.log('_fetchTemp() successful', result);
+    return result;
   } catch (e) {
     console.log('_fetchTemp() failed', e.message);
   }

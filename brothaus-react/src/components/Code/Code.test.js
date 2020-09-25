@@ -2,7 +2,7 @@ import React from 'react';
 import Enzyme, { mount } from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new EnzymeAdapter()});
-import Code from '../Code';
+import Code from './Code';
 import Root from '../../Root.js';
 
 let wrapper;
