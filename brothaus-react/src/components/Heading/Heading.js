@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import '../../css/Heading.css';
 import { switchToRussian, switchToEnglish, switchToChinese } from '../../actions/actions';
 import { useDispatch } from 'react-redux';
@@ -9,7 +9,7 @@ import Welcome from '../Welcome';
 
 export default function Heading(){
   const dispatch = useDispatch();
-  const [ degrees, toggleDegreeType ] = useState({isFahrenheit: true});
+  const [ degrees, toggleDegreeType ] = useState({ isFahrenheit: true });
 
   const _toggleDegrees = () => {
     toggleDegreeType({isFahrenheit: !degrees.isFahrenheit});

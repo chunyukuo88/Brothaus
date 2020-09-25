@@ -45,7 +45,7 @@ describe('actions.js: ', ()=>{
     });
     test('and has the correct payload.', async ()=>{
       console.log('\n=== action ===\n', action);
-      expect(await action.payload).toBe({temp: 50});
+      expect(await action.payload).toBe({ temp: 50 });
     });
   });
   describe('The _fetchTemp helper function', ()=>{
