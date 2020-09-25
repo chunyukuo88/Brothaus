@@ -2,10 +2,13 @@ import * as actions from '../actions';
 import urls from '../../urls';
 
 global.fetch = jest.fn(() =>
-  Promise.resolve({
-    json: ()=> Promise.resolve({ data: { main: { temp: 50 }}}),
-  })
+  setTimeout( ()=>{
+    Promise.resolve({
+      json: ()=> Promise.resolve({ data: { main: { temp: 50 }}}),
+    })
+  }, 100)
 );
+
 
 describe('actions.js: ', ()=>{
   describe('The switchToRussian action creator', ()=>{
@@ -38,14 +41,17 @@ describe('actions.js: ', ()=>{
   describe('The getGlobalTemp action creator', ()=>{
     const action = actions.getGlobalTemp();
     test('has the correct type', ()=>{
-      expect(action.type).toEqual('FETCH_TEMP');
+      setTimeout(()=>{
+        console.log(action.type);
+        expect(action.type).toEqual('FETCH_TEMP');
+      }, 100);
     });
     test('and calls the correct URL.', ()=>{
-      expect(global.fetch).toHaveBeenCalledWith(urls.openWeatherUrl);
+        expect(global.fetch).toHaveBeenCalledWith(urls.openWeatherUrl);
     });
-    test('and has the correct payload.', async ()=>{
-      console.log('\n=== action ===\n', action);
-      expect(await action.payload).toBe({ temp: 50 });
+    test('and has the correct payload.', ()=>{
+        const result = action.payload;
+        expect(result).toBe({ temp: 20 });
     });
   });
   describe('The _fetchTemp helper function', ()=>{
