@@ -12,7 +12,8 @@ import reducer from './reducers/index.js';
 
 const theInitialState = {
   language: 'english',
-  globalTemp: 40
+  temp: 40,
+  humidity: 50
 };
 
 export default function Root ({ children, initialState = theInitialState }) {

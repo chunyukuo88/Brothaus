@@ -14,11 +14,11 @@ describe('App.js', ()=>{
             const appComponent = wrapper.find(`[data-test="component-app"]`);
             expect(appComponent.length).toBe(1);
         });
-        test('and it dispatches temp and humidity to the global store.', ()=>{
-            const wrapper = shallow(<App />);
-            const appComponent = wrapper.find(`[data-test="component-app"]`);
-            const dispatchTempAndHumidity = jest.fn();
-            expect(dispatchTempAndHumidity).toHaveBeenCalled();
-        })
+        // test('and it dispatches temp and humidity to the global store.', ()=>{
+        //     const wrapper = shallow(<App />);
+        //     const appComponent = wrapper.find(`[data-test="component-app"]`);
+        //     const dispatchTempAndHumidity = jest.fn();
+        //     expect(dispatchTempAndHumidity).toHaveBeenCalled();
+        // })
     });
 });

@@ -1,6 +1,8 @@
+import { FETCH_HUMIDITY } from "../actions/types";
+
 export default function globalHumidityReducer(state = 0, action){
   switch (action.type){
-    case 'GLOBAL_HUMIDITY': return action.payload;
+    case FETCH_HUMIDITY: return action.payload;
     default: return { humidity: 50 };
   }
 }
