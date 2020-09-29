@@ -24,7 +24,7 @@ export async function getGlobalTemp(){
   return {
     type: types.FETCH_TEMP,
     payload: {
-      temp: await fetchWeather('temp'),
+      globalTemp: await fetchWeather('temp'),
     }
   };
 }
@@ -33,7 +33,7 @@ export async function getGlobalHumidity(){
   return {
     type: types.FETCH_HUMIDITY,
     payload: {
-      humidity: await fetchWeather('humidity'),
+      globalHumidity: await fetchWeather('humidity'),
     }
   };
 }
