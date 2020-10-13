@@ -7,30 +7,26 @@ body {
   user-select: none;
 }
 
+.chinese {
+  font-family: "ZCool Kuaile";
+}
+
 #copyright {
   color: fuchsia;
   text-align: center;
 }
 
-.chinese {
-  font-family: "ZCool Kuaile";
-}
-
 .english {
   font-family: "Luckiest Guy", cursive;
-}
-
-.russian {
-  font-family: "Neucha";
-}
-
-.code, .welcome, .weather, .localization {
-  color: white;
-  padding: 4px;
+  font-size: 2vw;
 }
 
 #heading {
   font-family: "Luckiest Guy", cursive;
+  font-size: 3vw;
+}
+
+.localization {
   font-size: 3vw;
 }
 
@@ -41,6 +37,17 @@ body {
 #nav-items {
   display: flex;
   justify-content: space-around;
+  max-width: 800px;
+  margin: auto;
+}
+
+.russian {
+  font-family: "Neucha";
+}
+
+.code, .welcome, .weather, .localization {
+  color: white;
+  padding: 4px;
 }
 
 @media (max-width: 800px) {
