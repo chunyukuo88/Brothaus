@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import urls from "../../urls";
+import React, { Component } from 'react';
+import urls from '../../urls';
 
 export class EnzymeLink extends Component {
   render(){

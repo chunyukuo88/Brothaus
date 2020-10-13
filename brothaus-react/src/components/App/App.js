@@ -2,7 +2,7 @@ import React from 'react';
 import Heading from '../Heading/Heading';
 import Carousel from '../Carousel/Carousel';
 import '../../css/common.css';
-import Copyright from '../Copyright';
+import Copyright from '../Copyright/Copyright';
 import { useDispatch } from 'react-redux';
 import { getGlobalHumidity, getGlobalTemp } from '../../actions/actions';
 

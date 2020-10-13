@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../css/FotoPublic.css';
-import Foto from '../Foto';
+import Foto from '../Foto/Foto';
 import getFotoCount from './photoCount';
 
 export default function Carousel(){

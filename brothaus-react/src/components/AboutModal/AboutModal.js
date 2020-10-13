@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { EnzymeLink, ReactPopup, ReactTesting } from './ClickableTechnologyLinks';
 import staticStrings from '../../StaticStrings.js';
 import Code from '../Code/Code';
-import urls from "../../urls";
 
 class AboutModal extends Component {
   render(){
@@ -17,7 +16,6 @@ class AboutModal extends Component {
           <div className='modal-text'>{this._getModalDescription(this.props)}</div>
           <div className='statement'>{this._getCoverageStatement(this.props)}</div>
           <br/>
-          {/*<div className='code'>{this._getCodeString(this.props)}</div>*/}
           <div className='code'>{this._getCodeDisplay(this.props)}</div>
         </div>
       </div>

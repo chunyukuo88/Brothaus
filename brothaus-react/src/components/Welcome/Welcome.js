@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Popup from 'reactjs-popup';
-import AboutModal from './AboutModal/AboutModal';
+import AboutModal from '../AboutModal/AboutModal';
 import { connect } from 'react-redux';
-import staticStrings from '../StaticStrings';
+import staticStrings from '../../StaticStrings';
 
 class Welcome extends Component {
   render(){

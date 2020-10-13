@@ -7,21 +7,40 @@ body {
   user-select: none;
 }
 
+.chinese {
+  font-family: "ZCool Kuaile";
+}
+
+.code {
+  color: fuchsia;
+}
+
 #copyright {
   color: fuchsia;
   text-align: center;
-}
-
-.chinese {
-  font-family: "ZCool Kuaile";
 }
 
 .english {
   font-family: "Luckiest Guy", cursive;
 }
 
-.russian {
-  font-family: "Neucha";
+.modal {
+  border: 5px;
+  font-size: 1rem;
+  /*height: 10vh;*/
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+}
+
+.modal .actions {
+  margin: auto;
+}
+
+.modal .actions {
+  width: 100%;
+  padding: calc(2 * 5px) 5px;
+  text-align: center;
 }
 
 .modal-header {
@@ -30,34 +49,22 @@ body {
   text-align: center;
 }
 
-.modal {
-  font-size: 1rem;
-  padding: 5px;
-  border: 5px;
-  margin: 5px;
-  text-align: center;
-}
-.modal .actions {
-  margin: auto;
-}
-.modal .actions {
-  width: 100%;
-  padding: calc(2 * 5px) 5px;
-  text-align: center;
-}
 .modal .modal-header {
   padding: 8px;
   border: 8px;
   margin: 8px;
 }
+
 .modal .content {
   width: 100%;
   padding: 10px 5px;
 }
+
 .modal .content .technology-link {
   color: fuchsia;
   text-decoration: none;
 }
+
 .modal .header {
   width: 100%;
   border-bottom: 1px solid gray;
@@ -70,4 +77,11 @@ body {
   border-radius: 8px;
 }
 
+#repo {
+  text-decoration: none;
+}
+
+.russian {
+  font-family: "Neucha";
+}
 /*# sourceMappingURL=AboutModal.css.map */
