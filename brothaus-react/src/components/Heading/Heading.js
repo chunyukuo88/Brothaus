@@ -34,24 +34,43 @@ export default function Heading(){
   );
 };
 
-const googleAnalyticsHandler = () => {
-  ReactGA.event({
-    category: 'Button',
-    action: 'User clicked the Welcome text.'
-  });
-}
-
 const getWrappedWelcomeComponent = () => <div id='nav-items__welcome'
                                               className='nav-item'
-                                              onClick={googleAnalyticsHandler}
-                                          ><Welcome/></div>;
+                                              onClick={welcomeTextGA}><Welcome/></div>;
+
+const welcomeTextGA = () => {
+  ReactGA.event({
+    category: 'Button',
+    action: 'User clicked the Welcome text in the heading.'
+  });
+}
 
 const getLocalizationStrings = (dispatch) => {
   return (
     <div id='nav-items__language' className='nav-item'>
-      <span id='rus' className='localization russian' onClick={()=>dispatch(switchToRussian())}>🇷🇺</span>
-      <span id='en' className='localization english' onClick={()=>dispatch(switchToEnglish())}>🇺🇸</span>
+      <span id='rus' className='localization russian' onClick={()=>{
+        russianIconGA();
+        dispatch(switchToRussian());
+      }}>🇷🇺</span>
+      <span id='en' className='localization english' onClick={()=>{
+        englishIconGA();
+        dispatch(switchToEnglish());
+      }}>🇺🇸</span>
       <span id='ch' className='localization chinese' onClick={()=>dispatch(switchToChinese())}>🇹🇼</span>
     </div>
   );
+}
+
+const russianIconGA = () => {
+  ReactGA.event({
+    category: 'Button',
+    action: 'User changed the localization to Russian.'
+  });
+}
+
+const englishIconGA = () => {
+  ReactGA.event({
+    category: 'Button',
+    action: 'User changed the localization to English.'
+  });
 }

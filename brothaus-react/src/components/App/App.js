@@ -11,7 +11,6 @@ export default function App() {
 
   useEffect(() => {
     ReactGa.initialize('UA-168681251-1');
-    //Report page views from page root:
     ReactGa.pageview(window.location.pathname + window.location.search);
   }, []);
 
