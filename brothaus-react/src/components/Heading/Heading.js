@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
+import ReactGA from 'react-ga';
 import '../../css/Heading.css';
 import { switchToRussian, switchToEnglish, switchToChinese } from '../../actions/actions';
 import { useDispatch } from 'react-redux';
-
-import Title from '../Title/Title';
 import WeatherDisplay from '../WeatherDisplay/WeatherDisplay';
+import Title from '../Title/Title';
 import Welcome from '../Welcome/Welcome';
+
+
 
 export default function Heading(){
   const dispatch = useDispatch();
@@ -19,7 +21,7 @@ export default function Heading(){
     <section data-test='heading' id='heading'>
       <Title/>
       <nav id='nav-items'>
-        {getWelcomeString()}
+        {getWrappedWelcomeComponent()}
         {getLocalizationStrings(dispatch)}
         <div id='nav-items__weather'
              className='nav-item'
@@ -32,7 +34,17 @@ export default function Heading(){
   );
 };
 
-const getWelcomeString = () => <div id='nav-items__welcome' className='nav-item'><Welcome/></div>;
+const googleAnalyticsHandler = () => {
+  ReactGA.event({
+    category: 'Button',
+    action: 'User clicked the Welcome text.'
+  });
+}
+
+const getWrappedWelcomeComponent = () => <div id='nav-items__welcome'
+                                              className='nav-item'
+                                              onClick={googleAnalyticsHandler}
+                                          ><Welcome/></div>;
 
 const getLocalizationStrings = (dispatch) => {
   return (
