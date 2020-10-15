@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
-import ReactGA from 'react-ga';
 import '../../css/Heading.css';
 import { switchToRussian, switchToEnglish, switchToChinese } from '../../actions/actions';
 import { useDispatch } from 'react-redux';
 import WeatherDisplay from '../WeatherDisplay/WeatherDisplay';
 import Title from '../Title/Title';
 import Welcome from '../Welcome/Welcome';
-
-
+import { welcomeTextGA,
+         russianIconGA,
+         englishIconGA,
+         chineseIconGA,
+} from '../../googleAnalytics/heading';
 
 export default function Heading(){
   const dispatch = useDispatch();
@@ -38,13 +40,6 @@ const getWrappedWelcomeComponent = () => <div id='nav-items__welcome'
                                               className='nav-item'
                                               onClick={welcomeTextGA}><Welcome/></div>;
 
-const welcomeTextGA = () => {
-  ReactGA.event({
-    category: 'Button',
-    action: 'User clicked the Welcome text in the heading.'
-  });
-}
-
 const getLocalizationStrings = (dispatch) => {
   return (
     <div id='nav-items__language' className='nav-item'>
@@ -56,21 +51,10 @@ const getLocalizationStrings = (dispatch) => {
         englishIconGA();
         dispatch(switchToEnglish());
       }}>🇺🇸</span>
-      <span id='ch' className='localization chinese' onClick={()=>dispatch(switchToChinese())}>🇹🇼</span>
+      <span id='ch' className='localization chinese' onClick={()=>{
+        chineseIconGA();
+        dispatch(switchToChinese())
+      }}>🇹🇼</span>
     </div>
   );
-}
-
-const russianIconGA = () => {
-  ReactGA.event({
-    category: 'Button',
-    action: 'User changed the localization to Russian.'
-  });
-}
-
-const englishIconGA = () => {
-  ReactGA.event({
-    category: 'Button',
-    action: 'User changed the localization to English.'
-  });
 }

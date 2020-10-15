@@ -5,11 +5,14 @@ import { EnglishTitle } from './English';
 import { RussianTitle } from './русский';
 import { ChineseTitle } from './Chinese';
 import * as actions from '../../actions/actions';
+import { mouseOverTitle } from '../../googleAnalytics/heading';
 
 class Title extends Component {
   render() {
     return (
-      <div data-test='title-container' id='display-container' >
+      <div onMouseEnter={mouseOverTitle}
+           data-test='title-container'
+           id='display-container' >
         {getTitleBasedOnLanguage(this.props)}
       </div>
     );
