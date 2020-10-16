@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6f998052-5cdf-48aa-b604-421da8ae22cc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/src/components/App/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/components/Carousel/Carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/src/components/Carousel/Carousel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1hkNq9anfCUKPbjEF3J1Rd9zAKX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/brothaus-react/node_modules/react-scripts" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/brothaus-react/src/components/Welcome" />
+      <recent name="$PROJECT_DIR$/brothaus-react/src/components/Input" />
+      <recent name="$PROJECT_DIR$/brothaus-react/src/components" />
+      <recent name="$PROJECT_DIR$/brothaus-react/src/components/Foto" />
+      <recent name="$PROJECT_DIR$/brothaus-react/src/components/Copyright" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Jest.App.js.ON LOAD:.and it dispatches temp and humidity to the global store.">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App.js.ON LOAD:.It renders the App component without crashing, " type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/brothaus-react/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/brothaus-react" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/brothaus-react/src/components/App/App.test.js" />
+      <test-names>
+        <test-name value="App.js" />
+        <test-name value="ON LOAD:" />
+        <test-name value="It renders the App component without crashing, " />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="App.js.ON LOAD:.and it dispatches temp and humidity to the global store." type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/brothaus-react/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/brothaus-react" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/brothaus-react/src/components/App/App.test.js" />
+      <test-names>
+        <test-name value="App.js" />
+        <test-name value="ON LOAD:" />
+        <test-name value="and it dispatches temp and humidity to the global store." />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="globalHumidityReducer.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/brothaus-react/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/brothaus-react" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/brothaus-react/src/reducers/globalHumidityReducer.test.js" />
+      <test-names>
+        <test-name value="globalHumidityReducer.js" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="globalHumidityReducer.js.When invoked with an invalid action type" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/brothaus-react/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/brothaus-react" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/brothaus-react/src/reducers/globalHumidityReducer.test.js" />
+      <test-names>
+        <test-name value="globalHumidityReducer.js" />
+        <test-name value="When invoked with an invalid action type" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="globalHumidityReducer.js.When invoked with the valid action type GLOBAL_HUMIDITY.It sets the global humidity state." type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/brothaus-react/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/brothaus-react" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/brothaus-react/src/reducers/globalHumidityReducer.test.js" />
+      <test-names>
+        <test-name value="globalHumidityReducer.js" />
+        <test-name value="When invoked with the valid action type GLOBAL_HUMIDITY" />
+        <test-name value="It sets the global humidity state." />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.App.js.ON LOAD:.and it dispatches temp and humidity to the global store." />
+        <item itemvalue="Jest.App.js.ON LOAD:.It renders the App component without crashing, " />
+        <item itemvalue="Jest.globalHumidityReducer.js.When invoked with an invalid action type" />
+        <item itemvalue="Jest.globalHumidityReducer.js" />
+        <item itemvalue="Jest.globalHumidityReducer.js.When invoked with the valid action type GLOBAL_HUMIDITY.It sets the global humidity state." />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6f998052-5cdf-48aa-b604-421da8ae22cc" name="Default Changelist" comment="" />
+      <created>1600551318596</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600551318596</updated>
+      <workItem from="1600551320394" duration="479000" />
+      <workItem from="1600611127085" duration="10481000" />
+      <workItem from="1600651125718" duration="8785000" />
+      <workItem from="1600661364796" duration="71000" />
+      <workItem from="1600724834602" duration="1488000" />
+      <workItem from="1600826720307" duration="7783000" />
+      <workItem from="1600864303457" duration="1005000" />
+      <workItem from="1600894453882" duration="2121000" />
+      <workItem from="1600896730707" duration="1497000" />
+      <workItem from="1600898235076" duration="11699000" />
+      <workItem from="1600951982905" duration="2474000" />
+      <workItem from="1600955252003" duration="890000" />
+      <workItem from="1600997036731" duration="431000" />
+      <workItem from="1600999225301" duration="3863000" />
+      <workItem from="1601004979914" duration="589000" />
+      <workItem from="1601005572467" duration="3339000" />
+      <workItem from="1601055447356" duration="7273000" />
+      <workItem from="1601064464756" duration="140000" />
+      <workItem from="1601176911960" duration="16000" />
+      <workItem from="1601177816932" duration="1943000" />
+      <workItem from="1601343410710" duration="7050000" />
+      <workItem from="1601384483133" duration="164000" />
+      <workItem from="1601394083251" duration="498000" />
+      <workItem from="1601429562532" duration="15000" />
+      <workItem from="1601433473503" duration="2005000" />
+      <workItem from="1601520719234" duration="380000" />
+      <workItem from="1601661711265" duration="322000" />
+      <workItem from="1602611859373" duration="4544000" />
+      <workItem from="1602680437523" duration="3967000" />
+      <workItem from="1602686228206" duration="669000" />
+      <workItem from="1602687561903" duration="3508000" />
+      <workItem from="1602699442712" duration="4579000" />
+      <workItem from="1602766885789" duration="1923000" />
+      <workItem from="1602774069461" duration="3974000" />
+      <workItem from="1602857983033" duration="1241000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="545" y="142" width="1915" height="1198" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1600833770163">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="545" y="142" width="1915" height="1198" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.2560.1417/-1792.23.1792.1097@0.23.2560.1417" timestamp="1600833770163" />
+    <state width="2518" height="210" key="GridCell.Tab.0.bottom" timestamp="1601063984584">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2518" height="210" key="GridCell.Tab.0.bottom/0.23.2560.1417/-1792.23.1792.1097@0.23.2560.1417" timestamp="1601063984584" />
+    <state width="2518" height="210" key="GridCell.Tab.0.center" timestamp="1601063984583">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2518" height="210" key="GridCell.Tab.0.center/0.23.2560.1417/-1792.23.1792.1097@0.23.2560.1417" timestamp="1601063984583" />
+    <state width="2518" height="210" key="GridCell.Tab.0.left" timestamp="1601063984583">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2518" height="210" key="GridCell.Tab.0.left/0.23.2560.1417/-1792.23.1792.1097@0.23.2560.1417" timestamp="1601063984583" />
+    <state width="2518" height="210" key="GridCell.Tab.0.right" timestamp="1601063984584">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2518" height="210" key="GridCell.Tab.0.right/0.23.2560.1417/-1792.23.1792.1097@0.23.2560.1417" timestamp="1601063984584" />
+    <state width="2518" height="502" key="GridCell.Tab.1.bottom" timestamp="1600921226639">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2518" height="502" key="GridCell.Tab.1.bottom/0.23.2560.1417/-1792.23.1792.1097@0.23.2560.1417" timestamp="1600921226639" />
+    <state width="2518" height="502" key="GridCell.Tab.1.center" timestamp="1600921226639">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2518" height="502" key="GridCell.Tab.1.center/0.23.2560.1417/-1792.23.1792.1097@0.23.2560.1417" timestamp="1600921226639" />
+    <state width="2518" height="502" key="GridCell.Tab.1.left" timestamp="1600921226639">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2518" height="502" key="GridCell.Tab.1.left/0.23.2560.1417/-1792.23.1792.1097@0.23.2560.1417" timestamp="1600921226639" />
+    <state width="2518" height="502" key="GridCell.Tab.1.right" timestamp="1600921226639">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2518" height="502" key="GridCell.Tab.1.right/0.23.2560.1417/-1792.23.1792.1097@0.23.2560.1417" timestamp="1600921226639" />
+    <state width="2518" height="502" key="GridCell.Tab.2.bottom" timestamp="1600921226640">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2518" height="502" key="GridCell.Tab.2.bottom/0.23.2560.1417/-1792.23.1792.1097@0.23.2560.1417" timestamp="1600921226640" />
+    <state width="2518" height="502" key="GridCell.Tab.2.center" timestamp="1600921226640">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2518" height="502" key="GridCell.Tab.2.center/0.23.2560.1417/-1792.23.1792.1097@0.23.2560.1417" timestamp="1600921226640" />
+    <state width="2518" height="502" key="GridCell.Tab.2.left" timestamp="1600921226640">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2518" height="502" key="GridCell.Tab.2.left/0.23.2560.1417/-1792.23.1792.1097@0.23.2560.1417" timestamp="1600921226640" />
+    <state width="2518" height="502" key="GridCell.Tab.2.right" timestamp="1600921226640">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2518" height="502" key="GridCell.Tab.2.right/0.23.2560.1417/-1792.23.1792.1097@0.23.2560.1417" timestamp="1600921226640" />
+    <state width="2518" height="502" key="GridCell.Tab.3.bottom" timestamp="1600921226641">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2518" height="502" key="GridCell.Tab.3.bottom/0.23.2560.1417/-1792.23.1792.1097@0.23.2560.1417" timestamp="1600921226641" />
+    <state width="2518" height="502" key="GridCell.Tab.3.center" timestamp="1600921226641">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2518" height="502" key="GridCell.Tab.3.center/0.23.2560.1417/-1792.23.1792.1097@0.23.2560.1417" timestamp="1600921226641" />
+    <state width="2518" height="502" key="GridCell.Tab.3.left" timestamp="1600921226640">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2518" height="502" key="GridCell.Tab.3.left/0.23.2560.1417/-1792.23.1792.1097@0.23.2560.1417" timestamp="1600921226640" />
+    <state width="2518" height="502" key="GridCell.Tab.3.right" timestamp="1600921226641">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2518" height="502" key="GridCell.Tab.3.right/0.23.2560.1417/-1792.23.1792.1097@0.23.2560.1417" timestamp="1600921226641" />
+    <state x="777" y="363" key="SettingsEditor" timestamp="1601005695615">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="777" y="363" key="SettingsEditor/0.23.2560.1417/-1792.23.1792.1097@0.23.2560.1417" timestamp="1601005695615" />
+    <state x="141" y="333" width="2464" height="965" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1601006916912">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="141" y="333" width="2464" height="965" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.2560.1417/-1792.23.1792.1097@0.23.2560.1417" timestamp="1601006916912" />
+    <state x="945" y="429" width="670" height="676" key="search.everywhere.popup" timestamp="1601006689054">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="945" y="429" width="670" height="676" key="search.everywhere.popup/0.23.2560.1417/-1792.23.1792.1097@0.23.2560.1417" timestamp="1601006689054" />
+  </component>
+</project>
