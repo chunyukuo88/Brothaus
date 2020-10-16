@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import urls from '../../urls';
 import { connect } from 'react-redux';
 import staticStrings from '../../StaticStrings';
 
@@ -9,7 +8,7 @@ class Code extends Component {
   };
 }
 
-const codeString = props => <a href={urls.githubRepo}
+const codeString = props => <a href={process.env.REACT_APP_GITHUB_REPO}
                                target='_blank'
                                data-test='code'
                                rel='noopener noreferrer'

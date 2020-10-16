@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import urls from '../../urls';
 import { useSelector } from 'react-redux';
 import { ChineseWeatherDisplay, EnglishWeatherDisplay, RussianWeatherDisplay } from './WeatherDisplayLocalizations';
 
@@ -17,7 +16,8 @@ export default function WeatherDisplay () {
   }
 
   const getWeatherFromApi = async () => {
-    const result = await fetch(urls.openWeatherUrl).then(res => res.json());
+    const weatherUrl = `${process.env.REACT_APP_OPENWEATHER_URL}${process.env.REACT_APP_OPENWEATHER_KEY}`;
+    const result = await fetch(weatherUrl).then(res => res.json());
     setDegreesKelvin(result.main.temp);
     setHumidity(result.main.humidity);
   }

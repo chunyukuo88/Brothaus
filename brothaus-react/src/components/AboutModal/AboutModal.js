@@ -22,7 +22,6 @@ class AboutModal extends Component {
     );
   };
 
-  //TODO: Figure out why this is a horizontal line.
   _getCodeDisplay = ({language}) => {
     switch (language){
       case 'chinese': return <div className='code chinese'><Code {...language}/></div>;
