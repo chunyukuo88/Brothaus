@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f998052-5cdf-48aa-b604-421da8ae22cc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brothaus-react/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brothaus-react/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brothaus-react/src/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/src/components/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brothaus-react/src/components/Carousel/Carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/src/components/Carousel/Carousel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/brothaus-react/src/googleAnalytics/foto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/components/Foto/Foto.js" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/src/components/Foto/Foto.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,19 +46,20 @@
       <recent name="$PROJECT_DIR$/brothaus-react/src/components/Copyright" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.App.js.ON LOAD:.and it dispatches temp and humidity to the global store.">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="Jest.App.js.ON LOAD:">
+    <configuration name="App.js.ON LOAD:" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/brothaus-react/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/brothaus-react" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/brothaus-react/src/components/App/App.test.js" />
+      <test-names>
+        <test-name value="App.js" />
+        <test-name value="ON LOAD:" />
+      </test-names>
+      <method v="2" />
     </configuration>
     <configuration name="App.js.ON LOAD:.It renders the App component without crashing, " type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
@@ -121,28 +118,13 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="globalHumidityReducer.js.When invoked with the valid action type GLOBAL_HUMIDITY.It sets the global humidity state." type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/brothaus-react/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$/brothaus-react" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/brothaus-react/src/reducers/globalHumidityReducer.test.js" />
-      <test-names>
-        <test-name value="globalHumidityReducer.js" />
-        <test-name value="When invoked with the valid action type GLOBAL_HUMIDITY" />
-        <test-name value="It sets the global humidity state." />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.App.js.ON LOAD:" />
         <item itemvalue="Jest.App.js.ON LOAD:.and it dispatches temp and humidity to the global store." />
         <item itemvalue="Jest.App.js.ON LOAD:.It renders the App component without crashing, " />
         <item itemvalue="Jest.globalHumidityReducer.js.When invoked with an invalid action type" />
         <item itemvalue="Jest.globalHumidityReducer.js" />
-        <item itemvalue="Jest.globalHumidityReducer.js.When invoked with the valid action type GLOBAL_HUMIDITY.It sets the global humidity state." />
       </list>
     </recent_temporary>
   </component>
@@ -188,7 +170,10 @@
       <workItem from="1602699442712" duration="4579000" />
       <workItem from="1602766885789" duration="1923000" />
       <workItem from="1602774069461" duration="3974000" />
-      <workItem from="1602857983033" duration="1241000" />
+      <workItem from="1602857983033" duration="4545000" />
+      <workItem from="1602882628664" duration="2270000" />
+      <workItem from="1603145729140" duration="1129000" />
+      <workItem from="1603205193264" duration="220000" />
     </task>
     <servers />
   </component>
@@ -200,21 +185,25 @@
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="545" y="142" width="1915" height="1198" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.2560.1417/-1792.23.1792.1097@0.23.2560.1417" timestamp="1600833770163" />
-    <state width="2518" height="210" key="GridCell.Tab.0.bottom" timestamp="1601063984584">
-      <screen x="0" y="23" width="2560" height="1417" />
+    <state width="1750" height="342" key="GridCell.Tab.0.bottom" timestamp="1602959571541">
+      <screen x="0" y="23" width="1792" height="1097" />
     </state>
+    <state width="1750" height="342" key="GridCell.Tab.0.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1602959571541" />
     <state width="2518" height="210" key="GridCell.Tab.0.bottom/0.23.2560.1417/-1792.23.1792.1097@0.23.2560.1417" timestamp="1601063984584" />
-    <state width="2518" height="210" key="GridCell.Tab.0.center" timestamp="1601063984583">
-      <screen x="0" y="23" width="2560" height="1417" />
+    <state width="1750" height="342" key="GridCell.Tab.0.center" timestamp="1602959571540">
+      <screen x="0" y="23" width="1792" height="1097" />
     </state>
+    <state width="1750" height="342" key="GridCell.Tab.0.center/0.23.1792.1097@0.23.1792.1097" timestamp="1602959571540" />
     <state width="2518" height="210" key="GridCell.Tab.0.center/0.23.2560.1417/-1792.23.1792.1097@0.23.2560.1417" timestamp="1601063984583" />
-    <state width="2518" height="210" key="GridCell.Tab.0.left" timestamp="1601063984583">
-      <screen x="0" y="23" width="2560" height="1417" />
+    <state width="1750" height="342" key="GridCell.Tab.0.left" timestamp="1602959571540">
+      <screen x="0" y="23" width="1792" height="1097" />
     </state>
+    <state width="1750" height="342" key="GridCell.Tab.0.left/0.23.1792.1097@0.23.1792.1097" timestamp="1602959571540" />
     <state width="2518" height="210" key="GridCell.Tab.0.left/0.23.2560.1417/-1792.23.1792.1097@0.23.2560.1417" timestamp="1601063984583" />
-    <state width="2518" height="210" key="GridCell.Tab.0.right" timestamp="1601063984584">
-      <screen x="0" y="23" width="2560" height="1417" />
+    <state width="1750" height="342" key="GridCell.Tab.0.right" timestamp="1602959571541">
+      <screen x="0" y="23" width="1792" height="1097" />
     </state>
+    <state width="1750" height="342" key="GridCell.Tab.0.right/0.23.1792.1097@0.23.1792.1097" timestamp="1602959571541" />
     <state width="2518" height="210" key="GridCell.Tab.0.right/0.23.2560.1417/-1792.23.1792.1097@0.23.2560.1417" timestamp="1601063984584" />
     <state width="2518" height="502" key="GridCell.Tab.1.bottom" timestamp="1600921226639">
       <screen x="0" y="23" width="2560" height="1417" />
