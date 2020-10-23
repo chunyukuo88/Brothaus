@@ -4,7 +4,7 @@ a {
   transition: 0.5s;
 }
 a:hover {
-  text-shadow: 2px 2px #4c9900;
+  text-shadow: 1px 1px 8px #4c9900;
   transition: 0.5s;
 }
 
