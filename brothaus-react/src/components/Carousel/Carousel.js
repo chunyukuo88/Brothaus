@@ -5,15 +5,18 @@ import '../../css/Carousel.css';
 
 export default function Carousel(){
 
-  function populateCarousel() {
-      const fotoCountAsArray = arrayFromFotoCount(8); //TODO: Have this use getFotoCount() or Redux.
+  function CarouselContent(){
+      const fotoCountAsArray = arrayFromFotoCount(8);
       return fotoCountAsArray.map(fotoNumber => <Foto key={fotoNumber} {...{fotoNumber: fotoNumber}}/>);
   }
 
   return(
       <div className="carousel"
-           data-flickity='{"lazyLoad": true, "freeScroll": true, "dragThreshold": 6, "wrapAround": true}'>
-        {populateCarousel()}
+           data-flickity='{"lazyLoad": true,
+                           "freeScroll": true,
+                           "dragThreshold": 6,
+                           "wrapAround": true}'>
+        <CarouselContent/>
      </div>
   );
 }
