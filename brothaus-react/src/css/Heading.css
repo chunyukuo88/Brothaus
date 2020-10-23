@@ -26,6 +26,11 @@ body {
 .code, .welcome, .weather, .localization {
   color: white;
   padding: 4px;
+  transition: 1s;
+}
+.code:hover, .welcome:hover, .weather:hover, .localization:hover {
+  transform: skew(-0.01turn, -1deg);
+  transition: 1s;
 }
 
 #heading {
@@ -71,13 +76,6 @@ body {
   #nav-items #nav-items__language {
     grid-column: 3;
     grid-row: 1/span 2;
-  }
-  #nav-items #nav-items__language .localization {
-    background: #314318;
-    border: 2px;
-    border-radius: 100%;
-    margin: 2px;
-    padding: 2px;
   }
 }
 .title-array {

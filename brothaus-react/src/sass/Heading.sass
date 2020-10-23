@@ -3,6 +3,10 @@
 .code, .welcome, .weather, .localization
   color: white
   padding: 4px
+  transition: 1s
+  &:hover
+    transform: skew(-0.01turn, -1deg)
+    transition: 1s
 
 #heading
   font-size: 2.5vw
@@ -36,12 +40,6 @@
     #nav-items__language
         grid-column: 3
         grid-row: 1 / span 2
-        .localization
-          background: lighten(common.$primary, 4%)
-          border: 2px
-          border-radius: 100%
-          margin: 2px
-          padding: 2px
 
 .title-array
   margin:  common.$common-margin
