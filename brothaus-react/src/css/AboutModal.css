@@ -1,3 +1,13 @@
+a {
+  color: fuchsia;
+  text-decoration: none;
+  transition: 0.5s;
+}
+a:hover {
+  text-shadow: 2px 2px #4c9900;
+  transition: 0.5s;
+}
+
 body {
   background-color: #222222;
   background: repeating-linear-gradient(45deg, #263413 0%, #263413 10%, #1f290f 0%, #1f290f 50%) 0/15px 15px;
@@ -49,10 +59,6 @@ body {
 .modal .content {
   width: 100%;
   padding: 10px 5px;
-}
-.modal .content .technology-link {
-  color: fuchsia;
-  text-decoration: none;
 }
 
 .popup-content {
