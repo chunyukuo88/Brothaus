@@ -14,8 +14,8 @@ export default function Carousel(){
       <div className="carousel"
            data-flickity='{"lazyLoad": true,
                            "freeScroll": true,
-                           "dragThreshold": 6,
-                           "wrapAround": true}'>
+                           "dragThreshold": 6
+                           }'>
         <CarouselContent/>
      </div>
   );
