@@ -24,9 +24,9 @@ class AboutModal extends Component {
 
   _getCodeDisplay = ({language}) => {
     switch (language){
-      case 'chinese': return <div className='code chinese'><Code {...language}/></div>;
-      case 'russian': return <div className='code russian'><Code {...language}/></div>;
-      default:        return <div className='code english'><Code {...language}/></div>;
+      case 'chinese': return <div className='chinese'><Code {...language}/></div>;
+      case 'russian': return <div className='russian'><Code {...language}/></div>;
+      default:        return <div className='english'><Code {...language}/></div>;
     }
   }
 

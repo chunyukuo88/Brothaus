@@ -30,20 +30,13 @@ body {
 
 .carousel {
   width: auto;
-  height: auto;
-  border: 8px;
-  margin: 0 auto;
-  padding: 8px;
-  border-radius: 25px 25px 25px 25px;
 }
 .carousel__cell__image {
   width: auto;
-  height: 60vh;
 }
 
-.flickity-viewport {
-  border-radius: 15px;
-  height: 100%;
+.flickity-button {
+  background-color: #4c9900;
 }
 
 /*# sourceMappingURL=FotoPublic.css.map */

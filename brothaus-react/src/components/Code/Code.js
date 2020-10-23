@@ -16,9 +16,9 @@ const codeString = props => <a href={process.env.REACT_APP_GITHUB_REPO}
 
 const getCodeDisplay = props => {
   switch (props.language){
-    case 'chinese': return <div className='code chinese'>{staticStrings.code.ZH}</div>;
-    case 'russian': return <div className='code russian'>{staticStrings.code.RU}</div>;
-    default:        return <div className='code english'>{staticStrings.code.EN}</div>;
+    case 'chinese': return <div className='chinese'>{staticStrings.code.ZH}</div>;
+    case 'russian': return <div className='russian'>{staticStrings.code.RU}</div>;
+    default:        return <div className='english'>{staticStrings.code.EN}</div>;
   }
 }
 

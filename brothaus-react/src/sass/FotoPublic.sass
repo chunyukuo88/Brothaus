@@ -1,26 +1,15 @@
 @use './common'
 
-$background-color: #54502d
-
 *
   -webkit-box-sizing: border-box
   box-sizing: border-box
 
 .carousel
   width: auto
-  height: auto
-  border: common.$common-border
-  margin: 0 auto
-  padding: common.$common-padding
-  border-radius: 25px 25px 25px 25px
   &__cell
     &__image
       width: auto
-      height: 60vh
-
-.flickity-viewport //This class is part of flickity; it does not appear in Carousel.js.
-  border-radius: 15px
-  height: 100%
 
 .flickity-button
   //TODO: Buttons move based on image size.
+  background-color: common.$primary-font-color
