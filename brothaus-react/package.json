@@ -63,10 +63,12 @@
     "dotenv": "^8.2.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
+    "file-loader": "^6.1.1",
     "istanbul": "^0.4.5",
     "jest-enzyme": "^7.1.2",
     "moxios": "^0.4.0",
     "nyc": "^15.1.0",
-    "redux-devtools": "^3.6.1"
+    "redux-devtools": "^3.6.1",
+    "webpack": "^5.2.0"
   }
 }

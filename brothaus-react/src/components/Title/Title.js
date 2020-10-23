@@ -6,6 +6,7 @@ import { RussianTitle } from './русский';
 import { ChineseTitle } from './Chinese';
 import * as actions from '../../actions/actions';
 import { mouseOverTitle } from '../../googleAnalytics/heading';
+import Hedgehog from './Hedgehog';
 
 class Title extends Component {
   render() {
@@ -14,6 +15,7 @@ class Title extends Component {
            data-test='title-container'
            id='display-container' >
         {getTitleBasedOnLanguage(this.props)}
+        <Hedgehog/>
       </div>
     );
   }
