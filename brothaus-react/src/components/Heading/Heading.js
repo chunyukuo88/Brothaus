@@ -23,20 +23,17 @@ export default function Heading(){
     <section data-test='heading' id='heading'>
       <Title/>
       <nav id='nav-items'>
-        {getWrappedWelcomeComponent()}
+        <WrappedWelcomeComponent/>
         {getLocalizationStrings(dispatch)}
-        <div id='nav-items__weather'
-             className='nav-item'
-             onClick={_toggleDegrees}
-             data-test='weather-display'>
-              <WeatherDisplay {...degrees}/>
+        <div id='nav-items__weather' className='nav-item' onClick={_toggleDegrees} data-test='weather-display'>
+          <WeatherDisplay {...degrees}/>
         </div>
       </nav>
     </section>
   );
 };
 
-const getWrappedWelcomeComponent = () => <div id='nav-items__welcome'
+const WrappedWelcomeComponent = () => <div id='nav-items__welcome'
                                               className='nav-item'
                                               onClick={welcomeTextGA}><Welcome/></div>;
 
