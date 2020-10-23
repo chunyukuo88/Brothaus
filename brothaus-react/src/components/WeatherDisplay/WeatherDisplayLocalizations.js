@@ -7,7 +7,7 @@ export class EnglishWeatherDisplay extends Component {
     return(
       <div className='english'>
         <span>{Math.round(this.degreesFahrenheit)}°F </span>
-        and {this.humidity}% humidity <br/> here in Westerville.
+        and {this.humidity}% humidity
       </div>
     );
   }
@@ -19,7 +19,7 @@ export class ChineseWeatherDisplay extends Component {
   render() {
     return(
       <div className='chinese'>
-        這裏有<span>{Math.round(this.degreesCelsius)}°C</span>，濕度為{this.humidity}%。
+        這裏有<span>{Math.round(this.degreesCelsius)}°C</span>，濕度為{this.humidity}%
       </div>
     );
   }
@@ -31,7 +31,7 @@ export class RussianWeatherDisplay extends Component {
   render() {
     return(
       <div className='russian'>
-        Здесь <span>{Math.round(this.degreesCelsius)}°C </span>и влажность {this.humidity}%.
+        Здесь <span>{Math.round(this.degreesCelsius)}°C </span>и влажность {this.humidity}%
       </div>
     );
   }

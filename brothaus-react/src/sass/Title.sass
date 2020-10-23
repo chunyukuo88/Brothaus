@@ -1,5 +1,6 @@
 @use './common'
 
+$title-text-size: 3rem
 $glow-color: #45ff11
 $text-glow-base: #fff
 
@@ -33,8 +34,8 @@ $text-glow-base: #fff
 .title:hover
   color: black
 
-.chinese-title
-  font-size: 5rem
+.chinese-title, .english-title, .russian-title
+  font-size: 6rem
 
 .english-title
   font-family: 'Monoton', cursive
@@ -48,3 +49,7 @@ $text-glow-base: #fff
     text-shadow: 0 0 10px $text-glow-base, 0 0 20px $text-glow-base, 0 0 30px $text-glow-base, 0 0 40px $glow-color, 0 0 70px $glow-color, 0 0 80px $glow-color, 0 0 100px $glow-color, 0 0 150px $glow-color
   to
     text-shadow: 0 0 5px $text-glow-base, 0 0 10px $text-glow-base, 0 0 15px $text-glow-base, 0 0 20px $glow-color, 0 0 35px $glow-color, 0 0 40px $glow-color, 0 0 50px $glow-color, 0 0 75px $glow-color
+
+@media only screen and (max-width: 600px)
+  .chinese-title, .english-title, .russian-title
+    font-size: $title-text-size
