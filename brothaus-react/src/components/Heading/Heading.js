@@ -40,15 +40,15 @@ const WrappedWelcomeComponent = () => <div id='nav-items__welcome'
 const getLocalizationStrings = (dispatch) => {
   return (
     <div id='nav-items__language' className='nav-item'>
-      <span id='rus' className='russian' onClick={()=>{
+      <span id='rus' role='img' aria-label='russian flag' className='russian' onClick={()=>{
         russianIconGA();
         dispatch(switchToRussian());
       }}>🇷🇺</span>
-      <span id='en' className='english' onClick={()=>{
+      <span id='en' role='img' aria-label='american  flag' className='english' onClick={()=>{
         englishIconGA();
         dispatch(switchToEnglish());
       }}>🇺🇸</span>
-      <span id='ch' className='chinese' onClick={()=>{
+      <span id='ch' role='img' aria-label='chinese flag' className='chinese' onClick={()=>{
         chineseIconGA();
         dispatch(switchToChinese())
       }}>🇹🇼</span>
