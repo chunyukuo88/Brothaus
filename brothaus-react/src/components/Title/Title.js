@@ -14,14 +14,14 @@ class Title extends Component {
       <div onMouseEnter={mouseOverTitle}
            data-test='title-container'
            id='display-container' >
-        {getTitleBasedOnLanguage(this.props)}
+        <TitleBasedOnLanguage {...this.props} />
         <Hedgehog/>
       </div>
     );
   }
 }
 
-const getTitleBasedOnLanguage = ({language}) => {
+const TitleBasedOnLanguage = ({language}) => {
     switch (language){
       case 'chinese': return <ChineseTitle/>;
       case 'russian': return <RussianTitle/>;
