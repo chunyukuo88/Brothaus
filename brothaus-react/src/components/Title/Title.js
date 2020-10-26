@@ -6,7 +6,6 @@ import { RussianTitle } from './русский';
 import { ChineseTitle } from './Chinese';
 import * as actions from '../../actions/actions';
 import { mouseOverTitle } from '../../googleAnalytics/heading';
-import Hedgehog from './hedgehog.png';
 
 class Title extends Component {
   render() {
@@ -23,10 +22,7 @@ class Title extends Component {
 const TitleBasedOnLanguage = ({language}) => {
     switch (language){
       case 'chinese': return <ChineseTitle/>;
-      case 'russian': return (<div>
-                                <RussianTitle/>
-                                <img src={Hedgehog} alt='hedgehog'/>
-                              </div>);
+      case 'russian': return <RussianTitle/>;
       default:        return <EnglishTitle/>;
     }
 };

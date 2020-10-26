@@ -6,6 +6,7 @@ import Copyright from '../Copyright/Copyright';
 import { useDispatch } from 'react-redux';
 import { getGlobalHumidity, getGlobalTemp } from '../../actions/actions';
 import ReactGa from 'react-ga';
+import Hedgehog from '../Hedgehog/Hedgehog';
 
 export default function App() {
 
