@@ -6,9 +6,10 @@ import Copyright from '../Copyright/Copyright';
 import { useDispatch } from 'react-redux';
 import { getGlobalHumidity, getGlobalTemp } from '../../actions/actions';
 import ReactGa from 'react-ga';
+import idleTimer from "../../timer";
 
 export default function App() {
-
+  idleTimer();
   useEffect(() => {
     ReactGa.initialize(`${process.env.REACT_APP_GA}`);
     ReactGa.pageview(window.location.pathname + window.location.search);
