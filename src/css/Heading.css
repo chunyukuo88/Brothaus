@@ -1,0 +1,95 @@
+a {
+  color: fuchsia;
+  text-decoration: none;
+  transition: 0.5s;
+}
+a:hover {
+  text-shadow: 1px 1px 8px #4c9900;
+  transition: 0.5s;
+}
+
+body {
+  background-color: #222222;
+  background: repeating-linear-gradient(45deg, #263413 0%, #263413 10%, #1f290f 0%, #1f290f 50%) 0/15px 15px;
+}
+
+#copyright {
+  text-align: center;
+  color: #4c9900;
+}
+
+.chinese {
+  font-family: "ZCool Kuaile";
+}
+
+.english {
+  font-family: "Luckiest Guy", cursive;
+}
+
+.russian {
+  font-family: "Neucha";
+}
+
+.welcome, .weather, .localization {
+  color: white;
+  padding: 4px;
+  transition: 1s;
+}
+.welcome:hover, .weather:hover, .localization:hover {
+  transform: skew(-0.01turn, -1deg);
+  transition: 1s;
+  color: #ccff99;
+}
+
+#heading {
+  font-size: 2.5vw;
+}
+
+.nav-item {
+  cursor: pointer;
+}
+
+#nav-items {
+  display: flex;
+  justify-content: space-around;
+}
+
+#nav-items__language {
+  grid-column: 1;
+}
+
+@media (max-width: 800px) {
+  #heading {
+    font-size: 4vw;
+  }
+
+  #nav-items {
+    display: grid;
+  }
+  #nav-items .nav-item {
+    place-self: center;
+  }
+  #nav-items #nav-items__weather {
+    grid-column: 1;
+    grid-row: 1/span 2;
+  }
+  #nav-items #nav-items__welcome {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  #nav-items #nav-items__code {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  #nav-items #nav-items__language {
+    grid-column: 3;
+    grid-row: 1/span 2;
+  }
+}
+.title-array {
+  margin: 8px;
+  padding: 8px;
+  border: 8px;
+}
+
+/*# sourceMappingURL=Heading.css.map */

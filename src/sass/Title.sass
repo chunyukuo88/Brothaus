@@ -1,0 +1,55 @@
+@use './common'
+
+$title-text-size: 3rem
+$glow-color: #45ff11
+$text-glow-base: #fff
+
+#display-container
+  height: 150px
+  display: flex
+  align-items: center
+  justify-content: center
+
+.title-container
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  margin-top: 15px
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate
+  animation: neon1 1.5s ease-in-out infinite alternate
+
+.title
+  color: #fff
+  font-size: 3em
+  text-decoration: none
+  transition: all 0.5s
+  -webkit-transition: all 0.5s
+  -moz-transition: all 0.5s
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate
+  animation: neon1 1.5s ease-in-out infinite alternate
+
+.title:hover
+  color: black
+
+.chinese-title, .english-title, .russian-title
+  font-size: 6rem
+
+.english-title
+  font-family: 'Monoton', cursive
+
+.russian-title
+  font-family: 'Rubik Mono One', sans-serif
+
+/*glow*/
+@keyframes neon1
+  from
+    text-shadow: 0 0 10px $text-glow-base, 0 0 20px $text-glow-base, 0 0 30px $text-glow-base, 0 0 40px $glow-color, 0 0 70px $glow-color, 0 0 80px $glow-color, 0 0 100px $glow-color, 0 0 150px $glow-color
+  to
+    text-shadow: 0 0 5px $text-glow-base, 0 0 10px $text-glow-base, 0 0 15px $text-glow-base, 0 0 20px $glow-color, 0 0 35px $glow-color, 0 0 40px $glow-color, 0 0 50px $glow-color, 0 0 75px $glow-color
+
+@media only screen and (max-width: 600px)
+  .chinese-title, .english-title, .russian-title
+    font-size: $title-text-size

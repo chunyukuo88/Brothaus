@@ -1,0 +1,48 @@
+@use './common'
+
+.welcome, .weather, .localization
+  color: white
+  padding: 4px
+  transition: 1s
+  &:hover
+    transform: skew(-0.01turn, -1deg)
+    transition: 1s
+    color: lighten(common.$primary-font-color, 50%)
+
+#heading
+  font-size: 2.5vw
+
+.nav-item
+  cursor: pointer
+
+#nav-items
+  display: flex
+  justify-content: space-around
+
+#nav-items__language
+  grid-column: 1
+
+@media(max-width: 800px)
+  #heading
+    font-size: 4vw
+  #nav-items
+    display: grid
+    .nav-item
+      place-self: center
+    #nav-items__weather
+        grid-column: 1
+        grid-row: 1 / span 2
+    #nav-items__welcome
+        grid-column: 2
+        grid-row: 1
+    #nav-items__code
+        grid-column: 2
+        grid-row: 2
+    #nav-items__language
+        grid-column: 3
+        grid-row: 1 / span 2
+
+.title-array
+  margin:  common.$common-margin
+  padding: common.$common-padding
+  border:  common.$common-border

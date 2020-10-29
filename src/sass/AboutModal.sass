@@ -1,0 +1,37 @@
+@use './common'
+$modal-fonts: 1rem
+$standard-paboma: 5px //paboma = 'padding, border, margin.' It's also the order of innermost to outermost spacing classifications.
+
+.modal-header
+  color: common.$primary-font-color
+  font-size: $modal-fonts
+  text-align: center
+
+.modal
+  font-size: $modal-fonts
+  padding: $standard-paboma
+  border: $standard-paboma
+  margin: $standard-paboma
+  text-align: center
+  .actions
+    margin: auto
+  .actions
+    width: 100%
+    padding: calc(2 * #{$standard-paboma}) $standard-paboma
+    text-align: center
+  .modal-header
+    padding: common.$common-padding
+    border: common.$common-border
+    margin: common.$common-margin
+  .content
+    width: 100%
+    padding: 10px $standard-paboma
+
+.popup-content
+  border-radius: 8px
+
+@media only screen and (min-width: 1000px)
+  .modal
+    font-size: 50px
+    .modal-header
+      font-size: inherit

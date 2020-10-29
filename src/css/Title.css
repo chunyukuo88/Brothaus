@@ -1,0 +1,94 @@
+a {
+  color: fuchsia;
+  text-decoration: none;
+  transition: 0.5s;
+}
+a:hover {
+  text-shadow: 1px 1px 8px #4c9900;
+  transition: 0.5s;
+}
+
+body {
+  background-color: #222222;
+  background: repeating-linear-gradient(45deg, #263413 0%, #263413 10%, #1f290f 0%, #1f290f 50%) 0/15px 15px;
+}
+
+#copyright {
+  text-align: center;
+  color: #4c9900;
+}
+
+.chinese {
+  font-family: "ZCool Kuaile";
+}
+
+.english {
+  font-family: "Luckiest Guy", cursive;
+}
+
+.russian {
+  font-family: "Neucha";
+}
+
+#display-container {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+.title {
+  color: #fff;
+  font-size: 3em;
+  text-decoration: none;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+.title:hover {
+  color: black;
+}
+
+.chinese-title, .english-title, .russian-title {
+  font-size: 6rem;
+}
+
+.english-title {
+  font-family: "Monoton", cursive;
+}
+
+.russian-title {
+  font-family: "Rubik Mono One", sans-serif;
+}
+
+/*glow*/
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #45ff11, 0 0 70px #45ff11, 0 0 80px #45ff11, 0 0 100px #45ff11, 0 0 150px #45ff11;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #45ff11, 0 0 35px #45ff11, 0 0 40px #45ff11, 0 0 50px #45ff11, 0 0 75px #45ff11;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .chinese-title, .english-title, .russian-title {
+    font-size: 3rem;
+  }
+}
+
+/*# sourceMappingURL=Title.css.map */
