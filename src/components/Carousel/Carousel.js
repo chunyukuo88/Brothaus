@@ -1,31 +1,22 @@
 import React from 'react';
-import '../../css/FotoPublic.css';
-import Foto from '../Foto/Foto';
-import '../../css/Carousel.css';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel as CarouselDisplay } from 'react-responsive-carousel';
 
-export default function Carousel(){
+const Carousel = () => (
+    <CarouselDisplay>
+      <div>
+        <img src="https://woobler-photos.s3.amazonaws.com/1-min.jpg" />
+        <p className="legend">Legend 1</p>
+      </div>
+      <div>
+        <img src="https://woobler-photos.s3.amazonaws.com/2-min.jpg" />
+        <p className="legend">Legend 2</p>
+      </div>
+      <div>
+        <img src="https://woobler-photos.s3.amazonaws.com/3-min.jpg" />
+        <p className="legend">Legend 3</p>
+      </div>
+    </CarouselDisplay>
+);
 
-  function CarouselContent(){
-      const fotoCountAsArray = arrayFromFotoCount(8);
-      return fotoCountAsArray.map(fotoNumber => <Foto key={fotoNumber} {...{fotoNumber: fotoNumber}}/>);
-  }
-
-  return(
-      <div className="carousel"
-           data-flickity='{"lazyLoad": true,
-                           "freeScroll": true,
-                           "dragThreshold": 6
-                           }'>
-        <CarouselContent/>
-     </div>
-  );
-}
-
-function arrayFromFotoCount (int) {
-  const arr = [];
-  for (let i = 1; i < (int+1); i++){
-    arr.push(i);
-  }
-  console.log('array: ', arr);
-  return arr;
-}
+export default Carousel;
