@@ -1,33 +1,6 @@
-a {
-  color: fuchsia;
-  text-decoration: none;
-  transition: 0.5s;
-}
-a:hover {
-  text-shadow: 1px 1px 8px #4c9900;
-  transition: 0.5s;
-}
-
-body {
-  background-color: #222222;
-  background: repeating-linear-gradient(45deg, #263413 0%, #263413 10%, #1f290f 0%, #1f290f 50%) 0/15px 15px;
-}
-
 #copyright {
   text-align: center;
   color: #4c9900;
-}
-
-.chinese {
-  font-family: "ZCool Kuaile";
-}
-
-.english {
-  font-family: "Luckiest Guy", cursive;
-}
-
-.russian {
-  font-family: "Neucha";
 }
 
 .welcome, .weather, .localization {
@@ -35,6 +8,7 @@ body {
   padding: 4px;
   transition: 1s;
 }
+
 .welcome:hover, .weather:hover, .localization:hover {
   transform: skew(-0.01turn, -1deg);
   transition: 1s;
@@ -58,11 +32,16 @@ body {
   grid-column: 1;
 }
 
+.title-array {
+  margin: 8px;
+  padding: 8px;
+  border: 8px;
+}
+
 @media (max-width: 800px) {
   #heading {
     font-size: 4vw;
   }
-
   #nav-items {
     display: grid;
   }
@@ -85,9 +64,4 @@ body {
     grid-column: 3;
     grid-row: 1/span 2;
   }
-}
-.title-array {
-  margin: 8px;
-  padding: 8px;
-  border: 8px;
 }
