@@ -1,15 +1,21 @@
 :root {
   --woob-green: green;
+  --link-color: fuchsia;
+  --hover-transition: 0.5s;
+}
+
+* {
+  user-select: none;
 }
 
 a {
-  color: fuchsia;
+  color: var(--link-color);
   text-decoration: none;
-  transition: 0.5s;
+  transition: var(--hover-transition);
 }
 a:hover {
   text-shadow: 1px 1px 8px var(--woob-green);
-  transition: 0.5s;
+  transition: var(--hover-transition);
 }
 
 body {

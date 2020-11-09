@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import '../../css/Title.css';
 import { EnglishTitle } from './English';
 import { RussianTitle } from './русский';
 import { ChineseTitle } from './Chinese';
 import * as actions from '../../actions/actions';
 import { mouseOverTitle } from '../../googleAnalytics/heading';
+import '../../css/Title.css';
 
 class Title extends Component {
   render() {
@@ -13,7 +13,7 @@ class Title extends Component {
       <div onMouseEnter={mouseOverTitle}
            data-test='title-container'
            id='display-container' >
-        <TitleBasedOnLanguage {...this.props} />
+        <TitleBasedOnLanguage id='title' {...this.props} />
       </div>
     );
   }

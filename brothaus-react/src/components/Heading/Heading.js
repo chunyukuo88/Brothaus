@@ -20,7 +20,7 @@ export default function Heading(){
   };
 
   return (
-    <section data-test='heading' id='heading'>
+    <section data-test='heading'>
       <Title/>
       <nav id='nav-items'>
         <WrappedWelcomeComponent/>
