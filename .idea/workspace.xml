@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6f998052-5cdf-48aa-b604-421da8ae22cc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brothaus-react/src/components/Carousel/Carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/src/components/Carousel/Carousel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brothaus-react/src/components/Carousel/photoCount.js" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/src/components/Carousel/photoCount.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brothaus-react/src/components/Foto/Foto.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/src/components/App/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/components/Carousel/Carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/src/components/Carousel/FotoDisplay.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/brothaus-react/src/css/AboutModal.css" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/src/css/AboutModal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brothaus-react/src/css/FotoPublic.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brothaus-react/src/css/Heading.css" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/src/css/Heading.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brothaus-react/src/css/Title.css" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/src/css/Title.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/brothaus-react/src/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/src/css/common.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -191,7 +187,7 @@
       <workItem from="1602882628664" duration="2270000" />
       <workItem from="1603145729140" duration="1129000" />
       <workItem from="1603205193264" duration="220000" />
-      <workItem from="1604891318381" duration="799000" />
+      <workItem from="1604891318381" duration="1239000" />
     </task>
     <servers />
   </component>

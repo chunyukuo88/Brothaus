@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Heading from '../Heading/Heading';
-import Carousel from '../Carousel/Carousel';
+import FotoDisplay from '../Carousel/FotoDisplay';
 import '../../css/common.css';
 import Copyright from '../Copyright/Copyright';
 import { useDispatch } from 'react-redux';
@@ -22,7 +22,7 @@ export default function App() {
            onLoad={()=>dispatchTempAndHumidity(dispatch)}
       >
         <Heading/>
-        <Carousel />
+        <FotoDisplay />
         <Copyright/>
       </div>
     );
