@@ -2,9 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f998052-5cdf-48aa-b604-421da8ae22cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/brothaus-react/src/googleAnalytics/foto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brothaus-react/src/components/Foto/Foto.js" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/src/components/Foto/Foto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/components/Carousel/Carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/src/components/Carousel/Carousel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/css/AboutModal.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/css/Carousel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/css/Carousel.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/css/FotoPublic.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/css/Heading.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/css/Title.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/css/common.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/sass/AboutModal.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/sass/AboutModal.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/sass/AboutModal.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/sass/Carousel.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/sass/FotoPublic.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/sass/FotoPublic.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/sass/FotoPublic.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/sass/Heading.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/sass/Heading.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/sass/Heading.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/sass/Title.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/sass/Title.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/sass/Title.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/sass/common.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/sass/common.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/sass/common.sass" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +73,17 @@
     </key>
   </component>
   <component name="RunManager" selected="Jest.App.js.ON LOAD:">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="App.js.ON LOAD:" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -174,6 +211,7 @@
       <workItem from="1602882628664" duration="2270000" />
       <workItem from="1603145729140" duration="1129000" />
       <workItem from="1603205193264" duration="220000" />
+      <workItem from="1604891318381" duration="525000" />
     </task>
     <servers />
   </component>

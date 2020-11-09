@@ -1,23 +1,42 @@
 import React from 'react';
-import '../../css/FotoPublic.css';
-import Foto from '../Foto/Foto';
-import '../../css/Carousel.css';
+import { Carousel as CarouselDisplay } from 'react-responsive-carousel';
 
 export default function Carousel(){
-
-  function CarouselContent(){
-      const fotoCountAsArray = arrayFromFotoCount(8);
-      return fotoCountAsArray.map(fotoNumber => <Foto key={fotoNumber} {...{fotoNumber: fotoNumber}}/>);
-  }
-
   return(
-      <div className="carousel"
-           data-flickity='{"lazyLoad": true,
-                           "freeScroll": true,
-                           "dragThreshold": 6
-                           }'>
-        <CarouselContent/>
-     </div>
+    <CarouselDisplay>
+      <div>
+        <img src="https://woobler-photos.s3.amazonaws.com/1-min.jpg" />
+        <p className="legend">Legend 1</p>
+      </div>
+      <div>
+        <img src="https://woobler-photos.s3.amazonaws.com/2-min.jpg" />
+        <p className="legend">Legend 1</p>
+      </div>
+      <div>
+        <img src="https://woobler-photos.s3.amazonaws.com/3-min.jpg" />
+        <p className="legend">Legend 1</p>
+      </div>
+      <div>
+        <img src="https://woobler-photos.s3.amazonaws.com/4-min.jpg" />
+        <p className="legend">Legend 1</p>
+      </div>
+      <div>
+        <img src="https://woobler-photos.s3.amazonaws.com/5-min.jpg" />
+        <p className="legend">Legend 1</p>
+      </div>
+      <div>
+        <img src="https://woobler-photos.s3.amazonaws.com/6-min.jpg" />
+        <p className="legend">Legend 1</p>
+      </div>
+      <div>
+        <img src="https://woobler-photos.s3.amazonaws.com/7-min.jpg" />
+        <p className="legend">Legend 1</p>
+      </div>
+      <div>
+        <img src="https://woobler-photos.s3.amazonaws.com/8-min.jpg" />
+        <p className="legend">Legend 1</p>
+      </div>
+    </CarouselDisplay>
   );
 }
 
