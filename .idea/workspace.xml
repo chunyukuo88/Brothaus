@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f998052-5cdf-48aa-b604-421da8ae22cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/brothaus-react/src/css/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brothaus-react/src/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/src/components/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brothaus-react/src/components/Heading/Heading.js" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/src/components/Heading/Heading.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brothaus-react/src/components/Title/Title.js" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/src/components/Title/Title.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/brothaus-react/src/components/AboutModal/AboutModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/src/components/AboutModal/AboutModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/brothaus-react/src/css/AboutModal.css" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/src/css/AboutModal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brothaus-react/src/css/Heading.css" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/src/css/Heading.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brothaus-react/src/css/Title.css" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/src/css/Title.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brothaus-react/src/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/src/css/common.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +185,7 @@
       <workItem from="1602882628664" duration="2270000" />
       <workItem from="1603145729140" duration="1129000" />
       <workItem from="1603205193264" duration="220000" />
-      <workItem from="1604891318381" duration="3192000" />
+      <workItem from="1604891318381" duration="3980000" />
     </task>
     <servers />
   </component>

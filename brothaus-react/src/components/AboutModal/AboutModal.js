@@ -56,7 +56,7 @@ class AboutModal extends Component {
     switch (language){
       case 'chinese': return <div className='chinese'>為了達成百分百測試覆蓋率，我用了<EnzymeLink/>及<ReactTesting/>。</div>;
       case 'russian': return <div className='russian'> 100% тестового покрытия с библиотекой <EnzymeLink/> и <ReactTesting/>.</div>;
-      default:        return <div className='english'>100% test coverage with <EnzymeLink/> & <ReactTesting/>.</div>;
+      default:        return <div className='english'>Tests use <EnzymeLink/> & <ReactTesting/>.</div>;
     }
   };
 }
