@@ -39,12 +39,3 @@ export default function Carousel(){
     </CarouselDisplay>
   );
 }
-
-function arrayFromFotoCount (int) {
-  const arr = [];
-  for (let i = 1; i < (int+1); i++){
-    arr.push(i);
-  }
-  console.log('array: ', arr);
-  return arr;
-}
