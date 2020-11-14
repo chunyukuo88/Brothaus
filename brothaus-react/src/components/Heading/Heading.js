@@ -13,11 +13,6 @@ import { welcomeTextGA,
 
 export default function Heading(){
   const dispatch = useDispatch();
-  const [ degrees, toggleDegreeType ] = useState({ isFahrenheit: true });
-
-  const _toggleDegrees = () => {
-    toggleDegreeType({isFahrenheit: !degrees.isFahrenheit});
-  };
 
   return (
     <section data-test='heading'>
@@ -25,8 +20,8 @@ export default function Heading(){
       <nav id='nav-items'>
         <WrappedWelcomeComponent/>
         {getLocalizationStrings(dispatch)}
-        <div id='nav-items__weather' className='nav-item' onClick={_toggleDegrees} data-test='weather-display'>
-          <WeatherDisplay {...degrees}/>
+        <div id='nav-items__weather' className='nav-item' data-test='weather-display'>
+          <WeatherDisplay/>
         </div>
       </nav>
     </section>
