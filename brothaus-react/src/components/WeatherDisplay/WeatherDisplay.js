@@ -7,6 +7,7 @@ export default function WeatherDisplay () {
   const [ degreesKelvin, setDegreesKelvin] = useState(285);
   const [ humidity, setHumidity ] = useState(50);
   const selectedLanguage = useSelector((state) => state.language);
+
   const displayLanguage = (language) => {
     switch(language){
       case 'russian': return getRussianDisplay(getDegreesCelsius(degreesKelvin), humidity);
@@ -16,15 +17,14 @@ export default function WeatherDisplay () {
   }
 
   const getWeatherFromApi = async () => {
-    const weatherUrl = `${urls.openWeatherUrl}`;
-    const result = await fetch(weatherUrl).then(res => res.json());
+    const result = await fetch(urls.openWeatherUrl).then(res => res.json());
     setDegreesKelvin(result.main.temp);
     setHumidity(result.main.humidity);
   }
 
   useEffect(() => {
     getWeatherFromApi();
-  },[degreesKelvin]);
+  },[]);
 
   return <div className='weather'>{displayLanguage(selectedLanguage)}</div>;
 }
