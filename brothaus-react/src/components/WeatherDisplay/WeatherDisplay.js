@@ -4,9 +4,25 @@ import urls from '../../urls';
 import { ChineseWeatherDisplay, EnglishWeatherDisplay, RussianWeatherDisplay } from './WeatherDisplayLocalizations';
 
 export default function WeatherDisplay () {
-  const [ degreesKelvin, setDegreesKelvin] = useState(285);
+  const [ degreesKelvin, setDegreesKelvin] = useState(275);
+  const [ startingDisplay, setStartingDisplay ] = useState(false);
   const [ humidity, setHumidity ] = useState(50);
   const selectedLanguage = useSelector((state) => state.language);
+
+  useEffect(() => {
+    getWeatherFromApi();
+  }, [degreesKelvin, humidity]);
+
+  const showWeatherStates = () => {
+    console.log('showWeatherStates');
+    setStartingDisplay(true);
+  };
+
+  const getWeatherFromApi = async () => {
+    const result = await fetch(urls.openWeatherUrl).then(res => res.json());
+    setDegreesKelvin(result.main.temp);
+    setHumidity(result.main.humidity);
+  };
 
   const displayLanguage = (language) => {
     switch(language){
@@ -16,17 +32,7 @@ export default function WeatherDisplay () {
     }
   };
 
-  const getWeatherFromApi = async () => {
-    const result = await fetch(urls.openWeatherUrl).then(res => res.json());
-    setDegreesKelvin(result.main.temp);
-    setHumidity(result.main.humidity);
-  };
-
-  useEffect(() => {
-    getWeatherFromApi();
-  });
-
-  return <div className='weather'>{displayLanguage(selectedLanguage)}</div>;
+  return <div onClick={showWeatherStates} className='weather'>{(startingDisplay === true) ? displayLanguage(selectedLanguage) : 'Weather'}</div>;
 }
 
 const getDegreesFahrenheit = degreesKelvin => (9/5) * (degreesKelvin - 273) + 32;

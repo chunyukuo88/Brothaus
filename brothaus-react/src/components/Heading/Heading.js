@@ -20,7 +20,9 @@ export default function Heading(){
       <nav id='nav-items'>
         <WrappedWelcomeComponent/>
         {getLocalizationStrings(dispatch)}
-        <div id='nav-items__weather' className='nav-item' data-test='weather-display'>
+        <div id='nav-items__weather'
+             className='nav-item'
+             data-test='weather-display'>
           <WeatherDisplay/>
         </div>
       </nav>
