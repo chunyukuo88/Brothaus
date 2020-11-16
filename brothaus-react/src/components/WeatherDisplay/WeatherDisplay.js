@@ -14,17 +14,17 @@ export default function WeatherDisplay () {
       case 'chinese': return getChineseDisplay(getDegreesCelsius(degreesKelvin), humidity);
       default:        return getEnglishDisplay(getDegreesFahrenheit(degreesKelvin), humidity);
     }
-  }
+  };
 
   const getWeatherFromApi = async () => {
     const result = await fetch(urls.openWeatherUrl).then(res => res.json());
     setDegreesKelvin(result.main.temp);
     setHumidity(result.main.humidity);
-  }
+  };
 
   useEffect(() => {
     getWeatherFromApi();
-  },[]);
+  });
 
   return <div className='weather'>{displayLanguage(selectedLanguage)}</div>;
 }
@@ -35,14 +35,14 @@ const getDegreesCelsius = degreesKelvin => (degreesKelvin - 273.15);
 const getEnglishDisplay = (temp, humidity) => {
   const props = {temp, humidity}
   return <EnglishWeatherDisplay {...props}/>
-}
+};
 
 const getChineseDisplay = (temp, humidity) => {
   const props = {temp, humidity};
   return <ChineseWeatherDisplay {...props}/>
-}
+};
 
 const getRussianDisplay = (temp, humidity) => {
   const props = {temp, humidity};
   return <RussianWeatherDisplay {...props}/>
-}
+};

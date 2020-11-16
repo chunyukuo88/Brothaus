@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 
 export class EnglishWeatherDisplay extends Component {
-  degreesFahrenheit = this.props.temp;
+  degreesCelsius = this.props.temp;
   humidity = this.props.humidity;
   render() {
     return(
       <div className='english'>
-        <span>{Math.round(this.degreesFahrenheit)}°F </span>
+        <span>{Math.round(this.degreesCelsius)}°F </span>
         and {this.humidity}% humidity
       </div>
     );
