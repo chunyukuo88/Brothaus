@@ -43,9 +43,7 @@ async function fetchWeather(weatherAttribute){
     const data = await fetch(urls.openWeatherUrl)
       .then(res => res.json())
       .catch(e => console.error(e.message));
-    const result = (weatherAttribute === 'temp')
-      ? data.main.temp
-      : data.main.humidity;
+    const result = (weatherAttribute === 'temp') ? data.main.temp : data.main.humidity;
     console.log('fetchWeather() successful', result);
     return result;
   } catch (e) {

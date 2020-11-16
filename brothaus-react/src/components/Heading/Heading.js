@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../../css/Heading.css';
 import { switchToRussian, switchToEnglish, switchToChinese } from '../../actions/actions';
 import { useDispatch } from 'react-redux';

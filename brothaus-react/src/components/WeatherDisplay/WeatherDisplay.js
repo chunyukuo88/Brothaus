@@ -7,7 +7,6 @@ export default function WeatherDisplay () {
   const [ degreesKelvin, setDegreesKelvin] = useState(285);
   const [ humidity, setHumidity ] = useState(50);
   const selectedLanguage = useSelector((state) => state.language);
-
   const displayLanguage = (language) => {
     switch(language){
       case 'russian': return getRussianDisplay(getDegreesCelsius(degreesKelvin), humidity);
