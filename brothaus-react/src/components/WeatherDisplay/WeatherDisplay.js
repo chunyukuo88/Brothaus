@@ -13,18 +13,13 @@ export default function WeatherDisplay () {
     getWeatherFromApi();
   }, [degreesKelvin, humidity]);
 
-  const showWeatherStates = () => {
-    console.log('showWeatherStates');
-    setStartingDisplay(true);
-  };
-
   const getWeatherFromApi = async () => {
     const result = await fetch(urls.openWeatherUrl).then(res => res.json());
     setDegreesKelvin(result.main.temp);
     setHumidity(result.main.humidity);
   };
 
-  const displayLanguage = (language) => {
+  const weatherDisplayPerLang = (language) => {
     switch(language){
       case 'russian': return getRussianDisplay(getDegreesCelsius(degreesKelvin), humidity);
       case 'chinese': return getChineseDisplay(getDegreesCelsius(degreesKelvin), humidity);
@@ -32,7 +27,19 @@ export default function WeatherDisplay () {
     }
   };
 
-  return <div onClick={showWeatherStates} className='weather'>{(startingDisplay === true) ? displayLanguage(selectedLanguage) : 'Weather'}</div>;
+  const weatherTitlePerLang = (language) => {
+    switch(language){
+      case 'russian': return <div className='russian'>местная погода</div>;
+      case 'chinese': return <div className='chinese'>當地天氣</div>;;
+      default:        return <div className='english'>Westerville Weather</div>;;
+    }
+  };
+
+  return (
+      <div onClick={()=> setStartingDisplay(!startingDisplay)} className='weather'>
+        {startingDisplay ? weatherDisplayPerLang(selectedLanguage) : weatherTitlePerLang(selectedLanguage)}
+      </div>
+  );
 }
 
 const getDegreesFahrenheit = degreesKelvin => (9/5) * (degreesKelvin - 273) + 32;
