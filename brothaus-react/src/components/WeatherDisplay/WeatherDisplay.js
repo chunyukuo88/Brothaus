@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import urls from '../../urls';
-import { ChineseWeatherDisplay, EnglishWeatherDisplay, RussianWeatherDisplay } from './WeatherDisplayLocalizations';
+import { ChineseWeatherDisplay, EnglishWeatherDisplay, RussianWeatherDisplay, WeatherStartingLabel } from './WeatherDisplayLocalizations';
+import { getDegreesFahrenheit, getDegreesCelsius } from './utils';
 
 export default function WeatherDisplay () {
   const [ degreesKelvin, setDegreesKelvin] = useState(275);
@@ -11,7 +12,7 @@ export default function WeatherDisplay () {
 
   useEffect(() => {
     getWeatherFromApi();
-  }, [degreesKelvin, humidity]);
+  });
 
   const getWeatherFromApi = async () => {
     const result = await fetch(urls.openWeatherUrl).then(res => res.json());
@@ -27,23 +28,16 @@ export default function WeatherDisplay () {
     }
   };
 
-  const weatherTitlePerLang = (language) => {
-    switch(language){
-      case 'russian': return <div className='russian'>местная погода</div>;
-      case 'chinese': return <div className='chinese'>當地天氣</div>;;
-      default:        return <div className='english'>Westerville Weather</div>;;
-    }
-  };
-
   return (
       <div onClick={()=> setStartingDisplay(!startingDisplay)} className='weather'>
-        {startingDisplay ? weatherDisplayPerLang(selectedLanguage) : weatherTitlePerLang(selectedLanguage)}
+        {startingDisplay ? weatherDisplayPerLang(selectedLanguage) : weatherTitlePerLang(WeatherStartingLabel, selectedLanguage)}
       </div>
   );
 }
 
-const getDegreesFahrenheit = degreesKelvin => (9/5) * (degreesKelvin - 273) + 32;
-const getDegreesCelsius = degreesKelvin => (degreesKelvin - 273.15);
+const weatherTitlePerLang = (WeatherStartingLabel, language) => {
+  return <div className={language}>{WeatherStartingLabel[language]}</div>;
+};
 
 const getEnglishDisplay = (temp, humidity) => {
   const props = {temp, humidity}

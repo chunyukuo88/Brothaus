@@ -36,3 +36,9 @@ export class RussianWeatherDisplay extends Component {
     );
   }
 }
+
+export const WeatherStartingLabel = {
+  'russian': 'местная погода',
+  'chinese': '當地天氣',
+  'english': 'Westerville Weather',
+}
