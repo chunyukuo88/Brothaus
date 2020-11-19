@@ -29,8 +29,8 @@ export default function Heading(){
 };
 
 const WrappedWelcomeComponent = () => <div id='nav-items__welcome'
-                                              className='nav-item'
-                                              onClick={welcomeTextGA}><Welcome/></div>;
+                                            className='nav-item'
+                                            onClick={welcomeTextGA}><Welcome/></div>;
 
 const getLocalizationStrings = (dispatch) => {
   return (

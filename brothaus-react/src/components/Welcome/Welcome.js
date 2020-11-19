@@ -18,9 +18,9 @@ const welcomeString = (props) => <span>{getWelcomeString(props)}</span>;
 
 const getWelcomeString = (props) => {
   switch (props.language){
-    case 'chinese': return <div className='welcome chinese'>{staticStrings.welcome.ZH}</div>;
-    case 'russian': return <div className='welcome russian'>{staticStrings.welcome.RU}</div>;
-    default:        return <div className='welcome english'>{staticStrings.welcome.EN}</div>;
+    case 'chinese': return <div className='welcome chinese'>{staticStrings.welcome.chinese}</div>;
+    case 'russian': return <div className='welcome russian'>{staticStrings.welcome.russian}</div>;
+    default:        return <div className='welcome english'>{staticStrings.welcome.english}</div>;
   }
 }
 

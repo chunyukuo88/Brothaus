@@ -1,8 +1,8 @@
 const staticStrings = {
   welcome: {
-    EN: "Welcome",
-    RU: "пожаловать",
-    ZH: "簡介"
+    english: "Welcome",
+    russian: "пожаловать",
+    chinese: "簡介"
   },
   modalHeading: {
     english: "...to my trilingual photo album",
