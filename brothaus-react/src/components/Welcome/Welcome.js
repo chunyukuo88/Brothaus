@@ -4,7 +4,7 @@ import Popup from 'reactjs-popup';
 import AboutModal from '../AboutModal/AboutModal';
 import staticStrings from '../../StaticStrings';
 
-const Welcome = () => {
+export default function Welcome() {
   const language = useSelector((state) => state.language);
     return (
       <Popup modal trigger={welcomeString(language)}>
@@ -13,13 +13,11 @@ const Welcome = () => {
     );
 }
 
-const welcomeString = (props) => <span>{getWelcomeString(props)}</span>;
-
-const getWelcomeString = (language) => {
+const welcomeString = (language) => {
   const className = `welcome ${language}`;
   return (
-    <div className={className}>{staticStrings.welcome[language]}</div>
+    <div className={className}>
+      {staticStrings.welcome[language]}
+    </div>
   );
 };
-
-export default Welcome;

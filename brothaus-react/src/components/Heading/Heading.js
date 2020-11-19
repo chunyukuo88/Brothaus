@@ -5,11 +5,7 @@ import { useDispatch } from 'react-redux';
 import WeatherDisplay from '../WeatherDisplay/WeatherDisplay';
 import Title from '../Title/Title';
 import Welcome from '../Welcome/Welcome';
-import { welcomeTextGA,
-         russianIconGA,
-         englishIconGA,
-         chineseIconGA,
-} from '../../googleAnalytics/heading';
+import * as GA from '../../googleAnalytics/heading';
 
 export default function Heading(){
   const dispatch = useDispatch();
@@ -19,7 +15,7 @@ export default function Heading(){
       <Title/>
       <nav id='nav-items'>
         <WrappedWelcomeComponent/>
-        {getLocalizationStrings(dispatch)}
+        {_getLocalizationStrings(dispatch)}
         <div id='nav-items__weather' className='nav-item' data-test='weather-display'>
           <WeatherDisplay/>
         </div>
@@ -30,21 +26,21 @@ export default function Heading(){
 
 const WrappedWelcomeComponent = () => <div id='nav-items__welcome'
                                             className='nav-item'
-                                            onClick={welcomeTextGA}><Welcome/></div>;
+                                            onClick={GA.welcomeTextGA}><Welcome/></div>;
 
-const getLocalizationStrings = (dispatch) => {
+const _getLocalizationStrings = (dispatch) => {
   return (
     <div id='nav-items__language' className='nav-item'>
       <span id='rus' role='img' aria-label='russian flag' className='russian' onClick={()=>{
-        russianIconGA();
+        GA.russianIconGA();
         dispatch(switchToRussian());
       }}>🇷🇺</span>
       <span id='en' role='img' aria-label='american  flag' className='english' onClick={()=>{
-        englishIconGA();
+        GA.englishIconGA();
         dispatch(switchToEnglish());
       }}>🇺🇸</span>
       <span id='ch' role='img' aria-label='chinese flag' className='chinese' onClick={()=>{
-        chineseIconGA();
+        GA.chineseIconGA();
         dispatch(switchToChinese())
       }}>🇹🇼</span>
     </div>
