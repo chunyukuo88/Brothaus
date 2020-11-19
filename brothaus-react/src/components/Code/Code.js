@@ -7,11 +7,11 @@ const Code = () => {
   return codeString(selectedLang);
 }
 
-const codeString = props => <a href={process.env.REACT_APP_GITHUB_REPO}
+const codeString = lang => <a href={process.env.REACT_APP_GITHUB_REPO}
                                target='_blank'
                                data-test='code'
                                rel='noopener noreferrer'
-                               id='repo'>{getCodeDisplay(props)}</a>;
+                               id='repo'>{getCodeDisplay(lang)}</a>;
 
 const getCodeDisplay = language => {
   switch (language){
