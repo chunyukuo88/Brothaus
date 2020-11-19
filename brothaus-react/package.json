@@ -19,6 +19,7 @@
     "aws-sdk": "^2.754.0",
     "axios": "^0.20.0",
     "bl": "^1.2.3",
+    "lodash": "^4.17.20",
     "markdown-to-jsx": "^6.11.4",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
