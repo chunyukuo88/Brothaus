@@ -6,19 +6,6 @@ import { mouseOverTitle } from '../../googleAnalytics/heading';
 import _ from 'lodash';
 import '../../css/Title.css';
 
-const _buildProps = (language) => {
-  const clonedStrings = _.cloneDeep(titleStrings);
-  return {
-    language: language,
-    localizedString: clonedStrings[language]
-  }
-};
-
-const englishProps = _buildProps('english');
-const russianProps = _buildProps('russian');
-const chineseProps = _buildProps('chinese');
-
-
 class Title extends Component {
   render() {
     return (
@@ -31,13 +18,17 @@ class Title extends Component {
   }
 }
 
+const _buildProps = (language) => {
+  const clonedStrings = _.cloneDeep(titleStrings);
+  return {
+    language: language,
+    localizedString: clonedStrings[language]
+  }
+};
+
 const TitleBasedOnLanguage = ({language}) => {
-  console.log('TitleBasedOnLanguage');
-    switch (language){
-      case 'chinese': return <LocalizedTitle {...chineseProps}/>;
-      case 'russian': return <LocalizedTitle {...russianProps}/>;
-      default:        return <LocalizedTitle {...englishProps}/>;
-    }
+  const props = _buildProps(language);
+  return (<LocalizedTitle {...props}/>);
 };
 
 function mapStateToProps(state){
