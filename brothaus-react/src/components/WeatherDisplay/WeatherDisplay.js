@@ -33,7 +33,7 @@ export default function WeatherDisplay () {
 const _buildDisplay = (showWeather, selectedLang, degreesK, humidity) => {
   return showWeather 
           ? _buildWeatherDisplay(selectedLang, degreesK, humidity) 
-          : _buildWeatherTitle(WeatherStartingLabels, selectedLang);
+          : _getWeatherTitle(WeatherStartingLabels, selectedLang);
 }
 
 const _buildWeatherDisplay = (language, degreesK, humidity) => {
@@ -66,7 +66,7 @@ const _buildWeatherData = async (degreesSetter, humiditySetter) => {
   humiditySetter(fetchedWeatherData.main.humidity);
 }
 
-const _buildWeatherTitle = (WeatherStartingLabels, language) => {
+const _getWeatherTitle = (WeatherStartingLabels, language) => {
   return (
     <div className={language}>
       {WeatherStartingLabels[language]}
