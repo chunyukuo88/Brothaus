@@ -1,31 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import Popup from 'reactjs-popup';
 import AboutModal from '../AboutModal/AboutModal';
-import { connect } from 'react-redux';
 import staticStrings from '../../StaticStrings';
 
-class Welcome extends Component {
-  render(){
+const Welcome = () => {
+  const language = useSelector((state) => state.language);
     return (
-      <Popup modal trigger={welcomeString(this.props)}>
+      <Popup modal trigger={welcomeString(language)}>
         {close => <AboutModal close={close} />}
       </Popup>
     );
-  };
 }
 
 const welcomeString = (props) => <span>{getWelcomeString(props)}</span>;
 
-const getWelcomeString = (props) => {
-  switch (props.language){
-    case 'chinese': return <div className='welcome chinese'>{staticStrings.welcome.chinese}</div>;
-    case 'russian': return <div className='welcome russian'>{staticStrings.welcome.russian}</div>;
-    default:        return <div className='welcome english'>{staticStrings.welcome.english}</div>;
-  }
-}
+const getWelcomeString = (language) => {
+  const className = `welcome ${language}`;
+  return (
+    <div className={className}>{staticStrings.welcome[language]}</div>
+  );
+};
 
-function mapStateToProps(state){
-  return { language: state.language };
-}
-
-export default connect(mapStateToProps)(Welcome);
+export default Welcome;
