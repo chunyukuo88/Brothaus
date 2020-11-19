@@ -10,29 +10,39 @@ import { ChineseWeatherDisplay,
 
 
 export default function WeatherDisplay () {
-  const [ degreesKelvin, setDegreesKelvin] = useState(275);
+  const [ degreesK, setDegreesK] = useState(275); // degreesKelvin
   const [ humidity, setHumidity ] = useState(50);
-  const [ startingDisplay, setStartingDisplay ] = useState(false);
-  const selectedLanguage = useSelector((state) => state.language);
+  const [ showWeather, setShowWeather ] = useState(false);
+  const selectedLang = useSelector((state) => state.language);
 
   useEffect(() => {
-    getWeatherFromApi(setDegreesKelvin, setHumidity);
+    getWeatherFromApi(setDegreesK, setHumidity);
   });
 
-  const weatherDisplayPerLang = (language) => {
-    switch(language){
-      case 'russian': return getRussianDisplay(getDegreesCelsius(degreesKelvin), humidity);
-      case 'chinese': return getChineseDisplay(getDegreesCelsius(degreesKelvin), humidity);
-      default: return getEnglishDisplay(getDegreesFahrenheit(degreesKelvin), humidity);
-    }
-  };
+  const toggleDisplay = () => setShowWeather(!showWeather);
 
-  return (<div onClick={()=> setStartingDisplay(!startingDisplay)} className='weather'>
-            {startingDisplay ? weatherDisplayPerLang(selectedLanguage) : weatherTitlePerLang(WeatherStartingLabel, selectedLanguage)}
-          </div>);
+  return (
+    <div onClick={toggleDisplay} className='weather'>
+      {_buildDisplay(showWeather, selectedLang , degreesK, humidity)}
+    </div>
+    );
 }
 
 
+
+const _buildDisplay = (showWeather, selectedLang , degreesK, humidity) => {
+  return showWeather 
+          ? weatherDisplayPerLang(selectedLang , degreesK, humidity) 
+          : weatherTitlePerLang(WeatherStartingLabel, selectedLang);
+}
+
+const weatherDisplayPerLang = (language, degreesK, humidity) => {
+  switch(language){
+    case 'russian': return getRussianDisplay(getDegreesCelsius(degreesK), humidity);
+    case 'chinese': return getChineseDisplay(getDegreesCelsius(degreesK), humidity);
+    default: return getEnglishDisplay(getDegreesFahrenheit(degreesK), humidity);
+  }
+};
 
 const getWeatherFromApi = async (degreesSetter, humiditySetter) => {
   const fetchResult = await fetch(urls.openWeatherUrl).then(res => res.json());
