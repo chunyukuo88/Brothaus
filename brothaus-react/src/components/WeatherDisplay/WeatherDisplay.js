@@ -23,7 +23,7 @@ export default function WeatherDisplay () {
 
   return (
     <div onClick={toggleDisplay} className='weather'>
-      {_buildDisplay(showWeather, selectedLang , degreesK, humidity)}
+      {_buildDisplay(showWeather, selectedLang, degreesK, humidity)}
     </div>
     );
 }
@@ -37,13 +37,27 @@ const _buildDisplay = (showWeather, selectedLang, degreesK, humidity) => {
 }
 
 const _buildWeatherDisplay = (language, degreesK, humidity) => {
-  const celsius = getDegreesC(degreesK);
-  const fahrenheit = getDegreesF(degreesK);
+  const celsiusProps = _buildCelsiusProps(degreesK, humidity);
+  const fahrenheitProps = _buildFahhrenheitProps(degreesK, humidity);
   switch(language){
-    case 'russian': return getRussianDisplay(celsius, humidity);
-    case 'chinese': return getChineseDisplay(celsius, humidity);
-    default: return getEnglishDisplay(fahrenheit, humidity);
+    case 'russian': return <RussianWeatherDisplay {...celsiusProps}/>
+    case 'chinese': return <ChineseWeatherDisplay {...celsiusProps}/>
+    default: return <EnglishWeatherDisplay {...fahrenheitProps}/>
   }
+};
+
+const _buildCelsiusProps = (degreesK, humidity) => {
+  return {
+    temp: getDegreesC(degreesK),
+    humidity: humidity,
+  };
+};
+
+const _buildFahhrenheitProps = (degreesK, humidity) => {
+  return {
+    temp: getDegreesF(degreesK),
+    humidity: humidity,
+  };
 };
 
 const _buildWeatherData = async (degreesSetter, humiditySetter) => {
@@ -58,19 +72,4 @@ const _buildWeatherTitle = (WeatherStartingLabels, language) => {
       {WeatherStartingLabels[language]}
     </div>
   );
-};
-
-const getEnglishDisplay = (temp, humidity) => {
-  const props = { temp, humidity }
-  return <EnglishWeatherDisplay {...props}/>
-};
-
-const getChineseDisplay = (temp, humidity) => {
-  const props = { temp, humidity }
-  return <ChineseWeatherDisplay {...props}/>
-};
-
-const getRussianDisplay = (temp, humidity) => {
-  const props = { temp, humidity }
-  return <RussianWeatherDisplay {...props}/>
 };

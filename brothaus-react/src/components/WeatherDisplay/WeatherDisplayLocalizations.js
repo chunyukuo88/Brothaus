@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 
-export class EnglishWeatherDisplay extends Component {
+export class EnglishWeatherDisplay extends PureComponent {
   degrees = this.props.temp;
   humidity = this.props.humidity;
   render() {
@@ -13,7 +13,7 @@ export class EnglishWeatherDisplay extends Component {
   }
 }
 
-export class ChineseWeatherDisplay extends Component {
+export class ChineseWeatherDisplay extends PureComponent {
   degrees = this.props.temp;
   humidity = this.props.humidity;
   render() {
@@ -25,7 +25,7 @@ export class ChineseWeatherDisplay extends Component {
   }
 }
 
-export class RussianWeatherDisplay extends Component {
+export class RussianWeatherDisplay extends PureComponent {
   degrees = this.props.temp;
   humidity = this.props.humidity;
   render() {
