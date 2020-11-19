@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
-import { titleStrings, LocalizedTitle } from './LocalizedTitles';
+import { titleStrings, LocalizedTitle } from './LocalizedTitle';
 import * as actions from '../../actions/actions';
 import { mouseOverTitle } from '../../googleAnalytics/heading';
 import '../../css/Title.css';
@@ -25,20 +25,16 @@ const TitleBasedOnLanguage = ({language}) => {
     }
 };
 
-const chineseProps = {
-  language: 'chinese',
-  localizedString: titleStrings.chinese,
+const _buildProps = (language) => {
+  return {
+    language: language,
+    localizedString: titleStrings[language]
+  }
 };
 
-const englishProps = {
-  language: 'english',
-  localizedString: titleStrings.english,
-};
-
-const russianProps = {
-  language: 'russian',
-  localizedString: titleStrings.russian,
-};
+const englishProps = _buildProps('english');
+const russianProps = _buildProps('russian');
+const chineseProps = _buildProps('chinese');
 
 function mapStateToProps(state){
   return {

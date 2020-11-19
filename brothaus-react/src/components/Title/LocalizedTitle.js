@@ -9,14 +9,16 @@ export class LocalizedTitle extends PureComponent {
   render() {
     return (
       <div className='title-container'>
-        <div data-test={this.dataTestValue} className={this.className}>{this.localizedString}</div>
+        <div data-test={this.dataTestValue} className={this.className}>
+          {this.localizedString}
+        </div>
       </div>
-    )
-  }
+    );
+  };
 }
 
 export const titleStrings = {
   english: 'Woobler\'s House',
   chinese: '小巫之屋',
   russian: 'Берлога Пуха',
-}
+};
