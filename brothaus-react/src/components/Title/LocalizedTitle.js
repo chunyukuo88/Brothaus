@@ -1,20 +1,17 @@
-import React, { PureComponent } from "react";
+import React from "react";
 
-export class LocalizedTitle extends PureComponent {
-  language = this.props.language;
-  className = `title ${this.language} ${this.language}-title`;
-  dataTestValue = `${this.language}-title`;
-  localizedString = this.props.localizedString;
+export const LocalizedTitle = (props) => {
+  const { language, localizedString} = props;
+  const className = `title ${language} ${language}-title`;
+  const dataTestValue = `${language}-title`;
 
-  render() {
     return (
       <div className='title-container'>
-        <div data-test={this.dataTestValue} className={this.className}>
-          {this.localizedString}
+        <div data-test={dataTestValue} className={className}>
+          {localizedString}
         </div>
       </div>
     );
-  };
 }
 
 export const titleStrings = {
@@ -22,3 +19,4 @@ export const titleStrings = {
   chinese: '小巫之屋',
   russian: 'Берлога Пуха',
 };
+
