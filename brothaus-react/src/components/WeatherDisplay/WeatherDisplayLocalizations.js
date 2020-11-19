@@ -37,7 +37,7 @@ export class RussianWeatherDisplay extends Component {
   }
 }
 
-export const WeatherStartingLabel = {
+export const WeatherStartingLabels = {
   'russian': 'местная погода',
   'chinese': '當地天氣',
   'english': 'Westerville Weather',
