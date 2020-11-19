@@ -15,9 +15,9 @@ const staticStrings = {
     ZH: "製作本站，我用了REACT與REDUX"
   },
   code: {
-    EN: "Github",
-    RU: "Код",
-    ZH: "代碼"
+    english: "Github",
+    russian: "Код",
+    chinese: "代碼"
   }
 }
 
