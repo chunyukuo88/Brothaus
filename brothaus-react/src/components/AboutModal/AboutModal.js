@@ -30,20 +30,18 @@ class AboutModal extends Component {
     }
   }
 
-  _getModalHeader = ({language}) => {
-    switch (language){
-      case 'chinese': return <div className='chinese'>{staticStrings.modalHeading.ZH}</div>;
-      case 'russian': return <div className='russian'>{staticStrings.modalHeading.RU}</div>;
-      default:        return <div className='english'>{staticStrings.modalHeading.EN}</div>;
-    }
-  };
-  _getSummaryText = ({language}) => {
-    switch (language){
-      case 'chinese': return <div className='chinese'>{staticStrings.modalSummary.ZH}</div>;
-      case 'russian': return <div className='russian'>{staticStrings.modalSummary.RU}</div>;
-      default:        return <div className='english'>{staticStrings.modalSummary.EN}</div>;
-    }
-  }
+  _getModalHeader = ({language}) => (
+      <div className={language}>
+        {staticStrings.modalHeading[language]}
+      </div>
+    );
+
+  _getSummaryText = ({language}) => (
+    <div className={language}>
+      {staticStrings.modalSummary[language]}
+    </div>
+  );
+  
   _getModalDescription = ({language}) => {
     switch (language){
       case 'chinese': return <div className='chinese'>我用了<ReactPopup/>來拼湊出這個模態框</div>;

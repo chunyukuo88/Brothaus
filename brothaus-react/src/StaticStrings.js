@@ -5,14 +5,14 @@ const staticStrings = {
     ZH: "簡介"
   },
   modalHeading: {
-    EN: "...to my trilingual photo album",
-    RU: "... в мой трехъязычный фотоальбом.",
-    ZH: "歡迎訪問小巫之屋"
+    english: "...to my trilingual photo album",
+    russian: "... в мой трехъязычный фотоальбом.",
+    chinese: "歡迎訪問小巫之屋"
   },
   modalSummary: {
-    EN: "This is a test-driven React/Redux project.",
-    RU: "Это проект React/Redux.",
-    ZH: "製作本站，我用了REACT與REDUX"
+    english: "This is a test-driven React/Redux project.",
+    russian: "Это проект React/Redux.",
+    chinese: "製作本站，我用了REACT與REDUX"
   },
   code: {
     english: "Github",
