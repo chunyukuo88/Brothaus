@@ -17,7 +17,7 @@ export default function WeatherDisplay () {
 
   useEffect(() => {
     _buildWeatherData(setDegreesK, setHumidity);
-  });
+  }, []);
 
   const toggleDisplay = () => setShowWeather(!showWeather);
 
