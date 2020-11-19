@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import WeatherDisplay from '../WeatherDisplay/WeatherDisplay';
 import Title from '../Title/Title';
 import Welcome from '../Welcome/Welcome';
-import * as GA from '../../googleAnalytics/heading';
+import * as GA from '../../googleAnalytics/events';
 
 export default function Heading(){
   const dispatch = useDispatch();

@@ -10,9 +10,9 @@ export default function idleTimer() {
 };
 
 function setAlert() {
-  console.time('time');
-  timeoutID = window.setTimeout(logEvent, 5000, 'User is idle.');
-  console.timeEnd('time');
+  // console.time('time');
+  // timeoutID = window.setTimeout(logEvent, 5000, 'User is idle.');
+  // console.timeEnd('time');
 }
 
 function clearAlert() {
@@ -20,6 +20,5 @@ function clearAlert() {
 }
 
 const logEvent = (event) => {
-  // eslint-disable-next-line no-console
-  console.log(event);
+  // console.log(event);
 };

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { titleStrings, LocalizedTitle } from './LocalizedTitle';
 import * as actions from '../../actions/actions';
-import { mouseOverTitle } from '../../googleAnalytics/heading';
+import { mouseOverTitle } from '../../googleAnalytics/events';
 import _ from 'lodash';
 import '../../css/Title.css';
 
