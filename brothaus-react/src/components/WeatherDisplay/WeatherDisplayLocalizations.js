@@ -39,6 +39,6 @@ export class RussianWeatherDisplay extends PureComponent {
 
 export const WeatherStartingLabels = {
   'russian': 'местная погода',
-  'chinese': '當地天氣',
+  'chinese': '本地天氣',
   'english': 'Westerville Weather',
 }

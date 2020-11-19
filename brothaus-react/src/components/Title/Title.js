@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
-import { EnglishTitle } from './English';
-import { RussianTitle } from './русский';
-import { ChineseTitle } from './Chinese';
+import { titleStrings, LocalizedTitle } from './LocalizedTitles';
 import * as actions from '../../actions/actions';
 import { mouseOverTitle } from '../../googleAnalytics/heading';
 import '../../css/Title.css';
 
-class Title extends Component {
+class Title extends PureComponent {
   render() {
     return (
       <div onMouseEnter={mouseOverTitle}
@@ -21,10 +19,25 @@ class Title extends Component {
 
 const TitleBasedOnLanguage = ({language}) => {
     switch (language){
-      case 'chinese': return <ChineseTitle/>;
-      case 'russian': return <RussianTitle/>;
-      default:        return <EnglishTitle/>;
+      case 'chinese': return <LocalizedTitle {...chineseProps}/>;
+      case 'russian': return <LocalizedTitle {...russianProps}/>;
+      default:        return <LocalizedTitle {...englishProps}/>;
     }
+};
+
+const chineseProps = {
+  language: 'chinese',
+  localizedString: titleStrings.chinese,
+};
+
+const englishProps = {
+  language: 'english',
+  localizedString: titleStrings.english,
+};
+
+const russianProps = {
+  language: 'russian',
+  localizedString: titleStrings.russian,
 };
 
 function mapStateToProps(state){
