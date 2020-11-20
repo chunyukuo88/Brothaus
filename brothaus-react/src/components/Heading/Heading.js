@@ -31,18 +31,24 @@ const WrappedWelcomeComponent = () => <div id='nav-items__welcome'
 const _getLocalizationStrings = (dispatch) => {
   return (
     <div id='nav-items__language' className='nav-item'>
-      <span id='rus' role='img' aria-label='russian flag' className='russian' onClick={()=>{
+      <div id='rus' role='img' aria-label='russian flag' className='russian' onClick={()=>{
         GA.russianIconGA();
         dispatch(switchToRussian());
-      }}>🇷🇺</span>
-      <span id='en' role='img' aria-label='american  flag' className='english' onClick={()=>{
+      }}>
+        <img src="./flag_kazakhstan.png" alt="flag of Kazakhstan"/>
+      </div>
+      <div id='en' role='img' aria-label='american  flag' className='english' onClick={()=>{
         GA.englishIconGA();
         dispatch(switchToEnglish());
-      }}>🇺🇸</span>
-      <span id='ch' role='img' aria-label='chinese flag' className='chinese' onClick={()=>{
+      }}>
+        <img src="./flag_australia.png" alt="flag of Australia"/>
+      </div>
+      <div id='ch' role='img' aria-label='chinese flag' className='chinese' onClick={()=>{
         GA.chineseIconGA();
         dispatch(switchToChinese())
-      }}>🇹🇼</span>
+      }}>
+        <img src="./flag_taiwan.png" alt="flag of Taiwan"/>
+      </div>
     </div>
   );
 }
