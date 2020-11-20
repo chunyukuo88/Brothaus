@@ -9,12 +9,8 @@
   color: #ccff99;
 }
 
-#heading {
-  /*font-size: 2.5vw;*/
-}
-
 .national-flag-icon {
-  height: 15px;
+  height: 20px;
   width: auto;
 }
 
@@ -28,14 +24,10 @@
 }
 
 #nav-items__language {
-  grid-column: 1;
+  display: flex;
 }
 
 @media (max-width: 800px) {
-  #heading {
-    /*font-size: 4vw;*/
-  }
-
   #nav-items {
     display: grid;
   }
@@ -54,10 +46,10 @@
     grid-column: 2;
     grid-row: 2;
   }
-  #nav-items #nav-items__language {
+  /* #nav-items #nav-items__language {
     grid-column: 3;
     grid-row: 1/span 2;
-  }
+  } */
 }
 .title-array {
   margin: 8px;

@@ -18,18 +18,22 @@ function Heading(){
       <Title/>
       <nav id='nav-items'>
         <WrappedWelcomeComponent/>
-        {_getLocalizationStrings(dispatch)}
         <div id='nav-items__weather' className='nav-item' data-test='weather-display'>
           <WeatherDisplay/>
         </div>
+        {_getLocalizationStrings(dispatch)}
       </nav>
     </section>
   );
 };
 
-const WrappedWelcomeComponent = () => <div id='nav-items__welcome'
-                                            className='nav-item'
-                                            onClick={GA.welcomeTextGA}><Welcome/></div>;
+const WrappedWelcomeComponent = () => {
+  return (
+    <div id='nav-items__welcome' className='nav-item' onClick={GA.welcomeTextGA}>
+      <Welcome/>
+    </div>
+  );
+}
 
 const _getLocalizationStrings = (dispatch) => {
   return (
