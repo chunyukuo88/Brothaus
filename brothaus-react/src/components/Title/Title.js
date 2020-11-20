@@ -1,21 +1,18 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import { titleStrings, LocalizedTitle } from './LocalizedTitle';
-import * as actions from '../../actions/actions';
 import { mouseOverTitle } from '../../googleAnalytics/events';
 import _ from 'lodash';
 import '../../css/Title.css';
 
-class Title extends Component {
-  render() {
-    return (
-      <div onMouseEnter={mouseOverTitle}
-           data-test='title-container'
-           id='display-container' >
-        <TitleBasedOnLanguage id='title' {...this.props} />
-      </div>
-    );
-  }
+const Title = () => {
+  const selectedLang = useSelector((state) => state.language);
+  const props = { language: selectedLang };
+  return (
+    <div  id='display-container' onMouseEnter={mouseOverTitle} data-test='title-container'>
+      <TitleBasedOnLanguage id='title' {...props} />
+    </div>
+  );
 }
 
 const _buildProps = (language) => {
@@ -28,14 +25,7 @@ const _buildProps = (language) => {
 
 const TitleBasedOnLanguage = ({language}) => {
   const props = _buildProps(language);
-  return (<LocalizedTitle {...props}/>);
+  return <LocalizedTitle {...props}/>;
 };
 
-function mapStateToProps(state){
-  return {
-    language: state.language,
-    temp: state.temp
-  };
-}
-
-export default connect(mapStateToProps, actions)(Title);
+export default Title;

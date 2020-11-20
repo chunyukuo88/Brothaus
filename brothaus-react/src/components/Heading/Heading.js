@@ -7,7 +7,7 @@ import Title from '../Title/Title';
 import Welcome from '../Welcome/Welcome';
 import * as GA from '../../googleAnalytics/events';
 
-export default function Heading(){
+function Heading(){
   const dispatch = useDispatch();
 
   return (
@@ -46,3 +46,5 @@ const _getLocalizationStrings = (dispatch) => {
     </div>
   );
 }
+
+export default Heading;
