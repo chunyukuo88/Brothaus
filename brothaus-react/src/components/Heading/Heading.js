@@ -5,6 +5,9 @@ import { useDispatch } from 'react-redux';
 import WeatherDisplay from '../WeatherDisplay/WeatherDisplay';
 import Title from '../Title/Title';
 import Welcome from '../Welcome/Welcome';
+import flag_kazakhstan from './flag_kazakhstan.png';
+import flag_australia from './flag_australia.png';
+import flag_taiwan from './flag_taiwan.png';
 import * as GA from '../../googleAnalytics/events';
 
 function Heading(){
@@ -35,19 +38,19 @@ const _getLocalizationStrings = (dispatch) => {
         GA.russianIconGA();
         dispatch(switchToRussian());
       }}>
-        <img src="./flag_kazakhstan.png" alt="flag of Kazakhstan"/>
+        <img className="national-flag-icon" src={flag_kazakhstan} alt="flag of Kazakhstan"/>
       </div>
       <div id='en' role='img' aria-label='american  flag' className='english' onClick={()=>{
         GA.englishIconGA();
         dispatch(switchToEnglish());
       }}>
-        <img src="./flag_australia.png" alt="flag of Australia"/>
+        <img className="national-flag-icon" src={flag_australia} alt="flag of Australia"/>
       </div>
       <div id='ch' role='img' aria-label='chinese flag' className='chinese' onClick={()=>{
         GA.chineseIconGA();
         dispatch(switchToChinese())
       }}>
-        <img src="./flag_taiwan.png" alt="flag of Taiwan"/>
+        <img className="national-flag-icon" src={flag_taiwan} alt="flag of Taiwan"/>
       </div>
     </div>
   );

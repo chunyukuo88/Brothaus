@@ -13,6 +13,11 @@
   /*font-size: 2.5vw;*/
 }
 
+.national-flag-icon {
+  height: 15px;
+  width: auto;
+}
+
 .nav-item {
   cursor: pointer;
 }
