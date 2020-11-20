@@ -8,7 +8,7 @@ import captions from './captions';
  * library. Doing so results in browser console errors and the images show up but the captions bunch up.
  * */
 
-const _getFotoSource = (integer) => `https://woobler-photos.s3.amazonaws.com/${integer}-min.jpg`;
+const _getFotoSource = (integer) => `https://woobler-photos.s3.amazonaws.com/${integer} (Custom).jpg`;
 
 export default function FotoDisplay(){
     return(

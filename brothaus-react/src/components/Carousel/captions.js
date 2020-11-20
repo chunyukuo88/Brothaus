@@ -1,12 +1,12 @@
 const captions = {
-    1: 'We just did.',
-    2: 'Cut mirchi at my favorite restaurant: Neehee\'s in Dublin!',
-    3: 'I downloaded this beautiful game to celebrate Halloween with The Fourth.',
-    4: 'Mugi\'s seasonal handiwork.',
-    5: 'I tried khaman, a savory Gujarati cake.',
-    6: 'We are getting better at making fires. More specifically, Mugi is. Sunday\'s roast was very nice indeed, and we used very few briquets.',
-    7: 'After procrastinating for more than a year, I got this along with an updated driver\'s license.',
-    8: 'Mile-high wochebrot was achieved by using a cast iron griddle as a baking stone. I think iron is much more conductive than stone, so the rise on this loaf was incredible.',
+    1: 'I didn\'t realize this pic was horizontal when I uploaded it.',
+    2: 'Wochebrot Innovation: Marbled crust effect by lining the loaf pan with masa seca.',
+    3: 'Mugi made cake pops.',
+    4: 'These are a thousand times more delicious than the stuff they sell at Starbucks.',
+    5: 'Researching landscaping projects these days.',
+    6: 'Colder weather calls for Finnish breakfasts: Lingonberry jam on bread cheese, and plenty of coffee!',
+    7: 'It is David\'s turn to update the kanban.',
+    8: 'Mini brioches.',
 }
 
 export default captions;
