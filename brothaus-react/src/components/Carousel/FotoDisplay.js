@@ -16,10 +16,9 @@ export default function FotoDisplay(){
 
   const fetchCaptions = async () => {
     const result = await fetch(urls.captions).then(res => res.text());
-    console.log('===', result);
-    const parsedResult = JSON.parse(result);
-    console.log('===', parsedResult);
-    setCaptions(parsedResult);
+    const arr = result.split('\n');
+    console.log('===', arr);
+    setCaptions(result);
   };
 
   useEffect(() => {
