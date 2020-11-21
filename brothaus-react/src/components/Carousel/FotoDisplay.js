@@ -11,54 +11,52 @@ import { Carousel as CarouselDisplay } from 'react-responsive-carousel';
 const _getFotoSource = (integer) => `https://woobler-photos.s3.amazonaws.com/${integer} (Custom).jpg`;
 
 export default function FotoDisplay(){
-
-  const [ captions, setCaptions ] = useState({});
-
-  const fetchCaptions = async () => {
-    const result = await fetch(urls.captions).then(res => res.text());
-    const arr = result.split('\n');
-    console.log('===', arr);
-    setCaptions(result);
-  };
+  const [ captions, setCaptions ] = useState([]);
 
   useEffect(() => {
-    fetchCaptions();
+    _fetchCaptions(setCaptions);
   }, []);
 
     return(
     <CarouselDisplay>
       <div>
         <img alt="" src={_getFotoSource(1)} />
-        <p className="legend">{captions[1]}</p>
+        <p className="legend">{captions[0]}</p>
       </div>
       <div>
         <img alt="" src={_getFotoSource(2)} />
-        <p className="legend">{captions[2]}</p>
+        <p className="legend">{captions[1]}</p>
       </div>
       <div>
         <img alt="" src={_getFotoSource(3)} />
-        <p className="legend">{captions[3]}</p>
+        <p className="legend">{captions[2]}</p>
       </div>
       <div>
         <img alt="" src={_getFotoSource(4)} />
-        <p className="legend">{captions[4]}</p>
+        <p className="legend">{captions[3]}</p>
       </div>
       <div>
         <img alt="" src={_getFotoSource(5)} />
-        <p className="legend">{captions[5]}</p>
+        <p className="legend">{captions[4]}</p>
       </div>
       <div>
         <img alt="" src={_getFotoSource(6)} />
-        <p className="legend">{captions[6]}</p>
+        <p className="legend">{captions[5]}</p>
       </div>
       <div>
         <img alt="" src={_getFotoSource(7)} />
-        <p className="legend">{captions[7]}</p>
+        <p className="legend">{captions[6]}</p>
       </div>
       <div>
         <img alt="" src={_getFotoSource(8)} />
-        <p className="legend">{captions[8]}</p>
+        <p className="legend">{captions[7]}</p>
       </div>
     </CarouselDisplay>
   );
 }
+
+const _fetchCaptions = async (captionsSetter) => {
+  const result = await fetch(urls.captions).then(res => res.text());
+  const arr = result.split('\n');
+  captionsSetter(arr);
+};

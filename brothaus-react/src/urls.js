@@ -6,7 +6,6 @@ const urls = {
     openWeatherUrl: 'https://api.openweathermap.org/data/2.5/weather?q=Columbus,Ohio&appid=' + myOpenWeatherApiKey,
     reactTestingLibrary: 'https://testing-library.com/docs/react-testing-library/intro',
     captions: `https://woobler-photos.s3.amazonaws.com/captions.txt`,
-    // captions: `https://woobler-photos.s3.amazonaws.com/captions.json`,
 };
 
 export default urls;
