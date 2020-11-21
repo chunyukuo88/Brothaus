@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../css/carousel.css';
+import urls from '../../urls';
 import { Carousel as CarouselDisplay } from 'react-responsive-carousel';
-import captions from './captions';
 
 /**
  * Dynamically populating the contents of <CarouselDisplay> is not possible with the react-responsive-carousel
@@ -11,6 +11,21 @@ import captions from './captions';
 const _getFotoSource = (integer) => `https://woobler-photos.s3.amazonaws.com/${integer} (Custom).jpg`;
 
 export default function FotoDisplay(){
+
+  const [ captions, setCaptions ] = useState({});
+
+  const fetchCaptions = async () => {
+    const result = await fetch(urls.captions).then(res => res.text());
+    console.log('===', result);
+    const parsedResult = JSON.parse(result);
+    console.log('===', parsedResult);
+    setCaptions(parsedResult);
+  };
+
+  useEffect(() => {
+    fetchCaptions();
+  }, []);
+
     return(
     <CarouselDisplay>
       <div>
