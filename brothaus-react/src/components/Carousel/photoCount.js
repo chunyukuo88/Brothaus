@@ -13,7 +13,7 @@ const s3 = new AWS.S3({apiVersion: '2006-03-01'});
 const albumBucketName = 'woobler-photos';
 const bucketParams = {Bucket: albumBucketName};
 
-export default async function getFotoCount() {
+async function getFotoCount() {
   const result = await s3.listObjectsV2(bucketParams).promise()
     .then(data => data.Contents.length);
   console.log('getFotoCount()');

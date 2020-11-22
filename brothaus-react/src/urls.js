@@ -8,4 +8,6 @@ const urls = {
     captions: `https://woobler-photos.s3.amazonaws.com/captions.txt`,
 };
 
+export const getFotoSource = (integer) => `https://woobler-photos.s3.amazonaws.com/${integer} (Custom).jpg`;
+
 export default urls;
