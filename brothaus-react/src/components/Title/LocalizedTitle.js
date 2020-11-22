@@ -1,17 +1,27 @@
-import React from "react";
+import React from 'react';
+import Hedgehog from '../Hedgehog/Hedgehog.jsx';
 
 export const LocalizedTitle = (props) => {
   const { language, localizedString } = props;
   const className = _getClassName(language);
   const dataTestValue = _getDataTestValue(language);
 
+  const hedgehogProps = { language: language };
+
     return (
       <div className='title-container'>
         <div data-test={dataTestValue} className={className}>
           {localizedString}
         </div>
+        <div>
+          <RussianHedgehog {...hedgehogProps}/>
+        </div>
       </div>
     );
+};
+
+const RussianHedgehog = ({ language }) => {
+  return language === 'russian' ? <Hedgehog/> : null;
 }
 
 const _getClassName = (language) => `title ${language} ${language}-title`;

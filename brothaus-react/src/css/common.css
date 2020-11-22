@@ -13,6 +13,7 @@ a {
   text-decoration: none;
   transition: var(--hover-transition);
 }
+
 a:hover {
   text-shadow: 1px 1px 8px var(--woob-green);
   transition: var(--hover-transition);
