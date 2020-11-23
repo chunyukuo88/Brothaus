@@ -1,12 +1,5 @@
-.welcome, .weather, .localization {
-  color: white;
-  padding: 4px;
-  transition: 1s;
-}
-.welcome:hover, .weather:hover, .localization:hover {
-  transform: skew(-0.01turn, -1deg);
-  transition: 1s;
-  color: #ccff99;
+#heading {
+
 }
 
 .national-flag-icon {
@@ -18,13 +11,30 @@
   cursor: pointer;
 }
 
-#nav-items {
+#heading__nav-items {
   display: flex;
   justify-content: space-around;
 }
 
 #nav-items__language {
   display: flex;
+}
+
+.title-array {
+  margin: 8px;
+  padding: 8px;
+  border: 8px;
+}
+
+.welcome, .weather, .localization {
+  color: white;
+  padding: 4px;
+  transition: 1s;
+}
+.welcome:hover, .weather:hover, .localization:hover {
+  transform: skew(-0.01turn, -1deg);
+  transition: 1s;
+  color: #ccff99;
 }
 
 @media (max-width: 800px) {
@@ -50,9 +60,4 @@
     grid-column: 3;
     grid-row: 1/span 2;
   } */
-}
-.title-array {
-  margin: 8px;
-  padding: 8px;
-  border: 8px;
 }

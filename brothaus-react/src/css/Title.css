@@ -1,4 +1,4 @@
-#display-container {
+#title-display-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,9 +30,7 @@
   color: black;
 }
 
-.chinese-title,
-.english-title,
-.russian-title {
+.chinese-title, .english-title, .russian-title {
   font-size: 2rem;
 }
 

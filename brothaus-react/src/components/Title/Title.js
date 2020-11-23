@@ -9,7 +9,7 @@ const Title = () => {
   const selectedLang = useSelector((state) => state.language);
   const props = { language: selectedLang };
   return (
-    <div  id='display-container' onMouseEnter={mouseOverTitle} data-test='title-container'>
+    <div  id='title-display-container' onMouseEnter={mouseOverTitle} data-test='title-container'>
       <TitleBasedOnLanguage id='title' {...props} />
     </div>
   );

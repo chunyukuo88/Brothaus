@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../css/Heading.css';
 import { switchToRussian, switchToEnglish, switchToChinese } from '../../actions/actions';
 import { useDispatch } from 'react-redux';
 import WeatherDisplay from '../WeatherDisplay/WeatherDisplay';
@@ -9,13 +8,16 @@ import flag_kazakhstan from './flag_kazakhstan.png';
 import flag_australia from './flag_australia.png';
 import flag_taiwan from './flag_taiwan.png';
 import * as GA from '../../googleAnalytics/events';
+import '../../css/Heading.css';
 
 function Heading(){
   const dispatch = useDispatch();
 
   return (
-    <section data-test='heading'>
-      <Title/>
+    <section id="heading" data-test='heading'>
+      <div id="heading__placement-wrapper">
+        <Title/>
+      </div>
       <nav id='nav-items'>
         <WrappedWelcomeComponent/>
         <div id='nav-items__weather' className='nav-item' data-test='weather-display'>
