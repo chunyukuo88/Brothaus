@@ -15,10 +15,10 @@ function Heading(){
 
   return (
     <section id="heading" data-test='heading'>
-      <div id="heading__placement-wrapper">
+      <div id="heading__title">
         <Title/>
       </div>
-      <nav id='nav-items'>
+      <nav id='heading__nav-items'>
         <WrappedWelcomeComponent/>
         <div id='nav-items__weather' className='nav-item' data-test='weather-display'>
           <WeatherDisplay/>

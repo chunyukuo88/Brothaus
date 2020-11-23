@@ -1,5 +1,18 @@
 #heading {
+  display: grid;
+  grid-template-rows: 1fr, 1fr;
+}
 
+#heading__title {
+  grid-row: 1 / 1;
+  height: 70px;
+}
+
+#heading__nav-items {
+  grid-row: 2 / 2;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .national-flag-icon {
@@ -9,11 +22,6 @@
 
 .nav-item {
   cursor: pointer;
-}
-
-#heading__nav-items {
-  display: flex;
-  justify-content: space-around;
 }
 
 #nav-items__language {
