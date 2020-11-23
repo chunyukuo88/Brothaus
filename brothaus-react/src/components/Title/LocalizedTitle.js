@@ -31,4 +31,3 @@ export const titleStrings = {
   chinese: '小巫之屋',
   russian: 'Берлога Пуха',
 };
-

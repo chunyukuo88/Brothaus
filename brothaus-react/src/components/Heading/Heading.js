@@ -13,6 +13,10 @@ import '../../css/Heading.css';
 function Heading(){
   const dispatch = useDispatch();
 
+  const localizationProps = {
+    dispatch: dispatch
+  };
+
   return (
     <section id="heading" data-test='heading'>
       <div id="heading__title">
@@ -26,14 +30,14 @@ function Heading(){
           <WeatherDisplay/>
         </div>
         <div id='nav-items__language' className='nav-item'>
-          {_getLocalizationStrings(dispatch)}
+          <LocalizationIcons {...localizationProps} />
         </div>
       </nav>
     </section>
   );
 };
 
-const _getLocalizationStrings = (dispatch) => {
+const LocalizationIcons = ({dispatch}) => {
   return (
     <>
       <div id='rus' role='img' aria-label='russian flag' className='russian' onClick={()=>{
