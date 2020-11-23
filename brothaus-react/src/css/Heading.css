@@ -12,8 +12,8 @@
   grid-row: 2 / 2;
   height: 30px;
   
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .national-flag-icon {
@@ -27,6 +27,19 @@
 
 #nav-items__language {
   display: flex;
+  grid-column: 3 / 3;
+  justify-self: end;
+  margin: auto 5px auto auto;
+}
+
+#nav-items__weather {
+  grid-column: 2 / 2;
+  margin: auto auto;
+}
+
+#nav-items__welcome {
+  grid-column: 1 / 1;
+  margin: auto auto auto 5px;
 }
 
 .title-array {

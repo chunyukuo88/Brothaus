@@ -1,15 +1,16 @@
 :root {
   --animation-rules: neon 1.5s ease-in-out infinite alternate;
+  --title-transition-interval: all 0.5s;
 }
 
 .chinese-title, .english-title, .russian-title {
   color: #fff;
   font-size: 2rem;
   text-decoration: none;
-  transition: all 0.5s;
+  transition: var(--title-transition-interval);
 
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
+  -webkit-transition: var(--title-transition-interval);
+  -moz-transition: var(--title-transition-interval);
   -webkit-animation: var(--animation-rules);
   -moz-animation: var(--animation-rules);
   animation: var(--animation-rules);

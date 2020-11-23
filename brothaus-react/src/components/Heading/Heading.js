@@ -19,27 +19,23 @@ function Heading(){
         <Title/>
       </div>
       <nav id='heading__nav-items'>
-        <WrappedWelcomeComponent/>
+        <div id='nav-items__welcome' className='nav-item' onClick={GA.welcomeTextGA}>
+          <Welcome/>
+        </div>
         <div id='nav-items__weather' className='nav-item' data-test='weather-display'>
           <WeatherDisplay/>
         </div>
-        {_getLocalizationStrings(dispatch)}
+        <div id='nav-items__language' className='nav-item'>
+          {_getLocalizationStrings(dispatch)}
+        </div>
       </nav>
     </section>
   );
 };
 
-const WrappedWelcomeComponent = () => {
-  return (
-    <div id='nav-items__welcome' className='nav-item' onClick={GA.welcomeTextGA}>
-      <Welcome/>
-    </div>
-  );
-}
-
 const _getLocalizationStrings = (dispatch) => {
   return (
-    <div id='nav-items__language' className='nav-item'>
+    <>
       <div id='rus' role='img' aria-label='russian flag' className='russian' onClick={()=>{
         GA.russianIconGA();
         dispatch(switchToRussian());
@@ -58,7 +54,7 @@ const _getLocalizationStrings = (dispatch) => {
       }}>
         <img className="national-flag-icon" src={flag_taiwan} alt="flag of Taiwan"/>
       </div>
-    </div>
+    </>
   );
 }
 
