@@ -13,14 +13,14 @@ const Title = () => {
       <TitleBasedOnLanguage id='title' {...props} />
     </div>
   );
-}
+};
 
 const _buildProps = (language) => {
   const clonedStrings = _.cloneDeep(titleStrings);
   return {
     language: language,
-    localizedString: titleStrings[language]
-  }
+    localizedString: clonedStrings[language]
+  };
 };
 
 const TitleBasedOnLanguage = ({ language }) => {

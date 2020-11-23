@@ -24,7 +24,7 @@ const RussianHedgehog = ({ language }) => {
   return language === 'russian' ? <Hedgehog/> : null;
 }
 
-const _getClassName = (language) => `title ${language} ${language}-title`;
+const _getClassName = (language) => `title ${language}-title`;
 
 const _getDataTestValue = (language) => `${language}-title`;
 

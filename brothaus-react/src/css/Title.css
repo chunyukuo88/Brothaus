@@ -10,9 +10,9 @@
   justify-content: center;
   align-items: center;
   margin-top: 15px;
-  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
-  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
-  animation: neon1 1.5s ease-in-out infinite alternate;
+  -webkit-animation: neon 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon 1.5s ease-in-out infinite alternate;
+  animation: neon 1.5s ease-in-out infinite alternate;
 }
 
 .title {
@@ -21,9 +21,9 @@
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
-  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
-  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
-  animation: neon1 1.5s ease-in-out infinite alternate;
+  -webkit-animation: neon 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon 1.5s ease-in-out infinite alternate;
+  animation: neon 1.5s ease-in-out infinite alternate;
 }
 
 .title:hover {
@@ -32,6 +32,10 @@
 
 .chinese-title, .english-title, .russian-title {
   font-size: 2rem;
+}
+
+.chinese-title {
+  font-family: "ZCool Kuaile";
 }
 
 .english-title {
@@ -43,7 +47,7 @@
 }
 
 /*glow*/
-@keyframes neon1 {
+@keyframes neon {
   from {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #45ff11, 0 0 70px #45ff11, 0 0 80px #45ff11, 0 0 100px #45ff11, 0 0 150px #45ff11;
   }
