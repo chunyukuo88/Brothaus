@@ -8,6 +8,8 @@ import '../../css/Title.css';
 const Title = () => {
   const selectedLang = useSelector((state) => state.language);
   const props = { language: selectedLang };
+  document.title = titleStrings[selectedLang];
+
   return (
     <div  id='title-display-container' onMouseEnter={mouseOverTitle} data-test='title-container'>
       <TitleBasedOnLanguage id='title' {...props} />
