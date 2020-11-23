@@ -19,11 +19,11 @@ const _buildProps = (language) => {
   const clonedStrings = _.cloneDeep(titleStrings);
   return {
     language: language,
-    localizedString: clonedStrings[language]
+    localizedString: titleStrings[language]
   }
 };
 
-const TitleBasedOnLanguage = ({language}) => {
+const TitleBasedOnLanguage = ({ language }) => {
   const props = _buildProps(language);
   return <LocalizedTitle {...props}/>;
 };
