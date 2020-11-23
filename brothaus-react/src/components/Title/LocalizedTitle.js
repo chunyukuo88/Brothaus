@@ -20,11 +20,9 @@ export const LocalizedTitle = (props) => {
     );
 };
 
-const RussianHedgehog = ({ language }) => {
-  return language === 'russian' ? <Hedgehog/> : null;
-}
+const RussianHedgehog = ({ language }) => (language === 'russian') ? <Hedgehog/> : null;
 
-const _getClassName = (language) => `title ${language}-title`;
+const _getClassName = (language) => `${language}-title`;
 
 const _getDataTestValue = (language) => `${language}-title`;
 
