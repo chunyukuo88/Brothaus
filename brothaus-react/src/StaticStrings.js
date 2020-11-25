@@ -1,8 +1,8 @@
 const staticStrings = {
-  welcome: {
-    english: "Welcome",
-    russian: "пожаловать",
-    chinese: "簡介"
+  code: {
+    english: "Github",
+    russian: "Код",
+    chinese: "代碼"
   },
   modalCoverage: {
     english: "Unit and GUI tests use ",
@@ -24,11 +24,11 @@ const staticStrings = {
     russian: "Это проект React/Redux.",
     chinese: "製作本站，我用了REACT與REDUX"
   },
-  code: {
-    english: "Github",
-    russian: "Код",
-    chinese: "代碼"
-  }
+  welcome: {
+    english: "Welcome",
+    russian: "пожаловать",
+    chinese: "簡介"
+  },
 }
 
 export default staticStrings;
