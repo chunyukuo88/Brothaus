@@ -1,6 +1,8 @@
-export const buildStringProps = (language, stringLabel) => {
+const buildStringProps = (language, stringLabel) => {
     return {
         language,
         stringLabel
     };
-}
+};
+
+export default buildStringProps;

@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import '../../css/AboutModal.css';
 import StaticString from '../StaticString/StaticString';
 import Code from '../Code/Code';
-import { buildStringProps } from './utils';
+import buildStringProps from './utils';
 
 const AboutModal = () => {
   const language = useSelector((state) => state.language);
