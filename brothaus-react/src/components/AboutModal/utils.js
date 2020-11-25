@@ -1,8 +1,8 @@
-import React from 'react';
-import staticStrings from '../../StaticStrings.js';
+const buildProps = (language, stringLabel) => {
+    return {
+        language,
+        stringLabel
+    };
+}
 
-export const StaticString = ({language, stringLabel}) => (
-    <div className={language}>
-        {staticStrings[stringLabel][language]}
-    </div>
-);
+export default buildProps;
