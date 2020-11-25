@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import '../../css/AboutModal.css';
-import * as utils from './utils';
+import { ModalHeader, SummaryText, ModalDescription, CoverageStatement, CodeDisplay } from './utils';
 
 const AboutModal = () => {
   const language = useSelector((state) => state.language);
@@ -9,14 +9,24 @@ const AboutModal = () => {
 
     return (
       <div className='modal'>
-        <div className='modal-header'>{utils.getModalHeader(props)}</div>
+        <div className='modal-header'>
+          <ModalHeader {...props}/>
+        </div>
         <div className='content'>
-          <div className='summary-text'>{utils.getSummaryText(props)}</div>
+          <div className='summary-text'>
+            <SummaryText {...props}/>
+          </div>
           <br/>
-          <div className='modal-text'>{utils.getModalDescription(props)}</div>
-          <div className='statement'>{utils.getCoverageStatement(props)}</div>
+          <div className='modal-text'>
+            <ModalDescription {...props}/>
+          </div>
+          <div className='statement'>
+            <CoverageStatement {...props}/>
+          </div>
           <br/>
-          <div className='code'>{utils.getCodeDisplay(props)}</div>
+          <div className='code'>
+            <CodeDisplay {...props}/>
+          </div>
         </div>
       </div>
     );
