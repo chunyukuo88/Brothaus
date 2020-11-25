@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import urls from '../../urls';
 
 export class EnzymeLink extends Component {
   render(){
     return (
-      <a href={process.env.REACT_APP_ENZYME_URL}
+      <a href={urls.enzyme}
          target='_blank'
          rel='noopener noreferrer'
          className='technology-link'>Enzyme</a>
@@ -14,7 +15,7 @@ export class EnzymeLink extends Component {
 export class ReactTesting extends Component {
   render(){
     return (
-      <a href={process.env.REACT_APP_RTL}
+      <a href={urls.reactTestingLibrary}
          target='_blank'
          rel='noopener noreferrer'
          className='technology-link'>React Testing Library</a>
@@ -26,7 +27,7 @@ export class ReactPopup extends Component {
   render(){
     return (
       <a className='technology-link'
-         href={process.env.REACT_APP_POPUP}
+         href={urls.reactJsPopup}
          target='_blank'
          rel='noopener noreferrer'>reactjs-popup library</a>
     );
