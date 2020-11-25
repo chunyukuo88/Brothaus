@@ -7,7 +7,6 @@ import Code from '../Code/Code';
 
 const AboutModal = () => {
   const language = useSelector((state) => state.language);
-  const props = { language: language };
   const modalHeaderProps = { language: language, stringLabel: 'modalHeading' };
   const summaryTextProps = { language: language, stringLabel: 'modalSummary' };
   const modalDescProps = { language: language, stringLabel: 'modalDescription' };
@@ -19,19 +18,10 @@ const AboutModal = () => {
           <StaticString {...modalHeaderProps}/>
         </div>
         <div className='content'>
-          <div className='summary-text'>
-            <StaticString {...summaryTextProps}/>
-          </div>
-          <br/>
-          <div className='modal-text'>
-            <StaticString {...modalDescProps}/><span className={language}><ReactPopup/></span>
-          </div>
-          <div className='statement'>
-            <StaticString {...coverageProps}/><span className={language}><EnzymeLink/>+<ReactTesting/></span>
-          </div>
-          <div className='code'>
-            <Code/>
-          </div>
+          <StaticString {...summaryTextProps}/>
+          <StaticString {...modalDescProps}/><div className={language}><ReactPopup/></div>
+          <StaticString {...coverageProps}/><div className={language}><EnzymeLink/>+<ReactTesting/></div>
+          <Code/>
         </div>
       </div>
     );
