@@ -15,12 +15,10 @@ export default function FotoDisplay(){
   }, []);
 
     return(
-    <>
-      <div>
-        <img className="image" alt="" src={getFotoSource(1)} />
-        <p>{captions[0]}</p>
-      </div>
-    </>
+    <div className="image_container">
+      <img className="image" alt="" src={getFotoSource(1)} />
+      <p className="caption">{captions[0]}</p>
+    </div>
   );
 }
 
