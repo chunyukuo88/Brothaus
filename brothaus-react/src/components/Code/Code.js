@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import staticStrings from '../../StaticStrings';
+import urls from '../../urls';
 
 const Code = () => {
   const selectedLang = useSelector((state) => state.language);
@@ -8,14 +9,11 @@ const Code = () => {
   return <CodeString {...prop} />;
 }
 
+const repo = urls.githubRepo;
+
 const CodeString = ({language}) => {
   return (
-    <a href={process.env.REACT_APP_GITHUB_REPO}
-       target='_blank'
-       data-test='code'
-       rel='noopener noreferrer'
-       id='repo'
-    >
+    <a href={repo} target='_blank' data-test='code' rel='noopener noreferrer' id='repo'>
       <div className={language}>
         {staticStrings.code[language]}
       </div>
