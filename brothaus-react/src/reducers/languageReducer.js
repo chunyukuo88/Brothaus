@@ -1,10 +1,12 @@
-import { CHINESE, ENGLISH, RUSSIAN } from "../actions/types";
+import ACTION_TYPES from '../actions/types';
 
-export default function languageReducer (state = ENGLISH, action){
- switch (action.type){
-   case RUSSIAN: return action.payload;
-   case CHINESE: return action.payload;
-   case ENGLISH: return action.payload;
-   default: return state;
- }
+const initialState = ACTION_TYPES.ENGLISH;
+
+export default function languageReducer (state = initialState, action){
+    switch (action.type){
+    case ACTION_TYPES.RUSSIAN: return action.payload;
+    case ACTION_TYPES.CHINESE: return action.payload;
+    case ACTION_TYPES.ENGLISH: return action.payload;
+    default: return initialState;
+    }
 }

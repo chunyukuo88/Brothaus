@@ -1,28 +1,28 @@
 import urls from '../urls';
-import * as types from './types';
+import ACTION_TYPES from './types';
 
 export function switchToRussian(){
   return {
-    type: types.RUSSIAN,
+    type: ACTION_TYPES.RUSSIAN,
     payload: 'russian'
   };
 }
 export function switchToEnglish(){
   return {
-    type: types.ENGLISH,
+    type: ACTION_TYPES.ENGLISH,
     payload: 'english'
   };
 }
 export function switchToChinese(){
   return {
-    type: types.CHINESE,
+    type: ACTION_TYPES.CHINESE,
     payload: 'chinese'
   };
 }
 
 export async function getGlobalTemp(){
   return {
-    type: types.FETCH_TEMP,
+    type: ACTION_TYPES.FETCH_TEMP,
     payload: {
       globalTemp: await fetchWeather('temp'),
     }
@@ -31,7 +31,7 @@ export async function getGlobalTemp(){
 
 export async function getGlobalHumidity(){
   return {
-    type: types.FETCH_HUMIDITY,
+    type: ACTION_TYPES.FETCH_HUMIDITY,
     payload: {
       globalHumidity: await fetchWeather('humidity'),
     }
