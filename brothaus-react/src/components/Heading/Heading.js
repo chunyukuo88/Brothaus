@@ -25,19 +25,14 @@ function Heading(){
                     <Title/>
               </div>
               <nav id='heading__nav-items'>
-                    <div id='nav-items__welcome' className='nav-item' onClick={GA.welcomeTextGA}>
+                    <div id='nav-items__welcome' onClick={GA.welcomeTextGA}>
                         <Welcome/>
                     </div>
-                    <div id='nav-items__weather' className='nav-item' data-test='weather-display'>
+                    <div id='nav-items__weather' data-test='weather-display'>
                         <WeatherDisplay/>
                     </div>
-                    <div id='nav-items__language' className='nav-item'>
-                        <div data-test="locbutton"
-                             style={{"color": "white"}}
-                             onClick={locButtonHandler}
-                        >
-                            {staticStrings.languageLabel[language]}
-                        </div>
+                    <div id='nav-items__language' className={language} onClick={locButtonHandler} >
+                        {staticStrings.languageLabel[language]}
                     </div>
               </nav>
         </section>

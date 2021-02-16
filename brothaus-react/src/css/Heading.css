@@ -9,23 +9,14 @@
 }
 
 #heading__nav-items {
-  grid-row: 2 / 2;
-  height: 30px;
-  
   display: grid;
+  grid-row: 2 / 2;
   grid-template-columns: repeat(3, 1fr);
-}
-
-.national-flag-icon {
-  height: 20px;
-  width: auto;
-}
-
-.nav-item {
-  cursor: pointer;
+  height: 30px;
 }
 
 #nav-items__language {
+  cursor: pointer;
   display: flex;
   grid-column: 3 / 3;
   justify-self: end;
@@ -33,19 +24,21 @@
 }
 
 #nav-items__weather {
+  cursor: pointer;
   grid-column: 2 / 2;
   margin: auto auto;
 }
 
 #nav-items__welcome {
+  cursor: pointer;
   grid-column: 1 / 1;
   margin: auto auto auto 5px;
 }
 
 .title-array {
+  border: 8px;
   margin: 8px;
   padding: 8px;
-  border: 8px;
 }
 
 .welcome, .weather, .localization {
@@ -54,9 +47,9 @@
   transition: 1s;
 }
 .welcome:hover, .weather:hover, .localization:hover {
+  color: #ccff99;
   transform: skew(-0.01turn, -1deg);
   transition: 1s;
-  color: #ccff99;
 }
 
 @media (max-width: 800px) {
@@ -65,12 +58,11 @@
   }
   
   #heading__nav-items {
+    display: grid;
     font-size: 0.75rem;
     grid-row: 2 / 2;
-    height: 30px;
-    
-    display: grid;
     grid-template-columns: 80px auto 80px;
+    height: 30px;
   }
   
   #nav-items__language {
