@@ -1,14 +1,5 @@
 {
   "name": "brothaus-react",
-  "jest": {
-    "collectCoverageFrom": [
-      "**/*.{js,jsx}",
-      "!**/node_modules/**",
-      "!**/coverage/**",
-      "!**/serviceWorker.js",
-      "!**/index.js"
-    ]
-  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,6 +8,12 @@
     "aws-sdk": "^2.754.0",
     "axios": ">=0.21.1",
     "bl": "^1.2.3",
+    "babel-core": "6.26.0",
+    "babel-eslint": "7.2.3",
+    "babel-jest": "20.0.3",
+    "babel-loader": "7.1.2",
+    "babel-preset-react-app": "^3.1.1",
+    "babel-runtime": "6.26.0",
     "lodash": "^4.17.20",
     "markdown-to-jsx": "^6.11.4",
     "prop-types": "^15.7.2",
@@ -40,6 +37,48 @@
     "coverage": "jest --coverage --colors --silent --verbose",
     "eject": "react-scripts eject"
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,mjs}"
+    ],
+    "coveragePathIgnorePatterns": [
+      "src/utils/testUtils.js",
+      "src/index.js",
+      "src/registerServiceWorker.js",
+      "src/axios-orders.js"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/polyfills.js"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
+      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
+    ],
+    "testEnvironment": "jsdom",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
+    ],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    },
+    "moduleFileExtensions": [
+      "web.js",
+      "js",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node",
+      "mjs"
+    ]
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -56,8 +95,10 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.12.16",
     "@testing-library/dom": "^7.22.2",
     "@testing-library/user-event": "^7.2.1",
+    "babel-loader": "^8.2.2",
     "check-prop-types": "^1.1.2",
     "dotenv": "^8.2.0",
     "enzyme": "^3.11.0",
