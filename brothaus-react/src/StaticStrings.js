@@ -4,10 +4,15 @@ const staticStrings = {
     russian: "Код",
     chinese: "代碼"
   },
+  languageLabel: {
+    english: "English",
+    russian: "русский",
+    chinese: "正體中文"
+  },
   modalCoverage: {
     english: "Unit and GUI tests use Enzyme & the React Testing Library.",
     russian: "100% тестового покрытия с библиотекой Enzyme и React Testing Library.",
-    chinese: "為了達成百分百測試覆蓋率，我用了Enzyme 與 React Testing Library。"    
+    chinese: "為了達成百分百測試覆蓋率，我用了Enzyme 與 React Testing Library。"
   },
   modalDescription: {
     english: "Modals are provided by ReactJS Popup.",

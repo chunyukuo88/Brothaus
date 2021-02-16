@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import urls from '../../urls';
 import { getDegreesF, getDegreesC } from './utils';
-import { ChineseWeatherDisplay, 
-         EnglishWeatherDisplay, 
-         RussianWeatherDisplay, 
+import { ChineseWeatherDisplay,
+         EnglishWeatherDisplay,
+         RussianWeatherDisplay,
          WeatherStartingLabels } from './WeatherDisplayLocalizations';
 
 
@@ -28,11 +28,9 @@ export default function WeatherDisplay () {
     );
 }
 
-
-
 const _buildDisplay = (showWeather, selectedLang, degreesK, humidity) => {
-  return showWeather 
-          ? _buildWeatherDisplay(selectedLang, degreesK, humidity) 
+  return showWeather
+          ? _buildWeatherDisplay(selectedLang, degreesK, humidity)
           : _getWeatherTitle(WeatherStartingLabels, selectedLang);
 }
 
