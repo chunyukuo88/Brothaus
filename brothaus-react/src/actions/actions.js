@@ -46,7 +46,6 @@ async function fetchWeather(weatherAttribute){
     const result = (weatherAttribute === 'temp')
         ? data.main.temp
         : data.main.humidity;
-    console.log(`fetchWeather() successful. ${weatherAttribute}: `, result);
     return result;
   } catch (e) {
     console.error('fetchWeather() failed', e.message);

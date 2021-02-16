@@ -36,14 +36,11 @@ describe('Heading.js', ()=>{
             const locButton = wrapper.find("[data-test='locbutton']");
             expect(locButton.text()).toEqual('English');
             locButton.simulate('click');
-            expect(locButton.text()).toEqual('русский');
-            locButton.simulate('click');
             expect(locButton.text()).toEqual('正體中文');
             locButton.simulate('click');
+            expect(locButton.text()).toEqual('русский');
+            locButton.simulate('click');
             expect(locButton.text()).toEqual('English');
-      });
-      test('AND: It displays the next icon', ()=>{
-
       });
    });
 });

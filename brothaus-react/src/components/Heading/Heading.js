@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import { switchToRussian, switchToEnglish, switchToChinese } from '../../actions/actions';
 import { useDispatch } from 'react-redux';
@@ -14,20 +14,10 @@ function Heading(){
     const language = useSelector((state) => state.language);
 
     const locButtonHandler = () => {
-        if (language === 'russian') {
-            dispatch(switchToEnglish());
-        }
-        if (language === 'english') {
-            dispatch(switchToChinese());
-        }
-        if (language === 'chinese') {
-            dispatch(switchToRussian());
-        }
+        if (language === 'russian') dispatch(switchToEnglish());
+        if (language === 'english') dispatch(switchToChinese());
+        if (language === 'chinese') dispatch(switchToRussian());
     };
-
-    // useEffect(() => {
-    //     locButtonHandler();
-    // }, [])
 
     return (
         <section id="heading" data-test='heading'>
