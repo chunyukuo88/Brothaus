@@ -6,6 +6,6 @@ const urls = {
     openWeatherUrl: 'https://api.openweathermap.org/data/2.5/weather?q=Columbus,Ohio&appid=' + openWeatherApiKey,
 };
 
-export const getFotoSource = (integer) => `https://woobler-photos.s3.amazonaws.com/${integer}.JPG`;
+export const getFotoSource = (integer) => `https://woobler-photos.s3.amazonaws.com/${integer} (Custom).JPG`;
 
 export default urls;
