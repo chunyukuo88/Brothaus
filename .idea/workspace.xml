@@ -20,12 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f998052-5cdf-48aa-b604-421da8ae22cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/brothaus-react/.env.development" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brothaus-react/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brothaus-react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brothaus-react/src/components/Heading/Heading.js" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/src/components/Heading/Heading.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brothaus-react/src/css/Heading.css" beforeDir="false" afterPath="$PROJECT_DIR$/brothaus-react/src/css/Heading.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fire_up_3000.sh" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +39,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -61,14 +59,14 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/brothaus-react/src/components/Welcome" />
       <recent name="$PROJECT_DIR$/brothaus-react/src/components/Input" />
       <recent name="$PROJECT_DIR$/brothaus-react/src/components" />
       <recent name="$PROJECT_DIR$/brothaus-react/src/components/Foto" />
-      <recent name="$PROJECT_DIR$/brothaus-react/src/components/Copyright" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.App.js.ON LOAD:">
+  <component name="RunManager" selected="Jest.actions.js: ">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -124,40 +122,36 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="globalHumidityReducer.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="Heading.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/brothaus-react/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$/brothaus-react" />
       <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/brothaus-react/src/reducers/globalHumidityReducer.test.js" />
-      <test-names>
-        <test-name value="globalHumidityReducer.js" />
-      </test-names>
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/brothaus-react/src/components/Heading/Heading.test.js" />
       <method v="2" />
     </configuration>
-    <configuration name="globalHumidityReducer.js.When invoked with an invalid action type" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="actions.js: " type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/brothaus-react/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$/brothaus-react" />
       <envs />
       <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/brothaus-react/src/reducers/globalHumidityReducer.test.js" />
+      <test-file value="$PROJECT_DIR$/brothaus-react/src/actions/__tests__/actions.test.js" />
       <test-names>
-        <test-name value="globalHumidityReducer.js" />
-        <test-name value="When invoked with an invalid action type" />
+        <test-name value="actions.js: " />
       </test-names>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.actions.js: " />
+        <item itemvalue="Jest.Heading.test.js" />
         <item itemvalue="Jest.App.js.ON LOAD:" />
         <item itemvalue="Jest.App.js.ON LOAD:.and it dispatches temp and humidity to the global store." />
         <item itemvalue="Jest.App.js.ON LOAD:.It renders the App component without crashing, " />
-        <item itemvalue="Jest.globalHumidityReducer.js.When invoked with an invalid action type" />
-        <item itemvalue="Jest.globalHumidityReducer.js" />
       </list>
     </recent_temporary>
   </component>
@@ -211,6 +205,10 @@
       <workItem from="1604982416320" duration="453000" />
       <workItem from="1613504400656" duration="70000" />
       <workItem from="1613517064554" duration="914000" />
+      <workItem from="1615565824035" duration="31000" />
+      <workItem from="1615565861630" duration="282000" />
+      <workItem from="1615566182191" duration="258000" />
+      <workItem from="1615566708301" duration="412000" />
     </task>
     <servers />
   </component>
@@ -228,27 +226,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="1017" y="491" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604894231111">
-      <screen x="0" y="23" width="2560" height="1417" />
-    </state>
-    <state x="1017" y="491" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.2560.1417/-1792.23.1792.1097@0.23.2560.1417" timestamp="1604894231111" />
-    <state width="2518" height="527" key="GridCell.Tab.0.bottom" timestamp="1613517292006">
-      <screen x="1792" y="25" width="2560" height="1415" />
-    </state>
-    <state width="2518" height="527" key="GridCell.Tab.0.bottom/1792.25.2560.1415/0.25.1792.1095@1792.25.2560.1415" timestamp="1613517292006" />
-    <state width="2518" height="527" key="GridCell.Tab.0.center" timestamp="1613517292005">
-      <screen x="1792" y="25" width="2560" height="1415" />
-    </state>
-    <state width="2518" height="527" key="GridCell.Tab.0.center/1792.25.2560.1415/0.25.1792.1095@1792.25.2560.1415" timestamp="1613517292005" />
-    <state width="2518" height="527" key="GridCell.Tab.0.left" timestamp="1613517292005">
-      <screen x="1792" y="25" width="2560" height="1415" />
-    </state>
-    <state width="2518" height="527" key="GridCell.Tab.0.left/1792.25.2560.1415/0.25.1792.1095@1792.25.2560.1415" timestamp="1613517292005" />
-    <state width="2518" height="527" key="GridCell.Tab.0.right" timestamp="1613517292006">
-      <screen x="1792" y="25" width="2560" height="1415" />
-    </state>
-    <state width="2518" height="527" key="GridCell.Tab.0.right/1792.25.2560.1415/0.25.1792.1095@1792.25.2560.1415" timestamp="1613517292006" />
   </component>
 </project>
